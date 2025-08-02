@@ -8,7 +8,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: syllabus/index.qmd
+        text: Syllabus
+      - href: schedule/index.qmd
+        text: Readings
+      - href: content/index.qmd
+        text: Slides
+      - href: resources/index.qmd
+        text: Resources
+      - href: report/index.qmd
+        text: Report example
 
 format:
   html:

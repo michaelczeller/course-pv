@@ -1,0 +1,105 @@
+---
+title: "Resources"
+---
+
+# On political violence
+
+Research on political violence is a large field of study. Over the years, researchers, groups, and institutions have created a wealth of accessible resources on the subject. Below are a few of the many resources available:
+
+- The Armed Conflict Location & Event Data Project (ACLED) collects real-time data on the locations, dates, actors, fatalities, and types of all reported political violence and protest events around the world: <https://acleddata.com/>.
+- Journal: [*Journal for Deradicalization*](https://journals.sfu.ca/jd/index.php/jd/index)
+- Journal: [*Perspectives on Terrorism*](https://www.jstor.org/journal/persponterr)
+- Journal: [*Studies in Conflict and Terrorism*](https://www.tandfonline.com/journals/uter20)
+- Journal: [*Terrorism and Political Violence*](https://www.tandfonline.com/loi/ftpv20?cookieSet=1)
+- Uppsala Conflict Data Program (UCDP): <https://ucdp.uu.se/>.
+
+# On writing
+
+For general guidance, please see the academic writing guidance provided by the university: <https://www.en.ub.uni-muenchen.de/writing/academic-writing/index.html>. All writing benefits from feedback and revision, so try to write and then revise your work. Beyond that guidance, the university has a Writing Center (<https://www.en.schreibzentrum.fak13.uni-muenchen.de/index.html>) that offers students help.
+
+Students wishing to improve their writing may find it helpful to consult guides on writing style, such as:
+
+Orwell, G. (1946). Politics and the English Language. The Orwell Foundation: <https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/>.^[Orwell offers six rules for good writing: (1) never use a metaphor, simile, or other figure of speech that you are used to seeing in print (avoid cliché); (2) never use a long word when a short one will do (short and simple); (3) if it is possible to cut a word out, cut it out (simplicity!); (4) never use the passive voice when you can use the active voice; (5) never use a foreign phrase, a scientific word, or a jargon word if you can think of an everyday English equivalent; and (6) break any of these rules sooner than say anything outright barberous.]
+
+Strunk, W. & White, E.B. (1999). *The Elements of Style*. Pearson.
+
+Use a citation management software to organise your papers and create bibiliographies. [Zotero](https://www.zotero.org/) is particularly good because it is free, open source, and works across multiple operating systems.
+
+If you are considering a career in research, you may find it helpful to familiarise yourself with typesetting programmes commonly used for research output, such as Markdown documents in the R programming environment ([RStudio](https://posit.co/download/rstudio-desktop/) is a good tool for R) or \LaTeX  ([TexStudio](https://www.texstudio.org/) is a good tool for \LaTeX). 
+
+
+<!-- ## Genres of Science writing -->
+
+<!-- ### Paper reviews -->
+
+<!-- Critical but constructive critique of unpublished research papers. Informs the journal editor of how the work contributes to existing literature and provides guide to authors and the editor for improvement to the manuscript. Can be signed but often anonymous. -->
+
+<!-- ### Descriptive Reports -->
+
+<!-- Descriptive reports are often made for industry or geological surveys. These describe the composition and structure of rocks in an area. Sometimes they include estimations of resource potentials or environmental impacts of industry. -->
+
+<!-- ### Research papers -->
+
+<!-- These pieces of science writing typically test one or more closely related hypotheses in the context of existing scientific knowledge. Most have structure that is pre-defined including: abstract, introduction, methods, results, discussion, and conclusion. Figures are an integral part of most papers in the Geosciences and range from images of outcrops to abstracted summaries of observations to plots of measurements. -->
+
+<!-- ### Conference abstracts -->
+
+<!-- These are generally a step on the path to a full research publication where results, interpretations, and context are publicly presented for the first time. -->
+
+<!-- ### Grant Applications -->
+
+<!-- Scientific work is generally funded with public or private funds that are obtained by writing grants. Unlike research papers, grants must persuade reviewers that the research planned is important, can be done by the applicant, and can be achieved in the time frame of the funding request. -->
+
+<!-- ### Science Communication -->
+
+<!-- Scientists also write general summaries of their work for non-specialist audiences. These can be blog posts, or lesson plans that are shared for educators. Some folks also write books for general audiences describing the processes of science. -->
+
+# Campus resources
+
+### COVID-19 policy: 
+<https://www.lmu.de/de/die-lmu/informationen-zum-corona-virus/index.html>
+
+### University IT: 
+<https://www.lmu.de/en/about-lmu/structure/central-university-administration/it-services-division-vi/it-service-desk/index.html>
+
+### Library: 
+<https://www.en.ub.uni-muenchen.de/index.html>
+
+<!-- ### Publishing:  -->
+<!-- <https://www.ub.uni-bielefeld.de/ub/digital/> -->
+    
+### Study techniques:
+
+[https://www.lmu.de/en/workspace-for-students/abc-study-guide/index.html](https://www.lmu.de/en/workspace-for-students/abc-study-guide/index.html)
+
+### Student advisory services: 
+[https://www.lmu.de/en/study/important-contacts/central-student-advisory-office/index.html](https://www.lmu.de/en/study/important-contacts/central-student-advisory-office/index.html)
+
+
+### International Student Services Centre: 
+[https://www.lmu.de/en/study/important-contacts/international-office/index.html](https://www.lmu.de/en/study/important-contacts/international-office/index.html)
+
+<!-- # This is a test -->
+
+<!-- ```{r show-slide-tabs, echo=FALSE, results="asis"} -->
+<!-- #| warning: false -->
+<!-- slide_buttons <- function(slide_id) { -->
+<!--   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>') -->
+<!-- } -->
+
+<!-- slide_buttons("/slides/slides_test") -->
+
+<!-- library(xaringanExtra) -->
+
+<!-- xaringanExtra::embed_xaringan( -->
+<!--   "/slides/slides_test.html", -->
+<!--   ratio = "16:9", -->
+<!--   border = "none", -->
+<!--   margin = "0 auto" -->
+<!-- ) -->
+<!-- ``` -->
+
+
+
+
+

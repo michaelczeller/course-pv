@@ -9,6 +9,18 @@ Office hour: Wednesdays, 11.00 - 12.00
 Office: GSI (Oettingenstr. 67) Room H105    
 
 
+<!-- NOTES FROM PREVIOUS CLASS EVALUATION (2024) -->
+<!-- - provide more content in the PowerPoints rather than just analysis of the Texts or discussion Points -->
+<!-- - weniger abstrakt/theoretisch/statistisch die Inhalte vermitteln -->
+<!-- - mehr Fokus auf die BRD (gehört zu politischem System der BRD, der Bezug ist aber kaum da -> dadurch schlechteres Verständnis und doppelter Lernaufwand) -->
+<!-- - In preparation for the final exam, short tests could be organised at each session so that students can assess their own knowledge. -->
+<!-- - More recommended readings based on the individual groups would be helpful - have found the search for literature on my organisation challenging. -->
+<!-- - Layout der PowerPoint könnte besser sein. Wichtige Punkte fallen nicht sehr auf. Zum wiederholen nicht geeignet. -->
+<!-- - this is not necessarily something that needs to be improved, as I wouldn’t call it a problem, but I did find a little misleading the name of the course: the course is called Political Violence in Germany, but we barely spoke about Germany. Maybe calling it Political Violence would be better -->
+
+<!-- NOTES FROM far right course EVALUATION (2025) FOR ONLINE MATERIALS: -->
+<!-- - Maybe encourage to make mistakes regarding the english language (I sometimes did not raise my hand because I was "too shy" to speak up compared to the students with very good english, as they had a bigger academic vocabulary than I did -->
+<!-- - The website is a little bit confusing at first. For me, it was not very intuitive. I couldn't find where the readings were (ı thought it would be under content and not under schedule) at first, but once I got used to it, it got easier. -->
 
 
 ```{r setup, include=FALSE}

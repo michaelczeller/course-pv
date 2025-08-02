@@ -1,0 +1,360 @@
+---
+title: "Syllabus"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(timeDate)
+library(tibble)
+library(dplyr)
+library(knitr)
+
+# https://www.benlinzmeier.rocks/post/an-rmarkdown-syllabus-template/
+# http://svmiller.com/blog/2016/07/r-markdown-syllabus/
+
+library(lubridate) # for submission date of assignments
+
+# library(RefManageR)
+# bib <- ReadBib("library.bib")
+# myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+# https://www.lmu.de/en/workspace-for-students/abc-study-guide/lecture-periods/index.html
+# https://www.ferienwiki.de/feiertage/de/bayern
+
+#This code chunk sets up a table of meeting days for the course.
+#You can set days of the week for course meetings (e.g. Monday and Wednesday).
+#Semester start and end dates are selected and then university holidays like spring break are specified.
+#Days of the week that the course meets. Must be full day name in quotes.
+Days <- c("Thursday")
+#Semester start date for classes as YYYY/M/D.
+SemesterStart <- as.Date("2025/10/16")
+#Semester end date for classes as YYYY/M/D.
+SemesterEnd <- as.Date("2026/2/7")
+#Fall break start and stop date.
+WinterBreak <-
+  seq.Date(
+    from = as.Date("2025/12/22"),
+    to = as.Date("2026/1/6"),
+    by = "day"
+  )
+#Spring break start and stop date.
+# SpringBreak <-
+#   seq.Date(
+#     from = as.Date("2022/02/28"),
+#     to = as.Date("2022/03/06"),
+#     by = "day"
+#   )
+#Creates a list of days within the semester.
+SemesterDays <-
+  seq.Date(from = SemesterStart, to = SemesterEnd, by = "day")
+#Add day before Thanksgiving.
+#Add day before Thanksgiving.
+# DayBeforeThnks<-as.Date(holiday(
+#     year = getRmetricsOptions("currentYear"),
+#     Holiday = c("USThanksgivingDay")))-1
+#Full list of holidays that there are no classes including breaks.
+Holidays <-
+  c(as.Date(holiday(
+    year = getRmetricsOptions("currentYear"),
+    Holiday = c("USLaborDay", "USThanksgivingDay", "USMLKingsBirthday")
+  )), WinterBreak)
+#Create a list of semester days excluding holidays.
+SemesterDays <- SemesterDays[!SemesterDays %in% Holidays]
+#Make dataframe with all semester days.
+ClassDays <- data.frame(index = 1:length(SemesterDays))
+#Insert dates.
+ClassDays$Date <- SemesterDays
+#Insert weekday designation.
+ClassDays$Weekday <- weekdays(ClassDays$Date)
+#Limit to the class meeting days.
+MeetingDays <- ClassDays[ClassDays$Weekday %in% Days, ]
+#Create numeric list of weeks.
+Week <- cut.Date(MeetingDays$Date, breaks = "week")
+levels(Week) <- 1:length(levels(Week))
+MeetingDays$Week <- Week
+MeetingDays$Class <- 1:nrow(MeetingDays)
+
+Lecture_Topic <- c("Introduction and types of political violence", # Class 1
+                   "Causes: setting the stage for political violence", # Class 2
+                   "Radicalisation", # Class 3
+                   "Selecting violent/nonviolent strategies", # Class 4
+                   "Radical subcultures and mobilisation", # Class 5
+                   "Leadership", # Class 6
+                   "Foreign fighters", # Class 7 - Mass shooters, foreign fighters, and terrorism in authoritarian states
+                   "Election-related violence", # Class 8
+                   "Escalation and restraint", # Class 9
+                   "Local support and public reaction", # Class 10
+                   "State responses: policies", # Class 11
+                   "State responses: repression", # Class 12
+                   "Addressing violence online", # Class 13
+                   "Disengagement, deradicalisation (individual), demobilisation (organisational)") # Class 14
+                   # "NO CLASS MEETING TODAY") # Class 15"
+
+          
+links <- c("#class1","#class2","#class3","#class4","#class5","#class6","#class7","#class8","#class9","#class10","#class11","#class12","#class13","#class14")
+
+MeetingDays <- bind_cols(MeetingDays, Lecture = Lecture_Topic)
+#### Grade table ####
+Grades <- tribble( ~ Grade,
+                   ~ Range,
+                   "A",
+                   "90-100",
+                   "B",
+                   "80-89",
+                   "C",
+                   "70-79",
+                   "D",
+                   "60-69",
+                   "F",
+                   "< 60")
+####Assignment weight table####
+Weights <- tribble(
+                    ~ Item,
+                    ~ Weight,
+                    "Writing scaffolding",
+                    "20 %",
+                    "Semester Project",
+                    "25 %",
+                    "Labratory Assignments",
+                    "20 %",
+                    "Midterm Exam",
+                    "15 %",
+                    "Final Exam",
+                    "20 %"
+                  )
+```
+
+
+
+<!-- # Recommended prior knowledge -->
+<!-- Empfohlene Vorkenntnisse -->
+
+<!-- Students will benefit from familiarity with research literature on political parties, social movements, and/or political violence. But relevant parts of these research fields will be introduced in the course where pertinent.  -->
+
+# Necessary prerequisites
+<!-- Notwendige Voraussetzungen -->
+
+Not applicable.
+
+# Course requirements
+
+The examination credit (*Prüfungsleistung*) in this course depends on your degree programme:
+
+```{r requirements, echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+# col1 <- c("","Attendance & Participation","Presentation","Essay"),
+kable(data.frame(
+  col1 <- c("","BA Hauptfach","BA Nebenfach (60 ECTS)","Lehramt Unterrichtsfach","BA Nebenfach (30 ECTS)", "Lehramt Didaktikfach", "Austauschstudierende für VL", "Austauschstudierende für GK"),
+  col2 <- c("Participation","X","X","X","X", "X", "X", "X"),
+  col3 <- c("Presentation","","","X","", "", "", "X"),
+  col4 <- c("Essay","","","X","", "", "", "X"),
+  col5 <- c("Klausur","X","X","X","X (nur VL)", "X (nur VL, 60 Min., 2 Wissensfragen)", "X (nur VL)", "")),
+  col.names = NULL, align = c("l","c","c","c","c")) %>%
+  kableExtra::kable_styling(bootstrap_options = "bordered") %>% 
+  # row_spec(1, background = "seagreen1") %>% 
+  row_spec(c(3,5,7), background = "pink") %>% 
+  row_spec(c(2,4,6,8), background = "cadetblue1")
+```
+
+
+```{r requirements1, message=FALSE, warning=FALSE}
+#| eval: false
+#| include: false
+library(kableExtra)
+# col1 <- c("","Attendance & Participation","Presentation","Essay"),
+kable(data.frame(
+  col1 <- c("","Participation","Presentation","Essay","Klausur"),
+  col2 <- c("BA main","X","","","X"),
+  col3 <- c("BA minor (60 ECTS)","X","","","X"),
+  col4 <- c("BA minor (30 ECTS)","X","","","X (nur VL)"),
+  col5 <- c("LA Unterrichtsfach","X","X","","X"),
+  col6 <- c("Exchange","X","X","X","")),
+  col.names = NULL, align = c("l","c","c","c","c","c")) %>%
+  kableExtra::kable_styling(bootstrap_options = "bordered") %>% 
+  # row_spec(1, background = "seagreen1") %>% 
+  row_spec(c(3,5), background = "pink") %>% 
+  row_spec(c(2,4), background = "cadetblue1")
+```
+
+
+## Participation
+
+To receive credit for this course, all students are expected to attend class meetings and participate actively in class discussions. Active participation requires independent preparation, especially [doing the required reading]{style="color:red;"}. Assigned and recommended readings for each session are listed in the [Readings](../schedule/index.qmd).
+
+<!-- The course has an e-learning site, which can be found on LMU's Moodle by searching for 15034 Political Violence in Germany. You can enrol in the course with the access key **PV2024**. -->
+
+<!-- Furthermore, each student participating in the course will be assigned one politically violent group. Over the period of the course, students will develop in-depth knowledge of this group and how the topics discussed in class apply to it. Ideally, studying these groups will give students an ongoing practical case to which they can refer to understand empirical manifestations of theoretical concepts we discuss. These cases may also offer good material for students' final course assignment (see below, the analytical paper). Below is the provisional list of organisations that will be assigned to students. They were selected because they are fairly well-known and covered thoroughly in research literature and because they represent diverse geographic and ideological characteristics. -->
+
+<!-- - \underline{Politically violent groups}: **Antifaschistische Aktion** (Antifa, Germany and elsewhere), **Blood and Honour** (B&H, transnational), **Grey Wolves** (Turkey), **Hammerskins** (transnational), **Hezbollah** (Lebanon, but also transnational), **Hizb ut-Tahrir** (HT, transnational), **Islamic State** (IS, transnational) **Kommunistische Partei Deutschlands** ('Communist Party of Germany,' KPD, Germany), **Liberation Tigers of Tamil Eelam** (LTTE, Sri Lanka), **Nationaldemokratische Partei Deutschlands** ('National Democratic Party of Germany,' NPD, Germany), **National Socialist Underground** (NSU, Germany), **Partiya Karkerên Kurdistanê** ('Kurdistan Workers' Party,' PKK, Turkey, Syria and several other countries including Germany), **Rote Armee Fraktion** ('Red Army Fraction,' RAF, Germany), **Sozialistische Reichspartei** ('Socialist Reich Party,' SRP, Germany) -->
+
+<!-- Leftist: FARC, IRA, RAF, ETA, Brigate Rossi (della Porta, book chapter in Terrorism in Context), Black Panthers, ANC (South Africa), SRs, Weather Underground, PKK, antifascist group in Italy (partisans) 1943-1945 (The Gap), 43 Group,  -->
+<!-- Rightist: NSU, National Action, KKK, CasaPound, Hammerskins (Lenny Zeskin book, Blood Politics) -->
+<!-- Islamist: al-Qaeda, ISIS, Boko Haram, Hezbollah, PLO, Al-Shabaab -->
+<!-- Other: Liberation Tigers of Tamil Eelam, Lord’s Resistance Army -->
+
+<!-- The instructor may consider other groups to be assigned. And while the instructor may agree to developing further students' preexisting interests by focusing on a specific group, the default objective is to learn about groups with which students are relatively unfamiliar. -->
+
+
+## Presentation (*Referat*)
+
+Students that are required by their degree programme to present must give one short (20 minutes maximum) group (2-4 students) presentation of a method of studying political violence. 
+
+A **method** is a system of data collection and analysis. A presentation of a method should introduce the method, explain how (e.g., for what research topics) it is useful for studying political violence, and (most importantly) discuss at least one example of applied research. For example, a group could present *regression analysis* by briefly reviewing the logic of regression techniques, explaining that it is useful for detecting correlations in large sets of data, and explaining how Authors X & Y used regression analysis techniques on incidents of political violence within a country.
+
+While students may choose any method after conferring with the instructor, the following is a list of some methods that would be suitable for presentation: linear regression, qualitative comparative analysis (QCA), network analysis, experimental design, content/discourse analysis, quantitative text analysis, process tracing, spatial analysis, ethnography.
+
+Students are responsible for creating their own group and organising their presentation. The date of presentation will be agreed with the instructor and, wherever possible, arranged so that no more than one group presents per class meeting. 
+
+::: {.callout-caution collapse="true"}
+## Scoring rubric
+
+```{r pres-rubric, echo=FALSE}
+#| message: false
+#| warning: false
+#| paged-print: false
+# Load necessary library
+library(dplyr)
+library(kableExtra)
+
+rub <- data.frame(
+  # block=c("Content", "Content", "Content", "Content", "Form", "Form"),
+  criteria=c("<b>1. Introduction</b> <br> - Was the specific method stated? <br> - Were the fundamental concepts necessary for understanding the method explained? <br> - Was it stated what sort of questions/topics the method can address? <br> - Was the sort of data generated/required for the method described? <br> - Was there an overview of the analytical technique(s) of the method?",
+             "<b>2. Application to study of political violence</b> <br> - Was it stated how the method can be applied to political violence questions/topics? <br> - Were (hypothetical or actual) examples discuss of different possible applications?", 
+             "<b>3. Applied research example</b> <br> - Was an applied example of the method presented? <br> - Was the example's research design described enough to understand the analysis? <br> - Was the example's analysis presented (at least in brief)? <br> - Did the presentation offer a good critical appraisal of the quality of the research (especially the applied method)?",
+             "<b>4. Conclusion</b> <br> - Were the main points of the presentation summarised? <br> - Did the conclusion describe (at least briefly) how one might apply the method? <br> - Were any points for discussion mentioned or questions from the audience answered?",
+             "<b>5. Spoken presentation</b> <br> - Were the speakers loud enough to be heard at the back? <br> - Were they <b>speaking to the audience</b>, speaking freely (best) or rather only reading off notes (okay) or reading off the slides (worst)?",
+             "<b>6. Visual presentation</b> <br> - Were the presentation materials (slides) clear? <br> - Were any graphics shown readable? <br> - Were any slides overcrowded with text?") #, 
+  #present=c("","","","","",""),
+  # evaluation=c("","","","","","")
+)
+
+colnames(rub)<-c(# "Block",
+                 "Criteria and Indicators" #,
+                 #"yes/no/partial/NA",
+                 #"Evaluation")
+)
+
+# kable(plan, format = "latex")  # For LaTeX output
+# kable(plan, format = "html")   # For HTML output
+
+rub %>% 
+  # group_by(Block) %>% 
+  kable("html", escape = FALSE) %>% 
+  # collapse_rows(1, valign="middle") %>% 
+  kable_styling(full_width = FALSE) # %>% 
+  # column_spec(1, bold = TRUE) %>% 
+  # collapse_rows(1, valign="middle") # %>% column_spec(2, width = "80px") %>% 
+  # column_spec(2, width = "120px")
+
+```
+
+:::
+
+## Examination (Klausur)
+
+Students will not have an examination in this course, but they will in the '**Einführung Politisches System der BRD**' course. During that examination, they will respond to one or more essay questions based on the content of this course.
+
+### Information on examination
+
+Typically, the examination is conducted over 90 minutes and will take the following form: for the lecture ('**Einführung Politisches System der BRD**') portion, students will be given five short answer (i.e., one or two paragraphs) questions; they should respond to three of the five. For the seminar (Grundkurs) portion, students will be given three essay prompts and they should respond to one of them. 
+
+For this course, students might receive an essay prompt like the following: *What does the term 'foreign fighter' mean? Who becomes a foreign fighter? How can 'home' countries deal with returning foreign fighters?* 
+
+A good response to this prompt (and others) would likely consist of four parts: (1) Broad introductory response; (2) Elaborate in (sufficient) detail to answer the questions; (3) Describe examples; (4) Concluding summary.
+
+(1) **Broad introductory response**, e.g.:   
+    - Foreign fighters are individuals who travel to a conflict zone from another territory. In other words, foreign fighters are individuals who engage [remember, about behaviours] in violent activity, which also suggests they have radicalised [remember, about attitudes] to some extent. Home countries have a variety of options for dealing with returning foreign fighters ...
+
+(2) **Elaborate in (sufficient) detail to answer the questions**, e.g.:   
+    - Foreign fighters travel to engage in violent conflict. They might do so for ideological reasons (including religious motivations), for material benefit, or because of connection to others who travel to the conflict zone (network/interpersonal causes). The extent of radicalisation underlying these reasons for becoming a foreign fighter vary, but the engagement in violence is clear. Given the fighters’ engagement in violence and possible criminal consequences of their activities, home countries face a challenge of how to deal with their return. Broadly, state authorities might praise returning foreign fighters, ignore/disregard, refer to intervention programmes, arrest and/or prosecute, or even take measures to prevent their return (e.g., revoke citizenship). ...
+
+(3) **Describe examples**, e.g.:   
+    - Recent research on ISIS foreign fighters (Morris 2023) identified common profiles for foreign fighters in the conflict in Syria: young, male, unmarried, urban, well-educated. These characteristics might be applicable to other cases. To assess whether such profiles of foreign fighters are generalizable, one might examine foreign fighters in historical cases, such as the Spanish Civil War where whole brigades of combatants were composed of volunteers from abroad, or contemporary conflicts, such as the Russian war on Ukraine where foreign fighters have formed part of both sides of the conflict. In any case, foreign fighters returning to their home countries can pose a dilemma for state authorities. German state authorities, for instance, might praise and heroise, such as (some) UK authorities did for fighters returning from Spain in the 1930s; the state might criminalise them, prosecuting and jailing for violent activity, such as with some fighters for ISIS returning from Syria. ...
+  
+(4) **Concluding summary**, e.g.:    
+    - The existence of foreign fighters is a longstanding and common form of political violence. Their motivations and characteristics may vary, but by definition they all engage in violence. Their exposure to and engagement in violence can pose threats to their home state and society when they return from conflict zones. States therefore may respond in several ways to minimise the danger of fighters acting violent upon their return.
+
+## Essay (*Hausarbeit*)
+
+Students that are required by their degree programme to write a final essay will write an analytical data report on a political violence phenomenon, such as incidents of political violence in Europe (or in a specific country, or in a sub-national area) or online posting activity by known politically violent groups. The report should be 2000-3000 words (excluding citations). It should briefly introduce the subject, briefly discuss relevant research literature, and (particularly important) **should gather and present (in a tablular and/or graphic format) some data relevant to understanding the political violence phenomenon** (e.g., a report on a politically violent group might present violent incidents associated with that group; or a report on online activity might present the quantity and characteristics of online posts by the platform account associated with a group(s)). Please note that introduction and literature review are to be *brief*. **The intention of this report is for you to gather data and generate analytical insights**. Imagine that you are describing this political violence phenomenon to someone (a policymaker or researcher) with no specific knowledge of it; your job is to provide context briefly, offer specific knowledge, and why that knowledge is important. 
+
+Students are generally free to choose their topic and have it confirmed by the instructor---though the instructor may veto a topic and assign another, or ask the student to choose another. At least one rule applies: **no drawing any data from or citing Statista or other data curation services**. <!-- By the middle of the semester, students should have started their data collection and should submit a draft dataframe: this (most likely) will be an Excel file with your variables in columns and observations in rows. The instructor will check it and offer any necessary guidance about completing data collection. --> Prior to the end of the semester, students intending to write the essay should submit a one-page synopsis that states your topic, lists some relevant research sources, describes the parameters of the data (i.e., variables, number of observations---think of writing up a mini-codebook) and presents a few example rows (i.e., observations), lists any ideas on how to present the data (i.e., how you will visualise it in your report), and identifies any particular points on which you need preliminary feedback. (**This is your chance to get risk-free feedback on your work. Embrace it!**) Feedback on the synopsis may direct students to revise their topic, focus on other sources, and/or reconsider their data approach to their proposed report.
+
+<!-- Deadline for draft dataframe submission: **`r SemesterEnd - (35)`** -->
+
+Deadline for short synopsis submission: **[`r SemesterEnd - (21)`]{style="color:red;"}**
+
+Deadline for full report submission (including full dataframe): **[`r SemesterEnd + (28)`]{style="color:red;"}**
+
+Due to time constraints, no written preliminary feedback can be provided after the synopsis submission deadline. Students requesting such feedback will receive the following response: "Unfortunately, I am unable to provide feedback at this time. But I suggest you look at the assignment description, the scoring rubric, and the example data report---all provided on the course website."
+
+Under exceptional circumstances, the instructor may accept late submissions of the full report due to unforeseen circumstances. Generally, late submissions will be marked down 0,3 for every two days it is not submitted. If foreseen circumstances make the deadline impossible, please speak to the instructor to make an alternative arrangement. 
+
+An [example data report](../report/index.qmd) is provided on this website. It is a slightly modified version of a previous student's submission and shows an example of a very good data report.
+
+Finally, a suggested (purely voluntary, but perhaps to your ultimate benefit) mode of conducting work on your report: students may find it advantageous to work in [R](https://www.r-project.org/about.html) and [Rstudio](https://posit.co/download/rstudio-desktop/). This is a powerful data management and analysis tool. It combines the capability to import and visualise data, conduct sophisticated analyses, and even present them in nicely formatted documents (whether Word, PDF, or HTML). Students interested in working with datasets in their theses, going on to advanced academic studies, or pursuing a career in research will benefit enormously from engaging with this tool early and often. The course introduction will provide some tips for using this tool. For further information, please turn to the vast material related to R online or inquire with the instructor. Nevertheless, [students are free to work with whatever tools they are most comfortable with, including Microsoft Office programmes.]{style="color:red;"}
+
+**Once you have read this far: please send me an email before second class stating your favourite city and what (if any) politically violent groups you are particularly interested in learning about.**
+
+::: {.callout-caution collapse="true"}
+## Scoring rubric
+
+```{r rep-rubric, echo=FALSE}
+#| message: false
+#| warning: false
+#| paged-print: false
+# Load necessary library
+library(dplyr)
+library(kableExtra)
+
+rubric <- data.frame(
+  # block=c("Content", "Content", "Content", "Content", "Form", "Form"),
+  criteria=c("<b>1. Introduction</b> <br> - Does the introduction clearly introduce the topic and related data? <br> - Does the introduction briefly state any information or context that is essential to understanding the topic and/or data? <br> - Does the introduction state the aim of the report? <br> - Does the introduction summarise the structure of the report and the main findings?",
+             "<b>2. Literature and concepts</b> <br> - Does the report have a section on relevant literature and concepts related to their topic and data? <br> - Does the section provide detailed systematised concept(s) to understand the rest of the data report? <br> - Does the section provide the contextual information necessary to understand the rest of the data report?", 
+             "<b>3. Data description</b> <br> - Does the data description explain how the data were collected or created? <br> - Does the data description report the (most important) variables and overall data structure (e.g., one row is an observation of what)? <br> Does the data description provide any necessary descriptive statistics (e.g., number of observations, range/mean/median, missing observations)? <br> - Does the data description reflect on the strengths and weaknesses of the underlying source of the data?",
+             "<b>4. Data presentation</b> <br> - Are the data presented in a tabular and graphical format? <br> - Is the presentation readable and readily interpretable (e.g., clear labels, legends)? <br> - Is the presentation directly connected to the analytical discussion?",
+             "<b>5. Analytical insights</b> <br> - Does the report discuss (descriptive) analytical insights enabled by presentation of the data and closer inspection of certain data points or collections of data points? <br> - Is the report cautious about the limits of how much we can interpret the data (e.g., how certain can we be of any trends; how plausible is any speculation about causes?)?",
+             "<b>6. Conclusion</b> <br> - Does the conclusion summarise the report? <br> - Does it reflect on the shortcomings or limitations of the data and interpretation? <br> - Does it discuss possible ways that this data might be used further (e.g., for thesis research projects, to inform policy discussions)?",
+             "<b>7. Form</b> <br> - Is the report well-organised, logically structured, and easy to follow? <br> - Do the different sections clearly, coherently relate to each other? <br> - Is the writing clear, with few if any spelling, typological, grammatical, or syntactical errors?",
+             "<b>8. Data</b> <br> - Has the report been submitted with the raw data? <br> - Is the data file clear? <br> - Would the reader be able to replicate the data report using the data file?") #, 
+  # present=c("","","","","",""),
+  # evaluation=c("","","","","","")
+)
+
+colnames(rubric)<-c("Criteria and Indicators")
+
+# kable(plan, format = "latex")  # For LaTeX output
+# kable(plan, format = "html")   # For HTML output
+
+rubric %>% 
+  # group_by(Block) %>% 
+  kable("html", escape = FALSE) %>% 
+  # collapse_rows(1, valign="middle") %>% 
+  kable_styling(full_width = FALSE) # %>% 
+  # column_spec(1, bold = TRUE) %>% 
+  # collapse_rows(1, valign="middle") # %>% column_spec(2, width = "80px") %>% 
+  # column_spec(2, width = "120px")
+
+```
+
+:::
+
+<!-- ## Exercise (*Übungsaufgabe*) -->
+
+<!-- Students that are required by their degree programme to complete an exercise will write a memo on an assigned far-right actor (e.g., a party, movement, or organisation). The memo topic will be assigned during our 12th class meeting, on **\textcolor{red}{`r MeetingDays$Date[12]`}** and it will be due on the day before our 13th class meeting **\textcolor{red}{`r MeetingDays$Date[13] - 1`}**. Under exceptional circumstances, the instructor may accept late submissions due to unforeseen circumstances. Generally, late submissions will be marked down 0,3 for every two days it is not submitted. If foreseen circumstances make the deadline inconvenient, please speak to the instructor to make an alternative arrangement.  -->
+
+<!-- The memo should be 1000-2000 words. It should provide a basic description of the far-right actor and any important context. It should gather and present (in a table and/or graphic format) some data relevant to understanding the far-right actor (e.g., a memo on a party might present their election results in the last five national elections; a memo on a movement might present the protest events they have organised during a specific period of time). Imagine that you are describing this far-right actor to someone (a policymaker or researcher) with no specific knowledge of it; your job is to provide context, specific knowledge, and why that knowledge is important.  -->
+
+<!-- Possible far-right actors: Reichsbürger,  -->
+
+<!-- ## Klausur -->
+
+<!-- # Useful books and sources of information. -->
+
+
+# Student conduct
+
+## Plagiarism
+
+Plagiarism is when ideas and words from others are presented as if they are one's own. It does not matter from which source (e.g., a book, magazine, newspaper, or the internet) the ideas and text came from or whether it is a large or small piece or whether it is copied verbatim or rephrased. The only consequential point is whether the original source is correctly cited or not.
+
