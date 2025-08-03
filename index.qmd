@@ -20,7 +20,6 @@ Office: GSI (Oettingenstr. 67) Room H105
 
 <!-- NOTES FROM far right course EVALUATION (2025) FOR ONLINE MATERIALS: -->
 <!-- - Maybe encourage to make mistakes regarding the english language (I sometimes did not raise my hand because I was "too shy" to speak up compared to the students with very good english, as they had a bigger academic vocabulary than I did -->
-<!-- - The website is a little bit confusing at first. For me, it was not very intuitive. I couldn't find where the readings were (ı thought it would be under content and not under schedule) at first, but once I got used to it, it got easier. -->
 
 
 ```{r setup, include=FALSE}

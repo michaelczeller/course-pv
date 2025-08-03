@@ -22,7 +22,7 @@ website:
 format:
   html:
     theme:
-      - cosmo
+      - superhero
       - brand
     css: styles.css
     toc: true

@@ -151,9 +151,10 @@ kable(data.frame(
   col5 <- c("Klausur","X","X","X","X (nur VL)", "X (nur VL, 60 Min., 2 Wissensfragen)", "X (nur VL)", "")),
   col.names = NULL, align = c("l","c","c","c","c")) %>%
   kableExtra::kable_styling(bootstrap_options = "bordered") %>% 
-  # row_spec(1, background = "seagreen1") %>% 
+  row_spec(1, background = "gold") %>%
   row_spec(c(3,5,7), background = "pink") %>% 
-  row_spec(c(2,4,6,8), background = "cadetblue1")
+  row_spec(c(2,4,6,8), background = "cadetblue1") %>% 
+  column_spec(1:5, color = "black")
 ```
 
 
