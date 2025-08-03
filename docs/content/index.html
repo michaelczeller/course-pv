@@ -68,6 +68,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/fitvids-2.1.1/fitvids.min.js"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -158,20 +159,13 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="class-1" class="level1">
 <h1>Class 1</h1>
-<!-- ```{r show-slide-tabs, echo=FALSE, results="asis"} -->
-<!-- #| warning: false -->
-<!-- slide_buttons <- function(slide_id) { -->
-<!--   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>') -->
-<!-- } -->
-<!-- slide_buttons("/slides/slides_01") -->
-<!-- library(xaringanExtra) -->
-<!-- xaringanExtra::embed_xaringan( -->
-<!--   "/slides/slides_01.html", -->
-<!--   ratio = "16:9", -->
-<!--   border = "none", -->
-<!--   margin = "0 auto" -->
-<!-- ) -->
-<!-- ``` -->
+<p class="text-center buttons">
+<a class="btn btn-danger" target="_blank" href="../slides/slides_01.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="../slides/slides_01.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a>
+</p>
+<div class="shareagain" style="min-width:300px;margin:0 auto;" data-exeternal="1">
+<iframe src="../slides/slides_01.html" width="1600" height="900" style="border:none;" loading="lazy" allowfullscreen=""></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
 <!-- # Class 2 -->
 <!-- ```{r echo=FALSE, results="asis"} -->
 <!-- #| warning: false -->

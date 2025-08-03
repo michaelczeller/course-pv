@@ -1,0 +1,1222 @@
+---
+title: "Class 1: Political Violence in Germany"
+subtitle: "Introduction and types of political violence"
+author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
+format: 
+  rladies-revealjs:
+    footer: ""
+    slide-number: c/t
+    toc: TRUE
+    toc-depth: 1
+    toc-title: Agenda for the day
+    menu: TRUE
+    theme: [default, custom_options]
+    background-transition: fade
+incremental: false
+embed-resources: true
+# runtime: shiny
+bibliography: ../../../library.bib
+---
+
+# Poll: course introduction {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/01/class1_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/iXweLEsJ7VTANrmGA>**
+
+- Most significant cause of political violence?
+- Any politically violent groups you are interested in studying?
+- Have you taken any methods course?
+- Are you familiar with any analytical software (e.g., R, Python, Stata, SPSS)?
+- What is your biggest concern for this course?
+
+:::
+:::: 
+
+
+# Course Introduction {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="60%"}
+
+- What is 'political violence'?
+- How this course relates to Prof. Bolleyer's lecture
+- Course structure
+- Learning aims
+- Notes of caution
+- Course assessment
+- Office hours and communication
+- course website
+- Q & A and student introductions
+
+<!-- https://tenor.com/en-GB/view/crazy-german-flag-germany-trikot-gif-12722037627503073743 -->
+
+:::
+
+::: {.column width="40%" .right}
+
+<div class="tenor-gif-embed" data-postid="12722037627503073743" data-share-method="host" data-aspect-ratio="0.564257" data-width="70%">
+  <a href="https://tenor.com/view/crazy-german-flag-germany-trikot-gif-12722037627503073743">Crazy German GIF</a>
+  from <a href="https://tenor.com/search/crazy-gifs">Crazy GIFs</a>
+</div>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+:::
+::::
+
+<!-- - types of political violent groups [@Ravndal2015] -->
+<!-- - and getting acquainted with course cases -->
+
+## First...
+
+::: {style="text-align: center;"}
+**[Can you understand me?]{style="color:indigo; font-size:80px;"}** 
+:::
+
+. . . 
+
+- Lots of different languages represented in the room &rarr; but please don't be shy: [feel [empowered]{style="color:cadetblue;"} to participate, even if you are not so confident in your English skills]{style="color:red;"}
+    + I will avoid 'calling on' people to contribute
+
+## First task...
+
+[Read the syllabus!]{style="font-size:120px;"}
+
+<!-- <div style="font-size: 50px;">Read the syllabus!</div> -->
+
+- We have a shiny new (developing) website for the course
+    + <https://michaelzeller.de/course-pv/>
+
+- Before our next meeting, your task is to peruse the website
+    + especially the [Syllabus]{style="color:red;"} and [Readings]{style="color:red;"} pages. 
+
+## Defining political violence
+
+- Broadly: *the use of force by a person or group with a political motivation/purpose*
+
+. . . 
+
+- it includes (but is certainly not limited to) assault, robbery, rioting, insurgency, assassination, terrorism, rebellion, guerrilla warfare and civil war, revolution
+- acts of political violence can be distinguished by *the nature of the [objectives]{style="color:red;"}*, *the [targets]{style="color:red;"} of attacks*, the *[organisational structure]{style="color:red;"}* of groups, and by the *[repertoire]{style="color:red;"} of actions*. 
+
+## Connection to Prof. Bolleyer's lecture
+
+- This course is one of the Grundkurse for Prof. Bolleyer's **Einführung in das politische System Deutschlands**
+- This course is a detailed investigation of a related topic---not a tutorial on the material in Prof. Bolleyer's lecture
+    + So---as should go without saying---for both the lecture and GK: read and attend classes 
+
+## Structure of the course {.scrollable}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(timeDate)
+library(tibble)
+library(dplyr)
+library(knitr)
+library(lubridate) # for submission date of assignments
+
+# library(RefManageR)
+# bib <- ReadBib("library.bib")
+# myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+# https://www.lmu.de/en/workspace-for-students/abc-study-guide/lecture-periods/index.html
+# https://www.ferienwiki.de/feiertage/de/bayern
+
+#This code chunk sets up a table of meeting days for the course.
+#You can set days of the week for course meetings (e.g. Monday and Wednesday).
+#Semester start and end dates are selected and then university holidays like spring break are specified.
+#Days of the week that the course meets. Must be full day name in quotes.
+Days <- c("Thursday")
+#Semester start date for classes as YYYY/M/D.
+SemesterStart <- as.Date("2025/10/16")
+#Semester end date for classes as YYYY/M/D.
+SemesterEnd <- as.Date("2026/2/7")
+#Fall break start and stop date.
+WinterBreak <-
+  seq.Date(
+    from = as.Date("2025/12/22"),
+    to = as.Date("2026/1/6"),
+    by = "day"
+  )
+#Creates a list of days within the semester.
+SemesterDays <-
+  seq.Date(from = SemesterStart, to = SemesterEnd, by = "day")
+#Full list of holidays that there are no classes including breaks.
+Holidays <-
+  c(as.Date(holiday(
+    year = getRmetricsOptions("currentYear"),
+    Holiday = c("USLaborDay", "USThanksgivingDay", "USMLKingsBirthday")
+  )), WinterBreak)
+#Create a list of semester days excluding holidays.
+SemesterDays <- SemesterDays[!SemesterDays %in% Holidays]
+#Make dataframe with all semester days.
+ClassDays <- data.frame(index = 1:length(SemesterDays))
+#Insert dates.
+ClassDays$Date <- SemesterDays
+#Insert weekday designation.
+ClassDays$Weekday <- weekdays(ClassDays$Date)
+#Limit to the class meeting days.
+MeetingDays <- ClassDays[ClassDays$Weekday %in% Days, ]
+#Create numeric list of weeks.
+Week <- cut.Date(MeetingDays$Date, breaks = "week")
+levels(Week) <- 1:length(levels(Week))
+MeetingDays$Week <- Week
+MeetingDays$Class <- 1:nrow(MeetingDays)
+
+Lecture_Topic <- c("Introduction and types of political violence", # Class 1
+                   "Causes: setting the stage for political violence", # Class 2
+                   "Radicalisation", # Class 3
+                   "Selecting violent/nonviolent strategies", # Class 4
+                   "Radical subcultures and mobilisation", # Class 5
+                   "Leadership", # Class 6
+                   "Foreign fighters", # Class 7 - Mass shooters, foreign fighters, and terrorism in authoritarian states
+                   "Election-related violence", # Class 8
+                   "Escalation and restraint", # Class 9
+                   "Local support and public reaction", # Class 10
+                   "State responses: policies", # Class 11
+                   "State responses: repression", # Class 12
+                   "Addressing violence online", # Class 13
+                   "Disengagement, deradicalisation (individual), demobilisation (organisational)") # Class 14
+                   # "NO CLASS MEETING TODAY") # Class 15"
+
+MeetingDays <- bind_cols(MeetingDays, Lecture = Lecture_Topic)
+
+```
+
+
+```{r Schedule, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(kableExtra)
+
+kable(MeetingDays[,c("Date","Class","Lecture")],
+      align = c("l","c","l")
+      ) %>% kableExtra::kable_styling(bootstrap_options = "bordered",
+                                      font_size = 23) %>% 
+  row_spec(c(1:5), background = "cadetblue1") %>% 
+  row_spec(c(6:10), background = "pink") %>% 
+  row_spec(c(11:14), background = "seagreen1")
+
+```
+
+<!-- [Part I: causes, radicalisation, mobilisation]{style="color:cadetblue1;"} -->
+<!-- [Part II: politically violent activity]{style="color:pink;"} -->
+<!-- [Part III: responses to political violence]{style="color:seagreen1;"} -->
+
+
+<!-- :::: {.columns} -->
+<!-- :::{.column width="50%"} -->
+
+<!-- ::: -->
+
+<!-- ::: {.column width="50%" .center} -->
+
+<!-- ::: -->
+<!-- :::: -->
+
+## Narrowing the field
+
+- there's a lot of political violence around...
+- In this course, we will focus on
+    + non-state
+    + organised groups
+    + in Germany and other (liberal) democratic contexts (with some exceptions)
+
+- The course is arranged to cover a diverse array of cases within these parameters (we'll discuss 'assigned cases' momentarily)
+
+## Aims
+
+- acquire both **substantive knowledge** of aspects of political violence and **critical knowledge** to evaluate research thereof
+- gain familiarity with **methodological approaches** to studying political violence
+- (further) develop the capacity to...
+    * assess episodes and broader cycles of political violence, especially by identifying underlying factors and comparing across contexts
+    * critically evaluate reporting, research, and policy on political violence, especially by evaluating the data and methods used
+
+## Notes of caution
+
+Accounts of political violence can be alarming, disturbing, horrifying... --- so some ground rules are necessary
+
+- graphic (i.e., vivid, shocking) images and even accounts will be avoided in course materials. Exceptions only in cases of necessity and with forewarning
+- any sympathies (towards any contenders) should be restrained in favour of sober consideration of cases and topics
+- normative considerations are not the focus of this course. It is *what, who, when, where, how, why* --- not so much *should*
+    + generally, the course materials do not challenge the legitimacy of the state's **monopoly of violence**
+
+- with concerns and questions, come talk with me
+
+## Assessment: related to BRD lecture {.scrollable}
+
+```{r assessment, echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+kable(data.frame(
+  col1 <- c("Studiengang","BA Hauptfach","BA Nebenfach 60 ECTS","Lehramt Unterrichtsfach","BA Nebenfach 30 ECTS","Lehramt Didaktikfach","Austauschstudierende für VL","Austauschstudierende für GK"),
+  col2 <- c("Belegung","VL (Vorlesung BRD) und GK (Grundkurs)","VL und GK","VL und GK","nur VL","nur VL", "VL","GK"),
+  col3 <- c("Leistungsnachweis(e)","Klausur (90 Min.)","Klausur (90 Min.)","Klausur (90 Min.) & Referat","Klausur (90 Min.)","Klausur (60 Min.)","Klausur (90 Min.)","Festgelegt durch GK Dozent"),
+  col4 <- c("Klausurinhalte","3/5 Wissensfragen und 1/3 Essayfrage","3/5 Wissensfragen und 1/3 Essayfrage","3/5 Wissensfragen und 1/3 Essayfrage","3/5 Wissensfragen kein Essay","2/5 Wissensfragen kein Essay","3/5 Wissensfragen kein Essay","N/A")),
+  col.names = NULL, align = c("l","l","l","l")) %>%
+  kableExtra::kable_styling(bootstrap_options = "bordered",
+                            font_size = 21) %>% 
+  column_spec(2, width = "4cm") %>% 
+  column_spec(4, width = "6cm") %>% 
+  column_spec(3, width = "2.5cm") %>% 
+  row_spec(c(1:3,7),bold=T,italic=T)
+
+```
+
+Die Sprache der Essayfragen (Deutsch oder Englisch) richtet sich nach der Sprache des jeweiligen GKs. Unabhängig von der Sprache der Fragestellung (oder Teil der Veranstaltung) können Studierende je nach Präferenz auf Deutsch oder Englisch antworten.
+
+**Kontakt für prüfungsrechtliche Fragen, Kursanmeldung, - wechsel, - abmeldung, Fragen zur Anmeldung zur Prüfung: [studienbuero@gsi.uni-muenchen.de](mailto:studienbuero@gsi.uni-muenchen.de)**
+
+## Assessment: within this course
+
+```{r requirements, echo=FALSE, message=FALSE, warning=FALSE}
+library(kableExtra)
+# col1 <- c("","Attendance & Participation","Presentation","Essay"),
+kable(data.frame(
+  col1 <- c("","BA Hauptfach","BA Nebenfach (60 ECTS)","Lehramt Unterrichtsfach","BA Nebenfach (30 ECTS)", "Lehramt Didaktikfach", "Austauschstudierende für VL", "Austauschstudierende für GK"),
+  col2 <- c("Participation","X","X","X","X", "X", "X", "X"),
+  col3 <- c("Presentation","","","X","", "", "", "X"),
+  col4 <- c("Essay","","","X","", "", "", "X"),
+  col5 <- c("Klausur","X","X","X","X (nur VL)", "X (nur VL, 60 Min., 2 Wissensfragen)", "X (nur VL)", "")),
+  col.names = NULL, align = c("l","c","c","c","c")) %>%
+  kableExtra::kable_styling(bootstrap_options = "bordered",
+                            font_size = 25) %>% 
+  row_spec(1, background = "gold") %>%
+  row_spec(c(3,5,7), background = "pink") %>% 
+  row_spec(c(2,4,6,8), background = "cadetblue1") %>% 
+  column_spec(1:5, color = "black") %>% 
+  column_spec(5, width = "5cm")
+```
+
+## Course assessment - *Participation*
+
+- No examination in this course, BUT there is in '*Einführung Politisches System der BRD*'. There, you respond to an essay question from this course.
+    + Exam on 3 February (Monday) at 14.00
+    + 90-minutes written exam: response to 3 of 5 short-answer prompts from Prof. Bolleyer's lecture and to 1 of 3 essay prompts from this course
+
+- attend class and actively participate
+    + do required reading
+    <!-- + develop knowledge of assigned politically violent group -->
+    
+## Course assessment - *Presentation*
+
+- **Presentation**
+    + short (max. 20 minutes) group (2-4 students) talk on a method for studying political violence
+    + A *method* is a system of data collection and analysis
+        (1) introduce method,
+        (2) explain its utility for studying political violence, 
+        (3) [the crucial part] and *discuss one applied example*
+
+## Essay (*Hausarbeit*): Data report
+
+- data report on a far-right phenomenon (e.g., voters, a party, protests, violence)
+    + why a dataset? Helpful preparation for thinking about [validity]{style="color:red;"}, [reliability]{style="color:red;"}, etc. &rarr; relevant for quant. and qual. 
+- gather and present data, generate analytical insights
+- 2000-3000 words (excluding citations)
+- [17 January]{style="color:red;"}: short synopsis due. [7 March]{style="color:red;"}: full, final report due. 
+- consider working with data visualisation and analysis software!
+- A rule: **no drawing any data from or citing Statista or other data curation services**.
+
+**submit all assignments by email: [m.zeller@lmu.de](mailto:m.zeller@lmu.de)**
+
+## For the paper, and writing in general...
+
+![Patriotta, G. (2017). Crafting papers for publication: Novelty and convention in academic writing. *Journal of Management Studies, 54*(5), 747-759.](slide_files/01/crafting_papers_for_publication.png)
+
+
+## Further: tools of the research trade...
+
+- qualitative data management: e.g., MAXQDA, ATLAS.ti
+- quantitative (and qual.) data analysis software: e.g., R (and R Studio), Stata
+- typesetting programmes: LaTeX  (through [TexStudio](https://www.texstudio.org/)) and RMarkdown
+
+## Typical class meeting
+
+- Opening question(s)/discussion point(s)
+    + e.g., theoretical dilemma, typology forming, news item
+- Summarising lecture on theory/findings related to week's topic
+    + discussion points
+- Short video relevant to topic
+- Discussing the reading(s)
+    + highlighting important points (esp. theory, research design)
+- Presentation of further research relevant to week's topic
+- Summative discussion: takeaways, new ideas, lingering questions
+
+[Throughout, we will use _cases_ to link _theory_ to _real-world events_]{style="color:red;"}
+
+<!-- - Opening question(s)/discussion point(s) -->
+<!--     + e.g., theoretical dilemma, typology forming, news item  -->
+<!-- - Summarising lecture on theory/findings related to week's topic -->
+<!-- - Discussion in groups or as a class on findings about known politically violent groups -->
+<!-- - Discussing the reading(s) -->
+<!--     + *[one required reading per week---very important to do it!]{style="color:red;"}* -->
+<!--     + highlighting important points (esp. theory, research design) -->
+<!-- - Presentation of further research relevant to week's topic -->
+<!--     + _another reason to attend class: this further research might help you on the exam_ -->
+<!-- - Summative discussion: takeaways, new ideas, lingering questions -->
+
+<!-- **Throughout, we will use _cases_ (especially the groups you study) to link _theory_ to _real-world events_.** -->
+
+
+## Colour scheme for course slides 
+
+- Why? To make [concepts]{style="color:darkred;"} and [important points]{style="color:red;"} easier to identity and review
+
+. . . 
+
+- [concepts]{style="color:darkred;"} (dark red) - building blocks of social science, important elements in every class session
+- [discussion point]{style="color:indigo;"} (indigo) - a question or prompt to discuss as a class (essential component of a *seminar*) 
+- [finding]{style="color:darkorange;"} (dark orange) - a noteworthy finding from one or more studies 
+- [important point]{style="color:red;"} (red) - something particularly noteworthy
+
+. . . 
+
+- *other colours* - [variously]{style="color:purple;"} [trying]{style="color:cadetblue;"} [to get]{style="color:violet;"} [your]{style="color:goldenrod;"} [attention]{style="color:forestgreen;"}
+
+## Office hours and communication
+
+* best to send an email
+    + [michael.zeller@gsi.uni-muenchen.de](mailto:michael.zeller@gsi.uni-muenchen.de)
+    + [m.zeller@lmu.de](mailto:m.zeller@lmu.de)
+
+* 11.00 - 12.00 on Wednesdays at GSI (Oettingenstr. 67) - Room H105
+* or by appointment
+* Please [use your LMU email address for communication]{style="color:red;"}
+    + this is important for the security of the university email system
+
+## Course website 
+
+- no use of Moodle
+- [we have a new, shiny, developing, purpose-built website:]{style="color:red;"}: <https://michaelzeller.de/course-pv/>
+    + all readings available
+    + slides available before class
+    + in case of class cancellation, video lecture will be available 
+
+## Resources
+
+- The **Armed Conflict Location & Event Data Project (ACLED)** collects real-time data on political violence and protest events around the world: <https://acleddata.com/>.
+- **Uppsala Conflict Data Program (UCDP)**: <https://ucdp.uu.se/>.
+- ECPR [Standing Group on Political Violence](https://ecpr.eu/StandingGroups/StandingGroupHome.aspx?ID=45)
+- **Journals**:
+    + [Terrorism and Political Violence](https://www.tandfonline.com/loi/ftpv20?cookieSet=1)
+    + [Studies in Conflict & Terrorism](https://www.tandfonline.com/toc/uter20/current)
+    + [Perspectives on Terrorism](https://www.jstor.org/journal/persponterr)
+    + [Journal for Deradicalization](https://journals.sfu.ca/jd/index.php/jd/index)
+    + [International Journal of Conflict and Violence](https://www.ijcv.org/index.php/ijcv/about)
+
+## About me
+
+- tell me if you have problems understanding me
+    + there's an accent at work that I tragically cannot shake off
+- Ph.D. in political science from Central European University (CEU)
+    + specialisation in qualitative methods (QCA, [Bayesian] process tracing), but also quant. text analysis, network analysis
+<!-- + dissertation on the demobilisation of far-right social movement campaigns -->
+- researcher in funded projects on ...
+    + violent/banned far-right groups and online content moderation
+    + radicalisation, violent extremism, polarisation, and resilience
+<!-- - a slowly-developing website with some resources <https://michaelzeller.de/> -->
+- current work: militant democracy; far-right activist networks; political violence (in 1970s Northern Ireland; in contemporary Italy); paths to female leadership in Asia; protest and polarisation
+
+## About the course
+
+::: {style="text-align: center;"}
+**[Q & A]{style="color:indigo; font-size:350px;"}** 
+:::
+
+--- 
+
+```{ojs}
+md`## About you! Poll results (Respondents: ${respondentCount})`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vRgVNCDj9QaTEoiYe3NzdsTPg4BGZRppVV7qHobUirGcYJHabSD_A2M7V_kE0Lx6j1vPKPUarro_o6x/" +
+    "pub?gid=784482251&single=true&output=csv",
+  10000, 1, 6); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+```
+
+
+```{ojs}
+function PieChart(data, {
+  name = ([x]) => x,  // given d in data, returns the (ordinal) label
+  value = ([, y]) => y, // given d in data, returns the (quantitative) value
+  title, // given d in data, returns the title text
+  width = 640, // outer width, in pixels
+  height = 400, // outer height, in pixels
+  innerRadius = 0, // inner radius of pie, in pixels (non-zero for donut)
+  outerRadius = Math.min(width, height) / 2, // outer radius of pie, in pixels
+  labelRadius = (innerRadius * 0.5 + outerRadius * 0.5), // center radius of labels
+  format = ",", // a format specifier for values (in the label)
+  names, // array of names (the domain of the color scale)
+  colors, // array of colors for names
+  stroke = innerRadius > 0 ? "none" : "white", // stroke separating widths
+  strokeWidth = 1, // width of stroke separating wedges
+  strokeLinejoin = "round", // line join of stroke separating wedges
+  padAngle = stroke === "none" ? 1 / outerRadius : 0, // angular separation between wedges, in radians
+} = {}) {
+  // Compute values.
+  const N = d3.map(data, name);
+  const V = d3.map(data, value);
+  const I = d3.range(N.length).filter(i => !isNaN(V[i]));
+
+  // Unique the names.
+  if (names === undefined) names = N;
+  names = new d3.InternSet(names);
+
+  // Chose a default color scheme based on cardinality.
+  if (colors === undefined) colors = d3.schemeSpectral[names.size];
+  if (colors === undefined) colors = d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), names.size);
+
+  // Construct scales.
+  const color = d3.scaleOrdinal(names, colors);
+
+  // Compute titles.
+  if (title === undefined) {
+    const formatValue = d3.format(format);
+    title = i => `${N[i]}\n${formatValue(V[i])}`;
+  } else {
+    const O = d3.map(data, d => d);
+    const T = title;
+    title = i => T(O[i], i, data);
+  }
+
+  // Construct arcs.
+  const arcs = d3.pie().padAngle(padAngle).sort(null).value(i => V[i])(I);
+  const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
+  const arcLabel = d3.arc().innerRadius(labelRadius).outerRadius(labelRadius);
+  
+  const svg = d3.create("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+
+  svg.append("g")
+      .attr("stroke", stroke)
+      .attr("stroke-width", strokeWidth)
+      .attr("stroke-linejoin", strokeLinejoin)
+    .selectAll("path")
+    .data(arcs)
+    .join("path")
+      .attr("fill", d => color(N[d.data]))
+      .attr("d", arc)
+    .append("title")
+      .text(d => title(d.data));
+
+  svg.append("g")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 100)
+      .attr("text-anchor", "middle")
+    .selectAll("text")
+    .data(arcs)
+    .join("text")
+      .attr("transform", d => `translate(${arcLabel.centroid(d)})`)
+    .selectAll("tspan")
+    .data(d => {
+      const lines = `${title(d.data)}`.split(/\n/);
+      return (d.endAngle - d.startAngle) > 0.25 ? lines : lines.slice(0, 1);
+    })
+    .join("tspan")
+      .attr("x", 0)
+      .attr("y", (_, i) => `${i * 1.1}em`)
+      .attr("font-weight", (_, i) => i ? null : "bold")
+      .text(d => d);
+
+  return Object.assign(svg.node(), {scales: {color}});
+}
+```
+
+::: columns
+::: {.column width="50%"}
+Prior methods class
+
+```{ojs}
+
+// aggregate the yes/no counts for "methods"
+methodsCounts = aq.from(surveyResults)
+  .select("methods")
+  .derive({ methods: d => (d.methods && d.methods.trim() !== "" ? d.methods : "NA") })
+  .groupby("methods")
+  .count()
+  .rename({ count: 'value', methods: 'name' }) // Rename for D3 pie chart
+  .objects() // convert to array for D3
+
+methodsChart = PieChart(methodsCounts, {
+  name: d => d.name,
+  value: d => d.value,
+  names: ["Yes", "No", "NA"], // ordering
+  colors: ["#4CAF50", "#F44336", "#CCCCCC"], // green 'yes', red 'no', grey 'NA'
+  width,
+  height: 800
+})
+
+```
+
+:::
+
+::: {.column width="50%"}
+Prior analytical software use
+
+```{ojs}
+
+// aggregate the yes/no counts for "software"
+softwareCounts = aq.from(surveyResults)
+  .select("software")
+  .derive({ software: d => (d.software && d.software.trim() !== "" ? d.software : "NA") })
+  .groupby("software")
+  .count()
+  .rename({ count: 'value', software: 'name' }) // Rename for D3 pie chart
+  .objects() // convert to array for D3
+
+softwareChart = PieChart(softwareCounts, {
+  name: d => d.name,
+  value: d => d.value,
+  names: ["Yes", "No", "NA"], // ordering
+  colors: ["#4CAF50", "#F44336", "#CCCCCC"], // green 'yes', red 'no', grey 'NA'
+  width,
+  height: 800
+})
+
+```
+:::
+:::
+
+## About you! Poll results
+
+```{ojs}
+causeCounts = aq.from(surveyResults)
+  .select("cause")
+  .groupby("cause")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+cause_maxCountRE = Math.max(...causeCounts.objects().map(d => d.count));
+
+plot_cause = Plot.plot({
+  marks: [
+    Plot.barY(causeCounts, {
+      x: "cause",
+      y: "count",
+      fill: "cause",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "economic inequality",
+      "political repression",
+      "extremist ideologies",
+      "ethnic or religious tensions",
+      "historical grievances",
+      "other"
+    ],
+    range: [
+      "darkred",
+      "darkorange",
+      "goldenrod",
+      "forestgreen",
+      "blue",
+      "indigo"
+    ]
+  },
+  marginBottom: 300,
+  x: { label: "", tickSize: 2, tickRotate: -35, padding: 0.3,
+    domain: ["economic inequality", "political repression", "extremist ideologies", "ethnic or religious tensions", "historical grievances", "other"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(causeCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, cause_maxCountRE]
+  },
+  facet: { data: causeCounts, x: "measure", label: "" },
+  marginLeft: 70,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+
+## About you! Poll results
+
+Any particular politically violent group you want to learn more about? 
+
+```{ojs}
+
+// Access and print the values from the 'learn' column
+ToLearn = aq.from(surveyResults)
+  .select("learn")
+
+ToLearn.array("learn")
+
+```
+
+
+## About you! Student introductions
+
+* Information about you, possibly including...
+    - Expectations for this course
+    - favourite joke
+    - Study programme
+    - favourite song
+    - Country (place) of origin
+    - top source for news
+    - Background in education/research
+    - secret skill
+    - Academic/professional aspirations
+
+## About you! Poll results: biggest concern
+
+```{ojs}
+concernCounts = aq.from(surveyResults)
+  .select("concern")
+  .groupby("concern")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+concern_maxCountRE = Math.max(...concernCounts.objects().map(d => d.count));
+
+plot_concern = Plot.plot({
+  marks: [
+    Plot.barY(concernCounts, {
+      x: "concern",
+      y: "count",
+      fill: "concern",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Encountering content about violence",
+      "Participating in class discussions",
+      "Passing the Klausur",
+      "Studying and discussing in English",
+      "Understanding abstract concepts"
+    ],
+    range: [
+      "darkred",
+      "darkorange",
+      "goldenrod",
+      "forestgreen",
+      "blue"
+    ]
+  },
+  marginBottom: 400,
+  x: { label: "", tickSize: 2, tickRotate: -35, padding: 0.3,
+    domain: ["Encountering content about violence", "Participating in class discussions", "Passing the Klausur", "Studying and discussing in English", "Understanding abstract concepts"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(concernCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, concern_maxCountRE]
+  },
+  facet: { data: concernCounts, x: "measure", label: "" },
+  marginLeft: 70,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+
+
+# Quick intro to concepts
+
+## Concept formation
+
+- **concepts** are the building blocks of social science research
+    + a term denoting an abstract idea
+
+![](slide_files/01/Munck_data_aggregation.png)
+
+## Concept formation
+
+- identifying bounds of concepts <!-- Sartori's extension (denotation) and intension (connotation) -->
+    * See @Sartori1970
+- broadly, three types of concepts in social science
+
+. . . 
+
+1. [classical]{style="color:red;"}: **all** criteria are shared by **all** cases
+
+. . . 
+
+2. [radial]{style="color:red;"}: **some** criteria are shared by **all** cases; others are not
+
+. . . 
+
+3. [family resemblance]{style="color:red;"}: **No** criterion is shared by **all** cases
+
+## Visualising classical/radial concepts
+
+::: columns
+::: {.column width="45%"}
+Classical concept (all criteria)
+
+```{r, fig.width=5}
+#| label: venn1
+#| echo: false
+#| eval: true
+library(venn)
+# https://bookdown.org/dusadrian/QCAbook/lkf.html#venn
+# https://cran.r-project.org/web/packages/venn/venn.pdf
+
+venn("111", snames = "claws, snout, ears", sncs = 1.1)
+centroid <- getCentroid(getZones("111"))[[1]]
+text(centroid[1], centroid[2], labels = "DOG", cex = 1.5)
+```
+:::
+
+::: {.column width="55%"}
+Radial concept (all share 'female')
+
+```{r, fig.width=5}
+#| label: venn2
+#| echo: false
+#| eval: true
+library(venn)
+
+venn(4, snames = "female, 50% of genes, married to father, nurtures", sncs = 1.1)
+area1 <- getZones("1100") # list of length ...
+polygon(area1[[1]], col="lightblue")
+centroid1 <- getCentroid(getZones("1100"))[[1]]
+text(centroid1[1], centroid1[2], labels = "mother", cex = 0.85)
+
+area2 <- getZones("1010") # list of length ...
+polygon(area2[[1]], col="lightblue")
+centroid2 <- getCentroid(getZones("1010"))[[1]]
+text(centroid2[1], centroid2[2], labels = "mother", cex = 0.85)
+
+area3 <- getZones("1001") # list of length ...
+polygon(area3[[1]], col="lightblue")
+centroid3 <- getCentroid(getZones("1001"))[[1]]
+text(centroid3[1], centroid3[2], labels = "mother", cex = 0.85)
+
+area4 <- getZones("1110") # list of length ...
+polygon(area4[[1]], col="lightblue")
+centroid4 <- getCentroid(getZones("1110"))[[1]]
+text(centroid4[1], centroid4[2], labels = "mother", cex = 0.85)
+
+area5 <- getZones("1101") # list of length ...
+polygon(area5[[1]], col="lightblue")
+centroid5 <- getCentroid(getZones("1101"))[[1]]
+text(centroid5[1], centroid5[2], labels = "mother", cex = 0.85)
+
+area6 <- getZones("1011") # list of length ...
+polygon(area6[[1]], col="lightblue")
+centroid6 <- getCentroid(getZones("1011"))[[1]]
+text(centroid6[1], centroid6[2], labels = "mother", cex = 0.85)
+
+area7 <- getZones("1111") # list of length ...
+polygon(area7[[1]], col="lightblue")
+centroid7 <- getCentroid(getZones("1111"))[[1]]
+text(centroid7[1], centroid7[2], labels = "mother", cex = 0.85)
+```
+
+:::
+:::
+
+Family resemblance: no criterion shared by all (e.g., games)
+
+## Classical vs. radial [@collier1993ConceptualStretchingRevisited]
+
+![](slide_files/01/CollierMahon_classical_radial.png)
+
+```{r out.height='100%'}
+#| eval: false
+#| include: false
+knitr::include_graphics(rep("slide_files/01/CollierMahon_classical_radial.png"))
+```
+
+
+
+# Onto our topic: political violence (PV) {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- 'patterns of violence' framework
+    + repertoires, targeting, frequency, techniques
+- @Ravndal2015 RW terrorism in western Europe 
+    + dimensions as a heuristic for understanding politically violent groups, generally?
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="17884347" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/dont-get-aggressive-violence-violin-3d-gifs-artist-violence-is-not-the-answer-gif-17884347">Dont Get Aggressive Violence GIF</a>from <a href="https://tenor.com/search/dont+get+aggressive-gifs">Dont Get Aggressive GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+> a pattern of violence on the part of an armed organization (state force, rebel group, or militia) as the *[relatively stable and recognizable configuration of violence in which it engages. This configuration consists of]{style="color:red;"} ...* 
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+repertoire 
+:::
+
+:::{.column width="25%"}
+targeting 
+:::
+
+:::{.column width="25%"}
+frequency
+:::
+
+:::{.column width="25%"}
+technique 
+:::
+::::
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+ 
+:::
+
+:::{.column width="25%"}
+targeting 
+:::
+
+:::{.column width="25%"}
+frequency
+:::
+
+:::{.column width="25%"}
+technique 
+:::
+::::
+
+::: {style="margin-top: 5px; font-size: 3em; color: darkred;"}
+repertoire
+:::
+
+- what [forms of violence]{style="color:darkorange;"} are used
+    + beatings, stabbings, sexual violence, homicide, etc.
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+repertoire 
+:::
+
+:::{.column width="25%"}
+targeting 
+:::
+
+:::{.column width="25%"}
+frequency
+:::
+
+:::{.column width="25%"}
+technique 
+:::
+::::
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+repertoire 
+:::
+
+:::{.column width="25%"}
+ 
+:::
+
+:::{.column width="25%"}
+frequency
+:::
+
+:::{.column width="25%"}
+technique 
+:::
+::::
+
+::: {style="margin-top: 5px; font-size: 3em; color: darkred;"}
+targeting
+:::
+
+- the [social groups]{style="color:darkorange;"} against whom actors regularly use violent repertoires
+    + an ethnic group, political opponents, LBGTI persons, militants of rival organisations, residents of certain areas, etc.
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+repertoire 
+:::
+
+:::{.column width="25%"}
+[targeting]{style="color:darkred;"} 
+:::
+
+:::{.column width="25%"}
+frequency
+:::
+
+:::{.column width="25%"}
+technique 
+:::
+::::
+
+:::: {.columns}
+:::{.column width="75%"} 
+![](slide_files/01/targeting_taxonomy.png)
+:::
+
+:::{.column width="25%"}
+*targeting taxonomy (and related conceptual space)* [@Zeller2025targeting] 
+:::
+::::
+
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+repertoire 
+:::
+
+:::{.column width="25%"}
+targeting 
+:::
+
+:::{.column width="25%"}
+frequency
+:::
+
+:::{.column width="25%"}
+technique 
+:::
+::::
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+repertoire 
+:::
+
+:::{.column width="25%"}
+targeting 
+:::
+
+:::{.column width="25%"}
+
+:::
+
+:::{.column width="25%"}
+technique 
+:::
+::::
+
+::: {style="margin-top: 5px; font-size: 3em; color: darkred;"}
+frequency
+:::
+
+- [count]{style="color:cadetblue;"}: number of attacks deploying a repertoire against a target 
+- [rates]{style="color:cadetblue;"} (common in criminology research as well): 
+    + [incidence]{style="color:cadetblue;"}: incidents per member of some referent population 
+    + [prevalence]{style="color:cadetblue;"}: fraction of population that suffered an incident
+    + [perpetration]{style="color:cadetblue;"}: number of incidents or persons of the targeted group per member of the group of violent attackers 
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+repertoire 
+:::
+
+:::{.column width="25%"}
+targeting 
+:::
+
+:::{.column width="25%"}
+frequency
+:::
+
+:::{.column width="25%"}
+technique 
+:::
+::::
+
+## Patterns of Violence {auto-animate=true}
+
+borrowing a conceptual framework from armed conflict research [@gutierrez-sanin2017WhatShouldWe]
+
+:::: {.columns}
+:::{.column width="25%"}
+repertoire 
+:::
+
+:::{.column width="25%"}
+targeting 
+:::
+
+:::{.column width="25%"}
+frequency
+:::
+
+:::{.column width="25%"}
+ 
+:::
+::::
+
+::: {style="margin-top: 5px; font-size: 3em; color: darkred;"}
+technique
+:::
+
+- how the actor(s) carry out their violence
+- techniques are about the [tools or instruments]{style="color:darkorange;"} used (e.g., clubs, knives, guns, bombs)
+
+
+## Patterns of Violence {auto-animate=true}
+
+:::: {.columns}
+:::{.column width="25%"}
+[repertoire]{style="color:darkred;"} 
+
+- what [forms of violence]{style="color:darkorange;"} are used
+    + beatings, stabbings, sexual violence, homicide, etc.
+
+:::
+
+:::{.column width="25%"}
+[targeting]{style="color:darkred;"} 
+
+- the [social groups]{style="color:darkorange;"} against whom actors regularly use violent repertoires
+    + an ethnic group, political opponents, LBGTI persons, etc
+
+:::
+
+:::{.column width="25%"}
+[frequency]{style="color:darkred;"} 
+
+- [count]{style="color:cadetblue;"}: number of attacks deploying a repertoire against a target 
+- [incidence rates]{style="color:cadetblue;"}, [prevalence rates]{style="color:cadetblue;"}, [perpetration rates]{style="color:cadetblue;"}
+
+:::
+
+:::{.column width="25%"}
+[technique]{style="color:darkred;"} 
+
+- how the actor(s) carry out their violence
+- techniques are about the [tools or instruments]{style="color:darkorange;"} used (e.g., clubs, knives, guns, bombs)
+:::
+::::
+
+## @Ravndal2015 Europe RW terrorism 
+
+```{r Ravndal, echo=FALSE, message=FALSE, warning=FALSE}
+df <- data.frame(
+  Variables = c("Organisational structure", "Leadership", "Group membership",
+                "Known political strategy", "Affiliation to former right-wing regime",
+                "Sponsorship", "Significant access to military resources",
+                "International terrorism"),
+  Elite_sponsored_groups = c("Hierarchy", "", ">100", "Always", "Yes", "Elites", "Yes", "Yes"),
+  Subcultural_networks = c("", "Decentralized", "<50", "Sometimes", "No", "Subculture", "No", "No"),
+  Lone_actors = c("N/A", "N/A", "N/A", "Sometimes", "No", "None", "No", "No")
+)
+
+# Convert character variables to factors for proper alignment
+df$Elite_sponsored_groups <- as.factor(df$Elite_sponsored_groups)
+df$Subcultural_networks <- as.factor(df$Subcultural_networks)
+df$Lone_actors <- as.factor(df$Lone_actors)
+
+# Use kableExtra to create the table
+kable(df, 
+      align = c("l", "l", "l"),
+      col.names = c("", "Elite-sponsored groups", "Subcultural networks", "Lone actors")) %>%
+  kable_styling(full_width = FALSE,
+                font_size = 25)
+```
+
+These are variables and types with which to consider politically violent groups --- **[Thoughts? Can we apply this generally or is it specific to RW? Any omissions?]{style="color:indigo;"}**
+
+## Examples of political violence?
+
+::: {style="text-align: center;"}
+**[What cases are you familiar with?]{style="color:indigo; font-size:80px;"}** 
+:::
+
+::: {style="text-align: center;"}
+**[What do you know about them?]{style="color:indigo; font-size:80px;"}** 
+:::
+
+::: {style="text-align: center;"}
+**[How can we categorise them?]{style="color:indigo; font-size:80px;"}** 
+:::
+
+
+
+# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+
+Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
+
+Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_01.html"))
+```
+
+
+## References
+

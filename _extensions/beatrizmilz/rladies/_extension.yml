@@ -1,16 +1,16 @@
-title: R-Ladies Presentation Template
-author: Beatriz Milz
-version: 0.0.4
+title: Zeller Presentation Template
+author: Michael C. Zeller
+version: 0.0.1
 contributes:
   formats: 
     revealjs:
-      logo: logo.png
+      logo: LMU_logo.png
       footer: |
-        [R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html).
-        Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme).
-      theme: rladies.scss
+        [mzeller](https://michaelzeller.de) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html).
+        Code available on [GitHub](https://github.com/michaelczeller).
+      theme: mz_course.scss
       slide-number: c/t
       show-slide-number: all
       title-slide-attributes:
-        data-background-color: "#562457"
+        data-background-color: "#2c844c"
       preview-links: true

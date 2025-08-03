@@ -158,9 +158,7 @@ kable(data.frame(
 ```
 
 
-```{r requirements1, message=FALSE, warning=FALSE}
-#| eval: false
-#| include: false
+```{r requirements1, message=FALSE, warning=FALSE, eval=FALSE, include=FALSE}
 library(kableExtra)
 # col1 <- c("","Attendance & Participation","Presentation","Essay"),
 kable(data.frame(
