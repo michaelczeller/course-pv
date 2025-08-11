@@ -1,0 +1,783 @@
+---
+title: "Class 2: Causes"
+subtitle: "Setting the stage for political violence"
+author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
+format: 
+  rladies-revealjs:
+    footer: ""
+    slide-number: c/t
+    toc: TRUE
+    toc-depth: 1
+    toc-title: Agenda for the day
+    menu: TRUE
+    theme: [default, custom_options]
+    background-transition: fade
+incremental: false
+embed-resources: true
+# runtime: shiny
+bibliography: ../../../library.bib
+---
+
+
+# Opening notes {background-color="#2c844c"}
+
+::: {.tenor-gif-embed data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="70%"}
+<div class="tenor-gif-embed" data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="100%"><a href="https://tenor.com/view/open-gif-14209777">Open Sticker</a>from <a href="https://tenor.com/search/open-stickers">Open Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+
+```{=html}
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```
+
+## Presentation groups
+
+Remember: topic to me at least by Week 4
+
+::: panel-tabset
+## December
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 4 Dec:  |                                  | TBD    | 
+| 11 Dec: |                                  | TBD    | 
+| 18 Dec: |                                  | TBD    | 
+
+: Presentations line-up
+
+## January
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 8 Jan:  |                                  | TBD    | 
+| 15 Jan: |                                  | TBD    | 
+| 22 Jan: |                                  | TBD    | 
+| 29 Jan: |                                  | TBD    | 
+
+: Presentations line-up
+
+:::
+
+<!-- []{style="font-size:10px;"} -->
+
+# A causal framework of political violence {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+
+- three organising questions 
+- common problems 
+- levels of causation
+    + macro-level 
+    + meso-level
+    + micro-level
+
+:::
+
+:::{.column width="50%"}
+<div class="tenor-gif-embed" data-postid="23032625" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/thats-another-reason-why-gill-engvid-more-reasons-why-all-the-more-reason-to-gif-23032625">Thats Another Reason Why Gill GIF</a>from <a href="https://tenor.com/search/thats+another+reason+why-gifs">Thats Another Reason Why GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## Three organising questions [@Crenshaw1981]
+
+- Terrorist violence communicates a political message; its ends go beyond damaging an enemy's material resources
+
+. . . 
+
+1. [why]{style="color:cadetblue;"} does terrorism occur? 
+    + *predictive*/*causal* questions
+
+. . . 
+
+2. [how]{style="color:cadetblue;"} do the processes of terrorism work?
+    + *processual*/*mechanistic* questions
+
+. . . 
+
+3. [what]{style="color:cadetblue;"} are its social and political [effects]{style="color:cadetblue;"}?
+    + *descriptive* and *causal* questions
+
+## Common problems [@Crenshaw1981]
+
+(still applicable to significant portions of political violence and research several decades on...)
+
+. . . 
+
+- [logical comparability]{style="color:goldenrod;"} 
+- specification of the [relationship of variables]{style="color:purple;"} to each other
+- [rank-ordering of variables]{style="color:forestgreen;"} in terms of explanatory power
+
+## 3 levels of causation [@Crenshaw1981]
+
+(1) broad environment/contextual factors ([macro-level]{style="color:red;"})
+
+(2) circumstances and actors ([meso-level]{style="color:red;"})
+
+(3) psychological variables that encourage or inhibit ([micro-level]{style="color:red;"})
+
+- these *levels* are a useful and widely applicable analytical framework
+
+## Context (macro-level): preconditions
+
+::: {style="text-align: center;"}
+**[Any ideas what is depicted here?]{style="color:indigo; font-size:60px;"}** 
+:::
+
+![](slide_files/02/nv_1879_train.png)
+
+## Context (macro-level): preconditions
+
+- [preconditions]{style="color:darkred;"}, factors setting stage for terrorism over the long run
+    + enabling or permissive factors provide opportunities <!-- for terrorism to happen -->
+        * e.g., [modernisation]{style="color:cadetblue;"} - Narodnaya Volya: operating in imperial Russia made possible by rail infrastructure
+        * e.g., [urbanisation]{style="color:cadetblue;"} - 19th century urban development of Paris by Haussman: riots and barricades less feasible, terrorism provides an alternative
+        * e.g., [absence of effective security measures]{style="color:cadetblue;"} - "necessary"
+    + situations that directly inspire and motivate terrorist campaigns
+        * [grievances]{style="color:darkred;"}: e.g., group-based discrimination, [relative deprivation]{style="color:darkred;"} (*Revisionist History* podcast: '[Saigon, 1965](https://www.pushkin.fm/podcasts/revisionist-history/saigon-1965)')
+        * *lack of opportunity for political participation* 
+
+## Context (macro-level): precipitants
+
+- [precipitants]{style="color:darkred;"}, specific events that immediately precede the occurrence of terrorism  
+
+> a common pattern of government actions that act as catalysts for terrorism. Government use of unexpected and unusual force in response to protestor reform attempts often compels terrorist retaliation. (p384)
+
+[Examples?]{style="color:indigo;"}
+
+## Context (macro-level): precipitants
+
+:::: {.columns}
+:::{.column width="40%"}
+![](slide_files/02/easter-rising-leaders.png)
+
+:::
+
+:::{.column width="20%"}
+&rarr;
+
+&rarr;
+
+&rarr;
+
+:::
+
+:::{.column width="40%"}
+![](slide_files/02/Michael_Collins.png)
+
+:::
+::::
+
+## Context (macro-level): precipitants
+
+- [precipitants]{style="color:darkred;"}, specific events that immediately precede the occurrence of terrorism  
+
+> a common pattern of government actions that act as catalysts for terrorism. Government use of unexpected and unusual force in response to protestor reform attempts often compels terrorist retaliation. (p384)
+
+[Examples?]{style="color:indigo;"}
+
+- execution of 1916 Easter Rising heroes in Ireland
+- Protestant violence in response to Catholic civil rights movement in northern Ireland
+- RAF emerges after 1968 Beno Ohnesorg death by police violence
+
+## Circumstances (meso-level) [@Crenshaw1981] 
+
+- terrorist behaviour as "rational" 
+    + based on assumption that terrorist organisations have consistent sets of values, beliefs, and images of the environment. Hence, terrorism is seen collectively as a logical means  
+    
+- variety of [goals]{style="color:darkred;"} 
+    + from revolutionary - e.g., new state, new system
+    + to (essentially) conservative - e.g., preserve social group relations, power arrangements
+
+<!-- It is possible that anarchist or millenarian terrorists are so preoccupied with the splendor of the future that they lose sight of the present. Less theoretical nationalists who concentrate on the short run have simpler aims but sharper plans. -->
+
+## Circumstances (meso-level): variety of goals [@Crenshaw1981] 
+
+- can serve long-term [strategy]{style="color:darkred;"} and/or proximate objectives
+- gain attention, win support
+- disrupt/discredit government/state
+- provoke reactions:
+    + affects public attitudes positively and negatively, creating either sympathy in a potential constituency or fear and hostility in an audience identified as the "enemy."
+    + government counteraction
+- internal organisation functions: control, discipline, morale-building
+- actors' impatience
+
+## Circumstances (meso-level) [@Crenshaw1981] 
+
+> The observation that terrorism is a [weapon of the weak]{style="color:violet;"} is hackneyed but apt. (p387)
+
+::: {style="text-align: center;"}
+**[What does this mean? Do you agree?]{style="color:indigo; font-size:60px;"}** 
+:::
+
+. . . 
+
+- inexpensive, simple
+- contrast: James C. Scott's book (1985), *Weapons of the Weak: Everyday Forms of Peasant Resistance*
+
+## Psychological (micro-level): common traits [@Crenshaw1981] 
+
+two fundamental questions about the psychological basis of terrorism:
+
+1. why the individual takes the first step and chooses to engage in terrorism: why join? Does the terrorist possess specific psychological predispositions, identifiable in advance, that suit them for terrorism? 
+    + [radicalisation]{style="color:darkred;"} and [engagement]{style="color:darkred;"} 
+
+. . . 
+
+2. Why does involvement continue? What are the psychological mechanisms of group interaction?
+    + [persistence]{style="color:darkred;"} or [endurance]{style="color:darkred;"} 
+
+## Psychological (micro-level): common traits [@Crenshaw1981] 
+
+- [ego-defensive]{style="color:darkorange;"} needs
+- [cognitive processes]{style="color:darkorange;"} 
+- [socialisation]{style="color:darkorange;"} 
+
+. . . 
+
+- in interaction with a specific [situation]{style="color:cadetblue;"} 
+- different acts of terror can carry differences in psychological demands
+    + extremely discriminate (e.g., assassination) to broadly indiscriminate (recall [patterns of violence]{style="color:red;"} conceptual framework)
+
+. . . 
+
+BUT: avoid stereotyping the terrorist or oversimplifying: No single motivation or personality can be valid for all circumstances 
+
+## Psychological (micro-level): normality [@Crenshaw1981] 
+
+> "the outstanding common characteristic of terrorists is their [normality]{style="color:darkorange;"} "
+
+. . . 
+
+> The West German psychiatrist who conducted a pretrial examination of four members of the RAF concluded that they were "intelligent," even "humorous," and showed no symptoms of psychosis or neurosis and "no particular personality type." (p390)
+
+## Psychological (micro-level): difficulties [@Crenshaw1981] 
+
+studying individuals engaged in terrorism presents problems:
+
+- [preconditions]{style="color:darkred;"} change over time and [precipitants]{style="color:darkred;"} are unpredictable
+- interviewing terrorists: may discover [subsequent rationalisations]{style="color:darkorange;"} instead of prior attitudes/motivations
+
+## Psychological (micro-level): endurance [@Crenshaw1981] 
+
+Within terrorist groups, individual/group dynamics of ...
+
+- commitment, 
+- risk, 
+- solidarity, 
+- loyalty, 
+- guilt, 
+- revenge, 
+- isolation
+
+discourage a change in behaviour (and at the organisational level, strategy)---even when contextual conditions change.
+
+# Politically violent groups connected to Germany {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- roster of organisations
+- discussion of causes
+
+:::
+
+:::{.column width="50%"}
+<div class="tenor-gif-embed" data-postid="17835309" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/germany-history-funny-what-whats-happening-gif-17835309">Germany History GIF</a>from <a href="https://tenor.com/search/germany-gifs">Germany GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## (In)famous PV groups in or connected to Germany 
+
+> “Those who only know one country, know no country” - Seymour Martin Lipset (inspired by Alexis de Tocqueville)
+
+- well-known and covered in research literature
+- diverse strategies, objectives, and ideological characteristics
+- active in Germany and/or banned by Germany (or EU)
+
+## (In)famous PV groups in or connected to Germany {.scrollable}
+
+*[Antifaschistische Aktion]{style="color:goldenrod;"}* (Antifa, Germany and elsewhere),   
+*[Blood and Honour]{style="color:goldenrod;"}* (B&H, transnational),   
+*[Grey Wolves]{style="color:goldenrod;"}* (Turkey, but also transnational),   
+*[Hammerskins]{style="color:goldenrod;"}* (transnational),   
+*[Hezbollah]{style="color:goldenrod;"}* (Lebanon, but also transnational),   
+*[Hizb ut-Tahrir]{style="color:goldenrod;"}* (HT, transnational),   
+*[Islamic State]{style="color:goldenrod;"}* (IS, transnational),   
+*[Kommunistische Partei Deutschlands]{style="color:goldenrod;"}* ('Communist Party of Germany,' KPD, Germany),   
+*[Liberation Tigers of Tamil Eelam]{style="color:goldenrod;"}* (LTTE, Sri Lanka),   
+*[Nationaldemokratische Partei Deutschlands]{style="color:goldenrod;"}* ('National Democratic Party of Germany,' NPD, Germany),   
+*[National Socialist Underground]{style="color:goldenrod;"}* (NSU, Germany),   
+*[Partiya Karkerên Kurdistanê]{style="color:goldenrod;"}* ('Kurdistan Workers' Party,' PKK, Turkey, Syria and several other countries including Germany),   
+*[Rote Armee Fraktion]{style="color:goldenrod;"}* ('Red Army Fraction,' RAF, Germany),   
+*[Sozialistische Reichspartei]{style="color:goldenrod;"}* ('Socialist Reich Party,' SRP, Germany),    
+*[Die Rechte]{style="color:goldenrod;"}* ('The Right', Germany)    
+
+## Antifa
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international
+- Organisational structure: network
+- Membership: large
+- (main) Objective: oppose fascist forces
+- (common) Targets: political opponents
+- Repertoire of actions: low-level violence, property damage, doxxing
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/antifa.png)
+:::
+::::
+
+## Blood & Honour
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international (originally U.K.)
+- Organisational structure: network
+- Membership: large
+- (main) Objective: white ethnostate
+- (common) Targets: political and ethnic opponents
+- Repertoire of actions: low-level violence, terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/de_bh4.png)
+:::
+::::
+
+## Grey Wolves
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international (originally Turkish)
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: promote Turkish nationalism
+- (common) Targets: political opponents
+- Repertoire of actions: low-level violence
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/greywolves.png)
+:::
+::::
+
+## Hammerskins
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international (originally U.S.)
+- Organisational structure: network
+- Membership: large
+- (main) Objective: white ethnostate
+- (common) Targets: political and ethnic opponents
+- Repertoire of actions: low-level violence, terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/h.png)
+:::
+::::
+
+## Hezbollah
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Lebanon, but also transnational 
+- Organisational structure: hierarchical 
+- Membership: large 
+- (main) Objective: Islamic state in Lebanon 
+- (common) Targets: Western forces, the power-sharing in Lebanon 
+- Repertoire of actions: terrorism 
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/hezbollah.png)
+:::
+::::
+
+## Hizb ut-Tahrir
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international 
+- Organisational structure: network 
+- Membership: large 
+- (main) Objective: united Islamic caliphate 
+- (common) Targets: political and ethnic opponents 
+- Repertoire of actions: low-level violence, incitement to violence, terrorism 
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/HuT.png)
+:::
+::::
+
+## Islamic State
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international
+- Organisational structure: network
+- Membership: large
+- (main) Objective: Islamic caliphate
+- (common) Targets: political, ethnic, religious opponents
+- Repertoire of actions: terrorism, militarised combat
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/IS.png)
+:::
+::::
+
+## Kommunistische Partei Deutschlands (KPD)
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Germany, but with important international links
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: communist/socialist revolution
+- (common) Targets: political opponents
+- Repertoire of actions: low-level violence and agitation for revolution
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/kpd.png)
+:::
+::::
+
+## Liberation Tigers of Tamil Eelam
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Sri Lanka, but also transnational
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: independent Tamil state
+- (common) Targets: Sinhalese dominated Sri Lankan state
+- Repertoire of actions: assassination, guerrilla activity
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/ltte.png)
+:::
+::::
+
+## National Socialist Underground
+
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Germany
+- Organisational structure: network
+- Membership: small
+- (main) Objective: terrorise non-ethnic Germans
+- (common) Targets: non-ethnic Germans
+- Repertoire of actions: murder, robbery
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/nsu.png)
+:::
+::::
+
+## Nationaldemokratische Partei Deutschlands (NPD) 
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Germany 
+- Organisational structure: hierarchical 
+- Membership: large 
+- (main) Objective: German ethno-state 
+- (common) Targets: political and ethnic opponents 
+- Repertoire of actions: low-level violence, support for terrorism 
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/npd.png)
+:::
+::::
+
+## Partiya Karkeren Kurdistane
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: prominently Turkey, but international advocates
+- Organisational structure: 
+- Membership: large
+- (main) Objective: Kurdish statehood
+- (common) Targets: Turkish military and state
+- Repertoire of actions: guerrilla activity
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/pkk.png)
+:::
+::::
+
+## Rote Armee Fraktion
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Germany
+- Organisational structure: network
+- Membership: small
+- (main) Objective: revolutionary state
+- (common) Targets: German state, right-wing figures
+- Repertoire of actions: kidnapping, robbery, bombing, assassination
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/raf.png)
+:::
+::::
+
+## Sozialistische Reichspartei (SRP)
+
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Germany
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: revive national socialist movement
+- (common) Targets: political opponents
+- Repertoire of actions: low-level violence, support for state violence
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/srp.png)
+:::
+::::
+
+# Other PV groups that will crop up in readings
+
+## al-Qaeda 
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international
+- Organisational structure: (hierarchical) network
+- Membership: large
+- (main) Objective: global Islamic caliphate
+- (common) Targets: U.S. and Western institutions and societies
+- Repertoire of actions: terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/aq.png)
+:::
+::::
+
+## Brigate Rosse
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Italy 
+- Organisational structure:  
+- Membership: small 
+- (main) Objective: revolutionary state 
+- (common) Targets: Italian state institutions and NATO 
+- Repertoire of actions: robberies, kidnapping, low-level violence 
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/br.png)
+:::
+::::
+
+## Euskadi Ta Askatasuna (ETA, 'Basque Homeland and Liberty')
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Basque country
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: leftist revolution, independent state
+- (common) Targets: state institutions
+- Repertoire of actions: kidnapping, terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/eta.png)
+:::
+::::
+
+## Fuerzas Armadas Revolucionarias de Colombia
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Colombia
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: leftist revolution
+- (common) Targets: state institutions, other paramilitaries
+- Repertoire of actions: kidnapping, terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/farc.png)
+:::
+::::
+
+## Irish Republican Army
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: British Isles
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: united, independent Ireland
+- (common) Targets: British military and institutions
+- Repertoire of actions: terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/ira.png)
+:::
+::::
+
+
+# Testing: determinants of right-wing terrorism in the U.S. {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- @Piazza2017 
+    + theorising and testing causes 
+
+:::
+
+:::{.column width="50%"}
+<div class="tenor-gif-embed" data-postid="20396506" data-share-method="host" data-aspect-ratio="1.33333" data-width="100%"><a href="https://tenor.com/view/orange-terror-alert-american-dad-gif-20396506">Orange Terror GIF</a>from <a href="https://tenor.com/search/orange-gifs">Orange GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+## @Piazza2017 - testing causes
+
+- Three groups of motivations (p. 54)
+    + economic hardships and [grievances]{style="color:darkred;"} (mechanism: drive resentment and support for terrorism)
+    + greater inclusion and empowerment of women and racial minorities (mechanism: [perceived threat]{style="color:darkred;"} to privilege)
+    + resentment toward the U.S. political system and government (mechanism: necessitates 'resistance against tyranny')
+
+Lays out differing theoretical/empirical contentions/findings about these motivations---and sets out to resolve them (theory-based and empirics-based [puzzles]{style="color:cadetblue;"}) [@day2019FindingQuestion]
+
+<!-- ([Piazza, 2017, p. 54](zotero://select/library/items/IERTEZ5Q)) THREE GROUPS OF MOTIVATIONS (TWO TYPES OF GRIEVANCE AND CHANGING OPPORTUNITY STRUCTURE)   -->
+<!-- economic hardships and grievances, produced by sectoral changes in the US economy—such as decline in manufacturing employment and crisis in the agricultural sector during the 1980s (known popularly as the ‘‘Farm Crisis’’)—that drive resentments and sup- port for terrorism, particularly among the white working class; societal changes that have led to greater inclusion and empowerment of women and racial minorities thereby producing a perceived challenge to traditional society and white male privilege or dominance, producing support for extremism and terrorism; and resentment toward the US political system and government, which is depicted in right-wing rhetoric as corrupt, tyrannical, unresponsive and unaccountable, prompting political violence as resistance against ‘‘big government’’ overreach and/or the exercise of political control by liberal-left government figures. All three of these categories of motivators8 contribute to conditions under which aggrieved individuals see political violence as a legitimate means to express their dissidence, communicate their opposition to the status quo, influence a wider audience or policy discus- sion, draw attention to their grievances, draw recruits and supporters and, ultimately if possible, cause a serious enough disruption to force the state into making concessions -->
+
+## @Piazza2017 - research design
+
+> the study uses a cross-sectional panel time series design to examine the predictive quality of a series of state and national-level economic, social and political indicators on counts of domestic terrorist attacks launched by right-wing terrorist movements and individuals in the 50 US states for the period 1970–2011.
+
+. . . 
+
+Let's break this down:
+
+## @Piazza2017 - research design
+
+::: {style="text-align: left;"}
+**[the study uses a cross-sectional panel time series design to examine the predictive quality of a series of state and national-level economic, social and political indicators on counts of domestic terrorist attacks launched by right-wing terrorist movements and individuals in the 50 US states for the period 1970–2011]{style="font-size:15px;"}** 
+:::
+
+- 'cross-sectional panel time series' = different clusters of [units of analysis]{style="color:blue;"} over time
+    + 'in the 50 US states for the period 1970–2011' = [state-year]{style="color:cadetblue;"} is the unit of analysis (see Note 14)
+- 'predictive quality' = research objective, *[predict]{style="color:blue;"}* (rather than '[describe]{style="color:blue;"}' or '[explain]{style="color:blue;"}'), here meaning *inferential statistics* 
+- 'series of state and national-level economic, social and political indicators' = the (groups of) *[independent variables]{style="color:blue;"}* (IVs), corresponding to the 3 groups of motivations
+- 'counts of domestic terrorist attacks launched by right-wing terrorist movements and individuals' = *[dependent variable]{style="color:blue;"}* (DV)
+
+## @Piazza2017 - research design
+
+| Variable group     | Indicators                          |
+| ------------------:|:------------------------------------|
+| Economic grievance | Per cent in poverty                 | 
+|                    | Per cent employed in manufacturing  | 
+|                    | Number of individual farms in state | 
+| Societal changes   | Rate of abortion                    | 
+|                    | Per cent of labour force that is female | 
+|                    | Change in non-white state population | 
+| 'Big government'   | measure of Democrat party dominance | 
+|                    | U.S. President a Democrat in given year | 
+|                    | Average income tax rate             | 
+
+<!-- OPERATIONALISATIONS -->
+
+<!-- To operationalize economic grievances and hardships and structural economic changes that have been previously theorized to foster radicalization and prompt terrorist activity in the USA, I use three indicators. The first is a measure of the percentage of the state population that lives below Federal Government-defined poverty levels reported in historical tables by the US Census Bureau.17 The second is a measure of the percentage of the population employed in manufacturing reported in the Economic Report of the President.18 The final economic measure attempts to capture long-term changes in agricultural livelihoods as well as the impact of the Farm Crisis by measuring the annual rate of change in the number of individual farms in a state using data obtained from US Department of Agriculture Economic Research Service, Farm Income and Wealth Statistics.19 -->
+
+<!-- To operationalize factors present in hypotheses 4–6—which comprise the societal changes that challenge traditional social values and white male dominance category—I use three social and demographic indicators. The first is a state-level measure of the rate of medical abortions per 1000 women aged 15–44 obtained from the State Politics and the Judiciary dataset compiled by Lindquist (2007) and made available by the State Politics and Policy Quarterly (SPPQ) website.20 The second is a measure of female participation in the labor market—the percentage of the labor force that is female—obtained from the Economic Report of the President.21 The third is a measure of change (growth) of the non-white/ Caucasian population of the state, obtained from the US Census Bureau, ‘‘Historical Census Statistics on Population Totals by Race’’ -->
+
+<!-- Finally, to operationalize the final three hypotheses, and their counters, in which the stateand national-level partisan control and ‘‘big government’’ policies drive terrorism, I use three indicators. The first is a measure of Democratic Party dominance at the state government level that uses an ordinal scale coded between 0 and 3 combining three dummy variables coded 1 for Democratic control over the lower state legislative house, the upper state legislative house and the governor’s mansion using data from the SPPQ database. The second is a simple dummy variable measuring whether or not the US President is a Democrat. The third is a measure of the average US Federal Income Tax rate for all households -->
+
+## Reading a regression table
+
+<!-- http://svmiller.com/blog/2014/08/reading-a-regression-table-a-guide-for-students/ -->
+
+Remember: regression is a tool for understanding a phenomenon as a linear function (generally) &rarr; (y = mx + b)
+
+1. Numbers not in parentheses next to a variable: [regression coefficient]{style="color:blue;"}: expected change in DV for a one-unit increase in IV. NB: ositive or negative relationship?
+
+2. Numbers inside parentheses next to a variable: [standard error]{style="color:blue;"}: estimate of the standard deviation of the coefficient
+
+3. Asterisks/'stars': [statistical significance]{style="color:blue;"}: probability of results as extreme as observed result, under the assumption that the null hypothesis is correct. Smaller p-value means such an observation would be less likely under null hypothesis; hence, significance. Statistical significance suggests more precise estimates---NOT necessarily that one IV is more important than another.
+
+
+## @Piazza2017 - abridged regression table
+
+![](slide_files/02/piazza_reg_table.png)
+
+## @Piazza2017 - findings (interpetting reg. table)
+
+- right-wing terrorism [not rooted in economic grievances]{style="color:darkorange;"}, economic stress, or structural economic change
+- 'gendered' dimension to right-wing extremist activity: [where women are becoming more empowered, right-wing terrorism is more frequent]{style="color:darkorange;"}
+    + predictors associated with women’s rights significantly boost the incidence of right-wing terrorism
+    + "*On average, increases in state-level abortion rates or women’s participation in the workforce produce fewer than 0.05 more right-wing terrorist attacks per state per year*."
+- of 'big gov.' motivations, only the dummy variable for a Democrat U.S. President is significant
+    + suggests [only peak-level and highly visible political predictors]{style="color:darkorange;"} are associated with increased incidence of right-wing terrorism
+
+<!-- FIGURE 2 SHOWS ... predictors associated with women’s rights significantly boost the incidence of right-wing terrorism in the USA, but are minimal contributors to terrorism compared with other factors. On average, increases in state-level abortion rates or women’s participation in the workforce produce fewer than 0.05 more right-wing terrorist attacks per state per year. -->
+
+## @Piazza2017 - conclusions
+
+1. economic factors are not reliable predictors of terrorist activity
+
+2. social factors help drive right-wing terrorism. ('ills afflicting "traditional" American society')
+
+3. partisan control over government matters at the national level, but not the state level, in determining right-wing terrorism
+
+
+
+
+
+# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+
+Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
+
+Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_02.html"))
+```
+
+
+## References
+

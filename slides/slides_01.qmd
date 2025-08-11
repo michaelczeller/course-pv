@@ -82,7 +82,8 @@ Take the survey at **<https://forms.gle/iXweLEsJ7VTANrmGA>**
 . . . 
 
 - Lots of different languages represented in the room &rarr; but please don't be shy: [feel [empowered]{style="color:cadetblue;"} to participate, even if you are not so confident in your English skills]{style="color:red;"}
-    + I will avoid 'calling on' people to contribute
+    + I will avoid 'calling on' people to contribute 
+    + when you speak, please speak up (*I'm rapidly ageing and my hearing is not what it once was*)
 
 ## First task...
 
@@ -231,8 +232,9 @@ kable(MeetingDays[,c("Date","Class","Lecture")],
 
 ## Aims
 
-- acquire both **substantive knowledge** of aspects of political violence and **critical knowledge** to evaluate research thereof
-- gain familiarity with **methodological approaches** to studying political violence
+- acquire **[substantive knowledge]{style="color:red;"}** of aspects of political violence and manifestation [within Germany and elsewhere]{style="color:cadetblue;"}
+- enhance **[critical knowledge]{style="color:red;"}** to evaluate research thereof
+- gain familiarity with **[methodological approaches]{style="color:red;"}** to studying political violence
 - (further) develop the capacity to...
     * assess episodes and broader cycles of political violence, especially by identifying underlying factors and comparing across contexts
     * critically evaluate reporting, research, and policy on political violence, especially by evaluating the data and methods used
@@ -313,7 +315,7 @@ kable(data.frame(
 
 ## Essay (*Hausarbeit*): Data report
 
-- data report on a far-right phenomenon (e.g., voters, a party, protests, violence)
+- data report on a political violence phenomenon (e.g., attacks, organisational membership)
     + why a dataset? Helpful preparation for thinking about [validity]{style="color:red;"}, [reliability]{style="color:red;"}, etc. &rarr; relevant for quant. and qual. 
 - gather and present data, generate analytical insights
 - 2000-3000 words (excluding citations)
@@ -364,13 +366,14 @@ kable(data.frame(
 
 ## Colour scheme for course slides 
 
-- Why? To make [concepts]{style="color:darkred;"} and [important points]{style="color:red;"} easier to identity and review
+- Why? To make [concepts]{style="color:darkred;"} and [important points]{style="color:red;"} easier to identify and review
 
 . . . 
 
 - [concepts]{style="color:darkred;"} (dark red) - building blocks of social science, important elements in every class session
 - [discussion point]{style="color:indigo;"} (indigo) - a question or prompt to discuss as a class (essential component of a *seminar*) 
 - [finding]{style="color:darkorange;"} (dark orange) - a noteworthy finding from one or more studies 
+- [methods point]{style="color:blue;"} (blue) - element of research design or methodology 
 - [important point]{style="color:red;"} (red) - something particularly noteworthy
 
 . . . 
@@ -391,7 +394,7 @@ kable(data.frame(
 ## Course website 
 
 - no use of Moodle
-- [we have a new, shiny, developing, purpose-built website:]{style="color:red;"}: <https://michaelzeller.de/course-pv/>
+- [we have a new, shiny, developing, purpose-built website]{style="color:red;"}: <https://michaelzeller.de/course-pv/>
     + all readings available
     + slides available before class
     + in case of class cancellation, video lecture will be available 
@@ -753,7 +756,20 @@ plot_concern = Plot.plot({
 ```
 
 
-# Quick intro to concepts
+# Quick intro to concepts {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- concept formation [cf. @adcock2001MeasurementValid]
+- types of concepts 
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="15962654" data-share-method="host" data-aspect-ratio="2.05128" data-width="100%"><a href="https://tenor.com/view/what-a-concept-smile-asking-happy-gif-15962654">What A Concept Smile GIF</a>from <a href="https://tenor.com/search/what+a+concept-gifs">What A Concept GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
 
 ## Concept formation
 
