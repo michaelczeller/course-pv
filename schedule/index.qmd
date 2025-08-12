@@ -92,7 +92,7 @@ library(lubridate) # for submission date of assignments
 #Days of the week that the course meets. Must be full day name in quotes.
 Days <- c("Thursday")
 #Semester start date for classes as YYYY/M/D.
-SemesterStart <- as.Date("2025/10/16")
+SemesterStart <- as.Date("2025/10/15")
 #Semester end date for classes as YYYY/M/D.
 SemesterEnd <- as.Date("2026/2/7")
 #Fall break start and stop date.
@@ -121,7 +121,7 @@ SemesterDays <-
 Holidays <-
   c(as.Date(holiday(
     year = getRmetricsOptions("currentYear"),
-    Holiday = c("USLaborDay", "USThanksgivingDay", "USMLKingsBirthday")
+    Holiday = c("USLaborDay", "USMLKingsBirthday")
   )), WinterBreak)
 #Create a list of semester days excluding holidays.
 SemesterDays <- SemesterDays[!SemesterDays %in% Holidays]
@@ -152,11 +152,11 @@ Lecture_Topic <- c("Introduction and types of political violence", # Class 1
                    "State responses: policies", # Class 11
                    "State responses: repression", # Class 12
                    "Addressing violence online", # Class 13
-                   "Disengagement, deradicalisation (individual), demobilisation (organisational)") # Class 14
-                   # "NO CLASS MEETING TODAY") # Class 15"
+                   "Disengagement, deradicalisation (individual), demobilisation (organisational)", # Class 14
+                   "NO CLASS MEETING TODAY") # Class 15"
 
           
-links <- c("#class1","#class2","#class3","#class4","#class5","#class6","#class7","#class8","#class9","#class10","#class11","#class12","#class13","#class14")
+links <- c("#class1","#class2","#class3","#class4","#class5","#class6","#class7","#class8","#class9","#class10","#class11","#class12","#class13","#class14","#class15")
 
 MeetingDays <- bind_cols(MeetingDays, Lecture = Lecture_Topic)
 #### Grade table ####
@@ -204,11 +204,11 @@ library(dplyr)
 library(kableExtra)
 
 plan <- data.frame(
-  block=c("causes, radicalisation, mobilisation", "causes, radicalisation, mobilisation", "causes, radicalisation, mobilisation", "causes, radicalisation, mobilisation", "causes, radicalisation, mobilisation", "politically violent activity", "politically violent activity", "politically violent activity", "politically violent activity", "politically violent activity", "responses to political violence", "responses to political violence", "responses to political violence", "responses to political violence"),
-  theme=c("1. Introduction and types of political violence","2. Causes: Setting the stage for political violence", "3. Radicalisation", "4. Selecting violent/nonviolent strategies", "5. Radical subcultures and mobilisation", "6. Leadership", "7. Foreign fighters", "8. Election-related violence", "9. Escalation and restraint", "10. Local support and public reaction", "11. State responses: Policies", "12. State responses: Repression", "13. Addressing violence online", "14. Disengagement, deradicalisation (individual), demobilisation (organisational)"),
-  content=c("core definitions; patterns of violence","macro-, meso-, and micro-level factors", "models and processes of radicalisation", "strategies and tactics; opportunity structures", "radical milieus, mobilising structures", "types of leadership; leading tasks", "armed conflict, foreign fighters", "electoral violence; intra- and anti-system violence", "spirals of escalation; brakes on violent activity", "violent group constitutuency relations", "resilience-building policies; violent extremism prevention", "counter-extremism/ counter-terrorism; social control", "social media platforms; transnationalisation; counterspeech", "policies, programmes, and state actions to end or diminish political violences"),
-  actors=c("individuals; groups/ organisations","state actors; group leaders", "at-risk individuals; recruiters", "groups/ organisations; state actors", "subcultural activists, entrepreneurs", "group/ organisation leaders", "individuals, activists, militants", "groups/ organisations; state actors", "individuals, militants, groups/ organisations", "movements; movement organisations", "state actors, social workers", "state actors, criminal justice authorities", "platform users; platform companies", "state actors, social workers, opposed activists"),
-  literature=c("Ravndal","Crenshaw", "della Porta", "Lafaye and Brochard", "Bosi and della Porta", "Bob and Nepstad", "Morris", "Harbers, Richetta, and van Wingerden", "Copsey and Merrill", "Setter and Nepstad", "Koehler", "Bourne and Veuglers", "Conway, Scrivens, and Macnair", "Gaudette, Scrivens, and Venkatesh; Zeller")
+  block=c("causes, radicalisation, mobilisation", "causes, radicalisation, mobilisation", "causes, radicalisation, mobilisation", "causes, radicalisation, mobilisation", "causes, radicalisation, mobilisation", "politically violent activity", "politically violent activity", "politically violent activity", "politically violent activity", "politically violent activity", "responses to political violence", "responses to political violence", "responses to political violence", "responses to political violence", " "),
+  theme=c("1. Introduction and types of political violence","2. Causes: Setting the stage for political violence", "3. Radicalisation", "4. Selecting violent/nonviolent strategies", "5. Radical subcultures and mobilisation", "6. Leadership", "7. Foreign fighters", "8. Election-related violence", "9. Escalation and restraint", "10. Local support and public reaction", "11. State responses: Policies", "12. State responses: Repression", "13. Addressing violence online", "14. Disengagement, deradicalisation (individual), demobilisation (organisational)", "15. NO CLASS MEETING TODAY"),
+  content=c("core definitions; patterns of violence","macro-, meso-, and micro-level factors", "models and processes of radicalisation", "strategies and tactics; opportunity structures", "radical milieus, mobilising structures", "types of leadership; leading tasks", "armed conflict, foreign fighters", "electoral violence; intra- and anti-system violence", "spirals of escalation; brakes on violent activity", "violent group constitutuency relations", "resilience-building policies; violent extremism prevention", "counter-extremism/ counter-terrorism; social control", "social media platforms; transnationalisation; counterspeech", "policies, programmes, and state actions to end or diminish political violences", " "),
+  actors=c("individuals; groups/ organisations","state actors; group leaders", "at-risk individuals; recruiters", "groups/ organisations; state actors", "subcultural activists, entrepreneurs", "group/ organisation leaders", "individuals, activists, militants", "groups/ organisations; state actors", "individuals, militants, groups/ organisations", "movements; movement organisations", "state actors, social workers", "state actors, criminal justice authorities", "platform users; platform companies", "state actors, social workers, opposed activists", " "),
+  literature=c("Ravndal","Crenshaw", "della Porta", "Lafaye and Brochard", "Bosi and della Porta", "Bob and Nepstad", "Morris", "Harbers, Richetta, and van Wingerden", "Copsey and Merrill", "Setter and Nepstad", "Koehler", "Bourne and Veuglers", "Conway, Scrivens, and Macnair", "Gaudette, Scrivens, and Venkatesh; Zeller", " ")
   # KlausurConnection=c()
 )
 
@@ -2679,7 +2679,7 @@ Rękawek, K. (2022). *Foreign Fighters in Ukraine: The Brown–Red Cocktail*. Ta
 ```
 :::
 
-
+## Class 15 - `r nth(MeetingDays$Lecture, 15)` {#class15}
 
 
 
