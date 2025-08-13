@@ -47,6 +47,31 @@ xaringanExtra::embed_xaringan(
 ```
 
 
+# Class 3
+
+```{r echo=FALSE, results="asis"}
+#| warning: false
+if (Sys.Date() >= as.Date("2025-10-29")) {
+
+slide_buttons <- function(slide_id) {
+  glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
+}
+
+slide_buttons("/slides/slides_03")
+
+library(xaringanExtra)
+
+xaringanExtra::embed_xaringan(
+  "/slides/slides_03.html",
+  ratio = "16:9",
+  border = "none",
+  margin = "0 auto"
+)
+}
+```
+
+
+
 
 <!-- ```{r echo=FALSE, results="asis"} -->
 <!-- #| warning: false -->

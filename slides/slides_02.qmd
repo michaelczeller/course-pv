@@ -1,6 +1,6 @@
 ---
-title: "Class 2: Causes"
-subtitle: "Setting the stage for political violence"
+title: "Class 2: Causes, Radicalisation, Mobilisation"
+subtitle: "Causes: Setting the stage for political violence"
 author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
 format: 
   rladies-revealjs:

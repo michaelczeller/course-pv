@@ -1,0 +1,1437 @@
+---
+title: "Class 3: Causes, Radicalisation, Mobilisation"
+subtitle: "Radicalisation"
+author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
+format: 
+  rladies-revealjs:
+    footer: ""
+    slide-number: c/t
+    toc: TRUE
+    toc-depth: 1
+    toc-title: Agenda for the day
+    menu: TRUE
+    theme: [default, custom_options]
+    background-transition: fade
+incremental: false
+embed-resources: true
+# runtime: shiny
+bibliography: ../../../library.bib
+---
+
+
+# Opening notes {background-color="#2c844c"}
+
+::: {.tenor-gif-embed data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="70%"}
+<div class="tenor-gif-embed" data-postid="14209777" data-share-method="host" data-aspect-ratio="1.94" data-width="100%"><a href="https://tenor.com/view/open-gif-14209777">Open Sticker</a>from <a href="https://tenor.com/search/open-stickers">Open Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+
+```{=html}
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+```
+
+## Presentation groups
+
+Remember: topic to me at least by Week 4
+
+::: panel-tabset
+## December
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 4 Dec:  |                                  | TBD    | 
+| 11 Dec: |                                  | TBD    | 
+| 18 Dec: |                                  | TBD    | 
+
+: Presentations line-up
+
+## January
+
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 8 Jan:  |                                  | TBD    | 
+| 15 Jan: |                                  | TBD    | 
+| 22 Jan: |                                  | TBD    | 
+| 29 Jan: |                                  | TBD    | 
+
+: Presentations line-up
+
+:::
+
+<!-- []{style="font-size:10px;"} -->
+
+# Radicalisation - core concepts {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- (de)radicalisation
+- (dis)engagement
+- models of radicalisation (esp. in government work)
+- pathways of radicalisation [@Jensen2018]
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="13305208" data-share-method="host" data-aspect-ratio="1.18997" data-width="100%"><a href="https://tenor.com/view/thats-rad-sarcastic-gif-13305208">Thats Rad Sarcastic GIF</a>from <a href="https://tenor.com/search/thats+rad-gifs">Thats Rad GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+:::
+::::
+
+
+## Radicalisation - core concepts
+
+- [radicalisation]{style="color:darkred;"} (*change in [belief]{style="color:cadetblue;"}*): [process]{style="color:blue;"} of connecting with and adopting radical or extremist ideology---does not necessarily result in violence or 'engaging' in extremist activity
+- [engagement]{style="color:darkred;"} (*change in [behaviour]{style="color:violet;"}*): (in this context) [process]{style="color:blue;"} or act of performing radical or extremist activity, especially violence
+
+- [deradicalisation]{style="color:darkred;"} (*change in [belief]{style="color:cadetblue;"}*): "[process]{style="color:blue;"} by which an individual is diverted from an extremist ideology, eventually rejecting an extremist ideology and moderating their beliefs" [@GaudetteETAL2022, p. 1]
+- [disengagement]{style="color:darkred;"} (*change in [behaviour]{style="color:violet;"}*): "[process]{style="color:blue;"} by which an individual decides to leave their associated extremist group or movement in order to reintegrate into society" (*Ibid.*)
+
+<!-- ## Saltman {background-video="https://www.youtube.com/watch?v=HY71088saG4"} -->
+
+
+<!-- until the 8.00 mark: <https://www.youtube.com/watch?v=HY71088saG4> -->
+
+---
+
+Dr. [Erin Saltman](https://gifct.org/team/dr-erin-saltman-2/) talk (until 8.00 mark)
+
+<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
+<!-- aspect-ratio="21x9"  -->
+{{< video https://www.youtube.com/watch?v=HY71088saG4 
+    start="1"
+    width="100%" 
+    height="100%" >}}
+
+## Opening questions
+
+::: {style="text-align: center;"}
+**[How have individuals radicalised into political violence?]{style="color:indigo; font-size:60px;"}** 
+:::
+
+- what are their motivations?
+- what/who are they influenced by?
+- what are the differences/similarities of radicalisation processes in different eras and contexts?
+
+- *Examples from cases you know of*?
+
+
+## Models of radicalisation (esp. in government work)
+
+<!-- ![](image1.png){.fragment width="450" height="300"} -->
+
+::: {.r-stack}
+<!-- Precht's Model (DK) -->
+![](slide_files/03/precht2007.png){.fragment}
+
+<!-- (Wiktorowitcz) Religious extremism model -->
+![](slide_files/03/wiktorowitcz_model.png){.fragment}
+
+<!-- Prevent Model (UK) -->
+![](slide_files/03/preventmodel.png){.fragment}
+
+<!-- (Moghaddam) Staircase Model (US) -->
+![](slide_files/03/staircase_Moghaddam.png){.fragment}
+
+<!-- Aarhus Model (Scandinavia) -->
+![](slide_files/03/aarhusmodel.png){.fragment}
+:::
+
+## Commonalities in radicalisation models
+
+- recognition of the [processual]{style="color:cadetblue;"} nature of radicalisation
+    + vulnerabilities and background factors
+    + [cognitive opening]{style="color:darkred;"}
+        * recognition of some conditions as wrong
+        * framing those conditions as unjust and justifying violent remedies
+        * singling out specific responsibilities; demonisation of other
+    + action
+
+. . . 
+
+- implicitly: most in society *can become vulnerable* to radicalisation
+
+. . . 
+
+- [prevent]{style="color:red;"} and [counter]{style="color:red;"} (P/CVE)
+
+## Commonalities in radicalisation models
+
+- Bjørgo (2005) identifies...
+
+> [ideological activists]{style="color:darkorange;"}, motivated by ideas; [drifters and fellow travelers]{style="color:darkorange;"}, seeking friendship; and [frustrated youth]{style="color:darkorange;"} with criminal records
+
+- @Bosi2012 similarly identifies [ideological]{style="color:darkred;"}, [instrumental]{style="color:darkred;"}, and [solidaristic]{style="color:darkred;"} paths of radicalisation
+
+
+. . . 
+
+::: {style="text-align: center;"}
+key finding: **[radicals tend to have normal personalities (pathologising is futile)]{style="color:darkorange; font-size:50px;"}** 
+:::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+::: footer
+[[icons created by Flaticon](https://www.flaticon.com/free-icons/)]{style="font-size:20px;"}
+<!-- <a href="https://www.flaticon.com/free-icons/" title="Flaticon">icons created by Freepik - Flaticon</a> -->
+:::
+
+:::: {.columns}
+:::{.column width="20%"}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+
+:::
+
+::: {.column width="20%" .right}
+
+:::
+
+::: {.column width="20%" .right}
+
+:::
+
+::: {.column width="20%" .right}
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+::: footer
+[[icons created by Flaticon](https://www.flaticon.com/free-icons/)]{style="font-size:20px;"}
+<!-- <a href="https://www.flaticon.com/free-icons/" title="Flaticon">icons created by Freepik - Flaticon</a> -->
+:::
+
+:::: {.columns}
+:::{.column width="20%"}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+
+
+:::
+
+::: {.column width="20%" .right}
+
+
+:::
+
+::: {.column width="20%" .right}
+
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+::: footer
+[[icons created by Flaticon](https://www.flaticon.com/free-icons/)]{style="font-size:20px;"}
+<!-- <a href="https://www.flaticon.com/free-icons/" title="Flaticon">icons created by Freepik - Flaticon</a> -->
+:::
+
+:::: {.columns}
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+
+
+:::
+
+::: {.column width="20%" .right}
+
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+::: footer
+[[icons created by Flaticon](https://www.flaticon.com/free-icons/)]{style="font-size:20px;"}
+<!-- <a href="https://www.flaticon.com/free-icons/" title="Flaticon">icons created by Freepik - Flaticon</a> -->
+:::
+
+:::: {.columns}
+::: {.column width="20%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+
+
+:::
+::::
+
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+::: footer
+[[icons created by Flaticon](https://www.flaticon.com/free-icons/)]{style="font-size:20px;"}
+<!-- <a href="https://www.flaticon.com/free-icons/" title="Flaticon">icons created by Freepik - Flaticon</a> -->
+:::
+
+:::: {.columns}
+::: {.column width="20%" .right}
+[psychological]{style="color:darkred;"}
+
+![](slide_files/03/icon_psychology.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+::::
+
+## Push/pull radicalisation factors - psychological {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="45%" .right}
+[psychological]{style="color:darkred;"}
+
+![](slide_files/03/icon_psychology.png){width=100%}
+:::
+
+::: {.column width="55%" .right}
+- cognitive, emotional frailties that threaten senses of [self]{style="color:cadetblue;"}, [identity]{style="color:cadetblue;"}, and [belonging]{style="color:cadetblue;"}
+    + cognitive, emotional [benefits]{style="color:red;"} (perceived to be) received by adopting radical beliefs/actions 
+- crises/breakdowns -- moments of acute vulnerability
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="20%" .right}
+[psychological]{style="color:darkred;"}
+
+![](slide_files/03/icon_psychology.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+::::
+
+## Push/pull radicalisation factors - personal {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="45%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+::: {.column width="55%" .right}
+- *factors or events that undermine the pillars of stability people depend on*
+- personal background factors: e.g., issues in adolescence, lack of stable social relations development
+    + sense of adventure/excitement
+- challenging event: e.g., loss of close interpersonal relationship(s), job loss, inability to provide for basic needs 
+    + possibility to gain [material rewards]{style="color:violet;"}
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="20%" .right}
+[psychological]{style="color:darkred;"}
+
+![](slide_files/03/icon_psychology.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+::::
+
+## Push/pull radicalisation factors - identity {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="45%" .right}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="55%" .right}
+- social isolation (either self-imposed or imposed by external conditions)
+    + possibility to join community
+    + possibility of 'acquired identity'
+- senses of exclusion, discrimination, [relative deprivation]{style="color:darkred;"} due to characteristics or beliefs
+    + gaining senses of [belonging]{style="color:darkred;"} and [solidarity]{style="color:darkred;"}
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="20%" .right}
+[psychological]{style="color:darkred;"}
+
+![](slide_files/03/icon_psychology.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+::::
+
+## Push/pull radicalisation factors - relational {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="45%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+:::
+
+::: {.column width="55%" .right}
+- alienation from family, friends (close interpersonal network)
+    + contacts, possibility of building relations in radical milieu
+- history of conflict, radical activism
+    + [recruitment]{style="color:darkred;"} by leaders/members of radical milieu
+    + radicalising messages about [group norms]{style="color:darkred;"} (beliefs, values, actions that are prototypical)
+- community crisis: collective feelings of trouble, danger
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="20%" .right}
+[psychological]{style="color:darkred;"}
+
+![](slide_files/03/icon_psychology.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+::::
+
+## Push/pull radicalisation factors - external {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="50%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+:::
+
+::: {.column width="50%" .right}
+- [polarisation]{style="color:darkred;"} in societies
+- loss of trust in political institutions 
+- provocative action from state or social actors
+- prevalent extremist discourse(s)
+- accessibility of radical/extremist activism
+- *many other possiblities*
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+:::: {.columns}
+::: {.column width="20%" .right}
+[psychological]{style="color:darkred;"}
+
+![](slide_files/03/icon_psychology.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+::::
+
+## Push/pull radicalisation factors {auto-animate=true}
+
+See further in (e.g.) @Campelo2018, @dellaPorta2018-radicalization, @Fahey2019, @Jensen2018, @Vergani2018  
+
+:::: {.columns}
+::: {.column width="20%" .right}
+[psychological]{style="color:darkred;"}
+
+![](slide_files/03/icon_psychology.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[personal]{style="color:darkred;"}
+
+![](slide_files/03/icon_personal.png){width=100%}
+:::
+
+:::{.column width="20%"}
+[identity]{style="color:darkred;"}
+
+![](slide_files/03/icon_identity.png){width=100%}
+:::
+
+::: {.column width="20%" .right}
+[relational]{style="color:darkred;"}
+
+![](slide_files/03/icon_relational.png){width=100%}
+
+:::
+
+::: {.column width="20%" .right}
+[external]{style="color:darkred;"}
+
+![](slide_files/03/icon_external.png){width=100%}
+
+:::
+::::
+
+## Radicalisation pathways [@Fahey2019] {visibility="hidden"}
+
+## Radicalisation pathways [@Fahey2019]
+
+- *RQ*: What are the [pathways]{style="color:cadetblue;"} to ideologically motivated violence among a sample of North American-based right-wing extremists, largely white supremacists and neo-Nazis?
+- *data*: 35 life history interviews (corrobated with open-source information)
+- *method*: (crisp-set) qualitative comparative analysis (QCA)
+    + **Outcome** (dependent variable): use of (planned/spontaneous) extremist violence
+
+## Radicalisation pathways - factors [@Fahey2019] 
+
+- prior property offences (*[part of cognitive opening]{style="color:cadetblue;"}*)
+
+. . . 
+
+- truancy (*[weakening social stability]{style="color:cadetblue;"}*)
+
+. . . 
+
+- delinquent peers (*[relational influences]{style="color:cadetblue;"}*)
+
+. . . 
+
+- family involvement in extremism (*[relational influences]{style="color:cadetblue;"}*)
+
+. . . 
+
+- lower/working class childhood (*[possible manifestations in psychological, personal, identity factors]{style="color:cadetblue;"}*)
+
+. . . 
+
+- academic failure (*[personal crises]{style="color:cadetblue;"}*)
+
+But...
+
+## Radicalisation pathways - factors [@Fahey2019] 
+
+- prior property offences (*[part of cognitive opening]{style="color:cadetblue;"}*)
+- truancy (*[weakening social stability]{style="color:cadetblue;"}*)
+- delinquent peers (*[relational influences]{style="color:cadetblue;"}*)
+- family involvement in extremism (*[relational influences]{style="color:cadetblue;"}*)
+- lower/working class childhood (*[possible manifestations in psychological, personal, identity factors]{style="color:cadetblue;"}*)
+- academic failure (*[personal crises]{style="color:cadetblue;"}*)
+
+But...
+
+> [No]{style="color:red;"} support was garnered for the identification of distinct pathways of [homogeneous risk factors]{style="color:red;"} among either sample of violent offenders.
+
+# Examples from the IRA: radicalisation, recruitment, restraint {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- radicalisation (Joe Clark)
+    + [Note of caution]{style="color:red;"}: the interviewee briefly describes some cruel interrogation that he underwent
+- recruitment and training (Des Long)
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="15032717" data-share-method="host" data-aspect-ratio="1.22137" data-width="100%"><a href="https://tenor.com/view/are-you-trying-to-recruit-me-recruit-invitation-pointing-are-you-making-a-deal-with-me-gif-15032717">Are You Trying To Recruit Me Recruit GIF</a>from <a href="https://tenor.com/search/are+you+trying+to+recruit+me-gifs">Are You Trying To Recruit Me GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+
+## Examples from the IRA (1/4): Joe Clark
+
+<video src="slide_files/03/ira_JoeClark.mp4" width="99%" 
+controls controlslist="nodownload"
+poster="slide_files/03/spotlight_cover.png"></video>
+
+<!-- <iframe src="https://players.brightcove.net/1507807800001/rf1BTdKk6M_default/index.html?videoId=6116779877001" -->
+<!--   allowfullscreen="" -->
+<!--   allow="encrypted-media" -->
+<!--   width="960" height="540"></iframe> -->
+
+<!-- {{< video ira_JoeClark.mp4 >}} -->
+
+
+## Examples from the IRA (1/4): Joe Clark transcript {.scrollable}
+
+Narrator: A secret interrogation centre had been built months before at an old airfield on the north coast. 14 internees were singled out and flown there by helicopter. They would spend the next seven days wearing hoods, deprived of sleep, undergoing what was called 'deep interrogation.' Joe Clark, then 19, was one of those men.
+
+Clark: We were taken out and put into this room, spread-eagled, fingertips up on the wall, feet out, and you would stand there for awhile. And if you tried to move your hands or your feet --- if you moved your hands, your hand was beat; if you moved your feet, the inside of your legs, your feet were kicked, until eventually my feet were twice the size they normally were and the inside of them were totally bruised, black and blue. I just couldn't comprehend why this was happening to me or how people could do this to other people. I just couldn't fathom this at all. 
+
+Narrator: You were an active republican?
+
+Clark: I was 19 at the time and I hadn't been in the republican movement a long time. I wasn't --- I would say I was an innocent person. 
+
+Narrator: Nine days after his initial arrest, Joe Clark was taken back to an ordinary prison.
+
+Clark: I couldn't believe it. A week had passed when I left there. I see a prison officer come in, and I know only, his name was Dicky Ellen, used to be called Dicky Elder, and he says to me, 'where were you?' I said, 'I don't know.' He says, 'what do you mean you don't know?' I said, 'I had a hood over my head.' He says, 'you had a hood over your head?' and he's patting me on the head and he says, 'you're alright now, nothing will happen to you; you're among men now.' And I got very emotional at this. I can actually feel myself getting emotion now, thinking about it. But it was guy in which genuine words of compassion or whatever were said to me in nine days.
+
+Narrator: The interrogation methods were later found to be illegal under British law. The European Court found that they didn't constitute torture,but were cruel and inhumane. Britain's reputation had been damaged and for very little return.
+
+## Overreacting state [@dellaPorta2018-radicalization, p. 464]
+
+> Radicalization spreads especially when the [state is perceived as overreacting to the challengers]{style="color:red;"}---as in Italy, when the student movement and then the labor movement protest of the late 1960s and early 1970s signaled a growing hostility. This was even more the case in Franco's Spain, when labor protest met ethnic revival, and in the authoritarian regimes in the Middle East, which reacted strongly to the so-called religious awakening (della Porta 2013).
+
+## Examples from the IRA (2/4): Des Long
+
+<video src="slide_files/03/ira_DesLong1.mp4" width="99%" 
+controls controlslist="nodownload"
+poster="slide_files/03/spotlight_cover.png"></video>
+
+## Examples from the IRA (2/4): Des Long transcript
+
+Narrator: At that point, Des Long was already one of the IRA's veterans. ... Unionists would say the civil rights movement was by and large a front for the IRA...
+
+Long: It wasn't. It wasn't a front for the IRA. You had people in it who were never in the IRA. Hume and a few of his cronies, they were never in the IRA. But then you had people in it who were in the IRA. I saw it as a wing helping people to oppose British rule. Every fellow that gets his head cracked open by a Peeler's baton is a potential recruit.
+
+## Examples from the IRA (3/4): Des Long
+
+<video src="slide_files/03/ira_DesLong2.mp4" width="99%" 
+controls controlslist="nodownload"
+poster="slide_files/03/spotlight_cover.png"></video>
+
+
+## Examples from the IRA (3/4): Des Long transcript
+
+Narrator: 1970 comes around. What is the IRA about at this point?
+
+Long: Recruiting and arming. 
+
+Narrator: It's not about actually carrying out attacks?
+
+Long: Well, of course you want to carry out attacks, if you could. Great tool of recruiting is attacks, if they're successful. ... We began training people, preparing people, because we were getting people in who didn't understand weapons or didn't know about them and would have to be trained, in training camps and that kind of thing.
+
+
+## Examples from the IRA (4/4): Des Long
+
+<video src="slide_files/03/ira_DesLong3.mp4" width="99%" 
+controls controlslist="nodownload"
+poster="slide_files/03/spotlight_cover.png"></video>
+
+
+## Examples from the IRA (4/4): Des Long transcript {.scrollable}
+
+Video clip: it is very important that the volunteers of the Irish Republican Army is of good character
+
+Narrator: The IRA leadership was dominated by men who had fought in the so-called 'border campaign' in the 1950s. 
+
+Video clip: He'd want to have a very sincere and genuine reason fro joining. It's for the love of his country. 
+
+Narrator: It was southern based and often southern accented. 
+
+Video clip: Classes consist largely of arms-handling, bomb-making, and urban guerilla tactics. The instructors are IRA veterans who have come out of retirement...
+
+Long: I wasn't retired. ... 
+
+Narrator: Limerick man, Desmond Long, sat very close to the top of the IRA, on the Army Executive, for 17 years. ... [to Long] That's yourself isn't it?
+
+Long: It is. ...
+
+Narrator: What was the average recruit like?
+
+Long: Enthusiastic. Some of them were in it for there own reason. I remember a fellow saying once to me, handling an M1 rifle, 'oh Jesus, that'd be great for shooting blue noses.' I said to him, 'what are blue noses?' 'Prots,' he says, so I ripped the weapon off him and I said, 'we're training nobody here to shoot Protestants. You're here to take on the British forces.'
+
+
+# Poll: tendencies of radicalisation {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/03/PVclass3_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/XjqgU7Xwnwaoio638>**
+
+- Is there a difference between how individuals radicalise depending on ideology?
+- Are younger people more open/vulnerable to radicalisation?
+
+:::
+:::: 
+
+- Has social media changed radicalisation processes?
+- Can government programmes effectively deradicalise individuals?
+- Should there be incentives for radical/extreme individuals to participate in deradicalisation programmes?
+
+--- 
+
+```{ojs}
+md`## Poll results (Respondents: ${respondentCount})`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vSi2B1vG4uov3Vjgrliic4xdhNDenSaK2H91a0phOVJlNheSBybnmTJ91ubqfmUCkU7XLuGYliBV1Xx/" +
+    "pub?gid=1654703300&single=true&output=csv",
+  10000, 1, 7); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+```
+
+Is there a difference between how individuals radicalise depending on ideology? 
+
+```{ojs}
+differenceCounts = aq.from(surveyResults)
+  .select("difference")
+  .groupby("difference")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+difference_maxCountRE = Math.max(...differenceCounts.objects().map(d => d.count));
+
+plot_difference = Plot.plot({
+  marks: [
+    Plot.barY(differenceCounts, {
+      x: "difference",
+      y: "count",
+      fill: "difference",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(differenceCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, difference_maxCountRE]
+  },
+  facet: { data: differenceCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+
+## Poll: youth and social media
+
+:::: {.columns}
+:::{.column width="50%"}
+Younger more vulnerable to radicalisation?
+
+```{ojs}
+youngerCounts = aq.from(surveyResults)
+  .select("younger")
+  .groupby("younger")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+younger_maxCountRE = Math.max(...youngerCounts.objects().map(d => d.count));
+
+plot_younger = Plot.plot({
+  marks: [
+    Plot.barY(youngerCounts, {
+      x: "younger",
+      y: "count",
+      fill: "younger",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(youngerCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, younger_maxCountRE]
+  },
+  facet: { data: youngerCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+:::
+
+::: {.column width="50%"}
+Social media changing radicalisation?
+
+```{ojs}
+social_mediaCounts = aq.from(surveyResults)
+  .select("social_media")
+  .groupby("social_media")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+social_media_maxCountRE = Math.max(...social_mediaCounts.objects().map(d => d.count));
+
+plot_social_media = Plot.plot({
+  marks: [
+    Plot.barY(social_mediaCounts, {
+      x: "social_media",
+      y: "count",
+      fill: "social_media",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(social_mediaCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, social_media_maxCountRE]
+  },
+  facet: { data: social_mediaCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+
+:::
+::::
+
+# Study snapshot: youth radicalisation {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="55%"}
+- @Schils2017 
+- 12 Belgian extremists interviewed: 
+    + 7 from left-wing scene
+    + 4 from right-wing scene
+    + 1 religious extremist
+    <!-- + *limited generalisability* -->
+
+- [futility of bans?]{style="font-size:40px; color:indigo;"} (p14): [one can strive to ban... groups, as long as the demand for these groups remains, this will lead to the constant development of new groups. The same goes for the websites run by these groups.]{style="color:lightblue;"}
+
+:::
+
+::: {.column width="45%"}
+- despite rise of [digital]{style="color:yellow;"} communication and mobilisation, [sub-culture-based recruitment]{style="color:yellow;"} remains (arguably chiefly) important for far-right movements
+- policy remedies (p14): 
+    (1) address breeding ground 
+    (2) alternatives for the demand: movements accessible and responsive to youth grievances
+
+:::
+:::: 
+
+## Poll: intervention, incentives, emphasis
+
+<!-- - Can government programmes effectively deradicalise individuals? -->
+<!-- - Should there be incentives (e.g., reduced prison sentences) for radical/extreme individuals to participate in deradicalisation programmes? -->
+
+:::: {.columns}
+:::{.column width="33%"}
+Gov. programmes effective intervention?
+
+```{ojs}
+government_programmesCounts = aq.from(surveyResults)
+  .select("government_programmes")
+  .groupby("government_programmes")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+government_programmes_maxCountRE = Math.max(...government_programmesCounts.objects().map(d => d.count));
+
+plot_government_programmes = Plot.plot({
+  marks: [
+    Plot.barY(government_programmesCounts, {
+      x: "government_programmes",
+      y: "count",
+      fill: "government_programmes",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(government_programmesCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, government_programmes_maxCountRE]
+  },
+  facet: { data: government_programmesCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+:::
+
+::: {.column width="33%"}
+Incentivise participation in programmes?
+
+```{ojs}
+incentivesCounts = aq.from(surveyResults)
+  .select("incentives")
+  .groupby("incentives")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+incentives_maxCountRE = Math.max(...incentivesCounts.objects().map(d => d.count));
+
+plot_incentives = Plot.plot({
+  marks: [
+    Plot.barY(incentivesCounts, {
+      x: "incentives",
+      y: "count",
+      fill: "incentives",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(incentivesCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, incentives_maxCountRE]
+  },
+  facet: { data: incentivesCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+
+:::
+
+:::{.column width="33%"}
+Emphasise *criminal* or *treatment* responses?
+
+```{ojs}
+emphasisCounts = aq.from(surveyResults)
+  .select("emphasis")
+  .groupby("emphasis")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+emphasis_maxCountRE = Math.max(...emphasisCounts.objects().map(d => d.count));
+
+plot_emphasis = Plot.plot({
+  marks: [
+    Plot.barY(emphasisCounts, {
+      x: "emphasis",
+      y: "count",
+      fill: "emphasis",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "criminal",
+      "treatment"
+    ],
+    range: [
+      "darkorange",
+      "cadetblue"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["criminal", "treatment"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(emphasisCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, emphasis_maxCountRE]
+  },
+  facet: { data: emphasisCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+ 
+:::
+::::
+
+
+# Why radicalisation fails {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="45%"}
+- Why Radicalization Fails: Barriers to Mass Casualty Terrorism [@SimiWindisch2020]
+- prevention 
+- resilience building 
+    + e.g., [Demokratie Leben!](https://www.demokratie-leben.de/)
+
+:::
+
+::: {.column width="55%" .center}
+<div class="tenor-gif-embed" data-postid="20454620" data-share-method="host" data-aspect-ratio="1.51659" data-width="100%"><a href="https://tenor.com/view/fail-gif-20454620">Fail Meme</a>from <a href="https://tenor.com/search/fail-memes">Fail Memes</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+:::: 
+
+## Barriers to terrorism [@SimiWindisch2020]
+
+*RQs* (p834): 
+
+> What limits the larger pool of extremists who embrace an ideology but do not translate these beliefs into action? What types of conditions serve as barriers in the action pathway process? And, finally, how can the identification of these barriers help inform counterterrorism measures? 
+
+- concepts:
+    + [action pathways]{style="color:cadetblue;"}: process of engaging in terrorism or violent extremist actions
+    + [barriers]{style="color:cadetblue;"}: maybe but not necessarily segues to disengagement and/or deradicalisation
+    + [MCV]{style="color:cadetblue;"}: mass casualty violence
+
+## Barriers to terrorism [@SimiWindisch2020]
+
+*RQs* (p834): 
+
+> What limits the larger pool of extremists who embrace an ideology but do not translate these beliefs into action? What types of conditions serve as barriers in the action pathway process? And, finally, how can the identification of these barriers help inform counterterrorism measures? 
+
+- 34 former U.S. white supremacist extremists; life history interviews, conducted between 2012-2016 
+    + [exemplary data description]{style="color:red;"} - take note for paper- and thesis-writing!
+
+## Methodological issue: 'negative cases' 
+
+@SimiWindisch2020[pp. 833-834]: 
+
+> our sample represents an important step forward in terms of focusing on “negative cases.”
+
+[for methods nerds, further on 'negative cases': @emigh1997PowerNegativeThinking; @varshney2001EthnicConflictCivil; @mahoney2004PossibilityPrincipleChoosing]
+
+```{r include=FALSE}
+library(ggplot2)
+
+df <- data.frame(
+  experienced = c("One Barrier Experienced","Two Barriers Experienced","Three Barriers Experienced","Four Barriers Experienced","Five Barriers Experienced"),
+  number =  c(10,10,12,1,1)
+  )
+
+df$experienced <- factor(df$experienced, level=c("One Barrier Experienced","Two Barriers Experienced","Three Barriers Experienced","Four Barriers Experienced","Five Barriers Experienced"))
+
+library(RColorBrewer)
+
+bars <- ggplot(df, aes(x = experienced, y = number, fill = experienced)) +
+  geom_col(position = "dodge", colour = "black") + theme(legend.position = c(0.8, 0.6)) +
+    geom_text(aes(y = number, label = number), vjust = 1.4, color = "black", size = 15) +
+  scale_fill_brewer(palette = "YlOrRd") +
+  scale_y_continuous(breaks=seq(0,12,2), limits=c(0,12)) +
+  theme(text = element_text(size = 22),
+        axis.text.x=element_blank(),
+        legend.title=element_blank()) +
+  labs(y="", x="")
+```
+
+## Barriers to terrorism - findings [@SimiWindisch2020]
+
+:::: {.columns}
+:::{.column width="45%"}
+1. mass casualty violence as *[counterproductive]{style="color:darkorange;"}*; 
+2. preference toward *[interpersonal violence]{style="color:darkorange;"}*; 
+3. changes in *[focus/availability]{style="color:darkorange;"}*; 
+4. internal *[organizational conflict]{style="color:darkorange;"}*; and 
+5. *[moral]{style="color:darkorange;"}* apprehension
+
+:::
+
+::: {.column width="55%" .center}
+
+```{r, out.width='100%'}
+bars
+```
+
+:::
+:::: 
+
+## expanding on the findings [@SimiWindisch2020] {.smaller}
+
+p.839 (**preference toward interpersonal violence**): 
+
+> They described [interpersonal violence as a masculine endeavor]{style="color:darkorange;"}, whereas, shooting or bombing people from a distance was considered dishonorable and unfair. As the following participants explained, compared to street fighting, using a gun expresses a lack of masculinity and physical prowess.
+
+p.841 (**changes in focus/availability**):
+
+> The presence of personal obligations can be thought of as changes in “[biographical availability]{style="color:darkred;"}” such as employment, marriage, and children. In all, thirteen participants (37 per cent) were identified as experiencing a change in focus and availability, which constrained the likelihood of MCV and shifted their attention toward personal obligations (e.g., children, work).
+
+p.842 (**internal organizational conflict**):
+
+> A common reason for entering extremism is the [appeal of joining a higher moral cause]{style="color:darkorange;"} predicated on virtues such as loyalty, kinship, and purity.
+
+## Radicalisation prevention
+
+Rune Ellefsen & Sveinung Sandberg (2022): Everyday Prevention of Radicalization: The Impacts of Family, Peer, and Police Intervention, *Studies in Conflict & Terrorism*.
+
+- (de)radicalisation actors in the example of Norway: 
+    + family 
+    + peers 
+    + police/security
+
+## Radicalisation prevention
+
+Rune Ellefsen & Sveinung Sandberg (2022): Everyday Prevention of Radicalization: The Impacts of Family, Peer, and Police Intervention, *Studies in Conflict & Terrorism*.
+
+- (de)radicalisation actors in the example of Norway: 
+    + family 
+    + peers 
+    + police/security
+    + [what about other actors?]{style="color:indigo;"}
+
+## Radicalisation prevention
+
+Rune Ellefsen & Sveinung Sandberg (2022): Everyday Prevention of Radicalization: The Impacts of Family, Peer, and Police Intervention, *Studies in Conflict & Terrorism*.
+
+- (de)radicalisation actors in the example of Norway: 
+    + family 
+    + peers 
+    + police/security
+    + [what about other actors?]{style="color:indigo;"}
+        * social workers 
+        * faith leaders 
+        * NGOs and community organisations
+
+## Resilience building, e.g., [Demokratie Leben!](https://www.demokratie-leben.de/)
+
+{{< video https://www.youtube.com/watch?v=3Ej6Uk2r4ig
+    start="1"
+    width="100%" 
+    height="100%" >}}
+
+
+# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+
+Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
+
+Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_03.html"))
+```
+
+
+## References
+
