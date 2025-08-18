@@ -31,8 +31,6 @@ bibliography: ../../../library.bib
 
 ## Presentation groups
 
-Remember: topic to me at least by Week 4
-
 ::: panel-tabset
 ## December
 
@@ -913,8 +911,8 @@ Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
 Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 
 
-<!-- ```{r} -->
-<!-- pagedown::chrome_print(file.path("..", "docs/slides", "slides_04.html")) -->
-<!-- ``` -->
+```{r}
+pagedown::chrome_print(file.path("..", "docs/slides", "slides_04.html"))
+```
 
 ## References
