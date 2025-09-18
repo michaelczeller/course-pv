@@ -3,6 +3,8 @@ title: "Slides"
 engine: knitr 
 ---
 
+* *[battery warning]{style="color:orange;"}*: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.
+
 # Class 1
 
 ```{r show-slide-tabs, echo=FALSE, results="asis"}
@@ -94,6 +96,51 @@ xaringanExtra::embed_xaringan(
 }
 ```
 
+# Class 5
+
+
+```{r echo=FALSE, results="asis"}
+#| warning: false
+if (Sys.Date() >= as.Date("2025-11-10")) {
+
+slide_buttons <- function(slide_id) {
+  glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
+}
+
+slide_buttons("/slides/slides_05")
+
+library(xaringanExtra)
+
+xaringanExtra::embed_xaringan(
+  "/slides/slides_05.html",
+  ratio = "16:9",
+  border = "none",
+  margin = "0 auto"
+)
+}
+```
+
+
+<!-- ```{r echo=FALSE, results="asis"} -->
+<!-- #| warning: false -->
+<!-- if (Sys.Date() >= as.Date("2025-11-10")) { -->
+
+<!-- slide_buttons <- function(slide_id) { -->
+<!--   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>') -->
+<!-- } -->
+
+<!-- slide_buttons("/slides/slides_05") -->
+
+<!-- library(xaringanExtra) -->
+
+<!-- xaringanExtra::embed_xaringan( -->
+<!--   "/slides/slides_05.html", -->
+<!--   ratio = "16:9", -->
+<!--   border = "none", -->
+<!--   margin = "0 auto" -->
+<!-- ) -->
+<!-- } -->
+<!-- ``` -->
 
 
 <!-- ```{r echo=FALSE, results="asis"} -->
