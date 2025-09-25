@@ -297,7 +297,7 @@ kable(data.frame(
 ## Course assessment - *Participation*
 
 - No examination in this course, BUT there is in '*Einführung Politisches System der BRD*'. There, you respond to an essay question from this course.
-    + Exam on 3 February (Monday) at 14.00
+    + Exam on [2 February (Monday) at 8.00]{style="color:red;"} in the [AudiMax](https://www.lmu.de/raumfinder/#/building/bw0000/map?room=000000100_)
     + 90-minutes written exam: response to 3 of 5 short-answer prompts from Prof. Bolleyer's lecture and to 1 of 3 essay prompts from this course
 
 - attend class and actively participate
