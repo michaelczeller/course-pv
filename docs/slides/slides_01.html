@@ -26005,6 +26005,19 @@ border: 0;
 <!-- - Summative discussion: takeaways, new ideas, lingering questions -->
 <!-- **Throughout, we will use _cases_ (especially the groups you study) to link _theory_ to _real-world events_.** -->
 </section>
+<section id="in-case-class-cannot-meet" class="slide level2">
+<h2>In case class cannot meet…</h2>
+<ul>
+<li>If it is not possible to convene in-person,
+<ul>
+<li>you will receive an email:</li>
+</ul>
+<ol type="1">
+<li>the class will meet online via Zoom (link in email), or</li>
+<li>the class will be cancelled, a recorded lecture uploaded on the ‘Slides’ page of the website, and a short review at the start of the next meeting</li>
+</ol></li>
+</ul>
+</section>
 <section id="colour-scheme-for-course-slides" class="slide level2">
 <h2>Colour scheme for course slides</h2>
 <ul>
@@ -26097,7 +26110,7 @@ border: 0;
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="435" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 434;"><span id="cb1-435"><a></a><span class="fu">md</span><span class="vs">`## About you! Poll results (Respondents: </span><span class="sc">${</span>respondentCount<span class="sc">}</span><span class="vs">)`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="441" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 440;"><span id="cb1-441"><a></a><span class="fu">md</span><span class="vs">`## About you! Poll results (Respondents: </span><span class="sc">${</span>respondentCount<span class="sc">}</span><span class="vs">)`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="expression">
 
@@ -26105,17 +26118,17 @@ border: 0;
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="442" data-source-offset="-1"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 441;"><span id="cb2-442"><a></a><span class="im">import</span> { liveGoogleSheet } <span class="im">from</span> <span class="st">&quot;@jimjamslam/live-google-sheet&quot;</span><span class="op">;</span></span>
-<span id="cb2-443"><a></a><span class="im">import</span> { aq<span class="op">,</span> op } <span class="im">from</span> <span class="st">&quot;@uwdata/arquero&quot;</span><span class="op">;</span></span>
-<span id="cb2-444"><a></a></span>
-<span id="cb2-445"><a></a><span class="co">// UPDATE THE LINK FOR A NEW POLL</span></span>
-<span id="cb2-446"><a></a>surveyResults <span class="op">=</span> <span class="fu">liveGoogleSheet</span>(</span>
-<span id="cb2-447"><a></a>  <span class="st">&quot;https://docs.google.com/spreadsheets/d/e/&quot;</span> <span class="op">+</span></span>
-<span id="cb2-448"><a></a>    <span class="st">&quot;2PACX-1vRgVNCDj9QaTEoiYe3NzdsTPg4BGZRppVV7qHobUirGcYJHabSD_A2M7V_kE0Lx6j1vPKPUarro_o6x/&quot;</span> <span class="op">+</span></span>
-<span id="cb2-449"><a></a>    <span class="st">&quot;pub?gid=784482251&amp;single=true&amp;output=csv&quot;</span><span class="op">,</span></span>
-<span id="cb2-450"><a></a>  <span class="dv">10000</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">6</span>)<span class="op">;</span> <span class="co">// adjust the last number to select all relevant columns </span></span>
-<span id="cb2-451"><a></a></span>
-<span id="cb2-452"><a></a>respondentCount <span class="op">=</span> surveyResults<span class="op">.</span><span class="at">length</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="448" data-source-offset="-1"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 447;"><span id="cb2-448"><a></a><span class="im">import</span> { liveGoogleSheet } <span class="im">from</span> <span class="st">&quot;@jimjamslam/live-google-sheet&quot;</span><span class="op">;</span></span>
+<span id="cb2-449"><a></a><span class="im">import</span> { aq<span class="op">,</span> op } <span class="im">from</span> <span class="st">&quot;@uwdata/arquero&quot;</span><span class="op">;</span></span>
+<span id="cb2-450"><a></a></span>
+<span id="cb2-451"><a></a><span class="co">// UPDATE THE LINK FOR A NEW POLL</span></span>
+<span id="cb2-452"><a></a>surveyResults <span class="op">=</span> <span class="fu">liveGoogleSheet</span>(</span>
+<span id="cb2-453"><a></a>  <span class="st">&quot;https://docs.google.com/spreadsheets/d/e/&quot;</span> <span class="op">+</span></span>
+<span id="cb2-454"><a></a>    <span class="st">&quot;2PACX-1vRgVNCDj9QaTEoiYe3NzdsTPg4BGZRppVV7qHobUirGcYJHabSD_A2M7V_kE0Lx6j1vPKPUarro_o6x/&quot;</span> <span class="op">+</span></span>
+<span id="cb2-455"><a></a>    <span class="st">&quot;pub?gid=784482251&amp;single=true&amp;output=csv&quot;</span><span class="op">,</span></span>
+<span id="cb2-456"><a></a>  <span class="dv">10000</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">6</span>)<span class="op">;</span> <span class="co">// adjust the last number to select all relevant columns </span></span>
+<span id="cb2-457"><a></a></span>
+<span id="cb2-458"><a></a>respondentCount <span class="op">=</span> surveyResults<span class="op">.</span><span class="at">length</span><span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -26146,93 +26159,93 @@ border: 0;
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="457" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 456;"><span id="cb3-457"><a></a><span class="kw">function</span> <span class="fu">PieChart</span>(data<span class="op">,</span> {</span>
-<span id="cb3-458"><a></a>  name <span class="op">=</span> ([x]) <span class="kw">=&gt;</span> x<span class="op">,</span>  <span class="co">// given d in data, returns the (ordinal) label</span></span>
-<span id="cb3-459"><a></a>  value <span class="op">=</span> ([<span class="op">,</span> y]) <span class="kw">=&gt;</span> y<span class="op">,</span> <span class="co">// given d in data, returns the (quantitative) value</span></span>
-<span id="cb3-460"><a></a>  title<span class="op">,</span> <span class="co">// given d in data, returns the title text</span></span>
-<span id="cb3-461"><a></a>  width <span class="op">=</span> <span class="dv">640</span><span class="op">,</span> <span class="co">// outer width, in pixels</span></span>
-<span id="cb3-462"><a></a>  height <span class="op">=</span> <span class="dv">400</span><span class="op">,</span> <span class="co">// outer height, in pixels</span></span>
-<span id="cb3-463"><a></a>  innerRadius <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> <span class="co">// inner radius of pie, in pixels (non-zero for donut)</span></span>
-<span id="cb3-464"><a></a>  outerRadius <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(width<span class="op">,</span> height) <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="co">// outer radius of pie, in pixels</span></span>
-<span id="cb3-465"><a></a>  labelRadius <span class="op">=</span> (innerRadius <span class="op">*</span> <span class="fl">0.5</span> <span class="op">+</span> outerRadius <span class="op">*</span> <span class="fl">0.5</span>)<span class="op">,</span> <span class="co">// center radius of labels</span></span>
-<span id="cb3-466"><a></a>  format <span class="op">=</span> <span class="st">&quot;,&quot;</span><span class="op">,</span> <span class="co">// a format specifier for values (in the label)</span></span>
-<span id="cb3-467"><a></a>  names<span class="op">,</span> <span class="co">// array of names (the domain of the color scale)</span></span>
-<span id="cb3-468"><a></a>  colors<span class="op">,</span> <span class="co">// array of colors for names</span></span>
-<span id="cb3-469"><a></a>  stroke <span class="op">=</span> innerRadius <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">&quot;none&quot;</span> <span class="op">:</span> <span class="st">&quot;white&quot;</span><span class="op">,</span> <span class="co">// stroke separating widths</span></span>
-<span id="cb3-470"><a></a>  strokeWidth <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> <span class="co">// width of stroke separating wedges</span></span>
-<span id="cb3-471"><a></a>  strokeLinejoin <span class="op">=</span> <span class="st">&quot;round&quot;</span><span class="op">,</span> <span class="co">// line join of stroke separating wedges</span></span>
-<span id="cb3-472"><a></a>  padAngle <span class="op">=</span> stroke <span class="op">===</span> <span class="st">&quot;none&quot;</span> <span class="op">?</span> <span class="dv">1</span> <span class="op">/</span> outerRadius <span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="co">// angular separation between wedges, in radians</span></span>
-<span id="cb3-473"><a></a>} <span class="op">=</span> {}) {</span>
-<span id="cb3-474"><a></a>  <span class="co">// Compute values.</span></span>
-<span id="cb3-475"><a></a>  <span class="kw">const</span> N <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(data<span class="op">,</span> name)<span class="op">;</span></span>
-<span id="cb3-476"><a></a>  <span class="kw">const</span> V <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(data<span class="op">,</span> value)<span class="op">;</span></span>
-<span id="cb3-477"><a></a>  <span class="kw">const</span> I <span class="op">=</span> d3<span class="op">.</span><span class="fu">range</span>(N<span class="op">.</span><span class="at">length</span>)<span class="op">.</span><span class="fu">filter</span>(i <span class="kw">=&gt;</span> <span class="op">!</span><span class="pp">isNaN</span>(V[i]))<span class="op">;</span></span>
-<span id="cb3-478"><a></a></span>
-<span id="cb3-479"><a></a>  <span class="co">// Unique the names.</span></span>
-<span id="cb3-480"><a></a>  <span class="cf">if</span> (names <span class="op">===</span> <span class="kw">undefined</span>) names <span class="op">=</span> N<span class="op">;</span></span>
-<span id="cb3-481"><a></a>  names <span class="op">=</span> <span class="kw">new</span> d3<span class="op">.</span><span class="fu">InternSet</span>(names)<span class="op">;</span></span>
-<span id="cb3-482"><a></a></span>
-<span id="cb3-483"><a></a>  <span class="co">// Chose a default color scheme based on cardinality.</span></span>
-<span id="cb3-484"><a></a>  <span class="cf">if</span> (colors <span class="op">===</span> <span class="kw">undefined</span>) colors <span class="op">=</span> d3<span class="op">.</span><span class="at">schemeSpectral</span>[names<span class="op">.</span><span class="at">size</span>]<span class="op">;</span></span>
-<span id="cb3-485"><a></a>  <span class="cf">if</span> (colors <span class="op">===</span> <span class="kw">undefined</span>) colors <span class="op">=</span> d3<span class="op">.</span><span class="fu">quantize</span>(t <span class="kw">=&gt;</span> d3<span class="op">.</span><span class="fu">interpolateSpectral</span>(t <span class="op">*</span> <span class="fl">0.8</span> <span class="op">+</span> <span class="fl">0.1</span>)<span class="op">,</span> names<span class="op">.</span><span class="at">size</span>)<span class="op">;</span></span>
-<span id="cb3-486"><a></a></span>
-<span id="cb3-487"><a></a>  <span class="co">// Construct scales.</span></span>
-<span id="cb3-488"><a></a>  <span class="kw">const</span> color <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleOrdinal</span>(names<span class="op">,</span> colors)<span class="op">;</span></span>
-<span id="cb3-489"><a></a></span>
-<span id="cb3-490"><a></a>  <span class="co">// Compute titles.</span></span>
-<span id="cb3-491"><a></a>  <span class="cf">if</span> (title <span class="op">===</span> <span class="kw">undefined</span>) {</span>
-<span id="cb3-492"><a></a>    <span class="kw">const</span> formatValue <span class="op">=</span> d3<span class="op">.</span><span class="fu">format</span>(format)<span class="op">;</span></span>
-<span id="cb3-493"><a></a>    title <span class="op">=</span> i <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>N[i]<span class="sc">}\n${</span><span class="fu">formatValue</span>(V[i])<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
-<span id="cb3-494"><a></a>  } <span class="cf">else</span> {</span>
-<span id="cb3-495"><a></a>    <span class="kw">const</span> O <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(data<span class="op">,</span> d <span class="kw">=&gt;</span> d)<span class="op">;</span></span>
-<span id="cb3-496"><a></a>    <span class="kw">const</span> T <span class="op">=</span> title<span class="op">;</span></span>
-<span id="cb3-497"><a></a>    title <span class="op">=</span> i <span class="kw">=&gt;</span> <span class="fu">T</span>(O[i]<span class="op">,</span> i<span class="op">,</span> data)<span class="op">;</span></span>
-<span id="cb3-498"><a></a>  }</span>
-<span id="cb3-499"><a></a></span>
-<span id="cb3-500"><a></a>  <span class="co">// Construct arcs.</span></span>
-<span id="cb3-501"><a></a>  <span class="kw">const</span> arcs <span class="op">=</span> d3<span class="op">.</span><span class="fu">pie</span>()<span class="op">.</span><span class="fu">padAngle</span>(padAngle)<span class="op">.</span><span class="fu">sort</span>(<span class="kw">null</span>)<span class="op">.</span><span class="fu">value</span>(i <span class="kw">=&gt;</span> V[i])(I)<span class="op">;</span></span>
-<span id="cb3-502"><a></a>  <span class="kw">const</span> arc <span class="op">=</span> d3<span class="op">.</span><span class="fu">arc</span>()<span class="op">.</span><span class="fu">innerRadius</span>(innerRadius)<span class="op">.</span><span class="fu">outerRadius</span>(outerRadius)<span class="op">;</span></span>
-<span id="cb3-503"><a></a>  <span class="kw">const</span> arcLabel <span class="op">=</span> d3<span class="op">.</span><span class="fu">arc</span>()<span class="op">.</span><span class="fu">innerRadius</span>(labelRadius)<span class="op">.</span><span class="fu">outerRadius</span>(labelRadius)<span class="op">;</span></span>
-<span id="cb3-504"><a></a>  </span>
-<span id="cb3-505"><a></a>  <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">&quot;svg&quot;</span>)</span>
-<span id="cb3-506"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> width)</span>
-<span id="cb3-507"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> height)</span>
-<span id="cb3-508"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;viewBox&quot;</span><span class="op">,</span> [<span class="op">-</span>width <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="op">-</span>height <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> width<span class="op">,</span> height])</span>
-<span id="cb3-509"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;style&quot;</span><span class="op">,</span> <span class="st">&quot;max-width: 100%; height: auto; height: intrinsic;&quot;</span>)<span class="op">;</span></span>
-<span id="cb3-510"><a></a></span>
-<span id="cb3-511"><a></a>  svg<span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;g&quot;</span>)</span>
-<span id="cb3-512"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;stroke&quot;</span><span class="op">,</span> stroke)</span>
-<span id="cb3-513"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;stroke-width&quot;</span><span class="op">,</span> strokeWidth)</span>
-<span id="cb3-514"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;stroke-linejoin&quot;</span><span class="op">,</span> strokeLinejoin)</span>
-<span id="cb3-515"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;path&quot;</span>)</span>
-<span id="cb3-516"><a></a>    <span class="op">.</span><span class="fu">data</span>(arcs)</span>
-<span id="cb3-517"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">&quot;path&quot;</span>)</span>
-<span id="cb3-518"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">color</span>(N[d<span class="op">.</span><span class="at">data</span>]))</span>
-<span id="cb3-519"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;d&quot;</span><span class="op">,</span> arc)</span>
-<span id="cb3-520"><a></a>    <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;title&quot;</span>)</span>
-<span id="cb3-521"><a></a>      <span class="op">.</span><span class="fu">text</span>(d <span class="kw">=&gt;</span> <span class="fu">title</span>(d<span class="op">.</span><span class="at">data</span>))<span class="op">;</span></span>
-<span id="cb3-522"><a></a></span>
-<span id="cb3-523"><a></a>  svg<span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;g&quot;</span>)</span>
-<span id="cb3-524"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;font-family&quot;</span><span class="op">,</span> <span class="st">&quot;sans-serif&quot;</span>)</span>
-<span id="cb3-525"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;font-size&quot;</span><span class="op">,</span> <span class="dv">100</span>)</span>
-<span id="cb3-526"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;text-anchor&quot;</span><span class="op">,</span> <span class="st">&quot;middle&quot;</span>)</span>
-<span id="cb3-527"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text&quot;</span>)</span>
-<span id="cb3-528"><a></a>    <span class="op">.</span><span class="fu">data</span>(arcs)</span>
-<span id="cb3-529"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">&quot;text&quot;</span>)</span>
-<span id="cb3-530"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="vs">`translate(</span><span class="sc">${</span>arcLabel<span class="op">.</span><span class="fu">centroid</span>(d)<span class="sc">}</span><span class="vs">)`</span>)</span>
-<span id="cb3-531"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;tspan&quot;</span>)</span>
-<span id="cb3-532"><a></a>    <span class="op">.</span><span class="fu">data</span>(d <span class="kw">=&gt;</span> {</span>
-<span id="cb3-533"><a></a>      <span class="kw">const</span> lines <span class="op">=</span> <span class="vs">`</span><span class="sc">${</span><span class="fu">title</span>(d<span class="op">.</span><span class="at">data</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\n</span><span class="ss">/</span>)<span class="op">;</span></span>
-<span id="cb3-534"><a></a>      <span class="cf">return</span> (d<span class="op">.</span><span class="at">endAngle</span> <span class="op">-</span> d<span class="op">.</span><span class="at">startAngle</span>) <span class="op">&gt;</span> <span class="fl">0.25</span> <span class="op">?</span> lines <span class="op">:</span> lines<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb3-535"><a></a>    })</span>
-<span id="cb3-536"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">&quot;tspan&quot;</span>)</span>
-<span id="cb3-537"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="dv">0</span>)</span>
-<span id="cb3-538"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>i <span class="op">*</span> <span class="fl">1.1</span><span class="sc">}</span><span class="vs">em`</span>)</span>
-<span id="cb3-539"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;font-weight&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> i <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> <span class="st">&quot;bold&quot;</span>)</span>
-<span id="cb3-540"><a></a>      <span class="op">.</span><span class="fu">text</span>(d <span class="kw">=&gt;</span> d)<span class="op">;</span></span>
-<span id="cb3-541"><a></a></span>
-<span id="cb3-542"><a></a>  <span class="cf">return</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(svg<span class="op">.</span><span class="fu">node</span>()<span class="op">,</span> {<span class="dt">scales</span><span class="op">:</span> {color}})<span class="op">;</span></span>
-<span id="cb3-543"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="463" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 462;"><span id="cb3-463"><a></a><span class="kw">function</span> <span class="fu">PieChart</span>(data<span class="op">,</span> {</span>
+<span id="cb3-464"><a></a>  name <span class="op">=</span> ([x]) <span class="kw">=&gt;</span> x<span class="op">,</span>  <span class="co">// given d in data, returns the (ordinal) label</span></span>
+<span id="cb3-465"><a></a>  value <span class="op">=</span> ([<span class="op">,</span> y]) <span class="kw">=&gt;</span> y<span class="op">,</span> <span class="co">// given d in data, returns the (quantitative) value</span></span>
+<span id="cb3-466"><a></a>  title<span class="op">,</span> <span class="co">// given d in data, returns the title text</span></span>
+<span id="cb3-467"><a></a>  width <span class="op">=</span> <span class="dv">640</span><span class="op">,</span> <span class="co">// outer width, in pixels</span></span>
+<span id="cb3-468"><a></a>  height <span class="op">=</span> <span class="dv">400</span><span class="op">,</span> <span class="co">// outer height, in pixels</span></span>
+<span id="cb3-469"><a></a>  innerRadius <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> <span class="co">// inner radius of pie, in pixels (non-zero for donut)</span></span>
+<span id="cb3-470"><a></a>  outerRadius <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(width<span class="op">,</span> height) <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="co">// outer radius of pie, in pixels</span></span>
+<span id="cb3-471"><a></a>  labelRadius <span class="op">=</span> (innerRadius <span class="op">*</span> <span class="fl">0.5</span> <span class="op">+</span> outerRadius <span class="op">*</span> <span class="fl">0.5</span>)<span class="op">,</span> <span class="co">// center radius of labels</span></span>
+<span id="cb3-472"><a></a>  format <span class="op">=</span> <span class="st">&quot;,&quot;</span><span class="op">,</span> <span class="co">// a format specifier for values (in the label)</span></span>
+<span id="cb3-473"><a></a>  names<span class="op">,</span> <span class="co">// array of names (the domain of the color scale)</span></span>
+<span id="cb3-474"><a></a>  colors<span class="op">,</span> <span class="co">// array of colors for names</span></span>
+<span id="cb3-475"><a></a>  stroke <span class="op">=</span> innerRadius <span class="op">&gt;</span> <span class="dv">0</span> <span class="op">?</span> <span class="st">&quot;none&quot;</span> <span class="op">:</span> <span class="st">&quot;white&quot;</span><span class="op">,</span> <span class="co">// stroke separating widths</span></span>
+<span id="cb3-476"><a></a>  strokeWidth <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> <span class="co">// width of stroke separating wedges</span></span>
+<span id="cb3-477"><a></a>  strokeLinejoin <span class="op">=</span> <span class="st">&quot;round&quot;</span><span class="op">,</span> <span class="co">// line join of stroke separating wedges</span></span>
+<span id="cb3-478"><a></a>  padAngle <span class="op">=</span> stroke <span class="op">===</span> <span class="st">&quot;none&quot;</span> <span class="op">?</span> <span class="dv">1</span> <span class="op">/</span> outerRadius <span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="co">// angular separation between wedges, in radians</span></span>
+<span id="cb3-479"><a></a>} <span class="op">=</span> {}) {</span>
+<span id="cb3-480"><a></a>  <span class="co">// Compute values.</span></span>
+<span id="cb3-481"><a></a>  <span class="kw">const</span> N <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(data<span class="op">,</span> name)<span class="op">;</span></span>
+<span id="cb3-482"><a></a>  <span class="kw">const</span> V <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(data<span class="op">,</span> value)<span class="op">;</span></span>
+<span id="cb3-483"><a></a>  <span class="kw">const</span> I <span class="op">=</span> d3<span class="op">.</span><span class="fu">range</span>(N<span class="op">.</span><span class="at">length</span>)<span class="op">.</span><span class="fu">filter</span>(i <span class="kw">=&gt;</span> <span class="op">!</span><span class="pp">isNaN</span>(V[i]))<span class="op">;</span></span>
+<span id="cb3-484"><a></a></span>
+<span id="cb3-485"><a></a>  <span class="co">// Unique the names.</span></span>
+<span id="cb3-486"><a></a>  <span class="cf">if</span> (names <span class="op">===</span> <span class="kw">undefined</span>) names <span class="op">=</span> N<span class="op">;</span></span>
+<span id="cb3-487"><a></a>  names <span class="op">=</span> <span class="kw">new</span> d3<span class="op">.</span><span class="fu">InternSet</span>(names)<span class="op">;</span></span>
+<span id="cb3-488"><a></a></span>
+<span id="cb3-489"><a></a>  <span class="co">// Chose a default color scheme based on cardinality.</span></span>
+<span id="cb3-490"><a></a>  <span class="cf">if</span> (colors <span class="op">===</span> <span class="kw">undefined</span>) colors <span class="op">=</span> d3<span class="op">.</span><span class="at">schemeSpectral</span>[names<span class="op">.</span><span class="at">size</span>]<span class="op">;</span></span>
+<span id="cb3-491"><a></a>  <span class="cf">if</span> (colors <span class="op">===</span> <span class="kw">undefined</span>) colors <span class="op">=</span> d3<span class="op">.</span><span class="fu">quantize</span>(t <span class="kw">=&gt;</span> d3<span class="op">.</span><span class="fu">interpolateSpectral</span>(t <span class="op">*</span> <span class="fl">0.8</span> <span class="op">+</span> <span class="fl">0.1</span>)<span class="op">,</span> names<span class="op">.</span><span class="at">size</span>)<span class="op">;</span></span>
+<span id="cb3-492"><a></a></span>
+<span id="cb3-493"><a></a>  <span class="co">// Construct scales.</span></span>
+<span id="cb3-494"><a></a>  <span class="kw">const</span> color <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleOrdinal</span>(names<span class="op">,</span> colors)<span class="op">;</span></span>
+<span id="cb3-495"><a></a></span>
+<span id="cb3-496"><a></a>  <span class="co">// Compute titles.</span></span>
+<span id="cb3-497"><a></a>  <span class="cf">if</span> (title <span class="op">===</span> <span class="kw">undefined</span>) {</span>
+<span id="cb3-498"><a></a>    <span class="kw">const</span> formatValue <span class="op">=</span> d3<span class="op">.</span><span class="fu">format</span>(format)<span class="op">;</span></span>
+<span id="cb3-499"><a></a>    title <span class="op">=</span> i <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>N[i]<span class="sc">}\n${</span><span class="fu">formatValue</span>(V[i])<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb3-500"><a></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-501"><a></a>    <span class="kw">const</span> O <span class="op">=</span> d3<span class="op">.</span><span class="fu">map</span>(data<span class="op">,</span> d <span class="kw">=&gt;</span> d)<span class="op">;</span></span>
+<span id="cb3-502"><a></a>    <span class="kw">const</span> T <span class="op">=</span> title<span class="op">;</span></span>
+<span id="cb3-503"><a></a>    title <span class="op">=</span> i <span class="kw">=&gt;</span> <span class="fu">T</span>(O[i]<span class="op">,</span> i<span class="op">,</span> data)<span class="op">;</span></span>
+<span id="cb3-504"><a></a>  }</span>
+<span id="cb3-505"><a></a></span>
+<span id="cb3-506"><a></a>  <span class="co">// Construct arcs.</span></span>
+<span id="cb3-507"><a></a>  <span class="kw">const</span> arcs <span class="op">=</span> d3<span class="op">.</span><span class="fu">pie</span>()<span class="op">.</span><span class="fu">padAngle</span>(padAngle)<span class="op">.</span><span class="fu">sort</span>(<span class="kw">null</span>)<span class="op">.</span><span class="fu">value</span>(i <span class="kw">=&gt;</span> V[i])(I)<span class="op">;</span></span>
+<span id="cb3-508"><a></a>  <span class="kw">const</span> arc <span class="op">=</span> d3<span class="op">.</span><span class="fu">arc</span>()<span class="op">.</span><span class="fu">innerRadius</span>(innerRadius)<span class="op">.</span><span class="fu">outerRadius</span>(outerRadius)<span class="op">;</span></span>
+<span id="cb3-509"><a></a>  <span class="kw">const</span> arcLabel <span class="op">=</span> d3<span class="op">.</span><span class="fu">arc</span>()<span class="op">.</span><span class="fu">innerRadius</span>(labelRadius)<span class="op">.</span><span class="fu">outerRadius</span>(labelRadius)<span class="op">;</span></span>
+<span id="cb3-510"><a></a>  </span>
+<span id="cb3-511"><a></a>  <span class="kw">const</span> svg <span class="op">=</span> d3<span class="op">.</span><span class="fu">create</span>(<span class="st">&quot;svg&quot;</span>)</span>
+<span id="cb3-512"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;width&quot;</span><span class="op">,</span> width)</span>
+<span id="cb3-513"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;height&quot;</span><span class="op">,</span> height)</span>
+<span id="cb3-514"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;viewBox&quot;</span><span class="op">,</span> [<span class="op">-</span>width <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> <span class="op">-</span>height <span class="op">/</span> <span class="dv">2</span><span class="op">,</span> width<span class="op">,</span> height])</span>
+<span id="cb3-515"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;style&quot;</span><span class="op">,</span> <span class="st">&quot;max-width: 100%; height: auto; height: intrinsic;&quot;</span>)<span class="op">;</span></span>
+<span id="cb3-516"><a></a></span>
+<span id="cb3-517"><a></a>  svg<span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;g&quot;</span>)</span>
+<span id="cb3-518"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;stroke&quot;</span><span class="op">,</span> stroke)</span>
+<span id="cb3-519"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;stroke-width&quot;</span><span class="op">,</span> strokeWidth)</span>
+<span id="cb3-520"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;stroke-linejoin&quot;</span><span class="op">,</span> strokeLinejoin)</span>
+<span id="cb3-521"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;path&quot;</span>)</span>
+<span id="cb3-522"><a></a>    <span class="op">.</span><span class="fu">data</span>(arcs)</span>
+<span id="cb3-523"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">&quot;path&quot;</span>)</span>
+<span id="cb3-524"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;fill&quot;</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="fu">color</span>(N[d<span class="op">.</span><span class="at">data</span>]))</span>
+<span id="cb3-525"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;d&quot;</span><span class="op">,</span> arc)</span>
+<span id="cb3-526"><a></a>    <span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;title&quot;</span>)</span>
+<span id="cb3-527"><a></a>      <span class="op">.</span><span class="fu">text</span>(d <span class="kw">=&gt;</span> <span class="fu">title</span>(d<span class="op">.</span><span class="at">data</span>))<span class="op">;</span></span>
+<span id="cb3-528"><a></a></span>
+<span id="cb3-529"><a></a>  svg<span class="op">.</span><span class="fu">append</span>(<span class="st">&quot;g&quot;</span>)</span>
+<span id="cb3-530"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;font-family&quot;</span><span class="op">,</span> <span class="st">&quot;sans-serif&quot;</span>)</span>
+<span id="cb3-531"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;font-size&quot;</span><span class="op">,</span> <span class="dv">100</span>)</span>
+<span id="cb3-532"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;text-anchor&quot;</span><span class="op">,</span> <span class="st">&quot;middle&quot;</span>)</span>
+<span id="cb3-533"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;text&quot;</span>)</span>
+<span id="cb3-534"><a></a>    <span class="op">.</span><span class="fu">data</span>(arcs)</span>
+<span id="cb3-535"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">&quot;text&quot;</span>)</span>
+<span id="cb3-536"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;transform&quot;</span><span class="op">,</span> d <span class="kw">=&gt;</span> <span class="vs">`translate(</span><span class="sc">${</span>arcLabel<span class="op">.</span><span class="fu">centroid</span>(d)<span class="sc">}</span><span class="vs">)`</span>)</span>
+<span id="cb3-537"><a></a>    <span class="op">.</span><span class="fu">selectAll</span>(<span class="st">&quot;tspan&quot;</span>)</span>
+<span id="cb3-538"><a></a>    <span class="op">.</span><span class="fu">data</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb3-539"><a></a>      <span class="kw">const</span> lines <span class="op">=</span> <span class="vs">`</span><span class="sc">${</span><span class="fu">title</span>(d<span class="op">.</span><span class="at">data</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\n</span><span class="ss">/</span>)<span class="op">;</span></span>
+<span id="cb3-540"><a></a>      <span class="cf">return</span> (d<span class="op">.</span><span class="at">endAngle</span> <span class="op">-</span> d<span class="op">.</span><span class="at">startAngle</span>) <span class="op">&gt;</span> <span class="fl">0.25</span> <span class="op">?</span> lines <span class="op">:</span> lines<span class="op">.</span><span class="fu">slice</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb3-541"><a></a>    })</span>
+<span id="cb3-542"><a></a>    <span class="op">.</span><span class="fu">join</span>(<span class="st">&quot;tspan&quot;</span>)</span>
+<span id="cb3-543"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;x&quot;</span><span class="op">,</span> <span class="dv">0</span>)</span>
+<span id="cb3-544"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;y&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>i <span class="op">*</span> <span class="fl">1.1</span><span class="sc">}</span><span class="vs">em`</span>)</span>
+<span id="cb3-545"><a></a>      <span class="op">.</span><span class="fu">attr</span>(<span class="st">&quot;font-weight&quot;</span><span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> i <span class="op">?</span> <span class="kw">null</span> <span class="op">:</span> <span class="st">&quot;bold&quot;</span>)</span>
+<span id="cb3-546"><a></a>      <span class="op">.</span><span class="fu">text</span>(d <span class="kw">=&gt;</span> d)<span class="op">;</span></span>
+<span id="cb3-547"><a></a></span>
+<span id="cb3-548"><a></a>  <span class="cf">return</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(svg<span class="op">.</span><span class="fu">node</span>()<span class="op">,</span> {<span class="dt">scales</span><span class="op">:</span> {color}})<span class="op">;</span></span>
+<span id="cb3-549"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -26243,22 +26256,22 @@ border: 0;
 <div class="column" style="width:50%;">
 <p>Prior methods class</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="554" data-source-offset="-46"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 553;"><span id="cb4-554"><a></a>methodsCounts <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
-<span id="cb4-555"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;methods&quot;</span>)</span>
-<span id="cb4-556"><a></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">methods</span><span class="op">:</span> d <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">methods</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">methods</span><span class="op">.</span><span class="fu">trim</span>() <span class="op">!==</span> <span class="st">&quot;&quot;</span> <span class="op">?</span> d<span class="op">.</span><span class="at">methods</span> <span class="op">:</span> <span class="st">&quot;NA&quot;</span>) })</span>
-<span id="cb4-557"><a></a>  <span class="op">.</span><span class="fu">groupby</span>(<span class="st">&quot;methods&quot;</span>)</span>
-<span id="cb4-558"><a></a>  <span class="op">.</span><span class="fu">count</span>()</span>
-<span id="cb4-559"><a></a>  <span class="op">.</span><span class="fu">rename</span>({ <span class="dt">count</span><span class="op">:</span> <span class="st">&#39;value&#39;</span><span class="op">,</span> <span class="dt">methods</span><span class="op">:</span> <span class="st">&#39;name&#39;</span> }) <span class="co">// Rename for D3 pie chart</span></span>
-<span id="cb4-560"><a></a>  <span class="op">.</span><span class="fu">objects</span>() <span class="co">// convert to array for D3</span></span>
-<span id="cb4-561"><a></a></span>
-<span id="cb4-562"><a></a>methodsChart <span class="op">=</span> <span class="fu">PieChart</span>(methodsCounts<span class="op">,</span> {</span>
-<span id="cb4-563"><a></a>  <span class="dt">name</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">name</span><span class="op">,</span></span>
-<span id="cb4-564"><a></a>  <span class="dt">value</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
-<span id="cb4-565"><a></a>  <span class="dt">names</span><span class="op">:</span> [<span class="st">&quot;Yes&quot;</span><span class="op">,</span> <span class="st">&quot;No&quot;</span><span class="op">,</span> <span class="st">&quot;NA&quot;</span>]<span class="op">,</span> <span class="co">// ordering</span></span>
-<span id="cb4-566"><a></a>  <span class="dt">colors</span><span class="op">:</span> [<span class="st">&quot;#4CAF50&quot;</span><span class="op">,</span> <span class="st">&quot;#F44336&quot;</span><span class="op">,</span> <span class="st">&quot;#CCCCCC&quot;</span>]<span class="op">,</span> <span class="co">// green &#39;yes&#39;, red &#39;no&#39;, grey &#39;NA&#39;</span></span>
-<span id="cb4-567"><a></a>  width<span class="op">,</span></span>
-<span id="cb4-568"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">800</span></span>
-<span id="cb4-569"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="560" data-source-offset="-46"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 559;"><span id="cb4-560"><a></a>methodsCounts <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
+<span id="cb4-561"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;methods&quot;</span>)</span>
+<span id="cb4-562"><a></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">methods</span><span class="op">:</span> d <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">methods</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">methods</span><span class="op">.</span><span class="fu">trim</span>() <span class="op">!==</span> <span class="st">&quot;&quot;</span> <span class="op">?</span> d<span class="op">.</span><span class="at">methods</span> <span class="op">:</span> <span class="st">&quot;NA&quot;</span>) })</span>
+<span id="cb4-563"><a></a>  <span class="op">.</span><span class="fu">groupby</span>(<span class="st">&quot;methods&quot;</span>)</span>
+<span id="cb4-564"><a></a>  <span class="op">.</span><span class="fu">count</span>()</span>
+<span id="cb4-565"><a></a>  <span class="op">.</span><span class="fu">rename</span>({ <span class="dt">count</span><span class="op">:</span> <span class="st">&#39;value&#39;</span><span class="op">,</span> <span class="dt">methods</span><span class="op">:</span> <span class="st">&#39;name&#39;</span> }) <span class="co">// Rename for D3 pie chart</span></span>
+<span id="cb4-566"><a></a>  <span class="op">.</span><span class="fu">objects</span>() <span class="co">// convert to array for D3</span></span>
+<span id="cb4-567"><a></a></span>
+<span id="cb4-568"><a></a>methodsChart <span class="op">=</span> <span class="fu">PieChart</span>(methodsCounts<span class="op">,</span> {</span>
+<span id="cb4-569"><a></a>  <span class="dt">name</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">name</span><span class="op">,</span></span>
+<span id="cb4-570"><a></a>  <span class="dt">value</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
+<span id="cb4-571"><a></a>  <span class="dt">names</span><span class="op">:</span> [<span class="st">&quot;Yes&quot;</span><span class="op">,</span> <span class="st">&quot;No&quot;</span><span class="op">,</span> <span class="st">&quot;NA&quot;</span>]<span class="op">,</span> <span class="co">// ordering</span></span>
+<span id="cb4-572"><a></a>  <span class="dt">colors</span><span class="op">:</span> [<span class="st">&quot;#4CAF50&quot;</span><span class="op">,</span> <span class="st">&quot;#F44336&quot;</span><span class="op">,</span> <span class="st">&quot;#CCCCCC&quot;</span>]<span class="op">,</span> <span class="co">// green &#39;yes&#39;, red &#39;no&#39;, grey &#39;NA&#39;</span></span>
+<span id="cb4-573"><a></a>  width<span class="op">,</span></span>
+<span id="cb4-574"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">800</span></span>
+<span id="cb4-575"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-1" data-nodetype="declaration">
@@ -26277,22 +26290,22 @@ border: 0;
 </div><div class="column" style="width:50%;">
 <p>Prior analytical software use</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="581" data-source-offset="-47"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 580;"><span id="cb5-581"><a></a>softwareCounts <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
-<span id="cb5-582"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;software&quot;</span>)</span>
-<span id="cb5-583"><a></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">software</span><span class="op">:</span> d <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">software</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">software</span><span class="op">.</span><span class="fu">trim</span>() <span class="op">!==</span> <span class="st">&quot;&quot;</span> <span class="op">?</span> d<span class="op">.</span><span class="at">software</span> <span class="op">:</span> <span class="st">&quot;NA&quot;</span>) })</span>
-<span id="cb5-584"><a></a>  <span class="op">.</span><span class="fu">groupby</span>(<span class="st">&quot;software&quot;</span>)</span>
-<span id="cb5-585"><a></a>  <span class="op">.</span><span class="fu">count</span>()</span>
-<span id="cb5-586"><a></a>  <span class="op">.</span><span class="fu">rename</span>({ <span class="dt">count</span><span class="op">:</span> <span class="st">&#39;value&#39;</span><span class="op">,</span> <span class="dt">software</span><span class="op">:</span> <span class="st">&#39;name&#39;</span> }) <span class="co">// Rename for D3 pie chart</span></span>
-<span id="cb5-587"><a></a>  <span class="op">.</span><span class="fu">objects</span>() <span class="co">// convert to array for D3</span></span>
-<span id="cb5-588"><a></a></span>
-<span id="cb5-589"><a></a>softwareChart <span class="op">=</span> <span class="fu">PieChart</span>(softwareCounts<span class="op">,</span> {</span>
-<span id="cb5-590"><a></a>  <span class="dt">name</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">name</span><span class="op">,</span></span>
-<span id="cb5-591"><a></a>  <span class="dt">value</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
-<span id="cb5-592"><a></a>  <span class="dt">names</span><span class="op">:</span> [<span class="st">&quot;Yes&quot;</span><span class="op">,</span> <span class="st">&quot;No&quot;</span><span class="op">,</span> <span class="st">&quot;NA&quot;</span>]<span class="op">,</span> <span class="co">// ordering</span></span>
-<span id="cb5-593"><a></a>  <span class="dt">colors</span><span class="op">:</span> [<span class="st">&quot;#4CAF50&quot;</span><span class="op">,</span> <span class="st">&quot;#F44336&quot;</span><span class="op">,</span> <span class="st">&quot;#CCCCCC&quot;</span>]<span class="op">,</span> <span class="co">// green &#39;yes&#39;, red &#39;no&#39;, grey &#39;NA&#39;</span></span>
-<span id="cb5-594"><a></a>  width<span class="op">,</span></span>
-<span id="cb5-595"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">800</span></span>
-<span id="cb5-596"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="587" data-source-offset="-47"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 586;"><span id="cb5-587"><a></a>softwareCounts <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
+<span id="cb5-588"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;software&quot;</span>)</span>
+<span id="cb5-589"><a></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">software</span><span class="op">:</span> d <span class="kw">=&gt;</span> (d<span class="op">.</span><span class="at">software</span> <span class="op">&amp;&amp;</span> d<span class="op">.</span><span class="at">software</span><span class="op">.</span><span class="fu">trim</span>() <span class="op">!==</span> <span class="st">&quot;&quot;</span> <span class="op">?</span> d<span class="op">.</span><span class="at">software</span> <span class="op">:</span> <span class="st">&quot;NA&quot;</span>) })</span>
+<span id="cb5-590"><a></a>  <span class="op">.</span><span class="fu">groupby</span>(<span class="st">&quot;software&quot;</span>)</span>
+<span id="cb5-591"><a></a>  <span class="op">.</span><span class="fu">count</span>()</span>
+<span id="cb5-592"><a></a>  <span class="op">.</span><span class="fu">rename</span>({ <span class="dt">count</span><span class="op">:</span> <span class="st">&#39;value&#39;</span><span class="op">,</span> <span class="dt">software</span><span class="op">:</span> <span class="st">&#39;name&#39;</span> }) <span class="co">// Rename for D3 pie chart</span></span>
+<span id="cb5-593"><a></a>  <span class="op">.</span><span class="fu">objects</span>() <span class="co">// convert to array for D3</span></span>
+<span id="cb5-594"><a></a></span>
+<span id="cb5-595"><a></a>softwareChart <span class="op">=</span> <span class="fu">PieChart</span>(softwareCounts<span class="op">,</span> {</span>
+<span id="cb5-596"><a></a>  <span class="dt">name</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">name</span><span class="op">,</span></span>
+<span id="cb5-597"><a></a>  <span class="dt">value</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value</span><span class="op">,</span></span>
+<span id="cb5-598"><a></a>  <span class="dt">names</span><span class="op">:</span> [<span class="st">&quot;Yes&quot;</span><span class="op">,</span> <span class="st">&quot;No&quot;</span><span class="op">,</span> <span class="st">&quot;NA&quot;</span>]<span class="op">,</span> <span class="co">// ordering</span></span>
+<span id="cb5-599"><a></a>  <span class="dt">colors</span><span class="op">:</span> [<span class="st">&quot;#4CAF50&quot;</span><span class="op">,</span> <span class="st">&quot;#F44336&quot;</span><span class="op">,</span> <span class="st">&quot;#CCCCCC&quot;</span>]<span class="op">,</span> <span class="co">// green &#39;yes&#39;, red &#39;no&#39;, grey &#39;NA&#39;</span></span>
+<span id="cb5-600"><a></a>  width<span class="op">,</span></span>
+<span id="cb5-601"><a></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">800</span></span>
+<span id="cb5-602"><a></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-5-1" data-nodetype="declaration">
@@ -26313,65 +26326,65 @@ border: 0;
 <section id="about-you-poll-results" class="slide level2">
 <h2>About you! Poll results</h2>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="605" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 604;"><span id="cb6-605"><a></a>causeCounts <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
-<span id="cb6-606"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;cause&quot;</span>)</span>
-<span id="cb6-607"><a></a>  <span class="op">.</span><span class="fu">groupby</span>(<span class="st">&quot;cause&quot;</span>)</span>
-<span id="cb6-608"><a></a>  <span class="op">.</span><span class="fu">count</span>()</span>
-<span id="cb6-609"><a></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">measure</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="st">&quot;&quot;</span> })</span>
-<span id="cb6-610"><a></a></span>
-<span id="cb6-611"><a></a><span class="co">// Calculate the maximum count from your dataset</span></span>
-<span id="cb6-612"><a></a>cause_maxCountRE <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>causeCounts<span class="op">.</span><span class="fu">objects</span>()<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">count</span>))<span class="op">;</span></span>
-<span id="cb6-613"><a></a></span>
-<span id="cb6-614"><a></a>plot_cause <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb6-615"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb6-616"><a></a>    Plot<span class="op">.</span><span class="fu">barY</span>(causeCounts<span class="op">,</span> {</span>
-<span id="cb6-617"><a></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">&quot;cause&quot;</span><span class="op">,</span></span>
-<span id="cb6-618"><a></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">&quot;count&quot;</span><span class="op">,</span></span>
-<span id="cb6-619"><a></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">&quot;cause&quot;</span><span class="op">,</span></span>
-<span id="cb6-620"><a></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">&quot;black&quot;</span><span class="op">,</span></span>
-<span id="cb6-621"><a></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">1</span></span>
-<span id="cb6-622"><a></a>    })<span class="op">,</span></span>
-<span id="cb6-623"><a></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([respondentCount]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> <span class="st">&quot;#ffffff99&quot;</span> })</span>
-<span id="cb6-624"><a></a>  ]<span class="op">,</span></span>
-<span id="cb6-625"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb6-626"><a></a>    <span class="dt">domain</span><span class="op">:</span> [</span>
-<span id="cb6-627"><a></a>      <span class="st">&quot;economic inequality&quot;</span><span class="op">,</span></span>
-<span id="cb6-628"><a></a>      <span class="st">&quot;political repression&quot;</span><span class="op">,</span></span>
-<span id="cb6-629"><a></a>      <span class="st">&quot;extremist ideologies&quot;</span><span class="op">,</span></span>
-<span id="cb6-630"><a></a>      <span class="st">&quot;ethnic or religious tensions&quot;</span><span class="op">,</span></span>
-<span id="cb6-631"><a></a>      <span class="st">&quot;historical grievances&quot;</span><span class="op">,</span></span>
-<span id="cb6-632"><a></a>      <span class="st">&quot;other&quot;</span></span>
-<span id="cb6-633"><a></a>    ]<span class="op">,</span></span>
-<span id="cb6-634"><a></a>    <span class="dt">range</span><span class="op">:</span> [</span>
-<span id="cb6-635"><a></a>      <span class="st">&quot;darkred&quot;</span><span class="op">,</span></span>
-<span id="cb6-636"><a></a>      <span class="st">&quot;darkorange&quot;</span><span class="op">,</span></span>
-<span id="cb6-637"><a></a>      <span class="st">&quot;goldenrod&quot;</span><span class="op">,</span></span>
-<span id="cb6-638"><a></a>      <span class="st">&quot;forestgreen&quot;</span><span class="op">,</span></span>
-<span id="cb6-639"><a></a>      <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
-<span id="cb6-640"><a></a>      <span class="st">&quot;indigo&quot;</span></span>
-<span id="cb6-641"><a></a>    ]</span>
-<span id="cb6-642"><a></a>  }<span class="op">,</span></span>
-<span id="cb6-643"><a></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
-<span id="cb6-644"><a></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span> <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">tickRotate</span><span class="op">:</span> <span class="op">-</span><span class="dv">35</span><span class="op">,</span> <span class="dt">padding</span><span class="op">:</span> <span class="fl">0.3</span><span class="op">,</span></span>
-<span id="cb6-645"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="st">&quot;economic inequality&quot;</span><span class="op">,</span> <span class="st">&quot;political repression&quot;</span><span class="op">,</span> <span class="st">&quot;extremist ideologies&quot;</span><span class="op">,</span> <span class="st">&quot;ethnic or religious tensions&quot;</span><span class="op">,</span> <span class="st">&quot;historical grievances&quot;</span><span class="op">,</span> <span class="st">&quot;other&quot;</span>]</span>
-<span id="cb6-646"><a></a>  }<span class="op">,</span>  </span>
-<span id="cb6-647"><a></a>  <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb6-648"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span></span>
-<span id="cb6-649"><a></a>    <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
-<span id="cb6-650"><a></a>    <span class="dt">tickFormat</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">,</span></span>
-<span id="cb6-651"><a></a>    <span class="dt">tickValues</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(</span>
-<span id="cb6-652"><a></a>      <span class="kw">new</span> <span class="bu">Set</span>(causeCounts<span class="op">.</span><span class="fu">objects</span>()<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">count</span>))</span>
-<span id="cb6-653"><a></a>    )<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">-</span> b)<span class="op">,</span></span>
-<span id="cb6-654"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> cause_maxCountRE]</span>
-<span id="cb6-655"><a></a>  }<span class="op">,</span></span>
-<span id="cb6-656"><a></a>  <span class="dt">facet</span><span class="op">:</span> { <span class="dt">data</span><span class="op">:</span> causeCounts<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> <span class="st">&quot;measure&quot;</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span> }<span class="op">,</span></span>
-<span id="cb6-657"><a></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">70</span><span class="op">,</span></span>
-<span id="cb6-658"><a></a>  <span class="dt">style</span><span class="op">:</span> {</span>
-<span id="cb6-659"><a></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">1600</span><span class="op">,</span></span>
-<span id="cb6-660"><a></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
-<span id="cb6-661"><a></a>    <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
-<span id="cb6-662"><a></a>  }<span class="op">,</span></span>
-<span id="cb6-663"><a></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="611" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 610;"><span id="cb6-611"><a></a>causeCounts <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
+<span id="cb6-612"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;cause&quot;</span>)</span>
+<span id="cb6-613"><a></a>  <span class="op">.</span><span class="fu">groupby</span>(<span class="st">&quot;cause&quot;</span>)</span>
+<span id="cb6-614"><a></a>  <span class="op">.</span><span class="fu">count</span>()</span>
+<span id="cb6-615"><a></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">measure</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="st">&quot;&quot;</span> })</span>
+<span id="cb6-616"><a></a></span>
+<span id="cb6-617"><a></a><span class="co">// Calculate the maximum count from your dataset</span></span>
+<span id="cb6-618"><a></a>cause_maxCountRE <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>causeCounts<span class="op">.</span><span class="fu">objects</span>()<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">count</span>))<span class="op">;</span></span>
+<span id="cb6-619"><a></a></span>
+<span id="cb6-620"><a></a>plot_cause <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb6-621"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb6-622"><a></a>    Plot<span class="op">.</span><span class="fu">barY</span>(causeCounts<span class="op">,</span> {</span>
+<span id="cb6-623"><a></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">&quot;cause&quot;</span><span class="op">,</span></span>
+<span id="cb6-624"><a></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">&quot;count&quot;</span><span class="op">,</span></span>
+<span id="cb6-625"><a></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">&quot;cause&quot;</span><span class="op">,</span></span>
+<span id="cb6-626"><a></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">&quot;black&quot;</span><span class="op">,</span></span>
+<span id="cb6-627"><a></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb6-628"><a></a>    })<span class="op">,</span></span>
+<span id="cb6-629"><a></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([respondentCount]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> <span class="st">&quot;#ffffff99&quot;</span> })</span>
+<span id="cb6-630"><a></a>  ]<span class="op">,</span></span>
+<span id="cb6-631"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb6-632"><a></a>    <span class="dt">domain</span><span class="op">:</span> [</span>
+<span id="cb6-633"><a></a>      <span class="st">&quot;economic inequality&quot;</span><span class="op">,</span></span>
+<span id="cb6-634"><a></a>      <span class="st">&quot;political repression&quot;</span><span class="op">,</span></span>
+<span id="cb6-635"><a></a>      <span class="st">&quot;extremist ideologies&quot;</span><span class="op">,</span></span>
+<span id="cb6-636"><a></a>      <span class="st">&quot;ethnic or religious tensions&quot;</span><span class="op">,</span></span>
+<span id="cb6-637"><a></a>      <span class="st">&quot;historical grievances&quot;</span><span class="op">,</span></span>
+<span id="cb6-638"><a></a>      <span class="st">&quot;other&quot;</span></span>
+<span id="cb6-639"><a></a>    ]<span class="op">,</span></span>
+<span id="cb6-640"><a></a>    <span class="dt">range</span><span class="op">:</span> [</span>
+<span id="cb6-641"><a></a>      <span class="st">&quot;darkred&quot;</span><span class="op">,</span></span>
+<span id="cb6-642"><a></a>      <span class="st">&quot;darkorange&quot;</span><span class="op">,</span></span>
+<span id="cb6-643"><a></a>      <span class="st">&quot;goldenrod&quot;</span><span class="op">,</span></span>
+<span id="cb6-644"><a></a>      <span class="st">&quot;forestgreen&quot;</span><span class="op">,</span></span>
+<span id="cb6-645"><a></a>      <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
+<span id="cb6-646"><a></a>      <span class="st">&quot;indigo&quot;</span></span>
+<span id="cb6-647"><a></a>    ]</span>
+<span id="cb6-648"><a></a>  }<span class="op">,</span></span>
+<span id="cb6-649"><a></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">300</span><span class="op">,</span></span>
+<span id="cb6-650"><a></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span> <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">tickRotate</span><span class="op">:</span> <span class="op">-</span><span class="dv">35</span><span class="op">,</span> <span class="dt">padding</span><span class="op">:</span> <span class="fl">0.3</span><span class="op">,</span></span>
+<span id="cb6-651"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="st">&quot;economic inequality&quot;</span><span class="op">,</span> <span class="st">&quot;political repression&quot;</span><span class="op">,</span> <span class="st">&quot;extremist ideologies&quot;</span><span class="op">,</span> <span class="st">&quot;ethnic or religious tensions&quot;</span><span class="op">,</span> <span class="st">&quot;historical grievances&quot;</span><span class="op">,</span> <span class="st">&quot;other&quot;</span>]</span>
+<span id="cb6-652"><a></a>  }<span class="op">,</span>  </span>
+<span id="cb6-653"><a></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb6-654"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span></span>
+<span id="cb6-655"><a></a>    <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb6-656"><a></a>    <span class="dt">tickFormat</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">,</span></span>
+<span id="cb6-657"><a></a>    <span class="dt">tickValues</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(</span>
+<span id="cb6-658"><a></a>      <span class="kw">new</span> <span class="bu">Set</span>(causeCounts<span class="op">.</span><span class="fu">objects</span>()<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">count</span>))</span>
+<span id="cb6-659"><a></a>    )<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">-</span> b)<span class="op">,</span></span>
+<span id="cb6-660"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> cause_maxCountRE]</span>
+<span id="cb6-661"><a></a>  }<span class="op">,</span></span>
+<span id="cb6-662"><a></a>  <span class="dt">facet</span><span class="op">:</span> { <span class="dt">data</span><span class="op">:</span> causeCounts<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> <span class="st">&quot;measure&quot;</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span> }<span class="op">,</span></span>
+<span id="cb6-663"><a></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">70</span><span class="op">,</span></span>
+<span id="cb6-664"><a></a>  <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb6-665"><a></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">1600</span><span class="op">,</span></span>
+<span id="cb6-666"><a></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb6-667"><a></a>    <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb6-668"><a></a>  }<span class="op">,</span></span>
+<span id="cb6-669"><a></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-6-1" data-nodetype="declaration">
@@ -26399,10 +26412,10 @@ border: 0;
 <h2>About you! Poll results</h2>
 <p>Any particular politically violent group you want to learn more about?</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="674" data-source-offset="-56"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 673;"><span id="cb7-674"><a></a>ToLearn <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
-<span id="cb7-675"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;learn&quot;</span>)</span>
-<span id="cb7-676"><a></a></span>
-<span id="cb7-677"><a></a>ToLearn<span class="op">.</span><span class="fu">array</span>(<span class="st">&quot;learn&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="680" data-source-offset="-56"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 679;"><span id="cb7-680"><a></a>ToLearn <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
+<span id="cb7-681"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;learn&quot;</span>)</span>
+<span id="cb7-682"><a></a></span>
+<span id="cb7-683"><a></a>ToLearn<span class="op">.</span><span class="fu">array</span>(<span class="st">&quot;learn&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-7-1" data-nodetype="declaration">
@@ -26439,63 +26452,63 @@ border: 0;
 <section id="about-you-poll-results-biggest-concern" class="slide level2">
 <h2>About you! Poll results: biggest concern</h2>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="698" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 697;"><span id="cb8-698"><a></a>concernCounts <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
-<span id="cb8-699"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;concern&quot;</span>)</span>
-<span id="cb8-700"><a></a>  <span class="op">.</span><span class="fu">groupby</span>(<span class="st">&quot;concern&quot;</span>)</span>
-<span id="cb8-701"><a></a>  <span class="op">.</span><span class="fu">count</span>()</span>
-<span id="cb8-702"><a></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">measure</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="st">&quot;&quot;</span> })</span>
-<span id="cb8-703"><a></a></span>
-<span id="cb8-704"><a></a><span class="co">// Calculate the maximum count from your dataset</span></span>
-<span id="cb8-705"><a></a>concern_maxCountRE <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>concernCounts<span class="op">.</span><span class="fu">objects</span>()<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">count</span>))<span class="op">;</span></span>
-<span id="cb8-706"><a></a></span>
-<span id="cb8-707"><a></a>plot_concern <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb8-708"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb8-709"><a></a>    Plot<span class="op">.</span><span class="fu">barY</span>(concernCounts<span class="op">,</span> {</span>
-<span id="cb8-710"><a></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">&quot;concern&quot;</span><span class="op">,</span></span>
-<span id="cb8-711"><a></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">&quot;count&quot;</span><span class="op">,</span></span>
-<span id="cb8-712"><a></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">&quot;concern&quot;</span><span class="op">,</span></span>
-<span id="cb8-713"><a></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">&quot;black&quot;</span><span class="op">,</span></span>
-<span id="cb8-714"><a></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">1</span></span>
-<span id="cb8-715"><a></a>    })<span class="op">,</span></span>
-<span id="cb8-716"><a></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([respondentCount]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> <span class="st">&quot;#ffffff99&quot;</span> })</span>
-<span id="cb8-717"><a></a>  ]<span class="op">,</span></span>
-<span id="cb8-718"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
-<span id="cb8-719"><a></a>    <span class="dt">domain</span><span class="op">:</span> [</span>
-<span id="cb8-720"><a></a>      <span class="st">&quot;Encountering content about violence&quot;</span><span class="op">,</span></span>
-<span id="cb8-721"><a></a>      <span class="st">&quot;Participating in class discussions&quot;</span><span class="op">,</span></span>
-<span id="cb8-722"><a></a>      <span class="st">&quot;Passing the Klausur&quot;</span><span class="op">,</span></span>
-<span id="cb8-723"><a></a>      <span class="st">&quot;Studying and discussing in English&quot;</span><span class="op">,</span></span>
-<span id="cb8-724"><a></a>      <span class="st">&quot;Understanding abstract concepts&quot;</span></span>
-<span id="cb8-725"><a></a>    ]<span class="op">,</span></span>
-<span id="cb8-726"><a></a>    <span class="dt">range</span><span class="op">:</span> [</span>
-<span id="cb8-727"><a></a>      <span class="st">&quot;darkred&quot;</span><span class="op">,</span></span>
-<span id="cb8-728"><a></a>      <span class="st">&quot;darkorange&quot;</span><span class="op">,</span></span>
-<span id="cb8-729"><a></a>      <span class="st">&quot;goldenrod&quot;</span><span class="op">,</span></span>
-<span id="cb8-730"><a></a>      <span class="st">&quot;forestgreen&quot;</span><span class="op">,</span></span>
-<span id="cb8-731"><a></a>      <span class="st">&quot;blue&quot;</span></span>
-<span id="cb8-732"><a></a>    ]</span>
-<span id="cb8-733"><a></a>  }<span class="op">,</span></span>
-<span id="cb8-734"><a></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span></span>
-<span id="cb8-735"><a></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span> <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">tickRotate</span><span class="op">:</span> <span class="op">-</span><span class="dv">35</span><span class="op">,</span> <span class="dt">padding</span><span class="op">:</span> <span class="fl">0.3</span><span class="op">,</span></span>
-<span id="cb8-736"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="st">&quot;Encountering content about violence&quot;</span><span class="op">,</span> <span class="st">&quot;Participating in class discussions&quot;</span><span class="op">,</span> <span class="st">&quot;Passing the Klausur&quot;</span><span class="op">,</span> <span class="st">&quot;Studying and discussing in English&quot;</span><span class="op">,</span> <span class="st">&quot;Understanding abstract concepts&quot;</span>]</span>
-<span id="cb8-737"><a></a>  }<span class="op">,</span>  </span>
-<span id="cb8-738"><a></a>  <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb8-739"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span></span>
-<span id="cb8-740"><a></a>    <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
-<span id="cb8-741"><a></a>    <span class="dt">tickFormat</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">,</span></span>
-<span id="cb8-742"><a></a>    <span class="dt">tickValues</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(</span>
-<span id="cb8-743"><a></a>      <span class="kw">new</span> <span class="bu">Set</span>(concernCounts<span class="op">.</span><span class="fu">objects</span>()<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">count</span>))</span>
-<span id="cb8-744"><a></a>    )<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">-</span> b)<span class="op">,</span></span>
-<span id="cb8-745"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> concern_maxCountRE]</span>
-<span id="cb8-746"><a></a>  }<span class="op">,</span></span>
-<span id="cb8-747"><a></a>  <span class="dt">facet</span><span class="op">:</span> { <span class="dt">data</span><span class="op">:</span> concernCounts<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> <span class="st">&quot;measure&quot;</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span> }<span class="op">,</span></span>
-<span id="cb8-748"><a></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">70</span><span class="op">,</span></span>
-<span id="cb8-749"><a></a>  <span class="dt">style</span><span class="op">:</span> {</span>
-<span id="cb8-750"><a></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">1600</span><span class="op">,</span></span>
-<span id="cb8-751"><a></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
-<span id="cb8-752"><a></a>    <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
-<span id="cb8-753"><a></a>  }<span class="op">,</span></span>
-<span id="cb8-754"><a></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="704" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 703;"><span id="cb8-704"><a></a>concernCounts <span class="op">=</span> aq<span class="op">.</span><span class="fu">from</span>(surveyResults)</span>
+<span id="cb8-705"><a></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">&quot;concern&quot;</span>)</span>
+<span id="cb8-706"><a></a>  <span class="op">.</span><span class="fu">groupby</span>(<span class="st">&quot;concern&quot;</span>)</span>
+<span id="cb8-707"><a></a>  <span class="op">.</span><span class="fu">count</span>()</span>
+<span id="cb8-708"><a></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">measure</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="st">&quot;&quot;</span> })</span>
+<span id="cb8-709"><a></a></span>
+<span id="cb8-710"><a></a><span class="co">// Calculate the maximum count from your dataset</span></span>
+<span id="cb8-711"><a></a>concern_maxCountRE <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>concernCounts<span class="op">.</span><span class="fu">objects</span>()<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">count</span>))<span class="op">;</span></span>
+<span id="cb8-712"><a></a></span>
+<span id="cb8-713"><a></a>plot_concern <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb8-714"><a></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb8-715"><a></a>    Plot<span class="op">.</span><span class="fu">barY</span>(concernCounts<span class="op">,</span> {</span>
+<span id="cb8-716"><a></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">&quot;concern&quot;</span><span class="op">,</span></span>
+<span id="cb8-717"><a></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">&quot;count&quot;</span><span class="op">,</span></span>
+<span id="cb8-718"><a></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">&quot;concern&quot;</span><span class="op">,</span></span>
+<span id="cb8-719"><a></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">&quot;black&quot;</span><span class="op">,</span></span>
+<span id="cb8-720"><a></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb8-721"><a></a>    })<span class="op">,</span></span>
+<span id="cb8-722"><a></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([respondentCount]<span class="op">,</span> { <span class="dt">stroke</span><span class="op">:</span> <span class="st">&quot;#ffffff99&quot;</span> })</span>
+<span id="cb8-723"><a></a>  ]<span class="op">,</span></span>
+<span id="cb8-724"><a></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb8-725"><a></a>    <span class="dt">domain</span><span class="op">:</span> [</span>
+<span id="cb8-726"><a></a>      <span class="st">&quot;Encountering content about violence&quot;</span><span class="op">,</span></span>
+<span id="cb8-727"><a></a>      <span class="st">&quot;Participating in class discussions&quot;</span><span class="op">,</span></span>
+<span id="cb8-728"><a></a>      <span class="st">&quot;Passing the Klausur&quot;</span><span class="op">,</span></span>
+<span id="cb8-729"><a></a>      <span class="st">&quot;Studying and discussing in English&quot;</span><span class="op">,</span></span>
+<span id="cb8-730"><a></a>      <span class="st">&quot;Understanding abstract concepts&quot;</span></span>
+<span id="cb8-731"><a></a>    ]<span class="op">,</span></span>
+<span id="cb8-732"><a></a>    <span class="dt">range</span><span class="op">:</span> [</span>
+<span id="cb8-733"><a></a>      <span class="st">&quot;darkred&quot;</span><span class="op">,</span></span>
+<span id="cb8-734"><a></a>      <span class="st">&quot;darkorange&quot;</span><span class="op">,</span></span>
+<span id="cb8-735"><a></a>      <span class="st">&quot;goldenrod&quot;</span><span class="op">,</span></span>
+<span id="cb8-736"><a></a>      <span class="st">&quot;forestgreen&quot;</span><span class="op">,</span></span>
+<span id="cb8-737"><a></a>      <span class="st">&quot;blue&quot;</span></span>
+<span id="cb8-738"><a></a>    ]</span>
+<span id="cb8-739"><a></a>  }<span class="op">,</span></span>
+<span id="cb8-740"><a></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span></span>
+<span id="cb8-741"><a></a>  <span class="dt">x</span><span class="op">:</span> { <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span> <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">tickRotate</span><span class="op">:</span> <span class="op">-</span><span class="dv">35</span><span class="op">,</span> <span class="dt">padding</span><span class="op">:</span> <span class="fl">0.3</span><span class="op">,</span></span>
+<span id="cb8-742"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="st">&quot;Encountering content about violence&quot;</span><span class="op">,</span> <span class="st">&quot;Participating in class discussions&quot;</span><span class="op">,</span> <span class="st">&quot;Passing the Klausur&quot;</span><span class="op">,</span> <span class="st">&quot;Studying and discussing in English&quot;</span><span class="op">,</span> <span class="st">&quot;Understanding abstract concepts&quot;</span>]</span>
+<span id="cb8-743"><a></a>  }<span class="op">,</span>  </span>
+<span id="cb8-744"><a></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb8-745"><a></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span></span>
+<span id="cb8-746"><a></a>    <span class="dt">tickSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb8-747"><a></a>    <span class="dt">tickFormat</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">,</span></span>
+<span id="cb8-748"><a></a>    <span class="dt">tickValues</span><span class="op">:</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(</span>
+<span id="cb8-749"><a></a>      <span class="kw">new</span> <span class="bu">Set</span>(concernCounts<span class="op">.</span><span class="fu">objects</span>()<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">count</span>))</span>
+<span id="cb8-750"><a></a>    )<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">-</span> b)<span class="op">,</span></span>
+<span id="cb8-751"><a></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> concern_maxCountRE]</span>
+<span id="cb8-752"><a></a>  }<span class="op">,</span></span>
+<span id="cb8-753"><a></a>  <span class="dt">facet</span><span class="op">:</span> { <span class="dt">data</span><span class="op">:</span> concernCounts<span class="op">,</span> <span class="dt">x</span><span class="op">:</span> <span class="st">&quot;measure&quot;</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">&quot;&quot;</span> }<span class="op">,</span></span>
+<span id="cb8-754"><a></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">70</span><span class="op">,</span></span>
+<span id="cb8-755"><a></a>  <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb8-756"><a></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">1600</span><span class="op">,</span></span>
+<span id="cb8-757"><a></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span><span class="op">,</span></span>
+<span id="cb8-758"><a></a>    <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">40</span><span class="op">,</span></span>
+<span id="cb8-759"><a></a>  }<span class="op">,</span></span>
+<span id="cb8-760"><a></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-8-1" data-nodetype="declaration">

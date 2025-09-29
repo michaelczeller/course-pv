@@ -363,6 +363,12 @@ kable(data.frame(
 
 <!-- **Throughout, we will use _cases_ (especially the groups you study) to link _theory_ to _real-world events_.** -->
 
+## In case class cannot meet... 
+
+- If it is not possible to convene in-person,
+    + you will receive an email: 
+    1. the class will meet online via Zoom (link in email), or
+    2. the class will be cancelled, a recorded lecture uploaded on the 'Slides' page of the website, and a short review at the start of the next meeting
 
 ## Colour scheme for course slides 
 
