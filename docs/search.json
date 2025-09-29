@@ -312,7 +312,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6"
   },
   {
     "objectID": "syllabus/index.html#examination-klausur",
@@ -2168,5 +2168,243 @@
     "title": "Class 1: Political Violence in Germany",
     "section": "In case class cannot meet…",
     "text": "In case class cannot meet…\n\nIf it is not possible to convene in-person,\n\nyou will receive an email:\n\n\nthe class will meet online via Zoom (link in email), or\nthe class will be cancelled, a recorded lecture uploaded on the ‘Slides’ page of the website, and a short review at the start of the next meeting"
+  },
+  {
+    "objectID": "slides/slides_06.html#presentation-groups",
+    "href": "slides/slides_06.html#presentation-groups",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Presentation groups",
+    "text": "Presentation groups\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+  },
+  {
+    "objectID": "slides/slides_06.html#theories-of-leadership",
+    "href": "slides/slides_06.html#theories-of-leadership",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Theories of leadership",
+    "text": "Theories of leadership\n\nMax Weber (1922): three ideal types: legal, traditional, charismatic\n\nshifting denotation of ‘charisma’ (away from divinity)\n\nMcDonnell (2016): ‘unique qualities, the unconditional acceptance of authority, and strong emotional attachment to leadership.’\n\nexamples from this framework?"
+  },
+  {
+    "objectID": "slides/slides_06.html#theories-of-leadership-1",
+    "href": "slides/slides_06.html#theories-of-leadership-1",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Theories of leadership",
+    "text": "Theories of leadership\n\nMax Weber (1922): three ideal types: legal, traditional, charismatic\n\nshifting denotation of ‘charisma’ (away from divinity)\n\nMcDonnell (2016): ‘unique qualities, the unconditional acceptance of authority, and strong emotional attachment to leadership.’\n\nexamples from this framework?\n\nNepstad and Bob (2006): ‘leadership capital’ (from Bourdieu, e.g., 1986)\n\nsocial (building up trust and interpersonal networks),\ncultural (applying relevant knowledge and skills), and\nsymbolic (amassing prestige, honor, and social recognition) components\nleaders in politically violent groups that have such ‘capital’?"
+  },
+  {
+    "objectID": "slides/slides_06.html#theories-of-leadership-2",
+    "href": "slides/slides_06.html#theories-of-leadership-2",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Theories of leadership",
+    "text": "Theories of leadership\n\nEarl (2007): ‘leading tasks’ (in movements):\n\narticulating vision and ideology,\nengaging the political environment,\nframing the movement and its issues,\nmanaging relations with non-movement actors,\nmaking strategic and tactical decisions,\norganizing specific actions,\nmanaging the internal life of the movement,\ninnovating and entrepreneurial activity, and\nproviding social capital"
+  },
+  {
+    "objectID": "slides/slides_06.html#study-of-far-right-movement-leadership-zellervirchow2024",
+    "href": "slides/slides_06.html#study-of-far-right-movement-leadership-zellervirchow2024",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Study of far-right movement leadership (Zeller and Virchow 2024)",
+    "text": "Study of far-right movement leadership (Zeller and Virchow 2024)\n\nRQs: (1) How can we characterise recent and contemporary far-right movement leadership? (2) Has leadership changed significantly with the advent of social media?\nTheory: modern far-right leadership studies (Chermak, Freilich, and Suttmoeller 2013; Virchow 2013; Busher, Harris, and Macklin 2018; Cleland 2020; Macklin 2020)\nResearch Design: comparative case study in adjacent eras of FR movement leadership\n\nquantitative text analysis on web-scraped (rvest) texts\nfollow-up qualitative analysis: themes and campaign examples\n\n\n\n\n\n\n\nAuthor\nSource\nYears\nTotal.texts\nTotal.words\n\n\n\n\nWorch\nRundbriefe\n2005–2012\n260\n209041\n\n\nSellner\nSezession\n2015–2022\n100\n354255\n\n\nSellner\nCompact\n2016–2021\n54\n34926"
+  },
+  {
+    "objectID": "slides/slides_06.html#references",
+    "href": "slides/slides_06.html#references",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "References",
+    "text": "References\nJenne, E. K. (2007). Ethnic bargaining: The paradox of minority empowerment. Cornell University Press.\nMcDonnell, D. (2016.) “Populist Leaders and Coterie Charisma.” Political Studies 64(3): 719-733.\nWeber, M. (1922). Wirtschaft und Gesellschaft: Grundriss der verstehenden Soziologie. Tübingen: Mohr\n\n\n\n\nAdcock, Robert, and David Collier. 2001. “Measurement Validity: A Shared Standard for Qualitative and Quantitative Research.” American Political Science Review 95 (3): 529–46. https://doi.org/10.1017/S0003055401003100.\n\n\nBourdieu, Pierre. 1986. “The Forms of Capital.” In Handbook of Theory and Research in Sociology of Education, edited by John G Richardson, 241–58. New York: Greenwald Press.\n\n\nBusher, Joel, Gareth Harris, and Graham Macklin. 2018. “Chicken Suits and Other Aspects of Situated Credibility Contests: Explaining Local Trajectories of Anti-Minority Activism.” Social Movement Studies 18 (2): 193–214. https://doi.org/10.1080/14742837.2018.1530978.\n\n\nChoi, Seung-Whan. 2022. “Leader Nationalism, Ethnic Identity, and Terrorist Violence.” British Journal of Political Science 52 (3): 1151–67. https://doi.org/10.1017/S0007123421000144.\n\n\nCleland, Jamie. 2020. “Charismatic Leadership in a Far-Right Movement: An Analysis of an English Defence League Message Board Following the Resignation of Tommy Robinson.” Social Identities 26 (1): 48–60.\n\n\nEarl, Jennifer. 2007. “Leaderless Movement The Case of Strategic Voting.” American Behavioral Scientist 50 (10): 1327–49.\n\n\nMacklin, Graham. 2020. Failed Führers: A History of Britain’s Extreme Right. Abingdon: Routledge.\n\n\nMetodieva, Asya. 2021. “The Radical Milieu and Radical Influencers of Bosnian Foreign Fighters.” Studies in Conflict & Terrorism 0 (0): 1–21. https://doi.org/10.1080/1057610X.2020.1868097.\n\n\nNepstad, Sharon Erickson, and Clifford Bob. 2006. “When Do Leaders Matter? Hypotheses on Leadership Dynamics in Social Movements.” Mobilization 11 (1): 1–22. https://doi.org/10.17813/maiq.11.1.013313600164m727.\n\n\nVidra, Zsuzsanna, and Michael C Zeller. 2022. “Preventing Violent Extremism: A Delicate Balance.” Firenze: European University Institute: Robert Schuman Centre.\n\n\nVirchow, Fabian. 2013. “Führer Und Schlüsselfiguren in Extrem Rechten Bewegungen.” Forschungsjournal Soziale Bewegungen 26 (4): 52–58.\n\n\nZeller, Michael C, and Fabian Virchow. 2024. “Far-Right Leadership in Comparison: Shifts and Continuities in German-speaking Movements.” Social Movement Studies 0 (0): 1–23. https://doi.org/10.1080/14742837.2024.2430974."
+  },
+  {
+    "objectID": "slides/slides_06.html#far-right-movement-leadership-zellervirchow2024",
+    "href": "slides/slides_06.html#far-right-movement-leadership-zellervirchow2024",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Far-right movement leadership (Zeller and Virchow 2024)",
+    "text": "Far-right movement leadership (Zeller and Virchow 2024)\n\nRQs: (1) How can we characterise recent and contemporary far-right movement leadership? (2) Has leadership changed significantly with the advent of social media?\nTheory: modern far-right leadership studies (Virchow 2013; Busher, Harris, and Macklin 2018; Cleland 2020; Macklin 2020)\nMethods: comparative case study in adjacent eras of FR activism\n\nquantitative text analysis on web-scraped (rvest) texts\nfollow-up qualitative analysis: themes and campaign examples\n\n\n\n\n\n\n\nAuthor\nSource\nYears\nTotal.texts\nTotal.words\n\n\n\n\nWorch\nRundbriefe\n2005–2012\n260\n209041\n\n\nSellner\nSezession\n2015–2022\n100\n354255\n\n\nSellner\nCompact\n2016–2021\n54\n34926"
+  },
+  {
+    "objectID": "slides/slides_06.html#fr-leadership---worch-topics",
+    "href": "slides/slides_06.html#fr-leadership---worch-topics",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "FR leadership - Worch topics",
+    "text": "FR leadership - Worch topics"
+  },
+  {
+    "objectID": "slides/slides_06.html#fr-leadership---sellner-topics",
+    "href": "slides/slides_06.html#fr-leadership---sellner-topics",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "FR leadership - Sellner topics",
+    "text": "FR leadership - Sellner topics"
+  },
+  {
+    "objectID": "slides/slides_06.html#fr-leadership-tasks",
+    "href": "slides/slides_06.html#fr-leadership-tasks",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "FR leadership tasks",
+    "text": "FR leadership tasks"
+  },
+  {
+    "objectID": "slides/slides_06.html#fr-leadership-tasks-by-year",
+    "href": "slides/slides_06.html#fr-leadership-tasks-by-year",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "FR leadership tasks by year",
+    "text": "FR leadership tasks by year"
+  },
+  {
+    "objectID": "slides/slides_06.html#fr-leadership---conclusions",
+    "href": "slides/slides_06.html#fr-leadership---conclusions",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "FR leadership - conclusions",
+    "text": "FR leadership - conclusions\n\nShared belief in street politics \n\nsocial media are new tools—but both Worch and Sellner believe in change through mobilisation\nmirroring left-wing tactics (imitation): IB as ‘right-wing clone’ of leftist movement organisations (at least according to Sellner); Worch’s autonome Nationalisten\n\nBut Sellner is broader in his scope of activism, transnational if not global outlook\nSellner more ideological: articulating vision and framing the movmement, `metapolitik’ (e.g., ‘Defend Europa’ cruise)\nWorch more practical: strategy and tactics and executing actions, emphasis on demonstrations and courts—punishing cities (e.g., Leipzig)\n\nFYI: intro lecture on QTA: https://www.youtube.com/watch?v=bvqur70ZmyM"
+  },
+  {
+    "objectID": "slides/slides_06.html#poll-results",
+    "href": "slides/slides_06.html#poll-results",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Poll results",
+    "text": "Poll results\n\n\nCharismatic leadership more likely to lead to political violence\n\ncharismaticCounts = aq.from(surveyResults)\n  .select(\"charismatic\")\n  .groupby(\"charismatic\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\ncharismatic_maxCountRE = Math.max(...charismaticCounts.objects().map(d =&gt; d.count));\n\nplot_charismatic = Plot.plot({\n  marks: [\n    Plot.barY(charismaticCounts, {\n      x: \"charismatic\",\n      y: \"count\",\n      fill: \"charismatic\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(charismaticCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, charismatic_maxCountRE]\n  },\n  facet: { data: charismaticCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGroups that reject hierarchical leadership are less likely to become violent\n\nreject_hierarchyCounts = aq.from(surveyResults)\n  .select(\"reject_hierarchy\")\n  .groupby(\"reject_hierarchy\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nreject_hierarchy_maxCountRE = Math.max(...reject_hierarchyCounts.objects().map(d =&gt; d.count));\n\nplot_reject_hierarchy = Plot.plot({\n  marks: [\n    Plot.barY(reject_hierarchyCounts, {\n      x: \"reject_hierarchy\",\n      y: \"count\",\n      fill: \"reject_hierarchy\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(reject_hierarchyCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, reject_hierarchy_maxCountRE]\n  },\n  facet: { data: reject_hierarchyCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_06.html#poll-results-1",
+    "href": "slides/slides_06.html#poll-results-1",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Poll results",
+    "text": "Poll results\n\n\nLeaders should be held criminally responsible for the violent acts committed by their followers\n\nresponsibleCounts = aq.from(surveyResults)\n  .select(\"responsible\")\n  .groupby(\"responsible\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nresponsible_maxCountRE = Math.max(...responsibleCounts.objects().map(d =&gt; d.count));\n\nplot_responsible = Plot.plot({\n  marks: [\n    Plot.barY(responsibleCounts, {\n      x: \"responsible\",\n      y: \"count\",\n      fill: \"responsible\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(responsibleCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, responsible_maxCountRE]\n  },\n  facet: { data: responsibleCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLeaders who rhetorically incite violence should be prosecuted like those who give orders\n\nrhetoricCounts = aq.from(surveyResults)\n  .select(\"rhetoric\")\n  .groupby(\"rhetoric\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nrhetoric_maxCountRE = Math.max(...rhetoricCounts.objects().map(d =&gt; d.count));\n\nplot_rhetoric = Plot.plot({\n  marks: [\n    Plot.barY(rhetoricCounts, {\n      x: \"rhetoric\",\n      y: \"count\",\n      fill: \"rhetoric\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(rhetoricCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, rhetoric_maxCountRE]\n  },\n  facet: { data: rhetoricCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_06.html#poll-results-2",
+    "href": "slides/slides_06.html#poll-results-2",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Poll results",
+    "text": "Poll results\nOnce violence has begun, a leader’s ability to control it is often overstated.\n\nviolence_begunCounts = aq.from(surveyResults)\n  .select(\"violence_begun\")\n  .groupby(\"violence_begun\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nviolence_begun_maxCountRE = Math.max(...violence_begunCounts.objects().map(d =&gt; d.count));\n\nplot_violence_begun = Plot.plot({\n  marks: [\n    Plot.barY(violence_begunCounts, {\n      x: \"violence_begun\",\n      y: \"count\",\n      fill: \"violence_begun\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(violence_begunCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, violence_begun_maxCountRE]\n  },\n  facet: { data: violence_begunCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_06.html#concepts-choi2022leadernationalismethnic",
+    "href": "slides/slides_06.html#concepts-choi2022leadernationalismethnic",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Concepts (Choi 2022)",
+    "text": "Concepts (Choi 2022)\n\nTerrorism - ‘the threatened or actual use of illegal force, directed against civilian targets, by nonstate actors, in order to attain a political goal, through fear, coercion or intimidation’ (LaFree and Ackerman 2009, 348)."
+  },
+  {
+    "objectID": "slides/slides_06.html#research-design-choi2022leadernationalismethnic-p.-1153",
+    "href": "slides/slides_06.html#research-design-choi2022leadernationalismethnic-p.-1153",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Research design (Choi 2022, 1153)",
+    "text": "Research design (Choi 2022, 1153)\nOoof! – what do we take from this?\n\nSince the dependent variable is the count of terrorist incidents carried out by related ethnic groups per country-year, I consider a Poisson regression model as the estimation technique. But I find the Pearson goodness-of-fit \\(x^2\\) test to be statistically significant (\\(x^2\\) = 1,842,103, p&lt; 0.001). This suggests that a Poisson regression estimation fails to fit the data correctly. I instead use multilevel mixed-effects negative binomial regression as an alternative estimation method. Because negative binomial regression adds a dispersion parameter to model the unobserved heterogeneity among observations, it can control for the overdispersion found in a Poisson regression model (Hilbe 2007). In addition, given the clustered nature of the data, with ethnic groups nested within year nested within country, I employ a multilevel mixed-effects negative binomial regression in which the ethnic groups comprise the first level, the years comprise the second level, and the countries comprise the third. In doing so, I assume that observations in the same cluster are correlated because they share common-level random effects."
+  },
+  {
+    "objectID": "slides/slides_06.html#research-design-choi2022leadernationalismethnic-p.-1153-1",
+    "href": "slides/slides_06.html#research-design-choi2022leadernationalismethnic-p.-1153-1",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Research design (Choi 2022, 1153)",
+    "text": "Research design (Choi 2022, 1153)\n\nSince the dependent variable is the count [initial technique selection criterion] of terrorist incidents carried out by related ethnic groups per country-year, I consider a Poisson regression model as the estimation technique. But I find the Pearson goodness-of-fit \\(x^2\\) test to be statistically significant (\\(x^2\\) = 1,842,103, p&lt; 0.001) [technique diagnostic tool]. This suggests that a Poisson regression estimation fails to fit the data correctly [technique reselection]. I instead use multilevel mixed-effects negative binomial regression as an alternative estimation method. Because negative binomial regression adds a dispersion parameter to model the unobserved heterogeneity among observations, it can control for the overdispersion found in a Poisson regression model [technical adjustment] (Hilbe 2007). In addition, given the clustered nature of the data, with ethnic groups nested within year nested within country, I employ a multilevel mixed-effects negative binomial regression in which the ethnic groups comprise the first level, the years comprise the second level, and the countries comprise the third. In doing so, I assume that observations in the same cluster are correlated because they share common-level random effects."
+  },
+  {
+    "objectID": "slides/slides_06.html#research-design-choi2022leadernationalismethnic-p.-1153-2",
+    "href": "slides/slides_06.html#research-design-choi2022leadernationalismethnic-p.-1153-2",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Research design (Choi 2022, 1153)",
+    "text": "Research design (Choi 2022, 1153)\n\nsample of 766 ethnic groups from 163 countries during the period from 1970 to 2009\nsample data structured by ethnic group and year-country\n\nunit of analysis is group-year-country\n\nterrorist attacks executed by ethnic groups in response to nationalist leaders\n\nDV: Ethnic Terrorism - the total number of terrorist attacks carried out by related ethnic groups per year\n\nmultilevel mixed-effects negative binomial regression analysis\n\nmultilevel: hierarchic data structure\nmixed-effects: typically, fixed and random effects\n\nfixed: estimation of regression coefficients of the covariates\nrandom: used to estimate the effect of individual-specific characteristics that are typically unmeasurable\n\nnegative binomial regression: usually for over-dispersed count outcome variables"
+  },
+  {
+    "objectID": "slides/slides_06.html#reading-a-regression-table",
+    "href": "slides/slides_06.html#reading-a-regression-table",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Reading a regression table",
+    "text": "Reading a regression table\n\nRemember: regression is a tool for understanding a phenomenon as a linear function (generally) → (y = mx + b)\n\nNumbers not in parentheses next to a variable: regression coefficient: expected change in DV for a one-unit increase in IV. NB: ositive or negative relationship?\nNumbers inside parentheses next to a variable: standard error: estimate of the standard deviation of the coefficient\nAsterisks/‘stars’: statistical significance: probability of results as extreme as observed result, under the assumption that the null hypothesis is correct. Smaller p-value means such an observation would be less likely under null hypothesis; hence, significance. Statistical significance suggests more precise estimates—NOT necessarily that one IV is more important than another."
+  },
+  {
+    "objectID": "slides/slides_06.html#regression-results-choi2022leadernationalismethnic-p.-1153",
+    "href": "slides/slides_06.html#regression-results-choi2022leadernationalismethnic-p.-1153",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Regression results (Choi 2022, 1153)",
+    "text": "Regression results (Choi 2022, 1153)"
+  },
+  {
+    "objectID": "slides/slides_06.html#plotting-average-marginal-effects-ame-choi2022leadernationalismethnic-p.-1153",
+    "href": "slides/slides_06.html#plotting-average-marginal-effects-ame-choi2022leadernationalismethnic-p.-1153",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Plotting average marginal effects (AME) (Choi 2022, 1153)",
+    "text": "Plotting average marginal effects (AME) (Choi 2022, 1153)\nAME: average change in the predicted counts when predictor increases by one unit. E.g., a one-unit increase in nationalism is predicted to prompt 1.5 terrorist attacks, all else equal."
+  },
+  {
+    "objectID": "slides/slides_06.html#sri-lanka-sinhalese-ltte-case-choi2022leadernationalismethnic-p.-1153",
+    "href": "slides/slides_06.html#sri-lanka-sinhalese-ltte-case-choi2022leadernationalismethnic-p.-1153",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Sri Lanka: Sinhalese-LTTE case (Choi 2022, 1153)",
+    "text": "Sri Lanka: Sinhalese-LTTE case (Choi 2022, 1153)\n\n1948: Dudley Senanayake approves Ceylon Citizenship Act, denies citizenship to ‘migrant workers’ (incl. Tamils)\n1956: Prime Minister Solomon Bandaranaike, Sinhalese nationalist and elevation of Buddhist myths and rituals\n\nSinhala Only Act, recognizing Sinhala as only official language of government\ndiscrimination against, torture, murder of Tamils\n\nLTTE forms in 1976, major mobilisation in 1983\n\nterrorist attacks, including assassinations, e.g., President Ranasinghe Premadasa in 1993.\ncase is consistent with large-N finding: leader nationalism precipitates ethnic terrorism"
+  },
+  {
+    "objectID": "slides/slides_06.html#findings-choi2022leadernationalismethnic-p.-1153",
+    "href": "slides/slides_06.html#findings-choi2022leadernationalismethnic-p.-1153",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Findings (Choi 2022, 1153)",
+    "text": "Findings (Choi 2022, 1153)\n\nhardline nationalist leaders \\(\\rightarrow\\) more likely to provoke violence from disfavoured ethnic groups\nPolitical environment matters (remember concept from last class: opportunity structure). Democracy allows “disfavored ethnic groups to exploit the opportunities of political institutions such as freedom of association and freedom of the press to garner support for terrorist activity.” (cf. Jenne 2007)"
+  },
+  {
+    "objectID": "slides/slides_06.html#concepts-metodieva2021",
+    "href": "slides/slides_06.html#concepts-metodieva2021",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Concepts (Metodieva 2021)",
+    "text": "Concepts (Metodieva 2021)\n\nradical milieu - conducive environments for radicalisation, recruitment, and eventual engagement in violent extremism (Vidra and Zeller 2022) (a family resemblance concept, many different types and manifestations)\nparajamaats - illegal praying congregations (‘parallel mosque’)\npower centres - hotspots of radical activism, centred on influencers, who pushed followers to become foreign fighters\nradical influencers - prominent, often charismatic individuals capable of attracting followers\n\nvarious functions: e.g., ruqya (spiritual healing)\nparallels to cases you know of?\n\nforeign fighters - indiviuals who travel to a conflict zone from another territory (prima facie evidence of radicalism \\(\\rightarrow\\) engagement in political violence; a ‘security failure’ by authority of origin state?)"
+  },
+  {
+    "objectID": "slides/slides_06.html#structures-around-radical-influencers-metodieva2021",
+    "href": "slides/slides_06.html#structures-around-radical-influencers-metodieva2021",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Structures around radical influencers (Metodieva 2021)",
+    "text": "Structures around radical influencers (Metodieva 2021)"
+  },
+  {
+    "objectID": "slides/slides_06.html#balkans-particularly-important-for-is-metodieva2021",
+    "href": "slides/slides_06.html#balkans-particularly-important-for-is-metodieva2021",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Balkans particularly important for IS (Metodieva 2021)",
+    "text": "Balkans particularly important for IS (Metodieva 2021)\nthree reasons:\n\nlinked to large diaspora communities in western Europe\nsocieties with historical ties to Islam\nregion is marked by recent wars, and thus also by frozen but unresolved political and ethnic disputes"
+  },
+  {
+    "objectID": "slides/slides_06.html#research-design-metodieva2021",
+    "href": "slides/slides_06.html#research-design-metodieva2021",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Research design (Metodieva 2021)",
+    "text": "Research design (Metodieva 2021)\n\naim: “in what way leadership networks and authority affect how recruitment is done at the local level”; two claims\n\nwartime fuelled the growth of the Salafist movement in BiH (creation and maintenance of radical milieu–context! structure!)\nradical influencers who emerged had an ideological and organizational impact on the foreign fighter recruitment (meso –&gt; micro level recruitment processes—agency!)\n\ncase-based research: 11 radical influencers\n\npurposive selection: advocated violence (17 nonviolent cases)\n\nselecting on the DV (a no-no in inferential statistics—often desirable in case-based research where explaining outcomes [not ‘explaining variation’] is the objective)"
+  },
+  {
+    "objectID": "slides/slides_06.html#data",
+    "href": "slides/slides_06.html#data",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Data",
+    "text": "Data\n\nbiographical data for 28 Salafi influencers\n\nselected based on their (prominent) radical activism (videos, sermons, organising events)\n8 categorical variables: (1) influencer’s place of origin, (2) role in the radical milieu, (3) promotion/non-promotion of violence, (4) online and offline activism, (5) background in religious studies, (6) participation in the Bosnian War, (7) power center of influence, and (8) current status\n\nissues here? omissions?"
+  },
+  {
+    "objectID": "slides/slides_06.html#data-1",
+    "href": "slides/slides_06.html#data-1",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Data",
+    "text": "Data\n\nbiographical data for 28 Salafi influencers\n\nselected based on their (prominent) radical activism (videos, sermons, organising events)\n8 categorical variables: (1) influencer’s place of origin, (2) role in the radical milieu, (3) promotion/non-promotion of violence, (4) online and offline activism, (5) background in religious studies, (6) participation in the Bosnian War, (7) power center of influence, and (8) current status\n\nissues here? omissions?\n\ngood data collection practices (collect more than needed)\nperhaps not ideal conceptualisation/measurement procedure\n\nbackground concept \\(\\rightarrow\\) 2. systematised concept \\(\\rightarrow\\) 3. indicators \\(\\rightarrow\\) 4. scoring cases (Adcock and Collier 2001)"
+  },
+  {
+    "objectID": "slides/slides_06.html#power-centres-of-fighter-recruitment-metodieva2021",
+    "href": "slides/slides_06.html#power-centres-of-fighter-recruitment-metodieva2021",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Power centres of fighter recruitment (Metodieva 2021)",
+    "text": "Power centres of fighter recruitment (Metodieva 2021)"
+  },
+  {
+    "objectID": "slides/slides_06.html#profiles-of-key-influencers-metodieva2021-p.-13",
+    "href": "slides/slides_06.html#profiles-of-key-influencers-metodieva2021-p.-13",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Profiles of key influencers (Metodieva 2021, 13)",
+    "text": "Profiles of key influencers (Metodieva 2021, 13)"
+  },
+  {
+    "objectID": "slides/slides_06.html#conclusion-metodieva2021-p.-17",
+    "href": "slides/slides_06.html#conclusion-metodieva2021-p.-17",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Conclusion (Metodieva 2021, 17)",
+    "text": "Conclusion (Metodieva 2021, 17)\n\nRadical influencers may have different pathways and histories across cases of foreign fighter recruitment. They may vary in the resources they rely on. In the postwar context of BiH, radical influencers shape the recruitment of foreign fighters by managing preexisting “institutions” of the radical milieu. Influencers may fill a variety of power gaps and thus be able to access and target their followers. The reference to influencers instead of “recruiters” or “radical imams”, points to the finding that radical authority figures may have both ideological and (sometimes) operational functions in recruitment. Although they may lack strategic links to the centralized leadership of a terror organization, they have the power to influence the “bottom,” where prospective foreign fighters are situated."
+  },
+  {
+    "objectID": "slides/slides_06.html#key-concept-choi2022leadernationalismethnic",
+    "href": "slides/slides_06.html#key-concept-choi2022leadernationalismethnic",
+    "title": "Class 6: Politically Violent Activity",
+    "section": "Key concept (Choi 2022)",
+    "text": "Key concept (Choi 2022)\n\nTerrorism - ‘the threatened or actual use of illegal force, directed against civilian targets, by nonstate actors, in order to attain a political goal, through fear, coercion or intimidation’ (LaFree and Ackerman 2009, 348)."
   }
 ]
