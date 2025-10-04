@@ -312,7 +312,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8"
   },
   {
     "objectID": "syllabus/index.html#examination-klausur",
@@ -2588,5 +2588,180 @@
     "title": "Class 7: Politically Violent Activity",
     "section": "Enstad (2018) - findings",
     "text": "Enstad (2018) - findings\n\nRussian activists have operated much more violently compared to their counterparts in the United States and Western Europe.\nRussian activists have operated more purposefully, with premeditated attacks vastly outnumbering spontaneous ones.\ngangs and unorganized groups have been the most common perpetrators; the overall share of lone actors has been much lower than in the West"
+  },
+  {
+    "objectID": "slides/slides_08.html#presentation-groups",
+    "href": "slides/slides_08.html#presentation-groups",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Presentation groups",
+    "text": "Presentation groups\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+  },
+  {
+    "objectID": "slides/slides_08.html#starter-questions",
+    "href": "slides/slides_08.html#starter-questions",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Starter questions",
+    "text": "Starter questions\n\nWhat actors might strategically use violence before or during an election? Why?\n\n\n\nCan you think of any cases of election-related violence?"
+  },
+  {
+    "objectID": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---concepts",
+    "href": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---concepts",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - concepts",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - concepts\n\nelectoral violence (p. 3): “coercion directed towards actors and/or objects during the electoral cycle … part of a menu of electoral manipulation, which includes threats and coercion targeting voters, candidates and officials involved in the process”\n\n\n\nintra-systemic violence\n\n“try to win under the existing system”\n“suppress or drown out the voices of political opponents”\n\nanti-systemic violence\n\n“burn down the house and alter the status quo”\n“depress participation as much as possible in order to undermine the legitimacy of the election”"
+  },
+  {
+    "objectID": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---concepts-1",
+    "href": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---concepts-1",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - concepts",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - concepts\n\nintra-systemic violence\n\n“try to win under the existing system”\n“suppress or drown out the voices of political opponents”\n\nanti-systemic violence\n\n“burn down the house and alter the status quo”\n“depress participation as much as possible in order to undermine the legitimacy of the election”\n\nexamples from cases? any difference in the form of violence? applicable beyond modern democracies? (e.g., KKK, Wilson, and The Birth of a Nation)"
+  },
+  {
+    "objectID": "slides/slides_08.html#intra-systemic-violence-left-and-anti-systemic-violence-right-in-india-1985-2008",
+    "href": "slides/slides_08.html#intra-systemic-violence-left-and-anti-systemic-violence-right-in-india-1985-2008",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "intra-systemic violence (left) and anti-systemic violence (right) in India, 1985-2008",
+    "text": "intra-systemic violence (left) and anti-systemic violence (right) in India, 1985-2008"
+  },
+  {
+    "objectID": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---research-design",
+    "href": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---research-design",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - research design",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - research design\n\nresearch aim: looking at sub-national election-related violence in India: what effect on electoral outcomes (DVs: turnout, incumbent vote percentage) does violence before elections (IV) have?\nMethod: series of fixed-effects and Poisson regression models\n\n\\(\\hookrightarrow\\) fixed-effects - intercept of model varies across units/cases to control for unvarying attributes of specific units/cases\n\\(\\hookrightarrow\\) Poisson - often used to model ‘count’ data\n\nData (collection procedure detailed on p. 8):\n\nTimes of India (ToI) new reports, sub-national elections\nUnit of analysis/case: constituency-year \ncoded: violence intra-systemic or part of armed group’s tactic"
+  },
+  {
+    "objectID": "slides/slides_08.html#reg-table-dv-turnout",
+    "href": "slides/slides_08.html#reg-table-dv-turnout",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Reg table, DV: turnout",
+    "text": "Reg table, DV: turnout\nwhat findings can you pick out?"
+  },
+  {
+    "objectID": "slides/slides_08.html#reg-table-dv-incumbent-vote",
+    "href": "slides/slides_08.html#reg-table-dv-incumbent-vote",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Reg table, DV: incumbent vote",
+    "text": "Reg table, DV: incumbent vote\nwhat findings can you pick out?"
+  },
+  {
+    "objectID": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---conclusions",
+    "href": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---conclusions",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - conclusions",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - conclusions\n\nviolence decreases turnout but that the effect is larger for anti-systemic violence\nintra-systemic violence appears intended to selectively depress turnout among opposition supporters\nanti-systemic violence “extremely effective in terms of keeping voters away from the polls and thus discrediting the electoral results due to low participation rates”\n\nethics question: qualms about reporting this finding?\n\n\n\n\nopen data on subnational violence: Zhukov, Davenport, and Kostyuk (2019)\n\n\n\nhow should states respond to electoral violence?"
+  },
+  {
+    "objectID": "slides/slides_08.html#background-study-of-chenoweth2011",
+    "href": "slides/slides_08.html#background-study-of-chenoweth2011",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\n\n\n\n\n\nresearch aim: determine relative success of nonviolent (‘civil resistance’ - Gene Sharp) or violent resistance\ncases of violent and non-violent campaigns between 1900 and 2006: 323 cases"
+  },
+  {
+    "objectID": "slides/slides_08.html#background-study-of-chenoweth2011-1",
+    "href": "slides/slides_08.html#background-study-of-chenoweth2011-1",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\n\n\n\n\n\ncases of violent and non-violent campaigns between 1900 and 2006: 323 cases\n\ninferential stats analysis of data\nnew dataset: Dahl et al. (2025)\nthree case studies: Philippine people power movement (1983–86), FALANTIL struggles for East Timor independence (1988–99), and Burmese civil resistance (1988–1990)\n\nnon-violent more than twice as likely to achieve full or partial success compared to violent cases"
+  },
+  {
+    "objectID": "slides/slides_08.html#background-study-of-chenoweth2011-2",
+    "href": "slides/slides_08.html#background-study-of-chenoweth2011-2",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\nPay attention to the mechanisms that Prof. Chenoweth specifies in her brief explanation"
+  },
+  {
+    "objectID": "slides/slides_08.html#kudelia2018---rebuttingrefining-chenoweth2011",
+    "href": "slides/slides_08.html#kudelia2018---rebuttingrefining-chenoweth2011",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Kudelia (2018) - rebutting/refining Chenoweth and Stephan (2011)",
+    "text": "Kudelia (2018) - rebutting/refining Chenoweth and Stephan (2011)\n\nUkraine’s Euromaidan\n\nwhat’s going on in this case?\n\nYanukovych’s regime: semi-authoritarian\n\n\n\n\n\nviolent protests occurred…\n\nbut accounted for just 12 percent of all protests\nyet concentrated in final month (Jan.-Feb. 2014) and in Kyiv\n\n\n\n\n\n“The success of violent protest tactics in Ukraine’s case, puzzling from the standpoint of recent findings, has received no systematic, theoretically-driven scholarly treatment.”\n\n\nviolent tactics effective - is it puzzling? (cf. Chenoweth and Stephan 2011)"
+  },
+  {
+    "objectID": "slides/slides_08.html#empirically-theoretically-puzzling-or-not",
+    "href": "slides/slides_08.html#empirically-theoretically-puzzling-or-not",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "(empirically, theoretically) puzzling or not…",
+    "text": "(empirically, theoretically) puzzling or not…\n\nKudelia (2018) - within-case qualitative process tracing of “actors’ choices using a rationalist theoretical”\n\nrationalist = strategic choice rather than spontaneous reaction"
+  },
+  {
+    "objectID": "slides/slides_08.html#counter-productive-effects-of-violence---kudelia2018",
+    "href": "slides/slides_08.html#counter-productive-effects-of-violence---kudelia2018",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "(counter-)productive effects of violence - Kudelia (2018)",
+    "text": "(counter-)productive effects of violence - Kudelia (2018)\n\nviolence counter-productive\n\nalienate current and potential supporters\nprovoke a coercive response\ndampen international support for protests\n\nviolence productive\n\nparticipatory character of protest violence\nembeddedness of violent groups and practices in a generally non-violent movement (radical flanks)\ncapacity and willingness of violent activists to escalate beyond the cost-tolerance threshold of the regime\n\ni.e., how much will regime tolerate? will it offer concessions?"
+  },
+  {
+    "objectID": "slides/slides_08.html#kudelia2018---findings",
+    "href": "slides/slides_08.html#kudelia2018---findings",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Kudelia (2018) - findings",
+    "text": "Kudelia (2018) - findings\n\nviolence complementing already and continuing high mobilisation is effective in making regime more sensitive to protest costs\n“a regime’s repressive escalation may decrease net participation costs by broadening support for militants among rank-and-file protesters and outside sympathizers”\ntwo-tiered orgs.: a violent vanguard and a non-violent base\n\nstrengthens the leverage of moderate opposition elites in bargaining with the regime\nwhen used in conjunction with non-violent actions in response to intensifying repression, it may deter the regime or even tip the balance of power against it.\n\nyour thoughts on these findings?"
+  },
+  {
+    "objectID": "slides/slides_08.html#references",
+    "href": "slides/slides_08.html#references",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "References",
+    "text": "References\n\n\n\n\nChenoweth, Erica, and Maria J. Stephan. 2011. Why Civil Resistance Works: The Strategic Logic of Nonviolent Conflict. New York: Columbia University Press.\n\n\nDahl, Marianne, Sirianne Dahlum, Hanne Fjelde, Haakon Gjerløw, Carl Henrik Knutsen, Carina Strøm-Sedgwick, and Tore Wig. 2025. “Mass Mobilization in the Modern Era: Introducing the Opposition Movements and Groups (OMG) Dataset, 1789–2019.” Comparative Political Studies, August, 00104140251369330. https://doi.org/10.1177/00104140251369330.\n\n\nHarbers, Imke, Cécile Richetta, and Enrike van Wingerden. 2022. “Shaping Electoral Outcomes: Intra- and Anti-systemic Violence in Indian Assembly Elections.” British Journal of Political Science, October, 1–17. https://doi.org/10.1017/S0007123422000345.\n\n\nKudelia, Serhiy. 2018. “When Numbers Are Not Enough: The Strategic Use of Violence in Ukraine’s 2014 Revolution.” Comparative Politics 50 (4): 501–21.\n\n\nZhukov, Yuri M, Christian Davenport, and Nadiya Kostyuk. 2019. “Introducing xSub: A New Portal for Cross-National Data on Subnational Violence.” Journal of Peace Research 56 (4): 604–14. https://doi.org/10.1177/0022343319836697."
+  },
+  {
+    "objectID": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---concepts-2",
+    "href": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---concepts-2",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - concepts",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - concepts\n\nintra-systemic violence\nanti-systemic violence\nexamples from cases? any difference in the form of violence?\n\nintra-systemic: riots or group clashes between party supporters and violent attacks on candidates, politicians or voters. … ‘booth capture’, where armed goons take over polling places\nanti-systemic: coercion of or threats against candidates, voters, poll workers or security, as well as destruction of election infrastructure"
+  },
+  {
+    "objectID": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---design",
+    "href": "slides/slides_08.html#harbers2022shapingelectoraloutcomes---design",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - design",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - design\n\nresearch aim: looking at sub-national election-related violence in India: what effect on electoral outcomes (DVs: turnout, incumbent vote percentage) does violence before elections (IV) have?\nMethod: series of fixed-effects and Poisson regression models\n\n\\(\\hookrightarrow\\) fixed-effects - intercept of model varies across units/cases to control for unvarying attributes of specific units/cases\n\\(\\hookrightarrow\\) Poisson - often used to model ‘count’ data\n\nData (collection procedure detailed on p. 8):\n\nTimes of India (ToI) new reports, sub-national elections\nUnit of analysis/case: constituency-year \ncoded: violence intra-systemic or part of armed group’s tactic"
+  },
+  {
+    "objectID": "slides/slides_08.html#background-study-of-chenoweth2011-3",
+    "href": "slides/slides_08.html#background-study-of-chenoweth2011-3",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\nPay attention to the mechanisms that Prof. Chenoweth specifies in her brief explanation\n\nnonviolent campaigns are better at eliciting broad and diverse support\nnonviolent campaigns create more defections among the opposition\nnonviolent campaigns have a broader set of tactics at their disposal\nnonviolent campaigns often maintain discipline even in the face of escalating oppression"
+  },
+  {
+    "objectID": "slides/slides_08.html#kudelia2018---refining-chenoweth2011",
+    "href": "slides/slides_08.html#kudelia2018---refining-chenoweth2011",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Kudelia (2018) - refining Chenoweth and Stephan (2011)",
+    "text": "Kudelia (2018) - refining Chenoweth and Stephan (2011)\n\nUkraine’s Euromaidan\n\nwhat’s going on in this case?\n\nYanukovych’s regime: semi-authoritarian\n\n\n\n\n\nviolent protests occurred…\n\nbut accounted for just 12 percent of all protests\nyet concentrated in final month (Jan.-Feb. 2014) and in Kyiv"
+  },
+  {
+    "objectID": "slides/slides_08.html#kudelia2018---refining-chenoweth2011-1",
+    "href": "slides/slides_08.html#kudelia2018---refining-chenoweth2011-1",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Kudelia (2018) - refining Chenoweth and Stephan (2011)",
+    "text": "Kudelia (2018) - refining Chenoweth and Stephan (2011)\n\nUkraine’s Euromaidan\n\nwhat’s going on in this case?\n\nYanukovych’s regime: semi-authoritarian\n\n\nviolent protests occurred…\n\nbut accounted for just 12 percent of all protests\nyet concentrated in final month (Jan.-Feb. 2014) and in Kyiv\n\n\n\n“The success of violent protest tactics in Ukraine’s case, puzzling from the standpoint of recent findings, has received no systematic, theoretically-driven scholarly treatment.”\n\n\nviolent tactics effective - is it puzzling? (cf. Chenoweth and Stephan 2011)"
+  },
+  {
+    "objectID": "slides/slides_08.html#reg-table-dv-turnout-1",
+    "href": "slides/slides_08.html#reg-table-dv-turnout-1",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Reg table, DV: turnout",
+    "text": "Reg table, DV: turnout\n\n\nintra-systemic and anti-systemic violence are negatively associated with turnout (in separate and combined models)\nintra-systemic violence, the negative effect emerges only for non-lethal events (88.2% of all intra-systemic violence in data). Coefficient for lethal events is not significant.\neffect of anti-systemic violence on turnout is stronger than the effect of intra-systemic violence (Model 3)"
+  },
+  {
+    "objectID": "slides/slides_08.html#reg-table-dv-incumbent-vote-1",
+    "href": "slides/slides_08.html#reg-table-dv-incumbent-vote-1",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Reg table, DV: incumbent vote",
+    "text": "Reg table, DV: incumbent vote\n\n\nviolence is associated with fewer votes for the constituency-level incumbent party\npositive interaction term (\\(\\beta\\) = 7.993***) indicates … the negative effect of violence is diminished if the incumbent is aligned with the state government\n\nsuggests that within non-aligned constituencies, intra-systemic violence is targeted at supporters of the state-level opposition"
+  },
+  {
+    "objectID": "slides/slides_08.html#concluding-discussion",
+    "href": "slides/slides_08.html#concluding-discussion",
+    "title": "Class 8: Politically Violent Activity",
+    "section": "Concluding discussion",
+    "text": "Concluding discussion\nRelationship across a movement:\n\nhow do (or should) nonviolent actors deal with violent actors/groups within their movement (‘radical flanks’)? Infighting or solidarity?"
   }
 ]
