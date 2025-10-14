@@ -312,7 +312,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8\n\n\nClass 9\n\n\nClass 10"
   },
   {
     "objectID": "syllabus/index.html#examination-klausur",
@@ -2763,5 +2763,593 @@
     "title": "Class 8: Politically Violent Activity",
     "section": "Concluding discussion",
     "text": "Concluding discussion\nRelationship across a movement:\n\nhow do (or should) nonviolent actors deal with violent actors/groups within their movement (‘radical flanks’)? Infighting or solidarity?"
+  },
+  {
+    "objectID": "slides/slides_09.html#presentation-groups",
+    "href": "slides/slides_09.html#presentation-groups",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "",
+    "text": "DecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+  },
+  {
+    "objectID": "slides/slides_09.html#opening-discussion",
+    "href": "slides/slides_09.html#opening-discussion",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Opening discussion",
+    "text": "Opening discussion\n\nWhat should we, students of political violence, know about antifa? (causes? organisation/leadership? radical subcultures and mobilisation? strategies?)\n\n. . .\n\nis antifa a ‘gang’ (Pyrooz and Densley 2018)? is antifa a ‘group’ (LaFree 2018)?\n\n\ngang - ‘durable and street-oriented youth group whose involvement in illegal activity is part of its group identity’ (Pyrooz and Densley 2018, 230)\ngroup - ‘some stable organisation that persists over time and has some discernible leadership structure’ (LaFree 2018, 249), see also GTF database: https://www.start.umd.edu/gtd/"
+  },
+  {
+    "objectID": "slides/slides_09.html#poll-results",
+    "href": "slides/slides_09.html#poll-results",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Poll results",
+    "text": "Poll results\n\n\nmost important factor allowing restraint?\n\nallows_restraintCounts = aq.from(surveyResults)\n  .select(\"allows_restraint\")\n  .groupby(\"allows_restraint\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nallows_restraint_maxCountRE = Math.max(...allows_restraintCounts.objects().map(d =&gt; d.count));\n\nplot_allows_restraint = Plot.plot({\n  marks: [\n    Plot.barY(allows_restraintCounts, {\n      x: \"allows_restraint\",\n      y: \"count\",\n      fill: \"allows_restraint\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"strategic factors\", \n      \"resource constraints\", \n      \"moral convictions\", \n      \"strong/weak organisation\", \n      \"other\"\n    ],\n    range: [\n      \"darkred\",\n      \"goldenrod\",\n      \"cadetblue\",\n      \"forestgreen\",\n      \"gray\"\n    ]\n  },\n  marginBottom: 400,\n  x: { label: \"\", tickSize: 2, tickRotate: -40, padding: 0.2,\n    domain: [\"strategic factors\", \"resource constraints\", \"moral convictions\", \"strong/weak organisation\", \"other\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(allows_restraintCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, allows_restraint_maxCountRE]\n  },\n  facet: { data: allows_restraintCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmost likely to provoke escalation?\n\nprovoke_escalationCounts = aq.from(surveyResults)\n  .select(\"provoke_escalation\")\n  .groupby(\"provoke_escalation\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nprovoke_escalation_maxCountRE = Math.max(...provoke_escalationCounts.objects().map(d =&gt; d.count));\n\nplot_provoke_escalation = Plot.plot({\n  marks: [\n    Plot.barY(provoke_escalationCounts, {\n      x: \"provoke_escalation\",\n      y: \"count\",\n      fill: \"provoke_escalation\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"state repression\",\n      \"economic inequality\",\n      \"limited political access\",\n      \"other\"\n    ],\n    range: [\n      \"violet\",\n      \"indigo\",\n      \"goldenrod\",\n      \"orange\"\n    ]\n  },\n  marginBottom: 500,\n  x: { label: \"\", tickSize: 2, tickRotate: -60, padding: 0.2,\n    domain: [\"state repression\", \"economic inequality\", \"limited political access\", \"other\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(provoke_escalationCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, provoke_escalation_maxCountRE]\n  },\n  facet: { data: provoke_escalationCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_09.html#poll-results-reaction-and-repression",
+    "href": "slides/slides_09.html#poll-results-reaction-and-repression",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Poll results: reaction and repression",
+    "text": "Poll results: reaction and repression\nstates should remain open to negotiating with politically violent groups?\n\nnegotiatingCounts = aq.from(surveyResults)\n  .select(\"negotiating\")\n  .groupby(\"negotiating\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nnegotiating_maxCountRE = Math.max(...negotiatingCounts.objects().map(d =&gt; d.count));\n\nplot_negotiating = Plot.plot({\n  marks: [\n    Plot.barY(negotiatingCounts, {\n      x: \"negotiating\",\n      y: \"count\",\n      fill: \"negotiating\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(negotiatingCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, negotiating_maxCountRE]\n  },\n  facet: { data: negotiatingCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_09.html#harbers2022shapingelectoraloutcomes---concepts",
+    "href": "slides/slides_09.html#harbers2022shapingelectoraloutcomes---concepts",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - concepts",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - concepts\n\nintra-systemic violence\nanti-systemic violence\nexamples from cases? any difference in the form of violence?\n\nintra-systemic: riots or group clashes between party supporters and violent attacks on candidates, politicians or voters. … ‘booth capture’, where armed goons take over polling places\nanti-systemic: coercion of or threats against candidates, voters, poll workers or security, as well as destruction of election infrastructure"
+  },
+  {
+    "objectID": "slides/slides_09.html#background-study-of-chenoweth2011",
+    "href": "slides/slides_09.html#background-study-of-chenoweth2011",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\nPay attention to the mechanisms that Prof. Chenoweth specifies in her brief explanation"
+  },
+  {
+    "objectID": "slides/slides_09.html#references",
+    "href": "slides/slides_09.html#references",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "References",
+    "text": "References\n\n\n\n\nBjørgo, Tore, and Jacob Aasland Ravndal. 2020. “Why the Nordic Resistance Movement Restrains Its Use of Violence.” Perspectives on Terrorism 14 (6): 37–48.\n\n\nBlomberg, Helena, and Jonas Stier. 2019. “Flashback as a Rhetorical Online Battleground: Debating the (Dis)guise of the Nordic Resistance Movement.” Social Media + Society 5 (1): 205630511882333. https://doi.org/10.1177/2056305118823336.\n\n\nBray, Mark. 2017. Antifa: The Anti-Fascist Handbook. New York: Melville House Publishing. https://doi.org/10.1017/CBO9781107415324.004.\n\n\nBusher, Joel, Gareth Harris, Julia Ebner, Zsofia Hacsek, and Graham Macklin. 2022. “The Dynamics Of Violence Escalation And Inhibition During ’Hot Periods’ Of Anti-Minority And Far-Right Activism: Towards An Assessment Framework.” Coventry: CREST.\n\n\nCopsey, Nigel, and Samuel Merrill. 2020. “Violence and Restraint Within Antifa: A View from the United States.” Perspectives on Terrorism 14 (6): 122–38.\n\n\nJones, Ali, and Nils Schuhmacher. 2024. “Ghostly Militanz: The Loss of Discursive Infrastructures and German Antifascist Radical Counterpublics” 17 (1): 46–63. https://doi.org/10.1285/I20356609V17I1P46.\n\n\nKotonen, Tommi. 2021. “Proscribing the Nordic Resistance Movement in Finland: Analyzing the Process and Its Outcome.” Journal for Deradicalization 29 (Winter): 177–204.\n\n\nLaFree, Gary. 2018. “Is Antifa a Terrorist Group?” Society 55 (3): 248–52. https://doi.org/10.1007/s12115-018-0246-x.\n\n\nPyrooz, David C., and James A. Densley. 2018. “On Public Protest, Violence, and Street Gangs.” Society 55 (3): 229–36. https://doi.org/10.1007/s12115-018-0242-1.\n\n\nRavndal, Jacob Aasland. 2020. “The Emergence of Transnational Street Militancy: A Comparative Case Study of the Nordic Resistance Movement and Generation Identity.” Journal for Deradicalization 25: 1–34.\n\n\nSartori, Giovanni. 1970. “Concept Misformation in Comparative Politics.” The American Political Science Review 64 (4): 1033–53.\n\n\nStiftelsen Expo. 2025. “Svensk Rasideologisk Miljö 2024.” Stokholm: Stiftelsen Expo.\n\n\nZeller, Michael C, and Michael Vaughan. 2024. “Proscribing Right-Wing Extremist Organizations in Europe: Variations, Trends, and Prospects.” Terrorism and Political Violence 36 (8): 985–1007. https://doi.org/10.1080/09546553.2023.2240446."
+  },
+  {
+    "objectID": "slides/slides_09.html#debatable-proposition-antifa-as-terrorist-org.",
+    "href": "slides/slides_09.html#debatable-proposition-antifa-as-terrorist-org.",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Debatable proposition: antifa as terrorist org.?",
+    "text": "Debatable proposition: antifa as terrorist org.?\n\nPyrooz and Densley (2018, 233): “the history of antifa reads like a history of violence”\n\n\nvs.\n\n\nBray (2017, 169): “In truth, violence represents a small though vital sliver of anti-fascist activity.”\n\n. . .\n\nShould state security (in Germany, elsewhere) designate antifa as extremist/terrorist"
+  },
+  {
+    "objectID": "slides/slides_09.html#antifa-in-germany",
+    "href": "slides/slides_09.html#antifa-in-germany",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "antifa in Germany",
+    "text": "antifa in Germany\nARD series (in German): https://www.ardaudiothek.de/sendung/die-fascho-jaegerin-der-fall-lina-e-und-seine-folgen/94838298/\n\n28-year-old antifa activist, Lina E., and three accomplices jailed for either membership of or support for a criminal organisation.\n\npoliticised/radicalised by revelations about NSU in 2011\n\nattacks on (assumed) right-wing extremists in Thüringen and Sachsen between 2018 and 2020\njudge…\n\nacknowledged deficiency of criminal punishment of neo-Nazis\ndescribed right-wing extremism as a greater threat to Germany\nbut asserted ‘even Nazis have inalienable rights’\ncriticized the defense lawyers for describing the trial as “political justice.”\n\n\nrecent article: Jones and Schuhmacher (2024)"
+  },
+  {
+    "objectID": "slides/slides_09.html#antifa-recently-in-germany",
+    "href": "slides/slides_09.html#antifa-recently-in-germany",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "antifa (recently) in Germany",
+    "text": "antifa (recently) in Germany\nARD series (in German): https://www.ardaudiothek.de/sendung/die-fascho-jaegerin-der-fall-lina-e-und-seine-folgen/94838298/\n\n28-year-old antifa activist, Lina E., and three accomplices jailed for either membership of or support for a criminal organisation.\n\npoliticised/radicalised by revelations about NSU in 2011\n\nattacks on (assumed) right-wing extremists in Thüringen and Sachsen between 2018 and 2020\njudge…\n\nacknowledged deficiency of criminal punishment of neo-Nazis\ndescribed right-wing extremism as a greater threat to Germany\nbut asserted ‘even Nazis have inalienable rights’\ncriticized the defense lawyers for describing the trial as “political justice.”\n\n\nrecent journal article: Jones and Schuhmacher (2024)"
+  },
+  {
+    "objectID": "slides/slides_09.html#copseymerrill2020---background",
+    "href": "slides/slides_09.html#copseymerrill2020---background",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Copsey and Merrill (2020) - background",
+    "text": "Copsey and Merrill (2020) - background\n\nSince 2001, right-wing extremists in the U.S. responsible for 110 politically motivated deaths — antifa: 0 (or maximum one, in case of 2020 death of Patriot Prayer supporter)\n\n\nIn putting their “bodies on the line,” militant anti-fascists aspire to defeat fascist organizing, to de-stabilize it, and ultimately de-mobilize it. At its root, anti-fascist militancy is the promise to effect intimidation, humiliation and de-moralization upon fascists. This involves a physical commitment to “no platforming” (p. 124)\n\n\nlots of informative background information about U.S. antifa in the article"
+  },
+  {
+    "objectID": "slides/slides_09.html#copseymerrill2020---research-design",
+    "href": "slides/slides_09.html#copseymerrill2020---research-design",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Copsey and Merrill (2020) - research design",
+    "text": "Copsey and Merrill (2020) - research design\n\nsemi-structured interviews with activists from RCA in Portland\n\nconditions of anonymity\nbetween October 2019 and February 2020. \n\nsample of 3971 tweets (including 2484 retweets) shared by RCA’s Twitter account (@RoseCityAntifa)\n\nbetween 13 March 2018 and 28 August 2019\ncollected using Tweepy in accordance with Twitter’s regulations\n‘more militant’ tweets—“648 tweets (including 279 retweets) from within this sample which featured variants of “violence,” “attack,” “assault,” “fight,” and “terror””\n\nclose reading; quantitatively and qualitatively analysed with critical discourse analysis approach"
+  },
+  {
+    "objectID": "slides/slides_09.html#copseymerrill2020---findingspoints-raised",
+    "href": "slides/slides_09.html#copseymerrill2020---findingspoints-raised",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Copsey and Merrill (2020) - findings/points raised",
+    "text": "Copsey and Merrill (2020) - findings/points raised\n\nviolent disruption of “fascist” assembly is an axiom of antifa praxis\nhow far does the label ‘fascist’ extend?\n\n“legitimacy of anti-fascist action is thus drawn from the illegitimacy of its opponent”\n\nantifa’s “pre-emptive self-defence”\n\npremised on (a) deadliness of fascist movements of any size and (b) rapid growth potential of fascist movements\n\nthere are ‘internal tactical and rhetorical strategies that limit violence’ from antifa — BUT, consistent danger of antifa slipping into glorification of violence"
+  },
+  {
+    "objectID": "slides/slides_09.html#poll-results-escalation-and-restraint",
+    "href": "slides/slides_09.html#poll-results-escalation-and-restraint",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Poll results: escalation and restraint",
+    "text": "Poll results: escalation and restraint\n\n\nmost important factor allowing restraint?\n\nallows_restraintCounts = aq.from(surveyResults)\n  .select(\"allows_restraint\")\n  .groupby(\"allows_restraint\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nallows_restraint_maxCountRE = Math.max(...allows_restraintCounts.objects().map(d =&gt; d.count));\n\nplot_allows_restraint = Plot.plot({\n  marks: [\n    Plot.barY(allows_restraintCounts, {\n      x: \"allows_restraint\",\n      y: \"count\",\n      fill: \"allows_restraint\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"strategic factors\", \n      \"resource constraints\", \n      \"moral convictions\", \n      \"strong/weak organisation\", \n      \"other\"\n    ],\n    range: [\n      \"darkred\",\n      \"goldenrod\",\n      \"cadetblue\",\n      \"forestgreen\",\n      \"gray\"\n    ]\n  },\n  marginBottom: 400,\n  x: { label: \"\", tickSize: 2, tickRotate: -40, padding: 0.2,\n    domain: [\"strategic factors\", \"resource constraints\", \"moral convictions\", \"strong/weak organisation\", \"other\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(allows_restraintCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, allows_restraint_maxCountRE]\n  },\n  facet: { data: allows_restraintCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmost likely to provoke escalation?\n\nprovoke_escalationCounts = aq.from(surveyResults)\n  .select(\"provoke_escalation\")\n  .groupby(\"provoke_escalation\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nprovoke_escalation_maxCountRE = Math.max(...provoke_escalationCounts.objects().map(d =&gt; d.count));\n\nplot_provoke_escalation = Plot.plot({\n  marks: [\n    Plot.barY(provoke_escalationCounts, {\n      x: \"provoke_escalation\",\n      y: \"count\",\n      fill: \"provoke_escalation\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"state repression\",\n      \"economic inequality\",\n      \"limited political access\",\n      \"other\"\n    ],\n    range: [\n      \"violet\",\n      \"indigo\",\n      \"goldenrod\",\n      \"orange\"\n    ]\n  },\n  marginBottom: 500,\n  x: { label: \"\", tickSize: 2, tickRotate: -60, padding: 0.2,\n    domain: [\"state repression\", \"economic inequality\", \"limited political access\", \"other\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(provoke_escalationCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, provoke_escalation_maxCountRE]\n  },\n  facet: { data: provoke_escalationCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_09.html#poll-results-negotiation",
+    "href": "slides/slides_09.html#poll-results-negotiation",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Poll results: negotiation",
+    "text": "Poll results: negotiation\nstates should remain open to negotiating with politically violent groups?\n\n\n\nnegotiatingCounts = aq.from(surveyResults)\n  .select(\"negotiating\")\n  .groupby(\"negotiating\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nnegotiating_maxCountRE = Math.max(...negotiatingCounts.objects().map(d =&gt; d.count));\n\nplot_negotiating = Plot.plot({\n  marks: [\n    Plot.barY(negotiatingCounts, {\n      x: \"negotiating\",\n      y: \"count\",\n      fill: \"negotiating\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(negotiatingCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, negotiating_maxCountRE]\n  },\n  facet: { data: negotiatingCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nrelates to our Week 11-12 classes on state responses"
+  },
+  {
+    "objectID": "slides/slides_09.html#escalation-and-restraint",
+    "href": "slides/slides_09.html#escalation-and-restraint",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "escalation and restraint",
+    "text": "escalation and restraint\n\nescalation - a rise in the frequency and/or severity of violent actions\nrestraint - a deliberate restriction (either reducing or completely stopping) of violent actions\n\n. . .\nare there significant examples of escalation and/or restraint in cases you know of?"
+  },
+  {
+    "objectID": "slides/slides_09.html#mechanisms-of-escalation-and-restraint-1",
+    "href": "slides/slides_09.html#mechanisms-of-escalation-and-restraint-1",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Mechanisms of escalation and restraint",
+    "text": "Mechanisms of escalation and restraint"
+  },
+  {
+    "objectID": "slides/slides_09.html#summarising-logics-of-restraint---busheretal2022-bjorgo2020whynordicresistance",
+    "href": "slides/slides_09.html#summarising-logics-of-restraint---busheretal2022-bjorgo2020whynordicresistance",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "summarising logics of restraint - (Busher et al. 2022; Bjørgo and Ravndal 2020)",
+    "text": "summarising logics of restraint - (Busher et al. 2022; Bjørgo and Ravndal 2020)\n(‘ascending the ladder of abstraction,’ Sartori 1970)\n\nA strategic logic (violence is counterproductive in the present circumstances)\nA moral logic (certain forms of violence are illegitimate)\nA logic of ego maintenance (we are not a violent organization)\nA logic of outgroup definition (softening views on putative outgroups)\nAn organisational logic (the organisation evolves in ways that undermine the logics of violent escalation)"
+  },
+  {
+    "objectID": "slides/slides_09.html#summarising-logics-of-escalation---busheretal2022",
+    "href": "slides/slides_09.html#summarising-logics-of-escalation---busheretal2022",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "summarising logics of escalation - Busher et al. (2022)",
+    "text": "summarising logics of escalation - Busher et al. (2022)\n(‘ascending the ladder of abstraction,’ Sartori 1970)\n\nframing logic (intensity of context/threat, revolutionary goals, glorification of violence, violence as viable/necessary, increasing vilification of ‘enemies’)\nstrategic logic (cope with changing dynamics with opponents and/or state, deal with diminishing opportunity, loss of state control)\norganisational logic (declining moderate influence, logistical/practical preparation for violence)\nconstituency/social logic (endorsement/legitimation from elites and/or public, politics/media focuses on radical flank)"
+  },
+  {
+    "objectID": "slides/slides_09.html#nrm-at-a-glance",
+    "href": "slides/slides_09.html#nrm-at-a-glance",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "NRM at a glance",
+    "text": "NRM at a glance\n\n\n\nTerritory of action: Scandinavia [Blomberg and Stier (2019); ]\n\nOrganisational structure: hierarchical national branches\nMembership: moderate (varies by country, e.g., Stiftelsen Expo 2025)\n(main) Objective: white ethno-state\n(common) Targets: political and ethnic opponents\n\n\n\n\n\n\nRepertoire of actions: low-level violence, connected to terrorism (e.g., Finland, Ravndal 2020; Kotonen 2021; Zeller and Vaughan 2024)"
+  },
+  {
+    "objectID": "slides/slides_09.html#nordic-resistance-movement-nrm---tore-bjørgo",
+    "href": "slides/slides_09.html#nordic-resistance-movement-nrm---tore-bjørgo",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Nordic Resistance Movement (NRM) - Tore Bjørgo",
+    "text": "Nordic Resistance Movement (NRM) - Tore Bjørgo\nTore Bjørgo on Why the Nordic Resistance Movement Restrains its Use of Violence (Bjørgo and Ravndal 2020)"
+  },
+  {
+    "objectID": "slides/slides_09.html#nordic-resistance-movement-nrm---tore-bjørgo-1",
+    "href": "slides/slides_09.html#nordic-resistance-movement-nrm---tore-bjørgo-1",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "Nordic Resistance Movement (NRM) - Tore Bjørgo",
+    "text": "Nordic Resistance Movement (NRM) - Tore Bjørgo\n\nWhen, why does NRM permit use of violence?\n\nno moral restraints, rather violence perceived as counter-productive (to gaining support and freely propagating views)\ntry to expand boundaries of acceptable violence with acts against police and political enemies\n\nWhy, how does NRM restrain use of violence?\n\nto maintain strategic position\ncommit members to maintaining nonviolent discipline\n\nHow does NRM leadership respond to cases where members overstep and act violently?\n\nhonouring rather than punishing activists who overstep\nBUT ALSO distancing from any affiliation or connection"
+  },
+  {
+    "objectID": "slides/slides_10.html",
+    "href": "slides/slides_10.html",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "",
+    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\n\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+  },
+  {
+    "objectID": "slides/slides_10.html#presentation-groups",
+    "href": "slides/slides_10.html#presentation-groups",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Presentation groups",
+    "text": "Presentation groups\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+  },
+  {
+    "objectID": "slides/slides_10.html#poll-results-escalation-and-support",
+    "href": "slides/slides_10.html#poll-results-escalation-and-support",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Poll results: escalation and support",
+    "text": "Poll results: escalation and support\n\n\nviolent escalation tends to alienate the public, reducing support?\n\nescalationCounts = aq.from(surveyResults)\n  .select(\"escalation\")\n  .groupby(\"escalation\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nescalation_maxCountRE = Math.max(...escalationCounts.objects().map(d =&gt; d.count));\n\nplot_escalation = Plot.plot({\n  marks: [\n    Plot.barY(escalationCounts, {\n      x: \"escalation\",\n      y: \"count\",\n      fill: \"escalation\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(escalationCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, escalation_maxCountRE]\n  },\n  facet: { data: escalationCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmost common reason people support politically violent groups?\n\nreasonCounts = aq.from(surveyResults)\n  .select(\"reason\")\n  .groupby(\"reason\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nreason_maxCountRE = Math.max(...reasonCounts.objects().map(d =&gt; d.count));\n\nplot_reason = Plot.plot({\n  marks: [\n    Plot.barY(reasonCounts, {\n      x: \"reason\",\n      y: \"count\",\n      fill: \"reason\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"political grievances\",\n      \"economic grievances\",\n      \"ideological beliefs\",\n      \"identity factors\",\n      \"other\"\n    ],\n    range: [\n      \"indigo\",\n      \"goldenrod\",\n      \"cadetblue\",\n      \"forestgreen\",\n      \"violet\"\n    ]\n  },\n  marginBottom: 500,\n  x: { label: \"\", tickSize: 2, tickRotate: -60, padding: 0.2,\n    domain: [\"political grievances\", \"economic grievances\", \"ideological beliefs\", \"identity factors\", \"other\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(reasonCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, reason_maxCountRE]\n  },\n  facet: { data: reasonCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_10.html#poll-results-reaction-and-repression",
+    "href": "slides/slides_10.html#poll-results-reaction-and-repression",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Poll results: reaction and repression",
+    "text": "Poll results: reaction and repression\n\n\ndifferent reaction depending on ideological motivation of violence?\n\nreact_differentlyCounts = aq.from(surveyResults)\n  .select(\"react_differently\")\n  .groupby(\"react_differently\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nreact_differently_maxCountRE = Math.max(...react_differentlyCounts.objects().map(d =&gt; d.count));\n\nplot_react_differently = Plot.plot({\n  marks: [\n    Plot.barY(react_differentlyCounts, {\n      x: \"react_differently\",\n      y: \"count\",\n      fill: \"react_differently\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(react_differentlyCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, react_differently_maxCountRE]\n  },\n  facet: { data: react_differentlyCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstate repression usually strengthens violent groups’ legitimacy?\n\nrepressionCounts = aq.from(surveyResults)\n  .select(\"repression\")\n  .groupby(\"repression\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nrepression_maxCountRE = Math.max(...repressionCounts.objects().map(d =&gt; d.count));\n\nplot_repression = Plot.plot({\n  marks: [\n    Plot.barY(repressionCounts, {\n      x: \"repression\",\n      y: \"count\",\n      fill: \"repression\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(repressionCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, repression_maxCountRE]\n  },\n  facet: { data: repressionCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_10.html#starter-questions",
+    "href": "slides/slides_10.html#starter-questions",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Starter questions",
+    "text": "Starter questions\n\nWhat actors might strategically use violence before or during an election? Why?\n\n\n\nCan you think of any cases of election-related violence?"
+  },
+  {
+    "objectID": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---concepts",
+    "href": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---concepts",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - concepts",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - concepts\n\nintra-systemic violence\nanti-systemic violence\nexamples from cases? any difference in the form of violence?\n\nintra-systemic: riots or group clashes between party supporters and violent attacks on candidates, politicians or voters. … ‘booth capture’, where armed goons take over polling places\nanti-systemic: coercion of or threats against candidates, voters, poll workers or security, as well as destruction of election infrastructure"
+  },
+  {
+    "objectID": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---concepts-1",
+    "href": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---concepts-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - concepts",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - concepts\n\nintra-systemic violence\n\n“try to win under the existing system”\n“suppress or drown out the voices of political opponents”\n\nanti-systemic violence\n\n“burn down the house and alter the status quo”\n“depress participation as much as possible in order to undermine the legitimacy of the election”\n\nexamples from cases? any difference in the form of violence? applicable beyond modern democracies? (e.g., KKK, Wilson, and The Birth of a Nation)"
+  },
+  {
+    "objectID": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---concepts-2",
+    "href": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---concepts-2",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - concepts",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - concepts\n\nintra-systemic violence\nanti-systemic violence\nexamples from cases? any difference in the form of violence?\n\nintra-systemic: riots or group clashes between party supporters and violent attacks on candidates, politicians or voters. … ‘booth capture’, where armed goons take over polling places\nanti-systemic: coercion of or threats against candidates, voters, poll workers or security, as well as destruction of election infrastructure"
+  },
+  {
+    "objectID": "slides/slides_10.html#intra-systemic-violence-left-and-anti-systemic-violence-right-in-india-1985-2008",
+    "href": "slides/slides_10.html#intra-systemic-violence-left-and-anti-systemic-violence-right-in-india-1985-2008",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "intra-systemic violence (left) and anti-systemic violence (right) in India, 1985-2008",
+    "text": "intra-systemic violence (left) and anti-systemic violence (right) in India, 1985-2008"
+  },
+  {
+    "objectID": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---design",
+    "href": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---design",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - design",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - design\n\nresearch aim: looking at sub-national election-related violence in India: what effect on electoral outcomes (DVs: turnout, incumbent vote percentage) does violence before elections (IV) have?\nMethod: series of fixed-effects and Poisson regression models\n\n\\(\\hookrightarrow\\) fixed-effects - intercept of model varies across units/cases to control for unvarying attributes of specific units/cases\n\\(\\hookrightarrow\\) Poisson - often used to model ‘count’ data\n\nData (collection procedure detailed on p. 8):\n\nTimes of India (ToI) new reports, sub-national elections\nUnit of analysis/case: constituency-year \ncoded: violence intra-systemic or part of armed group’s tactic"
+  },
+  {
+    "objectID": "slides/slides_10.html#reg-table-dv-turnout",
+    "href": "slides/slides_10.html#reg-table-dv-turnout",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Reg table, DV: turnout",
+    "text": "Reg table, DV: turnout\nwhat findings can you pick out?"
+  },
+  {
+    "objectID": "slides/slides_10.html#reg-table-dv-turnout-1",
+    "href": "slides/slides_10.html#reg-table-dv-turnout-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Reg table, DV: turnout",
+    "text": "Reg table, DV: turnout\n\n\nintra-systemic and anti-systemic violence are negatively associated with turnout (in separate and combined models)\nintra-systemic violence, the negative effect emerges only for non-lethal events (88.2% of all intra-systemic violence in data). Coefficient for lethal events is not significant.\neffect of anti-systemic violence on turnout is stronger than the effect of intra-systemic violence (Model 3)"
+  },
+  {
+    "objectID": "slides/slides_10.html#reg-table-dv-incumbent-vote",
+    "href": "slides/slides_10.html#reg-table-dv-incumbent-vote",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Reg table, DV: incumbent vote",
+    "text": "Reg table, DV: incumbent vote\nwhat findings can you pick out?"
+  },
+  {
+    "objectID": "slides/slides_10.html#reg-table-dv-incumbent-vote-1",
+    "href": "slides/slides_10.html#reg-table-dv-incumbent-vote-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Reg table, DV: incumbent vote",
+    "text": "Reg table, DV: incumbent vote\n\n\nviolence is associated with fewer votes for the constituency-level incumbent party\npositive interaction term (\\(\\beta\\) = 7.993***) indicates … the negative effect of violence is diminished if the incumbent is aligned with the state government\n\nsuggests that within non-aligned constituencies, intra-systemic violence is targeted at supporters of the state-level opposition"
+  },
+  {
+    "objectID": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---conclusions",
+    "href": "slides/slides_10.html#harbers2022shapingelectoraloutcomes---conclusions",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Harbers, Richetta, and van Wingerden (2022) - conclusions",
+    "text": "Harbers, Richetta, and van Wingerden (2022) - conclusions\n\nviolence decreases turnout but that the effect is larger for anti-systemic violence\nintra-systemic violence appears intended to selectively depress turnout among opposition supporters\nanti-systemic violence “extremely effective in terms of keeping voters away from the polls and thus discrediting the electoral results due to low participation rates”\n\nethics question: qualms about reporting this finding?\n\n\n\n\nopen data on subnational violence: Zhukov, Davenport, and Kostyuk (2019)\n\n. . .\n\nhow should states respond to electoral violence?"
+  },
+  {
+    "objectID": "slides/slides_10.html#background-study-of-chenoweth2011",
+    "href": "slides/slides_10.html#background-study-of-chenoweth2011",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\n\n\n\n\n\nresearch aim: determine relative success of nonviolent (‘civil resistance’ - Gene Sharp) or violent resistance\ncases of violent and non-violent campaigns between 1900 and 2006: 323 cases"
+  },
+  {
+    "objectID": "slides/slides_10.html#background-study-of-chenoweth2011-1",
+    "href": "slides/slides_10.html#background-study-of-chenoweth2011-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\n\n\n\n\n\ncases of violent and non-violent campaigns between 1900 and 2006: 323 cases\n\ninferential stats analysis of data\nnew dataset: Dahl et al. (2025)\nthree case studies: Philippine people power movement (1983–86), FALANTIL struggles for East Timor independence (1988–99), and Burmese civil resistance (1988–1990)\n\nnon-violent more than twice as likely to achieve full or partial success compared to violent cases"
+  },
+  {
+    "objectID": "slides/slides_10.html#background-study-of-chenoweth2011-2",
+    "href": "slides/slides_10.html#background-study-of-chenoweth2011-2",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\nPay attention to the mechanisms that Prof. Chenoweth specifies in her brief explanation"
+  },
+  {
+    "objectID": "slides/slides_10.html#background-study-of-chenoweth2011-3",
+    "href": "slides/slides_10.html#background-study-of-chenoweth2011-3",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Background: study of Chenoweth and Stephan (2011)",
+    "text": "Background: study of Chenoweth and Stephan (2011)\nPay attention to the mechanisms that Prof. Chenoweth specifies in her brief explanation\n\nnonviolent campaigns are better at eliciting broad and diverse support\nnonviolent campaigns create more defections among the opposition\nnonviolent campaigns have a broader set of tactics at their disposal\nnonviolent campaigns often maintain discipline even in the face of escalating oppression"
+  },
+  {
+    "objectID": "slides/slides_10.html#kudelia2018---refining-chenoweth2011",
+    "href": "slides/slides_10.html#kudelia2018---refining-chenoweth2011",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Kudelia (2018) - refining Chenoweth and Stephan (2011)",
+    "text": "Kudelia (2018) - refining Chenoweth and Stephan (2011)\n\nUkraine’s Euromaidan\n\nwhat’s going on in this case?\n\nYanukovych’s regime: semi-authoritarian\n\n\n\n. . .\n\nviolent protests occurred…\n\nbut accounted for just 12 percent of all protests\nyet concentrated in final month (Jan.-Feb. 2014) and in Kyiv"
+  },
+  {
+    "objectID": "slides/slides_10.html#kudelia2018---refining-chenoweth2011-1",
+    "href": "slides/slides_10.html#kudelia2018---refining-chenoweth2011-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Kudelia (2018) - refining Chenoweth and Stephan (2011)",
+    "text": "Kudelia (2018) - refining Chenoweth and Stephan (2011)\n\nUkraine’s Euromaidan\n\nwhat’s going on in this case?\n\nYanukovych’s regime: semi-authoritarian\n\n\nviolent protests occurred…\n\nbut accounted for just 12 percent of all protests\nyet concentrated in final month (Jan.-Feb. 2014) and in Kyiv\n\n\n\n“The success of violent protest tactics in Ukraine’s case, puzzling from the standpoint of recent findings, has received no systematic, theoretically-driven scholarly treatment.”\n\n\nviolent tactics effective - is it puzzling? (cf. Chenoweth and Stephan 2011)"
+  },
+  {
+    "objectID": "slides/slides_10.html#empirically-theoretically-puzzling-or-not",
+    "href": "slides/slides_10.html#empirically-theoretically-puzzling-or-not",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "(empirically, theoretically) puzzling or not…",
+    "text": "(empirically, theoretically) puzzling or not…\n\nKudelia (2018) - within-case qualitative process tracing of “actors’ choices using a rationalist theoretical”\n\nrationalist = strategic choice rather than spontaneous reaction"
+  },
+  {
+    "objectID": "slides/slides_10.html#counter-productive-effects-of-violence---kudelia2018",
+    "href": "slides/slides_10.html#counter-productive-effects-of-violence---kudelia2018",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "(counter-)productive effects of violence - Kudelia (2018)",
+    "text": "(counter-)productive effects of violence - Kudelia (2018)\n\nviolence counter-productive\n\nalienate current and potential supporters\nprovoke a coercive response\ndampen international support for protests\n\nviolence productive\n\nparticipatory character of protest violence\nembeddedness of violent groups and practices in a generally non-violent movement (radical flanks)\ncapacity and willingness of violent activists to escalate beyond the cost-tolerance threshold of the regime\n\ni.e., how much will regime tolerate? will it offer concessions?"
+  },
+  {
+    "objectID": "slides/slides_10.html#kudelia2018---findings",
+    "href": "slides/slides_10.html#kudelia2018---findings",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Kudelia (2018) - findings",
+    "text": "Kudelia (2018) - findings\n\nviolence complementing already and continuing high mobilisation is effective in making regime more sensitive to protest costs\n“a regime’s repressive escalation may decrease net participation costs by broadening support for militants among rank-and-file protesters and outside sympathizers”\ntwo-tiered orgs.: a violent vanguard and a non-violent base\n\nstrengthens the leverage of moderate opposition elites in bargaining with the regime\nwhen used in conjunction with non-violent actions in response to intensifying repression, it may deter the regime or even tip the balance of power against it.\n\nyour thoughts on these findings?"
+  },
+  {
+    "objectID": "slides/slides_10.html#concluding-discussion",
+    "href": "slides/slides_10.html#concluding-discussion",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Concluding discussion",
+    "text": "Concluding discussion\nRelationship across a movement:\n\nhow do (or should) nonviolent actors deal with violent actors/groups within their movement (‘radical flanks’)? Infighting or solidarity?"
+  },
+  {
+    "objectID": "slides/slides_10.html#meier2022coercionrepresentationexploring---context-and-research-design",
+    "href": "slides/slides_10.html#meier2022coercionrepresentationexploring---context-and-research-design",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Meier (2022) - context and research design",
+    "text": "Meier (2022) - context and research design\n\nanti-Tamil riots in July 1983, thousands of Tamils killed\n\ndrove armed conflict, with 8,000-10,000 strong Tamil Tigers\n\nJustification of approach: “Focusing on actions alone would deprive us of a crucial facet of support relations: the meaning people attach to actors and events. For instance, we can only understand why respondents continued to support the LTTE despite their increasing brutality and hostility if we consider the beliefs and affects that composed support relations and upheld them regardless of the LTTE’s ruthlessness.”\n\nactions, beliefs/meanings - epistemologic focal points\n\nData: 30 life history interviews with former Tigers\n\n“sample is too small to derive generalizable conclusions … enabling us to explore how people evaluate, make sense of and rationalize behaviors by conflict actors and to uncover some of the fluctuation, contradictions and ambivalences in peoples’ beliefs and actions towards armed groups”"
+  },
+  {
+    "objectID": "slides/slides_10.html#sri-lanka-map",
+    "href": "slides/slides_10.html#sri-lanka-map",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Sri Lanka map",
+    "text": "Sri Lanka map"
+  },
+  {
+    "objectID": "slides/slides_10.html#meier2022coercionrepresentationexploring---3-patterns",
+    "href": "slides/slides_10.html#meier2022coercionrepresentationexploring---3-patterns",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Meier (2022) - 3 patterns",
+    "text": "Meier (2022) - 3 patterns\n\npolitical representation and social distance; (2) fear and the relevance of affective ties; (3) security and (forceful) recruitment."
+  },
+  {
+    "objectID": "slides/slides_10.html#meier2022coercionrepresentationexploring---3-patterns-1",
+    "href": "slides/slides_10.html#meier2022coercionrepresentationexploring---3-patterns-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Meier (2022) - 3 patterns",
+    "text": "Meier (2022) - 3 patterns\n\nrespondents in LTTE territory, interacting with LTTE’s political and administrative institutions, more likely to support LTTE, having experienced them as service providers rather than as armed attackers.\nLTTE support not “solely coerced or entirely free of force”\n(p. 171) “it is more fruitful to explore how civilians cope with and react to this ambivalence. As the empirical evidence has demonstrated, depending on the type of force and the group targeted, violence was perceived as more or less justified.”"
+  },
+  {
+    "objectID": "slides/slides_10.html#a-recent-controversy",
+    "href": "slides/slides_10.html#a-recent-controversy",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "A recent controversy",
+    "text": "A recent controversy\n\n\n\n\n\n\nIn October 2023, the Irish Women’s Football team qualified for the Women’s World Cup. In the days after, the Irish public was ablaze with debate, politicians took turns condemning and defending the players, and UEFA launched an investigation that ended in a 20,000 EUR fine. Why? For singing a certain song…"
+  },
+  {
+    "objectID": "slides/slides_10.html#a-recent-controversy-1",
+    "href": "slides/slides_10.html#a-recent-controversy-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "A recent controversy",
+    "text": "A recent controversy\n\n\n\n\n\n\nsee also 8-minute roundtable: https://www.youtube.com/watch?v=KkGfRbh2_Vw"
+  },
+  {
+    "objectID": "slides/slides_10.html#references",
+    "href": "slides/slides_10.html#references",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "References",
+    "text": "References\n\n\n\n\nAl Jazeera. 2025. “US Lists White Supremacist Terrorgram Network as ‘Terrorist Group’.” Al Jazeera, January.\n\n\nAmsallem, Noé, William Audureau, and Romain Geoffroy. 2025. “Quelles sont les 46 associations visées par une dissolution sous la présidence Macron?” Le Monde, June.\n\n\nBryant, Miranda. 2025. “‘It Is about Vulnerable Guys’: Violent Far-Right Groups in Sweden Recruit Boys as Young as 10.” The Guardian, March.\n\n\nBundesministerium des Innern und für Heimat. 2025. “Bekanntmachung Eines Vereinsverbots Gegen ,,Königreich Deutschland“ Und Seine Teilorganisationen.” Bundesanzeiger, April.\n\n\nDuncan, Pamela, Raphael Hernandes, Elena Morresi, Pablo Gutiérrez, Garry Blight, and Lydia McMullan. 2025. “Inside the Everyday Facebook Networks Where Far-Right Ideas Grow.” The Guardian, September.\n\n\nFiroz, Fahadh. 2025. “Mapping ISKP’s Strength: Social Network Analysis of Tech-Driven Jihad.” Global Network on Extremism & Technology, April.\n\n\nGuardian staff. 2025. “Five Jailed for Far-Right Plot to Overthrow German Government.” The Guardian, March.\n\n\nHernandes, Raphael, Elena Morresi, Robyn Vinter, and Pamela Duncan. 2025. “Far-Right Facebook Groups Are Engine of Radicalisation in UK, Data Investigation Suggests.” The Guardian, September.\n\n\nJürgens, Oliver. 2025. “Radikalisierung im Internet: Junge Rechte werben um Nachwuchs.” NDR, May.\n\n\nKerr, Dara. 2025. “TikTok to Replace Trust and Safety Team in Germany with AI and Outsourced Labor.” The Guardian, August.\n\n\nKoopmans, Ruud, and Susan Olzak. 2004. “Discursive Opportunities and the Evolution of Right-Wing Violence in Germany.” American Journal of Sociology 110 (1): 198–230. https://doi.org/10.1086/386271.\n\n\nLitschko, Konrad. 2025. “Abzielen auf eine sehr verletzliche Zielgruppe.” TAZ, May.\n\n\nMakuch, Ben. 2025. “Ukraine Wing of US-founded Terrorist Group Says It Was Involved in Killing of Intelligence Officer in Kyiv.” The Guardian, July.\n\n\nMeier, Larissa Daria. 2022. “Between Coercion and Representation: Exploring Variation in Support Relations Between Tamil Civilians and the Liberation Tigers of Tamil Eelam (LTTE).” Partecipazione e Conflitto 15 (1): 157–74.\n\n\nPA Media. 2025. “Kneecap Banned from Canada for ‘Glorifying Terrorist Organisations’.” The Guardian, September.\n\n\nRankin, Jennifer. 2025. “Poland Hails Breakthrough with Ukraine over Second World War Volhynia Atrocity.” The Guardian, January.\n\n\nSetter, Davyd, and Sharon Erickson Nepstad. 2022. “How Social Movements Influence Public Opinion on Political Violence: Attitude Shifts in the Wake of the George Floyd Protests.” Mobilization: An International Quarterly 27 (4): 429–44. https://doi.org/10.17813/1086-671X-27-4-429.\n\n\nVölker, Teresa. 2023. “How Terrorist Attacks Distort Public Debates: A Comparative Study of Right-Wing and Islamist Extremism.” Journal of European Public Policy, October, 1–28. https://doi.org/10.1080/13501763.2023.2269194.\n\n\nWeaver, Matthew. 2025. “Terrorism Case Against Kneecap Rapper Liam Óg Ó hAnnaidh Thrown Out.” The Guardian, September.\n\n\nZeit Online. 2025. “Dobrindt verbietet Reichsbürgerverein \"Königreich Deutschland\".” Die Zeit, May."
+  },
+  {
+    "objectID": "slides/slides_10.html#background-on-the-george-floyd-protests---setter2022howsocialmovemenst",
+    "href": "slides/slides_10.html#background-on-the-george-floyd-protests---setter2022howsocialmovemenst",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "background on the George Floyd protests - Setter and Nepstad (2022)",
+    "text": "background on the George Floyd protests - Setter and Nepstad (2022)\n\nwhat are the most important points to know from this context and catalysing event?\nwhat factors might escalate activism to political violence? what factors might restrain?"
+  },
+  {
+    "objectID": "slides/slides_10.html#refresher-logics-of-restraintescalation",
+    "href": "slides/slides_10.html#refresher-logics-of-restraintescalation",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "refresher: logics of restraint/escalation",
+    "text": "refresher: logics of restraint/escalation\nrestraint\n\nA strategic logic (violence is counterproductive in the present circumstances)\nA moral logic (certain forms of violence are illegitimate)\nA logic of ego maintenance (we are not a violent organization)\nA logic of outgroup definition (softening views on putative outgroups)\nAn organisational logic (the organisation evolves in ways that undermine the logics of violent escalation)\n\nescalation\n\nframing logic (intensity of context/threat, revolutionary goals, glorification of violence, violence as viable/necessary, increasing vilification of ‘enemies’)\nstrategic logic (cope with changing dynamics with opponents and/or state, deal with diminishing opportunity, loss of state control)\norganisational logic (declining moderate influence, logistical/practical preparation for violence)\nconstituency/social logic (endorsement/legitimation from elites and/or public, politics/media focuses on radical flank)"
+  },
+  {
+    "objectID": "slides/slides_10.html#setter2022howsocialmovemenst---design",
+    "href": "slides/slides_10.html#setter2022howsocialmovemenst---design",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Setter and Nepstad (2022) - design",
+    "text": "Setter and Nepstad (2022) - design\n\nRQ: When such events happen, how does this shape citizens’ views on politically-oriented violence?\nContext:\n\n‘U.S. citizens expect protesters to conduct themselves nonviolently…’ (p. 430)\nYET - “people find violence more acceptable when traditional political methods are incapable of adequately addressing social injustices”\n\nData:\n\nfrom the American National Election Study’s (ANES) 2016 and 2020 samples"
+  },
+  {
+    "objectID": "slides/slides_10.html#how-sms-influence-public-opinion---setter2022howsocialmovemenst",
+    "href": "slides/slides_10.html#how-sms-influence-public-opinion---setter2022howsocialmovemenst",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "how SMs influence public opinion - Setter and Nepstad (2022)",
+    "text": "how SMs influence public opinion - Setter and Nepstad (2022)"
+  },
+  {
+    "objectID": "slides/slides_10.html#support-for-political-violence----setter2022howsocialmovemenst",
+    "href": "slides/slides_10.html#support-for-political-violence----setter2022howsocialmovemenst",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "support for political violence (%) - (2022)",
+    "text": "support for political violence (%) - (2022)\n\n\n\n\n\n\n\nDemographic\n2016\n2020\n\n\n\n\nSample Overall\n15.28\n14.34\n\n\nExtremely Liberal\n14.55\n30.79\n\n\nLiberal\n10.02\n17.36\n\n\nSlightly Liberal\n16.83\n16.23\n\n\nModerate\n15.93\n16.30\n\n\nSlightly Conservative\n14.84\n8.59\n\n\nConservative\n9.24\n5.45\n\n\nExtremely Conservative\n12.71\n8.22\n\n\nWhite\n11.79\n10.89\n\n\nBlack\n24.37\n24.41\n\n\nMen\n16.45\n14.13\n\n\nWomen\n14.17\n14.63\n\n\nAge 18-29\n28.40\n30.42\n\n\nAge 30-39\n16.42\n21.13\n\n\nAge 40-49\n14.54\n16.85\n\n\nAge 50-59\n13.12\n10.76\n\n\nAge 60-69\n9.86\n7.15\n\n\nAge 70-79\n9.35\n7.57\n\n\nAge 80+\n15.03\n6.02\n\n\nAttends Church\n16.10\n12.82\n\n\nDoes Not Attend Church\n14.00\n15.81\n\n\n\n\n\n\n\n\nany numbers that you think are noteworthy?"
+  },
+  {
+    "objectID": "slides/slides_10.html#support-for-political-violence----setter2022howsocialmovemenst-1",
+    "href": "slides/slides_10.html#support-for-political-violence----setter2022howsocialmovemenst-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "support for political violence (%) - (2022)",
+    "text": "support for political violence (%) - (2022)\n\n\n\n\n\n\n\nDemographic\n2016\n2020\n\n\n\n\nSample Overall\n15.28\n14.34\n\n\nExtremely Liberal\n14.55\n30.79\n\n\nLiberal\n10.02\n17.36\n\n\nSlightly Liberal\n16.83\n16.23\n\n\nModerate\n15.93\n16.30\n\n\nSlightly Conservative\n14.84\n8.59\n\n\nConservative\n9.24\n5.45\n\n\nExtremely Conservative\n12.71\n8.22\n\n\nWhite\n11.79\n10.89\n\n\nBlack\n24.37\n24.41\n\n\nMen\n16.45\n14.13\n\n\nWomen\n14.17\n14.63\n\n\nAge 18-29\n28.40\n30.42\n\n\nAge 30-39\n16.42\n21.13\n\n\nAge 40-49\n14.54\n16.85\n\n\nAge 50-59\n13.12\n10.76\n\n\nAge 60-69\n9.86\n7.15\n\n\nAge 70-79\n9.35\n7.57\n\n\nAge 80+\n15.03\n6.02\n\n\nAttends Church\n16.10\n12.82\n\n\nDoes Not Attend Church\n14.00\n15.81\n\n\n\n\n\n\n\n\n\n“liberals became much more likely to find political violence acceptable … conservatives became much less likely to find themselves in support of violence…”\n“Younger respondents were more likely to support political violence in 2020 … while their older counterparts were more opposed than before”"
+  },
+  {
+    "objectID": "slides/slides_10.html#support-for-political-violence----setter2022howsocialmovemenst-2",
+    "href": "slides/slides_10.html#support-for-political-violence----setter2022howsocialmovemenst-2",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "support for political violence (%) - (2022)",
+    "text": "support for political violence (%) - (2022)\n\n\n\n\n\n\n\nDemographic\n2016\n2020\n\n\n\n\nSample Overall\n15.28\n14.34\n\n\nExtremely Liberal\n14.55\n30.79\n\n\nLiberal\n10.02\n17.36\n\n\nSlightly Liberal\n16.83\n16.23\n\n\nModerate\n15.93\n16.30\n\n\nSlightly Conservative\n14.84\n8.59\n\n\nConservative\n9.24\n5.45\n\n\nExtremely Conservative\n12.71\n8.22\n\n\nWhite\n11.79\n10.89\n\n\nBlack\n24.37\n24.41\n\n\nMen\n16.45\n14.13\n\n\nWomen\n14.17\n14.63\n\n\nAge 18-29\n28.40\n30.42\n\n\nAge 30-39\n16.42\n21.13\n\n\nAge 40-49\n14.54\n16.85\n\n\nAge 50-59\n13.12\n10.76\n\n\nAge 60-69\n9.86\n7.15\n\n\nAge 70-79\n9.35\n7.57\n\n\nAge 80+\n15.03\n6.02\n\n\nAttends Church\n16.10\n12.82\n\n\nDoes Not Attend Church\n14.00\n15.81\n\n\n\n\n\n\n\n\n\nOne strange outlier is the 2016 survey’s proportion of 80+ year-olds who find political violence acceptable. We have checked the coding on this variable multiple times to ensure that there is nothing wrong with it, and it has remained accurate every time. Either the 2016 ANES just happened to capture a particularly rowdy set of senior citizens, or there was some cohort effect among that sample’s oldest respondents that was not shared among the 2020 cohort—such as lingering memories of WWII or the 1960s movements."
+  },
+  {
+    "objectID": "slides/slides_10.html#setter2022howsocialmovemenst---findings",
+    "href": "slides/slides_10.html#setter2022howsocialmovemenst---findings",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Setter and Nepstad (2022) - findings",
+    "text": "Setter and Nepstad (2022) - findings"
+  },
+  {
+    "objectID": "slides/slides_10.html#setter2022howsocialmovemenst---findings-1",
+    "href": "slides/slides_10.html#setter2022howsocialmovemenst---findings-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Setter and Nepstad (2022) - findings",
+    "text": "Setter and Nepstad (2022) - findings\n\nsupport for Black Lives Matter is significantly correlated with support for political violence.\n“The impact of age intensified between 2016 and 2020. In the 2016 model, each additional year of age corresponds to a .2% lower likelihood of supporting political violence. In 2020, each additional year corresponds to a decrease of .4%, two times the impact of the previous model. In other words, in 2016, a fifty-year-old respondent would be 6% less likely to support political violence than a twenty-year-old respondent, net of all other factors. In 2020, by contrast, they would be 12% less likely to support political violence, net of all other factors.”\nsignificance of higher education: having a college degree decreases support for political violence by 3.4%."
+  },
+  {
+    "objectID": "slides/slides_10.html#setter2022howsocialmovemenst---findings-revised-model",
+    "href": "slides/slides_10.html#setter2022howsocialmovemenst---findings-revised-model",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Setter and Nepstad (2022) - findings, revised model",
+    "text": "Setter and Nepstad (2022) - findings, revised model"
+  },
+  {
+    "objectID": "slides/slides_10.html#setter2022howsocialmovemenst---findings-2",
+    "href": "slides/slides_10.html#setter2022howsocialmovemenst---findings-2",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Setter and Nepstad (2022) - findings",
+    "text": "Setter and Nepstad (2022) - findings\n\nthe George Floyd riots functioned as a new “situational variation” that shifted people’s attitudes, increasing the proportion of liberals and ardent BLM movement supporters who felt that the political violence was justifiable.”\n\n\n“people may shift their attitudes about political violence yet again when a different movement poses a new situational variation. In one instance, people can be supportive of political violence and then, in a different instance, be morally opposed to it. The key factor shaping beliefs in any particular moment is how a person feels about the movement that is using political violence.”\nWhat do we take from these findings? How does local support (or opposition) manifest cases you know of?"
+  },
+  {
+    "objectID": "slides/slides_10.html#research-questions---volker2023howterroristattacks",
+    "href": "slides/slides_10.html#research-questions---volker2023howterroristattacks",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "research questions - Völker (2023)",
+    "text": "research questions - Völker (2023)\n\n\n\nto what extent and how do terrorist attacks influence public debates? What are the differences between public debates after extreme right and Islamist terrorist attacks?\n\nWhat do you expect, hypothesise?"
+  },
+  {
+    "objectID": "slides/slides_10.html#terrorist-attacks-and-public-debate---volker2023howterroristattacks-rqs",
+    "href": "slides/slides_10.html#terrorist-attacks-and-public-debate---volker2023howterroristattacks-rqs",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "terrorist attacks and public debate - Völker (2023) RQs",
+    "text": "terrorist attacks and public debate - Völker (2023) RQs\n\n\n\nto what extent and how do terrorist attacks influence public debates? What are the differences between public debates after extreme right and Islamist terrorist attacks?\n\nWhat do you expect, hypothesise?"
+  },
+  {
+    "objectID": "slides/slides_10.html#volker2023howterroristattacks---key-concepts",
+    "href": "slides/slides_10.html#volker2023howterroristattacks---key-concepts",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Völker (2023) - key concepts",
+    "text": "Völker (2023) - key concepts\n\nDiscursive opportunity structures - pre-existing values and visions around issues in the broader political culture of a country (Koopmans and Olzak 2004)\n\nissue-specific discursive opportunity structures determine which actors and issues gain access to and influence public debates (Völker 2023, 2)\n\ndiscursive critical junctures - moments that intensify polarisation and transform existing political alignments and visions around issues\n\ncan you think of an example?\n\n\n\nAuthor’s own discursive radicalisation model - how radical actors may shape public debates after critical events such as terrorist attacks\n\nvisibility - how much do events/actors attract attention\nresonance - political reactions that radical actors and events provoke and how they shape discourse dynamics on contested issues\nlegitimacy - extent to which actors and issues resonate positively and gain support"
+  },
+  {
+    "objectID": "slides/slides_10.html#volker2023howterroristattacks---key-concepts-1",
+    "href": "slides/slides_10.html#volker2023howterroristattacks---key-concepts-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Völker (2023) - key concepts (1)",
+    "text": "Völker (2023) - key concepts (1)\n\nDiscursive opportunity structures - pre-existing values and visions around issues in the broader political culture of a country (Koopmans and Olzak 2004)\n\nissue-specific discursive opportunity structures determine which actors and issues gain access to and influence public debates (Völker 2023, 2)\n\ndiscursive critical junctures - moments that intensify polarisation and transform existing political alignments and visions around issues\n\ncan you think of an example?"
+  },
+  {
+    "objectID": "slides/slides_10.html#volker2023howterroristattacks---key-concepts-2",
+    "href": "slides/slides_10.html#volker2023howterroristattacks---key-concepts-2",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Völker (2023) - key concepts (2)",
+    "text": "Völker (2023) - key concepts (2)\nAuthor’s own discursive radicalisation model - how radical actors may shape public debates after critical events such as terrorist attacks\n\nvisibility - how much do events/actors attract attention\nresonance - political reactions that radical actors and events provoke and how they shape discourse dynamics on contested issues\nlegitimacy - extent to which actors and issues resonate positively and gain support"
+  },
+  {
+    "objectID": "slides/slides_10.html#volker2023howterroristattacks---research-design",
+    "href": "slides/slides_10.html#volker2023howterroristattacks---research-design",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Völker (2023) - research design",
+    "text": "Völker (2023) - research design\n\ndata: mass media coverage after (for two weeks) all seven fatal politically violent attacks since 2015 (four by extreme right, three by Islamist)\n\n2016 in München, 2019 Walter Lübcke, 2019 Halle, 2020 Hanau; 2016 in Berlin, 2017 in Hamburg, 2020 in Dresden\n\nmethods: relational quantitative content analysis, frame analysis, network analysis\n\ndiagnostic and prognostic frames\ndata and methods transparency! see online article: https://doi.org/10.1080/13501763.2023.2269194"
+  },
+  {
+    "objectID": "slides/slides_10.html#visibility",
+    "href": "slides/slides_10.html#visibility",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Visibility",
+    "text": "Visibility\n\n\nFinding: the most publicised terrorist attacks were those where the debate centred on the ideological motives of the perpetrators and the political consequences of the act"
+  },
+  {
+    "objectID": "slides/slides_10.html#visibility-1",
+    "href": "slides/slides_10.html#visibility-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Visibility",
+    "text": "Visibility\n\n\n\n\nFinding: extremists (esp. Islamists) gain more discursive space after attacks"
+  },
+  {
+    "objectID": "slides/slides_10.html#resonance",
+    "href": "slides/slides_10.html#resonance",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Resonance",
+    "text": "Resonance\n\n“politicians from right-wing parties were more visible than politicians from left-wing parties in political debates after extreme right and Islamist attacks” \n\nRight-wing parties were able to share their perspective as subjects in the debate in 59% of political statements after Islamist attack; 57% after extreme right attack\n\nAfD politicians often the most visible actors\n\nwhy do you suppose this is the case? \n\n“the content of public debates after terrorist attacks was related to the ideological motive behind the attack” \n\nafter Islamist attacks there is a broad debate about immigration and asylum\n\n“debate evolved around the question of how and to what extent migration and Islam may be a breeding ground for radicalisation”\n\nafter extreme right attacks there is a narrow debate about RW extremism\n\n“focus of the debate was on the perpetrator’s motives, individual radicalisation and right-wing extremism”"
+  },
+  {
+    "objectID": "slides/slides_10.html#resonance-1",
+    "href": "slides/slides_10.html#resonance-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Resonance",
+    "text": "Resonance\n\n“politicians from right-wing parties were more visible than politicians from left-wing parties in political debates after extreme right and Islamist attacks” \n\nRight-wing parties were able to share their perspective as subjects in the debate in 59% of political statements after Islamist attack; 57% after extreme right attack\n\nAfD politicians often the most visible actors\n\nwhy do you suppose this is the case? \n\nright-wing actors are successful issue entrepreneurs in moments of crisis (Della Porta et al., 2020, Discursive turns and critical junctures: Debating citizenship after the Charlie Hebdo attacks)\n\n\n“the content of public debates after terrorist attacks was related to the ideological motive behind the attack” \n\nafter Islamist attacks there is a broad debate about immigration and asylum\n\n“debate evolved around the question of how and to what extent migration and Islam may be a breeding ground for radicalisation”\n\nafter extreme right attacks there is a narrow debate about RW extremism\n\n“focus of the debate was on the perpetrator’s motives, individual radicalisation and right-wing extremism”"
+  },
+  {
+    "objectID": "slides/slides_10.html#legitimacy",
+    "href": "slides/slides_10.html#legitimacy",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Legitimacy",
+    "text": "Legitimacy\ncomparing level of public support for issues and actors as object of statements one week before and one week after Islamist and extreme right attacks: captures change of (average) positions on issues and actors as the objects of statements (-1 stands for a negative relationship and 1 for a positive relationship) covered in the mass media\n\n\n\n\n\n\n\n\n\n\n\n\nPublic legitimacy shift (average position)\n\n\n\n\nIslamist attacks\nExtreme right attacks\n\n\n\n\nStatements referring to Actors\n\n\nextreme right actors\n-0.18\n-0.35\n\n\nIslamist actors\n-0.28\n-0.37\n\n\nStatements referring to Issues\n\n\nIslam\n-0.35\n-0.11\n\n\nmigration\n-0.19\n-0.55\n\n\nnationalism\n-0.19\n-0.16\n\n\nradicalisation\n0.01\n-0.06"
+  },
+  {
+    "objectID": "slides/slides_10.html#legitimacy-1",
+    "href": "slides/slides_10.html#legitimacy-1",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Legitimacy",
+    "text": "Legitimacy\n\n\n\n\n\n\n\n\n\n\n\n\nPublic legitimacy shift (average position)\n\n\n\n\nIslamist attacks\nExtreme right attacks\n\n\n\n\nStatements referring to Actors\n\n\nextreme right actors\n-0.18\n-0.35\n\n\nIslamist actors\n-0.28\n-0.37\n\n\nStatements referring to Issues\n\n\nIslam\n-0.35\n-0.11\n\n\nmigration\n-0.19\n-0.55\n\n\nnationalism\n-0.19\n-0.16\n\n\nradicalisation\n0.01\n-0.06\n\n\n\n\n\n\n\nTerrorist attacks reduce the public legitimacy of extremist actors and their political agenda in public debates"
+  },
+  {
+    "objectID": "slides/slides_10.html#legitimacy-2",
+    "href": "slides/slides_10.html#legitimacy-2",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Legitimacy",
+    "text": "Legitimacy\n\n\n\n\n\n\n\n\n\n\n\n\nPublic legitimacy shift (average position)\n\n\n\n\nIslamist attacks\nExtreme right attacks\n\n\n\n\nStatements referring to Actors\n\n\nextreme right actors\n-0.18\n-0.35\n\n\nIslamist actors\n-0.28\n-0.37\n\n\nStatements referring to Issues\n\n\nIslam\n-0.35\n-0.11\n\n\nmigration\n-0.19\n-0.55\n\n\nnationalism\n-0.19\n-0.16\n\n\nradicalisation\n0.01\n-0.06\n\n\n\n\n\n\n\nlegitimacy of Islam decreases more after Islamist attacks than the legitimacy of nationalism does after extreme right attacks (issues)"
+  },
+  {
+    "objectID": "slides/slides_10.html#influential-actors---volker2023howterroristattacks",
+    "href": "slides/slides_10.html#influential-actors---volker2023howterroristattacks",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "influential actors - Völker (2023)",
+    "text": "influential actors - Völker (2023)\nWho were the most influential actors in pushing frames and issues onto the media agenda?\nTo answer this, Völker (2023) creates ‘discourse networks’\n\nthe discourse networks have two types of nodes: actors and issues\ndirected ties (arrows) show which issues actors focus on\n\nsize of the arrow represents number of statements\ncolor of the arrow represents average position\n\npositive\nnegative\nneutral"
+  },
+  {
+    "objectID": "slides/slides_10.html#influential-actors-after-islamist-attacks",
+    "href": "slides/slides_10.html#influential-actors-after-islamist-attacks",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "influential actors (after Islamist attacks)",
+    "text": "influential actors (after Islamist attacks)\n\n\n\nnodes: actors and issues\ndirected ties (arrows) show which issues actors focus on\n\nsize of the arrow represents number of statements\ncolor of the arrow represents average position\n\npositive, negative, neutral"
+  },
+  {
+    "objectID": "slides/slides_10.html#influential-actors-after-extreme-right-attacks",
+    "href": "slides/slides_10.html#influential-actors-after-extreme-right-attacks",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "influential actors (after extreme right attacks)",
+    "text": "influential actors (after extreme right attacks)\n\n\n\nnodes: actors and issues\ndirected ties (arrows) show which issues actors focus on\n\nsize of the arrow represents number of statements\ncolor of the arrow represents average position\n\npositive, negative, neutral"
+  },
+  {
+    "objectID": "slides/slides_10.html#volker2023howterroristattacks---findings",
+    "href": "slides/slides_10.html#volker2023howterroristattacks---findings",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "Völker (2023) - findings",
+    "text": "Völker (2023) - findings\n\nsimilar actor constellations emerged and dominated public debates after terrorist attacks\n\ngovernmental actors and political parties drive post-attack debates\nemphasis is on security policies and strengthening counter-terrorism (‘securitisation’)\n\n\n\nPublic and political reactions drive state policy and repressive responses (covered in the next two weeks)\n(relates to repressive responses that we will address in Week 12)"
+  },
+  {
+    "objectID": "slides/slides_10.html#next-meeting",
+    "href": "slides/slides_10.html#next-meeting",
+    "title": "Class 10: Politically Violent Activity",
+    "section": "next meeting",
+    "text": "next meeting\n\nstate responses\nin the meantime…\n\n\nIo Saturnalia! and happy holidays"
+  },
+  {
+    "objectID": "slides/slides_09.html",
+    "href": "slides/slides_09.html",
+    "title": "Class 9: Politically Violent Activity",
+    "section": "",
+    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\n\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
   }
 ]
