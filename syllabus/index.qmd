@@ -147,7 +147,7 @@ kable(data.frame(
   col1 <- c("","BA Hauptfach","BA Nebenfach (60 ECTS)","Lehramt Unterrichtsfach","BA Nebenfach (30 ECTS)", "Lehramt Didaktikfach", "Austauschstudierende für VL", "Austauschstudierende für GK"),
   col2 <- c("Participation","X","X","X","X", "X", "X", "X"),
   col3 <- c("Presentation","","","X","", "", "", "X"),
-  col4 <- c("Essay","","","X","", "", "", "X"),
+  col4 <- c("Essay","","","","", "", "", "X"),
   col5 <- c("Klausur","X","X","X","X (nur VL)", "X (nur VL, 60 Min., 2 Wissensfragen)", "X (nur VL)", "")),
   col.names = NULL, align = c("l","c","c","c","c")) %>%
   kableExtra::kable_styling(bootstrap_options = "bordered") %>% 
