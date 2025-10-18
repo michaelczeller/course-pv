@@ -607,6 +607,8 @@ softwareChart = PieChart(softwareCounts, {
 
 ## About you! Poll results
 
+Most significant cause of political violence?
+
 ```{ojs}
 causeCounts = aq.from(surveyResults)
   .select("cause")
@@ -670,7 +672,7 @@ plot_cause = Plot.plot({
 
 ```
 
-## About you! Poll results
+## About you! Poll results {.scrollable}
 
 Any particular politically violent group you want to learn more about? 
 
