@@ -681,6 +681,7 @@ Any particular politically violent group you want to learn more about?
 // Access and print the values from the 'learn' column
 ToLearn = aq.from(surveyResults)
   .select("learn")
+  .filter(d => d.learn) // to exclude empty ("") strings, 0s, FALSEs, nulls, etc
 
 ToLearn.array("learn")
 

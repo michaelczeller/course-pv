@@ -669,7 +669,7 @@
     "href": "slides/slides_01.html#about-you-poll-results-1",
     "title": "Class 1: Political Violence in Germany",
     "section": "About you! Poll results",
-    "text": "About you! Poll results\nAny particular politically violent group you want to learn more about?\n\nToLearn = aq.from(surveyResults)\n  .select(\"learn\")\n\nToLearn.array(\"learn\")"
+    "text": "About you! Poll results\nAny particular politically violent group you want to learn more about?\n\nToLearn = aq.from(surveyResults)\n  .select(\"learn\")\n  .filter(d =&gt; d.learn) // to exclude empty (\"\") strings, 0s, FALSEs, nulls, etc\n\nToLearn.array(\"learn\")"
   },
   {
     "objectID": "slides/slides_01.html#about-you-poll-results-2",
