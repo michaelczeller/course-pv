@@ -29,6 +29,52 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+## Students' favourite cities
+
+```{r}
+#| message: false
+#| warning: false
+#| paged-print: false
+library(ggplot2)
+library(ggrepel)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(dplyr)
+
+places <- data.frame(
+  city = c("Galway", "Munich", "Taormina"),
+  country = c("Ireland", "Germany", "Italy"),
+  likes = c(1, 2, 1),
+  stringsAsFactors = FALSE
+)
+
+places_geo <- places %>% 
+  tidygeocoder::geocode(
+    city = city,
+    country = country,
+    method = "osm"
+    )
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+ggplot(data=world) +
+  geom_sf(fill="pink") +
+  geom_point(data=places_geo, aes(x=long, y=lat, size=likes), color="blue") +
+  geom_point(data=places_geo, aes(x=long, y=lat, size=likes), 
+             shape=1, color="black") +
+  geom_text_repel(data=places_geo, aes(x=long, y=lat, label=city), size=4) +
+  # coord_sf() +
+  coord_sf(xlim = c(-20, 50), ylim = c(30, 60), expand = FALSE) +
+  scale_size_continuous(breaks=c(1, 2, 5), range=c(3, 6), name="Likes") + 
+  theme_void() + # + labs(title="Favorite Cities", x="", y="")
+  theme(legend.position=c(0.05, 0.5), 
+        legend.background=element_rect(fill="white", color="black", linewidth=0.5), 
+        legend.box.background=element_rect(fill="white", color="black", linewidth=0.5))
+
+```
+
+
+
 ## Presentation groups
 
 Remember: topic to me at least by Week 4

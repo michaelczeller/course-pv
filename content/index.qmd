@@ -48,6 +48,20 @@ xaringanExtra::embed_xaringan(
 # }
 ```
 
+::: {.callout-important collapse="true"}
+## Class 2 Lecture video - part 1
+
+{{< video pv_class2_lecture_part1.mp4 >}}
+
+:::
+
+::: {.callout-important collapse="true"}
+## Class 2 Lecture video - part 2
+
+{{< video pv_class2_lecture_part2.mp4 >}}
+
+:::
+
 
 # Class 3
 
