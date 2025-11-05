@@ -276,6 +276,24 @@ bibliography: ../../../library.bib
 
 [The existence of foreign fighters is a longstanding and common form of political violence. Their motivations and characteristics may vary, but by definition they all engage in violence. Their exposure to and engagement in violence can pose threats to their home state and society when they return from conflict zones. States therefore may respond in several ways to minimise the danger of fighters acting violent upon their return.]{style="font-size:23px;"} 
 
+# Forming presentation groups {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="50%"}
+- 2-4 students
+- rank three possible dates for presentation
+- for later:  
+    1. find research article of interest 
+    2. what method is used: is it of interest too?
+
+:::
+
+::: {.column width="50%" .right}
+<div class="tenor-gif-embed" data-postid="3578530" data-share-method="host" data-aspect-ratio="1.83908" data-width="100%"><a href="https://tenor.com/view/best-presentation-gif-3578530">That&#39;S The Best Presentation I&#39;Ve Ever Seen GIF</a>from <a href="https://tenor.com/search/best-gifs">Best GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+
 # A conceptual framework of *strategy* {background-color="#2c844c"}
 
 :::: {.columns}
