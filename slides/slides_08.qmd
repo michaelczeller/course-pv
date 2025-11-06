@@ -31,29 +31,29 @@ bibliography: ../../../library.bib
 
 ## Presentation groups
 
-::: panel-tabset
-## December
+<!-- ::: panel-tabset -->
+<!-- ## December -->
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  |                                  | TBD    | 
-| 11 Dec: |                                  | TBD    | 
-| 18 Dec: |                                  | TBD    | 
+| 4 Dec:  | Shahadaan, Kristine, Daichi      | TBD    | 
+| 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    | 
+| 18 Dec: | Shoam, Aidan, Tara, Sebastian    | TBD    | 
 
 : Presentations line-up
 
-## January
+<!-- ## January -->
 
-| Date    | Presenters                       | Method |
-| -------:|:---------------------------------|:------:|
-| 8 Jan:  |                                  | TBD    | 
-| 15 Jan: |                                  | TBD    | 
-| 22 Jan: |                                  | TBD    | 
-| 29 Jan: |                                  | TBD    | 
+<!-- | Date    | Presenters                       | Method | -->
+<!-- | -------:|:---------------------------------|:------:| -->
+<!-- | 8 Jan:  |                                  | TBD    |  -->
+<!-- | 15 Jan: |                                  | TBD    |  -->
+<!-- | 22 Jan: |                                  | TBD    |  -->
+<!-- | 29 Jan: |                                  | TBD    |  -->
 
-: Presentations line-up
+<!-- : Presentations line-up -->
 
-:::
+<!-- ::: -->
 
 <!-- []{style="font-size:10px;"} -->
 
