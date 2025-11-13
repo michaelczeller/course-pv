@@ -36,7 +36,7 @@ bibliography: ../../../library.bib
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Shahadaan, Kristine, Daichi      | TBD    | 
+| 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography | 
 | 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    | 
 | 18 Dec: | Shoam, Aidan, Tara, Sebastian    | TBD    | 
 
@@ -114,9 +114,12 @@ bibliography: ../../../library.bib
     + quantitative text analysis on web-scraped (*rvest*) texts
     + follow-up qualitative analysis: themes and campaign examples
 
+::: {style="margin-top: -40px;"}
+
 ```{r}
 library(knitr)
 library(kableExtra)
+library(dplyr)
 
 kable(
   data.frame(
@@ -128,9 +131,11 @@ kable(
   ),
   # format = "latex", caption = "Summary of Text Sources", 
   booktabs = TRUE
-)
+) %>% kable_styling(font_size = 35) %>% 
+  row_spec(0, bold = T, color = "cadetblue") # , background = "#D7261E"
 ```
 
+::: 
 
 ## FR leadership - Worch topics
 
