@@ -29,6 +29,18 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+## Follow-up from last week 
+
+- factors shaping politically violent groups' [strategy]{style="color:darkred;"}
+    + multiple simultaneously 
+    + some more based around 'rational' calculation (e.g., available resources, state posture); others less so (e.g., ideology, emotional dynamics) 
+
+. . . 
+
+- [reminder]{style="color:red;"}: cases discussed in course are meant to help clarify theory and concepts
+
+> a great deal of charged politics behind many of these cases---but the justifiability of causes in these cases is not part of this course  
+
 ## Presentation groups
 
 <!-- ::: panel-tabset -->
