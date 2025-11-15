@@ -2174,7 +2174,7 @@
     "href": "slides/slides_06.html#presentation-groups",
     "title": "Class 6: Politically Violent Activity",
     "section": "Presentation groups",
-    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nShahadaan, Kristine, Daichi\nethnography\n\n\n11 Dec:\nBérénice, Zorka, Victoria, Katharina\nTBD\n\n\n18 Dec:\nShoam, Aidan, Tara, Sebastian\nTBD"
+    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nShahadaan, Kristine, Daichi\nethnography\n\n\n11 Dec:\nBérénice, Zorka, Victoria, Katharina\nTBD\n\n\n18 Dec:\nShoam, Aidan, Tara, Sebastian\nQCA"
   },
   {
     "objectID": "slides/slides_06.html#theories-of-leadership",
@@ -2411,8 +2411,8 @@
     "objectID": "slides/slides_07.html#presentation-groups",
     "href": "slides/slides_07.html#presentation-groups",
     "title": "Class 7: Politically Violent Activity",
-    "section": "",
-    "text": "Presentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nShahadaan, Kristine, Daichi\nethnography\n\n\n11 Dec:\nBérénice, Zorka, Victoria, Katharina\nTBD\n\n\n18 Dec:\nShoam, Aidan, Tara, Sebastian\nTBD"
+    "section": "Presentation groups",
+    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nShahadaan, Kristine, Daichi\nethnography\n\n\n11 Dec:\nBérénice, Zorka, Victoria, Katharina\nTBD\n\n\n18 Dec:\nShoam, Aidan, Tara, Sebastian\nQCA"
   },
   {
     "objectID": "slides/slides_07.html#poll-results---returning-foreign-fighters",
@@ -2517,7 +2517,7 @@
     "href": "slides/slides_07.html#findings",
     "title": "Class 7: Politically Violent Activity",
     "section": "Findings",
-    "text": "Findings\n\nDespite the difference in space and time, ISIS foreign fighters have a similar profile to members of Hamas, Hezbollah, the Palestinian Islamic Jihad, and even violent political activists in Bengal. The men in all these samples are predominately male, well-educated, urban, unmarried, and young.\n\n. . .\n\n\na university education is the strongest correlate of joining a terrorist organization.\n\n\n. . .\n\nany of characteristics stand out for… theoretical reasons? compared to other cases you know?\nIS attracted both unskilled and skilled workers = offered to improve the livelihood of its members"
+    "text": "Findings\n\nDespite the difference in space and time, ISIS foreign fighters have a similar profile to members of Hamas, Hezbollah, the Palestinian Islamic Jihad, and even violent political activists in Bengal. The men in all these samples are predominately male, well-educated, urban, unmarried, and young.\n\n\n\n\na university education is the strongest correlate of joining a terrorist organization.\n\n\n\n\n\nany of characteristics stand out for… theoretical reasons? compared to other cases you know?\nIS attracted both unskilled and skilled workers = offered to improve the livelihood of its members"
   },
   {
     "objectID": "slides/slides_07.html#dealing-with-returning-foreign-fighters-1",
@@ -2545,7 +2545,7 @@
     "href": "slides/slides_07.html#political-violence-in-an-authoritarian-context",
     "title": "Class 7: Politically Violent Activity",
     "section": "Political violence in an authoritarian context",
-    "text": "Political violence in an authoritarian context\nWhat are the special conditions of political violence in within an authoritarian regime?\n. . .\n\nmore extreme possibilities of repression\n\n. . .\n\nagainst the state or against others?\n\n. . .\n\ncombatted by, tolerated by, or supported by the state?"
+    "text": "Political violence in an authoritarian context\nWhat are the special conditions of political violence in within an authoritarian regime?\n\n\nmore extreme possibilities of repression\n\n\n\n\nagainst the state or against others?\n\n\n\n\ncombatted by, tolerated by, or supported by the state?"
   },
   {
     "objectID": "slides/slides_07.html#johannesdueenstad2018---an-empirical-puzzle",
@@ -2566,7 +2566,7 @@
     "href": "slides/slides_07.html#johannesdueenstad2018---data-overview",
     "title": "Class 7: Politically Violent Activity",
     "section": "Enstad (2018) - data overview",
-    "text": "Enstad (2018) - data overview\n\nlibrary(kableExtra)\n\ndata &lt;- data.frame(\n  `Perpetrator type` = c(\n    \"Organized groups\", \n    \"Affiliated members\", \n    \"Autonomous cells\", \n    \"&lt;span style='color:red;'&gt;Gangs&lt;/span&gt;\", \n    \"&lt;span style='color:red;'&gt;Unorganized&lt;/span&gt;\", \n    \"Lone actors\", \n    \"Shadow groups\", \n    \"Unknown\", \n    \"**Total**\"\n  ),\n  `Premeditated attacks` = c(48, 10, 34, 121, 74, 16, 0, 104, 408),\n  `Spontaneous attacks` = c(3, 1, 0, 12, 15, 8, 0, 7, 46),\n  `Plots` = c(2, 2, 7, 0, 1, 2, 0, 2, 16),\n  `Preparation for armed struggle` = c(0, 0, 0, 0, 0, 1, 0, 1, 2),\n  `Unknown` = c(1, 1, 0, 2, 1, 1, 1, 16, 23),\n  `Sum` = c(54, 14, 41, 135, 91, 28, 1, 130, 495)\n)\n\n# Generate the kable table\nkable(data, format = \"html\", escape = FALSE, align = \"lcccccc\", \n      col.names = c(\"Perpetrator type\", \n                    \"Premeditated attacks\", \n                    \"Spontaneous attacks\", \n                    \"Plots\", \n                    \"Preparation for armed struggle\", \n                    \"Unknown\", \n                    \"Sum\")) %&gt;%\n  kable_styling(full_width = FALSE, bootstrap_options = c(\"striped\", \"hover\", \"condensed\"),\n                font_size = 22) %&gt;%\n  add_header_above(c(\" \" = 1, \"Type of violence\" = 6)) %&gt;%\n  column_spec(1, bold = TRUE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nType of violence\n\n\n\nPerpetrator type\nPremeditated attacks\nSpontaneous attacks\nPlots\nPreparation for armed struggle\nUnknown\nSum\n\n\n\n\nOrganized groups\n48\n3\n2\n0\n1\n54\n\n\nAffiliated members\n10\n1\n2\n0\n1\n14\n\n\nAutonomous cells\n34\n0\n7\n0\n0\n41\n\n\nGangs\n121\n12\n0\n0\n2\n135\n\n\nUnorganized\n74\n15\n1\n0\n1\n91\n\n\nLone actors\n16\n8\n2\n1\n1\n28\n\n\nShadow groups\n0\n0\n0\n0\n1\n1\n\n\nUnknown\n104\n7\n2\n1\n16\n130\n\n\n**Total**\n408\n46\n16\n2\n23\n495"
+    "text": "Enstad (2018) - data overview\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nType of violence\n\n\n\nPerpetrator type\nPremeditated attacks\nSpontaneous attacks\nPlots\nPreparation for armed struggle\nUnknown\nSum\n\n\n\n\nOrganized groups\n48\n3\n2\n0\n1\n54\n\n\nAffiliated members\n10\n1\n2\n0\n1\n14\n\n\nAutonomous cells\n34\n0\n7\n0\n0\n41\n\n\nGangs\n121\n12\n0\n0\n2\n135\n\n\nUnorganized\n74\n15\n1\n0\n1\n91\n\n\nLone actors\n16\n8\n2\n1\n1\n28\n\n\nShadow groups\n0\n0\n0\n0\n1\n1\n\n\nUnknown\n104\n7\n2\n1\n16\n130\n\n\n**Total**\n408\n46\n16\n2\n23\n495"
   },
   {
     "objectID": "slides/slides_07.html#johannesdueenstad2018---region-comparison",

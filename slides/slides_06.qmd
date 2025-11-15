@@ -38,7 +38,7 @@ bibliography: ../../../library.bib
 | -------:|:---------------------------------|:------:|
 | 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography | 
 | 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    | 
-| 18 Dec: | Shoam, Aidan, Tara, Sebastian    | TBD    | 
+| 18 Dec: | Shoam, Aidan, Tara, Sebastian    | QCA    | 
 
 : Presentations line-up
 
