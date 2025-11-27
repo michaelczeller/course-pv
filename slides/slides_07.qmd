@@ -390,8 +390,10 @@ Remember: regression is a tool for understanding a phenomenon as a linear functi
 
 . . . 
 
+::: {style="margin-top: -50px;"} 
 - [any of characteristics stand out for]{style="color:indigo;"}... theoretical reasons? compared to other cases you know?
 - [IS attracted both unskilled and skilled workers]{style="color:darkorange;"} = offered to improve the livelihood of its members
+:::
 
 ## Dealing with returning foreign fighters (1)
 
