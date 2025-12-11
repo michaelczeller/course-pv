@@ -122,6 +122,7 @@ Take the survey at **<https://forms.gle/VZJuzHbzXXtNW2KN9>**
 
 - citizens react differently to political violence depending on the the ideological motivations underlying the violence.
 - when states respond repressively, it usually strengthens politically violent groups' legitimacy?
+- After an attack, demand for punishment rises. Should policymakers shift toward harsher policies?
 
 ## A recent controversy
 
@@ -173,7 +174,7 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vROlIm6z3iEJH16_NhePQ5TQJKNti8GrDmGTH5dPJ0SPtPNbKc_WVmfu463ijQzJrsrnwcPf-2KZo_g/" +
     "pub?gid=870695621&single=true&output=csv",
-  10000, 1, 6); // adjust the last number to select all relevant columns 
+  10000, 1, 7); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
 
@@ -197,10 +198,11 @@ respondentCount = surveyResults.length;
 <!-- Citizens react differently to political violence depending on the the ideological motivations underlying the violence. -->
 <!-- - strongly agree/agree/disagree/strongly disagree -->
 
-
 <!-- When states respond repressively to political violence (e.g., through military force), it usually strengthens the movement's legitimacy among local populations. -->
 <!-- - strongly agree/agree/disagree/strongly disagree -->
 
+<!-- After a major attack, public demand for punishment rises sharply. Should policymakers resist shifting toward harsh policies? -->
+<!-- yes/no/maybe -->
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -410,7 +412,7 @@ plot_reason = Plot.plot({
 ## Poll results: reaction and repression 
 
 :::: {.columns}
-:::{.column width="50%"}
+:::{.column width="33%"}
 different reaction depending on ideological motivation of violence?
 
 ```{ojs}
@@ -476,7 +478,69 @@ plot_react_differently = Plot.plot({
 
 :::
 
-::: {.column width="50%"}
+:::{.column width="33%"} 
+After an attack, following demand, should policymakers shift toward harsher policies?
+
+```{ojs}
+demandCounts = aq.from(surveyResults)
+  .select("demand")
+  .groupby("demand")
+  .count()
+  .derive({ measure: d => "" })
+
+// Calculate the maximum count from your dataset
+demand_maxCountRE = Math.max(...demandCounts.objects().map(d => d.count));
+
+plot_demand = Plot.plot({
+  marks: [
+    Plot.barY(demandCounts, {
+      x: "demand",
+      y: "count",
+      fill: "demand",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    Plot.ruleY([respondentCount], { stroke: "#ffffff99" })
+  ],
+  color: {
+    domain: [
+      "Yes",
+      "No",
+      "Maybe"
+    ],
+    range: [
+      "forestgreen",
+      "darkred",
+      "goldenrod"
+    ]
+  },
+  marginBottom: 80,
+  x: { label: "", tickSize: 2, tickRotate: -1, padding: 0.2,
+    domain: ["Yes", "No", "Maybe"]
+  },  
+  y: {
+    label: "",
+    tickSize: 10,
+    tickFormat: d => d,
+    tickValues: Array.from(
+      new Set(demandCounts.objects().map(d => d.count))
+    ).sort((a, b) => a - b),
+    domain: [0, demand_maxCountRE]
+  },
+  facet: { data: demandCounts, x: "measure", label: "" },
+  marginLeft: 60,
+  style: {
+    width: 1600,
+    height: 500,
+    fontSize: 40,
+  },
+});
+
+```
+
+:::
+
+::: {.column width="33%"}
 state repression usually strengthens violent groups' legitimacy?
 
 ```{ojs}
