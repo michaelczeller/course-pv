@@ -25446,7 +25446,7 @@ border: 0;
 <li><a href="#/support-in-an-armed-conflict-setting" id="/toc-support-in-an-armed-conflict-setting">Support in an armed conflict setting</a></li>
 <li><a href="#/poll-local-support-and-public-reaction" id="/toc-poll-local-support-and-public-reaction">Poll: local support and public reaction</a></li>
 <li><a href="#/public-opinion-on-political-violence" id="/toc-public-opinion-on-political-violence">Public opinion on political violence</a></li>
-<li><a href="#/some-2025-news-of-interest-to-pv-students" id="/toc-some-2025-news-of-interest-to-pv-students">some 2025 news of interest to PV students</a></li>
+<li><a href="#/some-2025-pv-news" id="/toc-some-2025-pv-news">some 2025 PV news</a></li>
 <li><a href="#/any-questions-concerns-feedback-for-this-class" id="/toc-any-questions-concerns-feedback-for-this-class">Any questions, concerns, feedback for this class?</a></li>
 </ul>
 </nav>
@@ -26583,22 +26583,6 @@ border: 0;
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb9-2"><a></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb9-3"><a></a></span>
-<span id="cb9-4"><a></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb9-5"><a></a>  <span class="at">Demographic =</span> <span class="fu">c</span>(<span class="st">&quot;Sample Overall&quot;</span>, <span class="st">&quot;Extremely Liberal&quot;</span>, <span class="st">&quot;Liberal&quot;</span>, <span class="st">&quot;Slightly Liberal&quot;</span>, <span class="st">&quot;Moderate&quot;</span>, <span class="st">&quot;Slightly Conservative&quot;</span>, <span class="st">&quot;Conservative&quot;</span>, <span class="st">&quot;Extremely Conservative&quot;</span>,</span>
-<span id="cb9-6"><a></a>                  <span class="st">&quot;White&quot;</span>, <span class="st">&quot;Black&quot;</span>, <span class="st">&quot;Men&quot;</span>, <span class="st">&quot;Women&quot;</span>, <span class="st">&quot;Age 18-29&quot;</span>, <span class="st">&quot;Age 30-39&quot;</span>, <span class="st">&quot;Age 40-49&quot;</span>, <span class="st">&quot;Age 50-59&quot;</span>, <span class="st">&quot;Age 60-69&quot;</span>, <span class="st">&quot;Age 70-79&quot;</span>, <span class="st">&quot;Age 80+&quot;</span>, <span class="st">&quot;Attends Church&quot;</span>, <span class="st">&quot;Does Not Attend Church&quot;</span>),</span>
-<span id="cb9-7"><a></a>  <span class="st">`</span><span class="at">2016</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">15.28</span>, <span class="fl">14.55</span>, <span class="fl">10.02</span>, <span class="fl">16.83</span>, <span class="fl">15.93</span>, <span class="fl">14.84</span>, <span class="fl">9.24</span>, <span class="fl">12.71</span>, <span class="fl">11.79</span>, <span class="fl">24.37</span>, <span class="fl">16.45</span>, <span class="fl">14.17</span>, <span class="fl">28.40</span>, <span class="fl">16.42</span>, <span class="fl">14.54</span>, <span class="fl">13.12</span>, <span class="fl">9.86</span>, <span class="fl">9.35</span>, <span class="fl">15.03</span>, <span class="fl">16.10</span>, <span class="fl">14.00</span>),</span>
-<span id="cb9-8"><a></a>  <span class="st">`</span><span class="at">2020</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="fl">14.34</span>, <span class="fl">30.79</span>, <span class="fl">17.36</span>, <span class="fl">16.23</span>, <span class="fl">16.30</span>, <span class="fl">8.59</span>, <span class="fl">5.45</span>, <span class="fl">8.22</span>, <span class="fl">10.89</span>, <span class="fl">24.41</span>, <span class="fl">14.13</span>, <span class="fl">14.63</span>, <span class="fl">30.42</span>, <span class="fl">21.13</span>, <span class="fl">16.85</span>, <span class="fl">10.76</span>, <span class="fl">7.15</span>, <span class="fl">7.57</span>, <span class="fl">6.02</span>, <span class="fl">12.82</span>, <span class="fl">15.81</span>)</span>
-<span id="cb9-9"><a></a>)</span>
-<span id="cb9-10"><a></a></span>
-<span id="cb9-11"><a></a>setter_reg_tab <span class="ot">&lt;-</span> <span class="fu">kable</span>(data, <span class="at">format =</span> <span class="st">&quot;html&quot;</span>, </span>
-<span id="cb9-12"><a></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot;Demographic&quot;</span>, <span class="st">&quot;2016&quot;</span>, <span class="st">&quot;2020&quot;</span>), </span>
-<span id="cb9-13"><a></a>      <span class="at">align =</span> <span class="fu">c</span>(<span class="st">&quot;r&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;c&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-14"><a></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">font_size =</span> <span class="dv">16</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-15"><a></a>  <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb9-16"><a></a>setter_reg_tab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table caption-top" data-quarto-postprocess="true" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -26729,47 +26713,6 @@ border: 0;
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: &#39;dplyr&#39;</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from &#39;package:kableExtra&#39;:
-
-    group_rows</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from &#39;package:stats&#39;:
-
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from &#39;package:base&#39;:
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>setter_reg_tab <span class="sc">%&gt;%</span> </span>
-<span id="cb15-2"><a></a>  <span class="fu">column_spec</span>(<span class="dv">3</span>, </span>
-<span id="cb15-3"><a></a>              <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, </span>
-<span id="cb15-4"><a></a>              <span class="at">bold =</span> T,</span>
-<span id="cb15-5"><a></a>              <span class="at">background =</span> <span class="fu">case_when</span>(</span>
-<span id="cb15-6"><a></a>                data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">17.36</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">30.79</span> <span class="sc">~</span> <span class="st">&quot;red&quot;</span>,</span>
-<span id="cb15-7"><a></a>                data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">8.59</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">5.45</span> <span class="sc">~</span> <span class="st">&quot;pink&quot;</span>,</span>
-<span id="cb15-8"><a></a>                data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">30.42</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">21.13</span> <span class="sc">~</span> <span class="st">&quot;red&quot;</span>,</span>
-<span id="cb15-9"><a></a>                data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">10.76</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">7.15</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">7.57</span> <span class="sc">~</span> <span class="st">&quot;pink&quot;</span>,</span>
-<span id="cb15-10"><a></a>                <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">&quot;white&quot;</span></span>
-<span id="cb15-11"><a></a>              )) <span class="sc">%&gt;%</span> </span>
-<span id="cb15-12"><a></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, </span>
-<span id="cb15-13"><a></a>              <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, </span>
-<span id="cb15-14"><a></a>              <span class="at">bold =</span> T,</span>
-<span id="cb15-15"><a></a>              <span class="at">background =</span> <span class="fu">case_when</span>(</span>
-<span id="cb15-16"><a></a>                data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">17.36</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">30.79</span> <span class="sc">~</span> <span class="st">&quot;pink&quot;</span>,</span>
-<span id="cb15-17"><a></a>                data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">8.59</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">5.45</span> <span class="sc">~</span> <span class="st">&quot;red&quot;</span>,</span>
-<span id="cb15-18"><a></a>                data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">30.42</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">21.13</span> <span class="sc">~</span> <span class="st">&quot;pink&quot;</span>,</span>
-<span id="cb15-19"><a></a>                data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">10.76</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">7.15</span> <span class="sc">|</span> data<span class="sc">$</span>X2020 <span class="sc">==</span> <span class="fl">7.57</span> <span class="sc">~</span> <span class="st">&quot;red&quot;</span>,</span>
-<span id="cb15-20"><a></a>                <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">&quot;white&quot;</span></span>
-<span id="cb15-21"><a></a>              ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table caption-top" data-quarto-postprocess="true" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -26903,9 +26846,6 @@ Attaching package: &#39;dplyr&#39;</code></pre>
 <div class="columns">
 <div class="column" style="width:30%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>setter_reg_tab <span class="sc">%&gt;%</span> </span>
-<span id="cb16-2"><a></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">bold =</span> T,</span>
-<span id="cb16-3"><a></a>              <span class="at">background=</span><span class="fu">ifelse</span>(data<span class="sc">$</span>X2016 <span class="sc">==</span> <span class="fl">15.03</span>, <span class="st">&quot;lightblue&quot;</span>, <span class="st">&quot;white&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table caption-top" data-quarto-postprocess="true" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -27180,23 +27120,6 @@ Attaching package: &#39;dplyr&#39;</code></pre>
 <h2>Legitimacy</h2>
 <p>comparing level of public support for issues and actors as object of statements one week before and one week after Islamist and extreme right attacks: captures change of (average) positions on issues and actors as the objects of statements (-1 stands for a negative relationship and 1 for a positive relationship) covered in the mass media</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>data_voelker <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb17-2"><a></a>  <span class="sc">~</span>Variable, <span class="sc">~</span><span class="st">`</span><span class="at">Islamist attacks</span><span class="st">`</span>, <span class="sc">~</span><span class="st">`</span><span class="at">Extreme right attacks</span><span class="st">`</span>,</span>
-<span id="cb17-3"><a></a>  <span class="st">&quot;extreme right actors&quot;</span>, <span class="sc">-</span><span class="fl">0.18</span>, <span class="sc">-</span><span class="fl">0.35</span>,</span>
-<span id="cb17-4"><a></a>  <span class="st">&quot;Islamist actors&quot;</span>, <span class="sc">-</span><span class="fl">0.28</span>, <span class="sc">-</span><span class="fl">0.37</span>,</span>
-<span id="cb17-5"><a></a>  <span class="st">&quot;Islam&quot;</span>, <span class="sc">-</span><span class="fl">0.35</span>, <span class="sc">-</span><span class="fl">0.11</span>,</span>
-<span id="cb17-6"><a></a>  <span class="st">&quot;migration&quot;</span>, <span class="sc">-</span><span class="fl">0.19</span>, <span class="sc">-</span><span class="fl">0.55</span>,</span>
-<span id="cb17-7"><a></a>  <span class="st">&quot;nationalism&quot;</span>, <span class="sc">-</span><span class="fl">0.19</span>, <span class="sc">-</span><span class="fl">0.16</span>,</span>
-<span id="cb17-8"><a></a>  <span class="st">&quot;radicalisation&quot;</span>, <span class="fl">0.01</span>, <span class="sc">-</span><span class="fl">0.06</span></span>
-<span id="cb17-9"><a></a>)</span>
-<span id="cb17-10"><a></a></span>
-<span id="cb17-11"><a></a>voelker_tab <span class="ot">&lt;-</span> <span class="fu">kable</span>(data_voelker, <span class="st">&quot;html&quot;</span>, <span class="at">escape =</span> <span class="cn">FALSE</span>, </span>
-<span id="cb17-12"><a></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;Islamist attacks&quot;</span>, <span class="st">&quot;Extreme right attacks&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb17-13"><a></a>  <span class="fu">kable_styling</span>(<span class="st">&quot;striped&quot;</span>, <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">font_size =</span> <span class="dv">25</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-14"><a></a>  <span class="fu">pack_rows</span>(<span class="st">&quot;Statements referring to Actors&quot;</span>, <span class="dv">1</span>, <span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-15"><a></a>  <span class="fu">pack_rows</span>(<span class="st">&quot;Statements referring to Issues&quot;</span>, <span class="dv">3</span>, <span class="dv">6</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-16"><a></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">&quot; &quot;</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">&quot;Public legitimacy shift (average position)&quot;</span> <span class="ot">=</span> <span class="dv">2</span>)) </span>
-<span id="cb17-17"><a></a>voelker_tab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 25px; width: auto !important; margin-left: auto; margin-right: auto;">
 <colgroup>
@@ -27264,15 +27187,6 @@ Public legitimacy shift (average position)
 <section id="legitimacy-1" class="slide level2">
 <h2>Legitimacy</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>voelker_tab <span class="sc">%&gt;%</span> </span>
-<span id="cb18-2"><a></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">bold =</span> T,</span>
-<span id="cb18-3"><a></a>              <span class="at">background=</span><span class="fu">ifelse</span>(data_voelker<span class="sc">$</span><span class="st">`</span><span class="at">Islamist attacks</span><span class="st">`</span> <span class="sc">==</span> <span class="sc">-</span><span class="fl">0.18</span> <span class="sc">|</span></span>
-<span id="cb18-4"><a></a>                                  data_voelker<span class="sc">$</span><span class="st">`</span><span class="at">Islamist attacks</span><span class="st">`</span> <span class="sc">==</span> <span class="sc">-</span><span class="fl">0.28</span>,</span>
-<span id="cb18-5"><a></a>                                <span class="st">&quot;red&quot;</span>, <span class="st">&quot;white&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb18-6"><a></a>  <span class="fu">column_spec</span>(<span class="dv">3</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">bold =</span> T,</span>
-<span id="cb18-7"><a></a>              <span class="at">background=</span><span class="fu">ifelse</span>(data_voelker<span class="sc">$</span><span class="st">`</span><span class="at">Islamist attacks</span><span class="st">`</span> <span class="sc">==</span> <span class="sc">-</span><span class="fl">0.18</span> <span class="sc">|</span></span>
-<span id="cb18-8"><a></a>                                  data_voelker<span class="sc">$</span><span class="st">`</span><span class="at">Islamist attacks</span><span class="st">`</span> <span class="sc">==</span> <span class="sc">-</span><span class="fl">0.28</span>,</span>
-<span id="cb18-9"><a></a>                                <span class="st">&quot;red&quot;</span>, <span class="st">&quot;white&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 25px; width: auto !important; margin-left: auto; margin-right: auto;">
 <colgroup>
@@ -27341,13 +27255,6 @@ Public legitimacy shift (average position)
 <section id="legitimacy-2" class="slide level2">
 <h2>Legitimacy</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>voelker_tab <span class="sc">%&gt;%</span> </span>
-<span id="cb19-2"><a></a>  <span class="fu">column_spec</span>(<span class="dv">2</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">bold =</span> T,</span>
-<span id="cb19-3"><a></a>              <span class="at">background=</span><span class="fu">ifelse</span>(data_voelker<span class="sc">$</span><span class="st">`</span><span class="at">Islamist attacks</span><span class="st">`</span> <span class="sc">==</span> <span class="sc">-</span><span class="fl">0.35</span>,</span>
-<span id="cb19-4"><a></a>                                <span class="st">&quot;red&quot;</span>, <span class="st">&quot;white&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-5"><a></a>  <span class="fu">column_spec</span>(<span class="dv">3</span>, <span class="at">color =</span> <span class="st">&quot;black&quot;</span>, <span class="at">bold =</span> T,</span>
-<span id="cb19-6"><a></a>              <span class="at">background=</span><span class="fu">ifelse</span>(data_voelker<span class="sc">$</span><span class="st">`</span><span class="at">Extreme right attacks</span><span class="st">`</span> <span class="sc">==</span> <span class="sc">-</span><span class="fl">0.16</span>,</span>
-<span id="cb19-7"><a></a>                                <span class="st">&quot;red&quot;</span>, <span class="st">&quot;white&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-striped caption-top" data-quarto-postprocess="true" style="font-size: 25px; width: auto !important; margin-left: auto; margin-right: auto;">
 <colgroup>
@@ -27484,8 +27391,8 @@ Public legitimacy shift (average position)
 </div>
 </section></section>
 <section>
-<section id="some-2025-news-of-interest-to-pv-students" class="title-slide slide level1 smaller center" data-background-color="#2c844c">
-<h1>some 2025 news of interest to PV students</h1>
+<section id="some-2025-pv-news" class="title-slide slide level1 smaller center" data-background-color="#2c844c">
+<h1>some 2025 PV news</h1>
 <ul>
 <li>Extreme right (online) group ‘Terrorgram’ listed as terrorist group by U.S. <span class="citation" data-cites="AlJazeera2025-1-13">(<a href="#/references" role="doc-biblioref" onclick>Al Jazeera 2025</a>)</span></li>
 <li>WWII historical reparations between Poland-Ukraine <span class="citation" data-cites="Rankin2025-1-16">(<a href="#/references" role="doc-biblioref" onclick>Rankin 2025</a>)</span></li>
@@ -27497,6 +27404,7 @@ Public legitimacy shift (average position)
 <li>transnational terror group operating in Ukraine <span class="citation" data-cites="Makuch2025-7-16">(<a href="#/references" role="doc-biblioref" onclick>Makuch 2025</a>)</span></li>
 <li>TikTok’s online trust and safety team replaced by AI <span class="citation" data-cites="Kerr2025-8-10">(<a href="#/references" role="doc-biblioref" onclick>Kerr 2025</a>)</span></li>
 <li>Irish rap group banned from Canada for ‘glorifying terrorism’ <span class="citation" data-cites="PAmedia2025-9-19 Weaver2025-9-26">(<a href="#/references" role="doc-biblioref" onclick>PA Media 2025</a>; <a href="#/references" role="doc-biblioref" onclick>Weaver 2025</a>)</span></li>
+<li>UK government’s use of double agent in northern Ireland conflict <span class="citation" data-cites="Carroll2025-12-9">(<a href="#/references" role="doc-biblioref" onclick>Carroll 2025</a>)</span></li>
 </ul>
 </section>
 <section id="next-meeting" class="slide level2">
@@ -27531,6 +27439,9 @@ Bryant, Miranda. 2025. <span>“<span>‘<span>It</span> Is about Vulnerable Guy
 </div>
 <div id="ref-BA2025-4-3" class="csl-entry" role="listitem">
 Bundesministerium des Innern und für Heimat. 2025. <span>“Bekanntmachung Eines <span>Vereinsverbots</span> Gegen ,,<span class="nocase">K<span class="nocase">ö</span>nigreich Deutschland</span>“ Und Seine <span>Teilorganisationen</span>.”</span> <em>Bundesanzeiger</em>, April.
+</div>
+<div id="ref-Carroll2025-12-9" class="csl-entry" role="listitem">
+Carroll, Rory. 2025. <span>“<span>MI5</span> Impeded Inquiry into <span>Stakeknife</span> Agent Who Murdered for <span>IRA</span>, Says Official Report <span></span> <span>Northern Ireland</span>.”</span> <em>The Guardian</em>, December.
 </div>
 <div id="ref-DuncanETAL2025-9-28" class="csl-entry" role="listitem">
 Duncan, Pamela, Raphael Hernandes, Elena Morresi, Pablo Gutiérrez, Garry Blight, and Lydia McMullan. 2025. <span>“Inside the Everyday <span>Facebook</span> Networks Where Far-Right Ideas Grow.”</span> <em>The Guardian</em>, September.
@@ -28757,6 +28668,44 @@ window.QuartoSupport = function () {
     window._ojs.selfContained = true;
     window._ojs.runtime.interpretFromScriptTags();
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

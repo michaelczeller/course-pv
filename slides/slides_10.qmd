@@ -997,7 +997,7 @@ Public and political reactions drive [state policy]{style="color:cadetblue;"} an
 
 (*relates to repressive responses that we will address in Week 12*)
 
-# some 2025 news of interest to PV students {background-color="#2c844c" .smaller} 
+# some 2025 PV news {background-color="#2c844c" .smaller} 
 
 - Extreme right (online) group 'Terrorgram' listed as terrorist group by U.S. [@AlJazeera2025-1-13]
 - WWII historical reparations between Poland-Ukraine [@Rankin2025-1-16]
@@ -1009,6 +1009,7 @@ Public and political reactions drive [state policy]{style="color:cadetblue;"} an
 - transnational terror group operating in Ukraine [@Makuch2025-7-16]
 - TikTok's online trust and safety team replaced by AI [@Kerr2025-8-10] 
 - Irish rap group banned from Canada for 'glorifying terrorism' [@PAmedia2025-9-19; @Weaver2025-9-26]
+- UK government's use of double agent in northern Ireland conflict [@Carroll2025-12-9] 
 
 ## next meeting
 
