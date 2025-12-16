@@ -29,6 +29,9 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+- **short synopsis** for final essay due **Friday (17 January)** (send to me via email)
+- 29 January: pre-Klausur review (incl. important course content and how to structure an exam essay)
+
 <!-- ## Presentation groups -->
 
 <!-- ::: panel-tabset -->
@@ -67,6 +70,7 @@ bibliography: ../../../library.bib
 <!-- (e.g., family, jobs, mentorship) -->
 <!-- what should be the primary priority of counter-extremism policy? -->
 <!-- (One or two words: prevention, protection, rehabilitation, deterrence, etc.) -->
+<!-- What is one non-repressive strategy that states can use to address political violence? -->
 
 <!-- Do you believe that addressing economic inequality through social welfare programs and progressive taxation is an effective long-term strategy to prevent political violence? -->
 <!-- strongly agree/agree/disagree/strongly disagree -->

@@ -312,7 +312,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 2\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 5\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 6\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 7\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 8\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 9\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 10\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 11"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 2\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 5\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 6\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 7\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 8\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 9\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 10\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 11\n\n\nClass 12"
   },
   {
     "objectID": "syllabus/index.html#examination-klausur",
@@ -1894,7 +1894,7 @@
     "href": "slides/slides_04.html#peaks-of-etas-armed-offensive-lafaye2022methodologicalapproachevolution",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Peaks of ETA’s armed offensive (Lafaye and Brochard 2022)",
-    "text": "Peaks of ETA’s armed offensive (Lafaye and Brochard 2022)\n\nlibrary(reshape2)\nlibrary(ggplot2)\n# library(wesanderson)\n\ndf &lt;- data.frame(\n  year = c(1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1988,1989,1990,1991),\n  actions = c(105,153,173,153,144,224,142,176,146,139,105,136,139,166)\n)\n\nggplot(df, aes(x=year))+\n  geom_col(aes(y=actions), colour = \"black\", fill=\"red\", width = 0.5) + \n  scale_x_continuous(\"\", breaks = seq(1977,1991,1))+\n  scale_y_continuous(\"Actions\", breaks = seq(0,250,25), minor_breaks = seq(0,250,25), limits = c(0,250))+\n  theme_bw()+\n  theme(text = element_text(size=30),\n        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))"
+    "text": "Peaks of ETA’s armed offensive (Lafaye and Brochard 2022)"
   },
   {
     "objectID": "slides/slides_04.html#eta-lafaye2022methodologicalapproachevolution-p.-2470",
@@ -3413,7 +3413,7 @@
     "href": "slides/slides_11.html",
     "title": "Class 11: Responses to Political Violence",
     "section": "",
-    "text": "Open Stickerfrom Open Stickers"
+    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\nshort synopsis for final essay due Friday (17 January) (send to me via email)\n29 January: pre-Klausur review (incl. important course content and how to structure an exam essay)"
   },
   {
     "objectID": "slides/slides_11.html#starting-question",
@@ -3455,21 +3455,21 @@
     "href": "slides/slides_11.html#membrives2022counteringviolentextremism---research-approach",
     "title": "Class 11: Responses to Political Violence",
     "section": "Membrives and Alonso (2022) - research approach",
-    "text": "Membrives and Alonso (2022) - research approach\n\nRQ: what are the challenges of intervening with juvenile offenders involved in terrorism?\n\n\n\ncases: five radicalized minors from Spain who were convicted of membership of a jihadist terrorist organisation, now engaged in derad. programmes\ndata: semi-structured interviews\nfour stages of intervention\n\nevaluation of the youths’ risks and needs\nhypothesis formulation of each individual case\ndesign and implementation of objectives, actions, and activities\nfinal evaluation"
+    "text": "Membrives and Alonso (2022) - research approach\n\nRQ: what are the challenges of intervening with juvenile offenders involved in terrorism?\n\n. . .\n\ncases: five radicalized minors from Spain who were convicted of membership of a jihadist terrorist organisation, now engaged in derad. programmes\ndata: semi-structured interviews\nfour stages of intervention\n\nevaluation of the youths’ risks and needs\nhypothesis formulation of each individual case\ndesign and implementation of objectives, actions, and activities\nfinal evaluation"
   },
   {
     "objectID": "slides/slides_11.html#membrives2022counteringviolentextremism---initial-risk-evaluation",
     "href": "slides/slides_11.html#membrives2022counteringviolentextremism---initial-risk-evaluation",
     "title": "Class 11: Responses to Political Violence",
     "section": "Membrives and Alonso (2022) - initial risk evaluation",
-    "text": "Membrives and Alonso (2022) - initial risk evaluation\n\nwhat do you think of these ‘factors’ for assessing risk?\n\n\n\n\n\n\n\nFactor\nNadia\nOscar\nDafya\nThamir\nCaleb\n\n\n\n\n1. Past and present offenses and sentences\nlow\nlow\nlow\nlow\nlow\n\n\n2. educational guidelines in family environment\nmoderate\nmoderate\nlow\nmoderate\nmoderate\n\n\n3. formal education/ employment\nhigh\nmoderate\nmoderate\nlow\nlow\n\n\n4. relationship with peer group\nmoderate\nhigh\nlow\nhigh\nhigh\n\n\n5. Substance misuse\nlow\nmoderate\nlow\nlow*\nlow*\n\n\n6. leisure/hobbies\nhigh\nhigh\nmoderate\nhigh\nhigh\n\n\n7. Personality/ behavior\nmoderate\nmoderate\nmoderate\nmoderate\nmoderate\n\n\n8. Attitudes, values, and beliefs\nmoderate\nhigh\nmoderate\nhigh\nhigh\n\n\nGeneral risk level\n21\n22\n5\n19\n18\n\n\n\nfrom moderate (9–22) to very high\nfrom moderate (9–22) to very high\nfrom low (0–8) to moderate\nfrom moderate (9–22) to very high\nfrom moderate (9–22) to very high"
+    "text": "Membrives and Alonso (2022) - initial risk evaluation\n\nwhat do you think of these ‘factors’ for assessing risk?\n\n\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(kableExtra)\n\n\nAttaching package: 'kableExtra'\n\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\ndata &lt;- data.frame(\n  Factor = c(\n    \"1. Past and present offenses and sentences\",\n    \"2. educational guidelines in family environment\",\n    \"3. formal education/ employment\",\n    \"4. relationship with peer group\",\n    \"5. Substance misuse\",\n    \"6. leisure/hobbies\",\n    \"7. Personality/ behavior\",\n    \"8. Attitudes, values, and beliefs\",\n    \"General risk level\",\n    \"\",\n    \"\"),\n  Nadia = c(\"low\", \"moderate\", \"high\", \"moderate\", \"low\", \"high\", \"moderate\", \"moderate\", 21, \"from moderate (9–22) to very high\", \"\"),\n  Oscar = c(\"low\", \"moderate\", \"moderate\", \"high\", \"moderate\", \"high\", \"moderate\", \"high\", 22, \"from moderate (9–22) to very high\", \"\"),\n  Dafya = c(\"low\", \"low\", \"moderate\", \"low\", \"low\", \"moderate\", \"moderate\", \"moderate\", 5, \"from low (0–8) to moderate\", \"\"),\n  Thamir = c(\"low\", \"moderate\", \"low\", \"high\", \"low*\", \"high\", \"moderate\", \"high\", 19, \"from moderate (9–22) to very high\", \"\"),\n  Caleb = c(\"low\", \"moderate\", \"low\", \"high\", \"low*\", \"high\", \"moderate\", \"high\", 18, \"from moderate (9–22) to very high\", \"\")\n)\n\nkable(data, \"html\", col.names = c(\"Factor\", \"Nadia\", \"Oscar\", \"Dafya\", \"Thamir\", \"Caleb\")) %&gt;%\n  kable_styling(font_size = 23) %&gt;%\n  column_spec(1, width = \"9cm\") %&gt;%\n  column_spec(2:6, width = \"2.5cm\")\n\n\n\n\nFactor\nNadia\nOscar\nDafya\nThamir\nCaleb\n\n\n\n\n1. Past and present offenses and sentences\nlow\nlow\nlow\nlow\nlow\n\n\n2. educational guidelines in family environment\nmoderate\nmoderate\nlow\nmoderate\nmoderate\n\n\n3. formal education/ employment\nhigh\nmoderate\nmoderate\nlow\nlow\n\n\n4. relationship with peer group\nmoderate\nhigh\nlow\nhigh\nhigh\n\n\n5. Substance misuse\nlow\nmoderate\nlow\nlow*\nlow*\n\n\n6. leisure/hobbies\nhigh\nhigh\nmoderate\nhigh\nhigh\n\n\n7. Personality/ behavior\nmoderate\nmoderate\nmoderate\nmoderate\nmoderate\n\n\n8. Attitudes, values, and beliefs\nmoderate\nhigh\nmoderate\nhigh\nhigh\n\n\nGeneral risk level\n21\n22\n5\n19\n18\n\n\n\nfrom moderate (9–22) to very high\nfrom moderate (9–22) to very high\nfrom low (0–8) to moderate\nfrom moderate (9–22) to very high\nfrom moderate (9–22) to very high"
   },
   {
     "objectID": "slides/slides_11.html#membrives2022counteringviolentextremism---activities",
     "href": "slides/slides_11.html#membrives2022counteringviolentextremism---activities",
     "title": "Class 11: Responses to Political Violence",
     "section": "Membrives and Alonso (2022) - activities",
-    "text": "Membrives and Alonso (2022) - activities\n\nwhy these activities for a derad. programme? what’s the reasoning? do you think it would be effective?\n\n\n\n\n\n\n\nArea\nActivity\nNadia\nOscar\nDafya\nThamir\nCaleb\n\n\n\n\nformative\nSchool classroom at the Center\nX\nX\nX\nX\nX\n\n\nformative\nSchool support and encouragement for reading\n\n\nX\n\nX\n\n\nformative\nVocational training\n\n\nX\n\n\n\n\nPre-work\nBook binding\nX\nX\n\nX\n\n\n\nPre-work\nrestoration\nX\nX\n\n\nX\n\n\nPre-work\npottery\nX\n\n\n\n\n\n\nPre-work\nmodeling, sculpture, decoration\n\n\nX\n\nX\n\n\nPre-work\nhandcrafted wood turning\n\n\n\nX\nX\n\n\nPersonal development and social competence\nCentral educational and therapeutic treatment Program for Young offenders\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Personal development and Social Competence\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Personal development and Civic-ethic education\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Preparation for an independent life\n\nX\n\n\n\n\n\nPersonal development and social competence\nWorkshop on equal opportunities\nX\n\nX\nX\n\n\n\noccupational workshop\ndance workshop\nX\n\n\n\n\n\n\noccupational workshop\nPainting on canvas, decoration, models\nX\nX\nX\nX\nX\n\n\nleisure and free time\nSports\nX\nX\nX\nX\nX\n\n\nleisure and free time\nVideo-forum\nX\nX\nX\nX\nX\n\n\nleisure and free time\nGroup leisure\nX\nX\nX\nX\nX\n\n\nleisure and free time\nindividual leisure\nX\nX\nX\nX\nX"
+    "text": "Membrives and Alonso (2022) - activities\n\nwhy these activities for a derad. programme? what’s the reasoning? do you think it would be effective?\n\n\n\ndata &lt;- data.frame(\n  Area = c(\"formative\", \n           \"formative\", \n           \"formative\", \n           \"Pre-work\", \n           \"Pre-work\", \n           \"Pre-work\", \n           \"Pre-work\", \n           \"Pre-work\", \n           \"Personal development and social competence\", \n           \"Personal development and social competence\", \n           \"Personal development and social competence\", \n           \"Personal development and social competence\", \n           \"Personal development and social competence\", \n           \"occupational workshop\", \n           \"occupational workshop\", \n           \"leisure and free time\", \n           \"leisure and free time\", \n           \"leisure and free time\", \n           \"leisure and free time\"),\n  Activity = c(\"School classroom at the Center\", \n               \"School support and encouragement for reading\", \n               \"Vocational training\", \n               \"Book binding\", \n               \"restoration\", \n               \"pottery\", \n               \"modeling, sculpture, decoration\", \n               \"handcrafted wood turning\", \n               \"Central educational and therapeutic treatment Program for Young offenders\", \n               \"Program on Personal development and Social Competence\", \n               \"Program on Personal development and Civic-ethic education\", \n               \"Program on Preparation for an independent life\", \n               \"Workshop on equal opportunities\", \n               \"dance workshop\", \n               \"Painting on canvas, decoration, models\", \n               \"Sports\", \n               \"Video-forum\", \n               \"Group leisure\", \n               \"individual leisure\"),\n  Nadia = c(\"X\", \"\", \"\", \"X\", \"X\", \"X\", \"\", \"\", \"X\", \"X\", \"X\", \"\", \"X\", \"X\", \"X\", \"X\", \"X\", \"X\", \"X\"),\n  Oscar = c(\"X\", \"\", \"\", \"X\", \"X\",  \"\", \"\", \"\", \"X\", \"X\", \"X\",\"X\",  \"\",  \"\", \"X\", \"X\", \"X\", \"X\", \"X\"),\n  Dafya = c(\"X\",\"X\",\"X\",  \"\",  \"\",  \"\",\"X\", \"\", \"X\", \"X\", \"X\", \"\", \"X\",  \"\", \"X\", \"X\", \"X\", \"X\", \"X\"),\n  Thamir =c(\"X\", \"\", \"\", \"X\",  \"\",  \"\", \"\",\"X\", \"X\", \"X\", \"X\", \"\", \"X\",  \"\", \"X\", \"X\", \"X\", \"X\", \"X\"),\n  Caleb = c(\"X\",\"X\", \"\",  \"\", \"X\",  \"\",\"X\",\"X\", \"X\", \"X\", \"X\", \"\",  \"\",  \"\", \"X\", \"X\", \"X\", \"X\", \"X\")\n)\n\n# Create the table using kable for HTML output\nkable(data, format = \"html\", col.names = c(\"Area\", \"Activity\", \"Nadia\", \"Oscar\", \"Dafya\", \"Thamir\", \"Caleb\"), \n      # caption = \"Activity and Participation by Area and Person\", \n      escape = FALSE) %&gt;% \n  kable_styling(font_size = 21) # %&gt;%\n\n\n\n\nArea\nActivity\nNadia\nOscar\nDafya\nThamir\nCaleb\n\n\n\n\nformative\nSchool classroom at the Center\nX\nX\nX\nX\nX\n\n\nformative\nSchool support and encouragement for reading\n\n\nX\n\nX\n\n\nformative\nVocational training\n\n\nX\n\n\n\n\nPre-work\nBook binding\nX\nX\n\nX\n\n\n\nPre-work\nrestoration\nX\nX\n\n\nX\n\n\nPre-work\npottery\nX\n\n\n\n\n\n\nPre-work\nmodeling, sculpture, decoration\n\n\nX\n\nX\n\n\nPre-work\nhandcrafted wood turning\n\n\n\nX\nX\n\n\nPersonal development and social competence\nCentral educational and therapeutic treatment Program for Young offenders\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Personal development and Social Competence\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Personal development and Civic-ethic education\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Preparation for an independent life\n\nX\n\n\n\n\n\nPersonal development and social competence\nWorkshop on equal opportunities\nX\n\nX\nX\n\n\n\noccupational workshop\ndance workshop\nX\n\n\n\n\n\n\noccupational workshop\nPainting on canvas, decoration, models\nX\nX\nX\nX\nX\n\n\nleisure and free time\nSports\nX\nX\nX\nX\nX\n\n\nleisure and free time\nVideo-forum\nX\nX\nX\nX\nX\n\n\nleisure and free time\nGroup leisure\nX\nX\nX\nX\nX\n\n\nleisure and free time\nindividual leisure\nX\nX\nX\nX\nX\n\n\n\n\n\n\n  # column_spec(1, width = \"9cm\") %&gt;%\n  # column_spec(2:6, width = \"2.5cm\")"
   },
   {
     "objectID": "slides/slides_11.html#meier2022coercionrepresentationexploring---3-patterns",
@@ -3714,49 +3714,49 @@
     "href": "slides/slides_11.html#membrives2022counteringviolentextremism---takeaways",
     "title": "Class 11: Responses to Political Violence",
     "section": "Membrives and Alonso (2022) - takeaways",
-    "text": "Membrives and Alonso (2022) - takeaways\n\nTraditional objectives of criminal justice must give way to rehabilitation and restorative justice objectives when dealing with minors.\n\ndo you agree or disagree? This is an ongoing debate in public policy\n\n\n\n\nThe Spanish judicial framework provides the framework for the judicial response against offences committed by youths in Spain, with the guiding principles of any intervention being its sanctioning-educational nature and the superior interest of the minor."
+    "text": "Membrives and Alonso (2022) - takeaways\n\nTraditional objectives of criminal justice must give way to rehabilitation and restorative justice objectives when dealing with minors.\n\ndo you agree or disagree? This is an ongoing debate in public policy\n\n\n. . .\n\nThe Spanish judicial framework provides the framework for the judicial response against offences committed by youths in Spain, with the guiding principles of any intervention being its sanctioning-educational nature and the superior interest of the minor."
   },
   {
     "objectID": "slides/slides_11.html#criminal-justice-responses-to-political-violence---an-example-taylorsuliman2021-1-21",
     "href": "slides/slides_11.html#criminal-justice-responses-to-political-violence---an-example-taylorsuliman2021-1-21",
     "title": "Class 11: Responses to Political Violence",
     "section": "criminal justice responses to political violence - an example (Taylor and Suliman 2021)",
-    "text": "criminal justice responses to political violence - an example (Taylor and Suliman 2021)\n\n21-years-old British man, Ben John, with neo-Nazi sympathies\ncollected extremist documents (including a book that contains bomb-making instructions, illegal in the UK) on computer \n\npossessing information likely to be useful for preparing an act of terrorism, punishable by up to 15 years in prison under Section 58 of UK’s Terrorism Act\n\n\n\nrecommended sentencing? what do you think? (keeping in mind British judges have lots of leeway with sentencing)\n\n\n\nsentenced by judge to read works of great literature by Jane Austen, William Shakespeare, Thomas Hardy and Charles Dickens\nappeals court overturns ruling, sentenced to two years in prison"
+    "text": "criminal justice responses to political violence - an example (Taylor and Suliman 2021)\n\n21-years-old British man, Ben John, with neo-Nazi sympathies\ncollected extremist documents (including a book that contains bomb-making instructions, illegal in the UK) on computer \n\npossessing information likely to be useful for preparing an act of terrorism, punishable by up to 15 years in prison under Section 58 of UK’s Terrorism Act\n\n\n\nrecommended sentencing? what do you think? (keeping in mind British judges have lots of leeway with sentencing)\n\n. . .\n\nsentenced by judge to read works of great literature by Jane Austen, William Shakespeare, Thomas Hardy and Charles Dickens\nappeals court overturns ruling, sentenced to two years in prison"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---eu-context",
     "href": "slides/slides_11.html#koehler2019---eu-context",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - EU context",
-    "text": "Koehler (2019) - EU context\nComparing right-wing extremist terrorism to other forms\n\nEven though the number of arrests related to right-wing extremist terrorism within the European Union almost doubled to 20 in 2017 from 12 in 2016, it pales in comparison to other forms of political violence, at least in terms of numbers (e.g. 705 jihadists in 2017)."
+    "text": "Koehler (2019) - EU context\nComparing right-wing extremist terrorism to other forms\n\nEven though the number of arrests related to right-wing extremist terrorism within the European Union almost doubled to 20 in 2017 from 12 in 2016, it pales in comparison to other forms of political violence, at least in terms of numbers (e.g. 705 jihadists in 2017).\n\n\nlibrary(reshape2)\nlibrary(ggplot2)\nlibrary(wesanderson)\n\ndf &lt;- data.frame(\n  year = c(2001:2021),\n  explosive = c(1,0,0,2,3,1,1,0,0,2,0,1,2,6,18,10,5,0,2,2,1), #Herbeiführen einer Sprengstoffexplosion\n  arson = c(16,20,24,37,14,18,24,29,18,29,20,21,11,21,99,113,42,11,6,25,11), #Brandstiftungen\n  gesamt = c(980,940,845,832,1034,1115,1054,1113,959,806,828,842,837,1029,1485,1600,1054,1088,925,1023,945), \n  open129 = c(2,1,4,1,1,3,3,1,0,0,1,15,2,2,1,4,6,4,16,1,\"-\"), #129(a, b)\n  closed129 = c(1,2,0,0,0,2,2,3,1,0,0,0,0,2,0,0,0,0,0,0,\"-\"),\n  charged129 = c(0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,1,1,\"-\"),\n  verdict129 = c(1,0,3,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,3,1,\"-\")\n)\n\n# SEE ANSWERS TO 12, SUBQUESTIONS 1a, 3, 4, 6\n# 2018 on 129: https://dserver.bundestag.de/btd/19/097/1909773.pdf\n# 2019 on 129: https://dserver.bundestag.de/btd/19/192/1919232.pdf\n# 2020 on 129: https://dserver.bundestag.de/btd/19/291/1929128.pdf\n# 2021 on 129: \n\ndfx = subset(df, select = c(year,explosive,arson))\ndf_melt &lt;- melt(dfx, id=\"year\")\ndf_melt$gesamt &lt;- df$gesamt\n\nk &lt;- ggplot(df_melt, aes(x=year))+\n  geom_col(aes(y=value,fill=variable), position=\"dodge\",colour=\"black\")+\n  scale_fill_manual(\"\", values= wes_palette(\"Darjeeling1\", n = 2))+\n  geom_point(aes(y=gesamt/12))+\n  geom_line(aes(y=gesamt/12))+\n  theme_bw()+\n  scale_x_continuous(\"\", breaks=seq(2001,2021,1),minor_breaks=seq(2001,2021,1)) +\n  scale_y_continuous(\"(bars)\", breaks = seq(0,130,10), sec.axis = sec_axis(~ . * 12, name = \"(line) RWE violent crimes\", breaks = seq(0,1700,100)))+\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+\n  theme(legend.position = \"bottom\")+\n  theme(text = element_text(size = 25))+\n  theme(legend.position = c(0.25,0.85))\n\nWarning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2\n3.5.0.\nℹ Please use the `legend.position.inside` argument of `theme()` instead.\n\ndfz &lt;- subset(df, select = c(year, open129, closed129, charged129, verdict129))\ndfz &lt;- subset(dfz, year &lt; 2021)\ndfz_melt &lt;- melt(dfz, id=\"year\")\ndfz_melt$value &lt;- as.numeric(dfz_melt$value)"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany",
-    "text": "Koehler (2019) - focusing in on Germany\n\nRWE explosives & arson crimes (bars); all RWE violent crimes (line)\nLooking at … explosives attacks or arson, crimes usually but not always (legally) framed as terrorism, statistics from Germany indicate a surge during the so-called “refugee crisis” between 2015 and 2016. …"
+    "text": "Koehler (2019) - focusing in on Germany\n\nk\n\n\n\n\n\n\n\n\nRWE explosives & arson crimes (bars); all RWE violent crimes (line)\nLooking at … explosives attacks or arson, crimes usually but not always (legally) framed as terrorism, statistics from Germany indicate a surge during the so-called “refugee crisis” between 2015 and 2016. …"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany, homicides",
-    "text": "Koehler (2019) - focusing in on Germany, homicides\nRecognised by BRD vs. identified by Amadeu Antonio Stiftung"
+    "text": "Koehler (2019) - focusing in on Germany, homicides\nRecognised by BRD vs. identified by Amadeu Antonio Stiftung\n\nlibrary(rvest)\nlibrary(stringr)\nlibrary(dplyr)\nlibrary(magrittr)\nlibrary(httr)\nlibrary(lubridate)\n\n\nAttaching package: 'lubridate'\n\n\nThe following objects are masked from 'package:base':\n\n    date, intersect, setdiff, union\n\n# scraping data -----------------------------------------------------------\n\n# links to news stories\n\n# LINK &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\"#main .text-grey-light a\") %&gt;% \n#   html_attr(\"href\")\n# \n# DATE &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\".bigdate\") %&gt;% \n#   html_text()\n# \n# DATE &lt;- dmy(DATE)\n# \n# YEAR &lt;- format(DATE, format=\"%Y\")\n# \n# VICTIM &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\"#main .no-underline\") %&gt;% \n#   html_text()\n# VICTIM &lt;- VICTIM[1:237]\n# \n# AGE &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\".md\\\\:block:nth-child(3)\") %&gt;% \n#   html_text()\n# # 27.07.2000 - no age; 04.04.1992 - no age\n# AGE &lt;- append(AGE, \"46\", after = 24)\n# AGE &lt;- append(AGE, \"0\", after = 130)\n# AGE &lt;- AGE[1:237]\n# AGE &lt;- gsub(\" Jahre\",\"\",as.character(AGE))\n# AGE &lt;- gsub(\"13 Monate\",\"1\",as.character(AGE))\n# \n# LOCATION &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\".mt-2.md\\\\:block\") %&gt;% \n#   html_text()\n# \n# LAND &lt;- regmatches(LOCATION, gregexpr( \"(?&lt;=\\\\().+?(?=\\\\))\", LOCATION, perl = T))\n# LAND &lt;- str_remove_all(LAND, \"Saale\")\n# \n# OFFICIAL &lt;- c(F,T,F,T,F,F,F,T,F,T,T,T,F,T,T,F,F,F,F,F,F,T,T,T,F,T,T,T,T,F,F,F,T,T,T,T,F,T,T,T,T,F,F,T,F,T,T,F,F,T,F,T,T,T,T,T,T,F,F,F,T,F,F,F,F,T,F,F,F,F,F,F,T,F,F,F,F,F,F,F,F,F,F,F,F,T,T,T,F,F,F,T,T,F,T,T,T,F,F,T,F,T,F,F,F,T,T,T,F,T,T,T,T,T,F,F,F,F,T,F,F,T,T,T,F,F,F,F,F,T,F,T,T,T,T,F,F,F,F,T,T,T,F,F,T,F,T,F,F,F,T,F,F,F,F,F,F,F,T,T,T,T,F,F,F,F,F,F,F,T,F,F,T,T,F,F,T,T,F,F,T,F,F,F,T,F,T,F,F,T,F,T,F,F,F,F,T,F,F,F,T,F,F,T,T,T,T,T,T,T,T,T,F,T,T,F,T,F,T,T,T,F,T,T,T,T,T,T,T,T,T,F,F,T,T,T,T)\n# \n# COUNTRYCODE &lt;- rep(\"DE\",237)\n# \n# df &lt;- data.frame(YEAR, DATE, LOCATION, LAND, VICTIM, AGE, OFFICIAL, COUNTRYCODE, LINK)\n# df$AGE &lt;- as.numeric(df$AGE)\n# \n# df[119, 4] = \"Sachsen-Anhalt\"\n# df[220, 4] = \"Sachsen-Anhalt\"\n# df[221, 4] = \"Sachsen-Anhalt\"\n# \n# df$LOCATION &lt;- gsub(\"\\\\s*\\\\([^\\\\)]+\\\\)\",\"\",as.character(df$LOCATION))\n# \n# dfOFFIC &lt;- subset(df, OFFICIAL == T)\n# rownames(dfOFFIC) = seq(length=nrow(dfOFFIC))\n\ndf &lt;- read.csv(\"slide_files/11/FR_homicides2023-01-20.csv\", row.names=1, header = TRUE)\n\ndfUNOFFIC &lt;- subset(df, OFFICIAL == F)\nrownames(dfUNOFFIC) = seq(length=nrow(dfUNOFFIC))\n\ndfOFFIC &lt;- subset(df, OFFICIAL == T)\nrownames(dfOFFIC) = seq(length=nrow(dfOFFIC))\n\ndfplot &lt;- df %&gt;% \n  group_by(YEAR) %&gt;% \n  summarise(DEATHS = length(YEAR))\ndfplot$YEAR &lt;- as.numeric(dfplot$YEAR)\ndfplot$DEATHS &lt;- as.numeric(dfplot$DEATHS)\n\ndfplotofficial &lt;- dfOFFIC %&gt;% \n  group_by(YEAR) %&gt;% \n  summarise(OFFICIAL = length(YEAR))\ndfplotofficial$YEAR &lt;- as.numeric(dfplotofficial$YEAR)\ndfplotofficial$OFFICIAL &lt;- as.numeric(dfplotofficial$OFFICIAL)\n\n\ndfX &lt;- merge(dfplot, dfplotofficial, by=c(\"YEAR\"), all = TRUE)\ndfX[is.na(dfX)] &lt;- 0\n\nlibrary(ggplot2)\nlibrary(reshape2)\n\na &lt;- ggplot(dfX, aes(x=YEAR))+\n  geom_col(aes(y=DEATHS), colour = \"black\", fill = \"grey60\", width = 1)+\n  geom_col(aes(y=OFFICIAL), colour = \"black\", fill = \"black\", width = 0.5)+\n  scale_x_continuous(\"\", breaks = seq(1990,2021,1))+\n  scale_y_continuous(\"Deaths\", breaks = seq(0,30,5), minor_breaks = seq(0,30,1), limits = c(0,30))+\n  theme_bw()+\n  theme(text = element_text(size=15), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))\na\n\n\n\n\n\n\n\n# df_melt &lt;- melt(dfX, id=\"YEAR\")\n# \n# b &lt;- ggplot(df_melt, aes(x = YEAR, y = value, fill = variable)) +\n#   geom_col(position = \"dodge\", colour = \"black\", width = 0.8) +\n#   scale_y_continuous(\"Deaths\", breaks = seq(0,30,5), minor_breaks = seq(0,30,1), limits = c(0,30))+\n#   scale_fill_manual(\"\", values=c(\"grey60\",\"black\")) + # \"Darjeeling1\", n = 4)\n#   scale_x_continuous(\"\", breaks = seq(1990,2021,1), minor_breaks = seq(1990,2021,1))+\n#   theme_bw()+\n#   theme(text = element_text(size=15), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+\n#   theme(legend.position = c(0.6, 0.8),\n#         text = element_text(size=15),\n#         legend.title=element_blank(),\n#         legend.box.background = element_rect(colour = \"black\"))\n# b"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides-1",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides-1",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany, homicides",
-    "text": "Koehler (2019) - focusing in on Germany, homicides\n\n\nlibrary(tmap)\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(rnaturalearth)\nlibrary(gganimate)\nlibrary(gifski)\n\ndfALLgrouped &lt;- dfALL %&gt;% \n  group_by(YEAR)\n\ndfALLgrouped &lt;- as.data.frame(dfALLgrouped)\n\ndfALLgrouped$Latitude &lt;- dfALLgrouped$LAT\ndfALLgrouped$Longitude &lt;- dfALLgrouped$LON\n\ndfALLgrouped$LATjit &lt;- jitter(dfALLgrouped$LAT, factor = 300)\ndfALLgrouped$LONjit &lt;- jitter(dfALLgrouped$LON, factor = 300)\n\ndfALLgrouped_sf &lt;- dfALLgrouped %&gt;% drop_na(LAT)\n\ndfALLgrouped_sf &lt;- dfALLgrouped_sf %&gt;% \n  st_as_sf(\n    coords = c(\"LONjit\", \"LATjit\"),\n    crs = st_crs(\"EPSG:32632\") # CRS for Germany\n  )\n\nDE = ne_states(returnclass = \"sf\") |&gt;\n  filter(admin == \"Germany\") \n\nst_crs(dfALLgrouped_sf) &lt;- st_crs(DE)\n\nfr_hom_anim &lt;- tm_shape(DE)+\n  tm_polygons(fill=\"gold\", col=\"darkolivegreen\")+\n  tm_shape(dfALLgrouped_sf)+\n  tm_bubbles(shape=21, \n             size=5, \n             col=\"CATEGORY\", \n             palette = c(\"Official\" = \"red\",\"Unofficial\" = \"blue\"),\n             scale=8, \n             alpha=0.5, \n             border.col=\"black\")+\n  tm_facets(pages=\"YEAR\")+\n  tm_layout(legend.show = FALSE,\n            panel.label.size = 4, \n            panel.label.color = 'black',\n            panel.label.bg.color = 'grey', \n            panel.label.height = 3,\n            legend.text.size = 1.5)\ntmap_animation(\n  fr_hom_anim, \n  filename = \"fr_hom_anim.gif\",\n  delay = 50, \n  width = 1200, \n  height = 1200\n)\no: recognised by BRD\no: identified by Amadeu Antonio Stiftung"
+    "text": "Koehler (2019) - focusing in on Germany, homicides\n\n# map plot -------------------------------------------\n\n# SOURCE DATA AND VISUALISATIONS\n# - https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\n# - https://de.wikipedia.org/wiki/Todesopfer_rechtsextremer_Gewalt_in_der_Bundesrepublik_Deutschland\n# - https://www.zeit.de/gesellschaft/zeitgeschehen/2018-09/todesopfer-rechte-gewalt-karte-portraet\n# - https://www.zeit.de/gesellschaft/zeitgeschehen/2020-09/rechte-gewalt-todesopfer-bundeskriminalamt-wiedervereinigung/komplettansicht?utm_referrer=https%3A%2F%2Fde.wikipedia.org%2F\n\nlibrary(raster)\n\nLoading required package: sp\n\n\n\nAttaching package: 'raster'\n\n\nThe following object is masked from 'package:dplyr':\n\n    select\n\nlibrary(sf)\n\nWarning: package 'sf' was built under R version 4.5.2\n\n\nLinking to GEOS 3.13.0, GDAL 3.8.5, PROJ 9.5.1; sf_use_s2() is TRUE\n\n# germany &lt;- getData(country = \"Germany\", level = 1) \ngermany &lt;- readRDS(\"slide_files/11/germany.rds\")\n\n## ALTERNATIVE APPROACH USING sf PACKAGE\n# germany &lt;- \n#   getData(country = \"Germany\", level = 1) %&gt;% \n#   st_as_sf() %&gt;% \n#   left_join(dat, by = c(\"NAME_1\" = \"Bundesland\"))\n\ndiff_col2 &lt;- ggplot() +\n  geom_polygon(data = germany,\n               aes(x = long, y = lat, group = group),\n               colour = \"black\", fill = \"grey90\") +\n  geom_point(data = dfUNOFFIC,\n             aes(x = LON, y = LAT),\n             position = position_jitter(w = 0.1, h = 0.1),\n             shape = 1, size = 3, color = \"blue\", stroke = 0.8) +\n  geom_point(data = dfOFFIC,\n             aes(x = LON, y = LAT),\n             position = position_jitter(w = 0.1, h = 0.1),\n             shape = 1, size = 3, color = \"red\", stroke = 0.8) +\n  coord_map() +\n  theme_void() +\n  # xlab(\"Longitude\") + ylab(\"Latitude\") +\n  theme(legend.position = \"none\")\n\nWarning: `fortify(&lt;SpatialPolygonsDataFrame&gt;)` was deprecated in ggplot2 3.4.4.\nℹ Please migrate to sf.\nℹ The deprecated feature was likely used in the ggplot2 package.\n  Please report the issue at &lt;https://github.com/tidyverse/ggplot2/issues&gt;.\n\n\nRegions defined for each Polygons\n\n# labs(color = 'Record length')\n\n\n\nlibrary(tmap)\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(rnaturalearth)\nlibrary(gganimate)\nlibrary(gifski)\n\ndfALLgrouped &lt;- dfALL %&gt;% \n  group_by(YEAR)\n\ndfALLgrouped &lt;- as.data.frame(dfALLgrouped)\n\ndfALLgrouped$Latitude &lt;- dfALLgrouped$LAT\ndfALLgrouped$Longitude &lt;- dfALLgrouped$LON\n\ndfALLgrouped$LATjit &lt;- jitter(dfALLgrouped$LAT, factor = 300)\ndfALLgrouped$LONjit &lt;- jitter(dfALLgrouped$LON, factor = 300)\n\ndfALLgrouped_sf &lt;- dfALLgrouped %&gt;% drop_na(LAT)\n\ndfALLgrouped_sf &lt;- dfALLgrouped_sf %&gt;% \n  st_as_sf(\n    coords = c(\"LONjit\", \"LATjit\"),\n    crs = st_crs(\"EPSG:32632\") # CRS for Germany\n  )\n\nDE = ne_states(returnclass = \"sf\") |&gt;\n  filter(admin == \"Germany\") \n\nst_crs(dfALLgrouped_sf) &lt;- st_crs(DE)\n\nfr_hom_anim &lt;- tm_shape(DE)+\n  tm_polygons(fill=\"gold\", col=\"darkolivegreen\")+\n  tm_shape(dfALLgrouped_sf)+\n  tm_bubbles(shape=21, \n             size=5, \n             col=\"CATEGORY\", \n             palette = c(\"Official\" = \"red\",\"Unofficial\" = \"blue\"),\n             scale=8, \n             alpha=0.5, \n             border.col=\"black\")+\n  tm_facets(pages=\"YEAR\")+\n  tm_layout(legend.show = FALSE,\n            panel.label.size = 4, \n            panel.label.color = 'black',\n            panel.label.bg.color = 'grey', \n            panel.label.height = 3,\n            legend.text.size = 1.5)\ntmap_animation(\n  fr_hom_anim, \n  filename = \"fr_hom_anim.gif\",\n  delay = 50, \n  width = 1200, \n  height = 1200\n)\no: recognised by BRD\no: identified by Amadeu Antonio Stiftung"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany-law-enforcement",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany-law-enforcement",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany, law enforcement",
-    "text": "Koehler (2019) - focusing in on Germany, law enforcement\n\n\n\n\n\n\n\n\n\n\n\n\nErmittlungsverfahren/opened 129 case\nclosed/discontinued 129 case\ncharges in 129 case\nverdict/conviction in 129 case\ncompare: jihadist terrorism in 2017: 952 opened cases, 460 closed\n\n\n\n§129: forming or membership in criminal or terrorist org.\nmore terror investigations paralleling spikes in right-wing extremist violence\n\n2012 (15) spike, reaction to NSU\ni.e., triggered by political and popular pressure \n\n\n\n\n\n“However, even if keeping in mind that one group could have been responsible for more than one arson or explosive attack, the number of new investigations still falls short of the overall level of severe violence (four and six new investigations in 2016 and 2017).”"
+    "text": "Koehler (2019) - focusing in on Germany, law enforcement\n\n\n\nggplot(dfz_melt, aes(x=year, y=value, color=variable, group=variable))+\n  geom_line(linewidth=2)+\n  scale_colour_manual(values = c(\"red\",\"blue\",\"green\",\"purple\"))+\n  theme_bw()+\n  scale_x_continuous(\"\", breaks = seq(2001,2020,1), minor_breaks = seq(2001,2020,1))+\n  scale_y_continuous(\"\", breaks = seq(0,16,2), minor_breaks = seq(0,16,1), limits = c(0,16))+\n  theme(legend.position = c(0.25,0.7))+\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+\n  theme(text = element_text(size = 30))\n\n\n\n\n\n\n\n\n\nErmittlungsverfahren/opened 129 case\nclosed/discontinued 129 case\ncharges in 129 case\nverdict/conviction in 129 case\ncompare: jihadist terrorism in 2017: 952 opened cases, 460 closed\n\n\n\n§129: forming or membership in criminal or terrorist org.\nmore terror investigations paralleling spikes in right-wing extremist violence\n\n2012 (15) spike, reaction to NSU\ni.e., triggered by political and popular pressure \n\n\n\n\n\n\n“However, even if keeping in mind that one group could have been responsible for more than one arson or explosive attack, the number of new investigations still falls short of the overall level of severe violence (four and six new investigations in 2016 and 2017).”"
   },
   {
     "objectID": "slides/slides_11.html#debate-raised-by-koehler2019-hate-crime---terrorism",
@@ -3791,7 +3791,7 @@
     "href": "slides/slides_11.html#koehler2019-selected-recommendations",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019): selected recommendations",
-    "text": "Koehler (2019): selected recommendations\n\nAvoid double standards between forms of political violence\nallocate adequate resources to counter RWE\nappropriate judicial responses (‘quick and efficient’)\nincrease funding for research on FR violence and terrorism\nacknowledge relationship between hate crimes and terrorism\n\nreporting mechanisms about right-wing terrorism should not only be based on legal prosecutions and convictions using the ‘terrorism’ label, but also consider psychological effects on the target group of violent acts and specific attack forms used.\n\nexpand EXIT programmes for RWE\n\n\nwhat do you make of these recommendations (or others)?"
+    "text": "Koehler (2019): selected recommendations\n\nAvoid double standards between forms of political violence\nallocate adequate resources to counter RWE\nappropriate judicial responses (‘quick and efficient’)\nincrease funding for research on FR violence and terrorism\nacknowledge relationship between hate crimes and terrorism\n\nreporting mechanisms about right-wing terrorism should not only be based on legal prosecutions and convictions using the ‘terrorism’ label, but also consider psychological effects on the target group of violent acts and specific attack forms used.\n\nexpand EXIT programmes for RWE\n\n. . .\nwhat do you make of these recommendations (or others)?"
   },
   {
     "objectID": "slides/slides_11.html#a-final-policy-example",
@@ -3854,13 +3854,293 @@
     "href": "slides/slides_11.html#snapshot-stopping-ethnic-violence-1",
     "title": "Class 11: Responses to Political Violence",
     "section": "Snapshot: stopping ethnic violence",
-    "text": "Snapshot: stopping ethnic violence\n\nVarshney (2001): Hindu-Muslim violence in India (urban and locally concentrated)—breakouts of violence in some cities (e.g., Aligarh) and not others (e.g., Calicut)—why?\n\n\nThe preexisting local networks of civic engagement between the two communities stand out as the single most important proximate explanation for the difference between peace and violence.\n\nThis argument, it should be clarified, is probabilistic, not lawlike.\n\n\nDarby (1986): sectarian violence in Belfast communities (Kileen/Banduff, Upper Ashbourne Estates) and absence (Dunville)\n\nDunville: non-segregated service, sport, and parent clubs"
+    "text": "Snapshot: stopping ethnic violence\n\nVarshney (2001): Hindu-Muslim violence in India (urban and locally concentrated)—breakouts of violence in some cities (e.g., Aligarh) and not others (e.g., Calicut)—why?\n\n\nThe preexisting local networks of civic engagement between the two communities stand out as the single most important proximate explanation for the difference between peace and violence.\n\nThis argument, it should be clarified, is probabilistic, not lawlike.\n. . .\n\nDarby (1986): sectarian violence in Belfast communities (Kileen/Banduff, Upper Ashbourne Estates) and absence (Dunville)\n\nDunville: non-segregated service, sport, and parent clubs"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides-2",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides-2",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany, homicides",
-    "text": "Koehler (2019) - focusing in on Germany, homicides\n\n\no: officially recognised by BRD\no: identified by Amadeu Antonio Stiftung"
+    "text": "Koehler (2019) - focusing in on Germany, homicides\n\ndiff_col2\n\n\n\n\n\n\n\n\n\no: officially recognised by BRD\no: identified by Amadeu Antonio Stiftung"
+  },
+  {
+    "objectID": "slides/slides_12.html#course-feedback",
+    "href": "slides/slides_12.html#course-feedback",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Course feedback",
+    "text": "Course feedback\nPlease take a few minutes to fill in the course feedback survey (check your LMU email).\nIf have an opinion on these points in the comments:\n\nWould you have preferred getting a specific assigned organisation to independently study in depth? Yes/No\nWould you have liked more structured discussions (e.g., set debates on class topics)? Yes/No\nWould you rather that class readings are drawn from textbook(s) than journal articles? Yes/No\nchanges or additions to the course website?"
+  },
+  {
+    "objectID": "slides/slides_12.html#references",
+    "href": "slides/slides_12.html#references",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "References",
+    "text": "References\n\n\n\n\nal-Anani, Khalil. 2019. “Rethinking the Repression-Dissent Nexus: Assessing Egypt’s Muslim Brotherhood’s Response to Repression Since the Coup of 2013.” Democratization 0 (0): 1–13. https://doi.org/10.1080/13510347.2019.1630610.\n\n\nBackes, Uwe. 2019. “Banning Political Parties in a Democratic Constitutional State: The Second NPD Ban Proceedings in a Comparative Perspective.” Patterns of Prejudice 53 (2): 136–51. https://doi.org/10.1080/0031322X.2019.1572275.\n\n\nBourne, Angela K., and John Veugelers. 2022. “Militant Democracy and Successors to Authoritarian Ruling Parties in Post-1945 West Germany and Italy.” Democratization 29 (4): 736–53. https://doi.org/10.1080/13510347.2021.2012160.\n\n\nBundesamt für Verfassungsschutz. 2025. “Verfassungsschutzgutachten Zur AfD.” Berlin: Bundesamt für Verfassungsschutz.\n\n\nBundesverfassungsgericht. 2009. “1 BvR 2150/08.” Germany.\n\n\nDeutscher Bundestag. 1994. “Antwort Der Bundesregierung - Drucksache 12/7008.” Gro{\\ss}e {{Anfrage Antwort}} 12/7008. Bonn: Deutscher Bundestag.\n\n\nDPA. 2024. “Petition für Entzug von Höckes Grundrechten Hat 830.000 Unterzeichner.” Die Zeit, January.\n\n\nEarl, Jennifer. 2003. “Tanks, Tear Gas, and Taxes : Toward a Theory of Movement Repression.” Sociological Theory 21 (1): 44–68.\n\n\nGerring, John. 2007. Case Study Research: Principles and Practices. Cambridge: Cambridge University Press.\n\n\nPedahzur, Ami. 2001. “Struggling with the Challenges of Right-Wing Extremism and Terrorism Within Democratic Boundaries: A Comparative Analysis.” Studies in Conflict & Terrorism 24 (5): 339–59. https://doi.org/10.1080/105761001750434213.\n\n\n———. 2003. “The Potential Role of \"Pro-Democratic Civil Society’ in Responding to Extreme Right-Wing Challenges: The Case of Brandenburg.” Contemporary Politics 9 (1): 63–74. https://doi.org/10.1080/1356977032000072468.\n\n\nZeller, Michael C. 2025. “Pragmatic Rather Than Principled: Organisational Bans in Democracies.” European Journal of Political Research 0 (0): 1–30. https://doi.org/10.1017/S1475676525100121y."
+  },
+  {
+    "objectID": "slides/slides_12.html#poll-results",
+    "href": "slides/slides_12.html#poll-results",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Poll results",
+    "text": "Poll results\nStrategy most likely to end political violence?\n\nend_pvCounts = aq.from(surveyResults)\n  .select(\"end_pv\")\n  .groupby(\"end_pv\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nend_pv_maxCountRE = Math.max(...end_pvCounts.objects().map(d =&gt; d.count));\n\nplot_end_pv = Plot.plot({\n  marks: [\n    Plot.barY(end_pvCounts, {\n      x: \"end_pv\",\n      y: \"count\",\n      fill: \"end_pv\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Repression alone\",\n      \"Concessions alone\",\n      \"Repression followed by concessions\",\n      \"Concessions followed by repression\",\n      \"Neither repression nor concessions\"\n    ],\n    range: [\n      \"indigo\",\n      \"goldenrod\",\n      \"cadetblue\",\n      \"forestgreen\",\n      \"violet\"\n    ]\n  },\n  marginBottom: 600,\n  x: { label: \"\", tickSize: 2, tickRotate: -60, padding: 0.2,\n    domain: [\"Repression alone\", \"Concessions alone\", \"Repression followed by concessions\", \"Concessions followed by repression\", \"Neither repression nor concessions\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(end_pvCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, end_pv_maxCountRE]\n  },\n  facet: { data: end_pvCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_12.html#poll-results-1",
+    "href": "slides/slides_12.html#poll-results-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Poll results",
+    "text": "Poll results\nWhy do you think states ban groups?\n\nbanningWhy = aq.from(surveyResults)\n  .select(\"banning\")\n  .filter(d =&gt; d.banning) // to exclude empty (\"\") strings, 0s, FALSEs, nulls, etc\n\nbanningWhy.array(\"banning\")"
+  },
+  {
+    "objectID": "slides/slides_12.html#starting-question",
+    "href": "slides/slides_12.html#starting-question",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Starting question",
+    "text": "Starting question\n\nWhat repressive measures can be applied to address (potential) political violence? In democratic systems? In authoritarian systems?"
+  },
+  {
+    "objectID": "slides/slides_12.html#dimensions-of-repressionsocial-control-earl2003",
+    "href": "slides/slides_12.html#dimensions-of-repressionsocial-control-earl2003",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "3 dimensions of repression/social control (Earl 2003)",
+    "text": "3 dimensions of repression/social control (Earl 2003)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentity of repressive agent\nState agents tightly connected with national political elites (e.g., military units)\nState agents loosely connected with national political elites (e.g., local police departments)\nPrivate agents (e.g., counter-demonstrators)\n\n\nCharacter of repressive action\nCoercion (e.g., use of tear gas and rubber bullets)\nChannelling (e.g., restrictions on registered organisations)\n\n\n\nWhether repressive action is observable\nObservable (i.e., overt; e.g., Tiananmen Square)\nUnobserved (i.e., covert or latent; e.g., COINTELPRO)\n\n\n\n\n\n\n\n\n\nWhat sort of repression/social control in cases do you know of? Was it effective? Why/How?"
+  },
+  {
+    "objectID": "slides/slides_12.html#al-anani2019---responses-to-repression",
+    "href": "slides/slides_12.html#al-anani2019---responses-to-repression",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "al-Anani (2019) - responses to repression",
+    "text": "al-Anani (2019) - responses to repression\n\ncollective responses to repression\n\nopposition movements’ tactics in responding to repression (i.e. mobilisation, backlash, de-escalation, etc.)\n\nindividual responses to repression\n\nspecific individuals’ reactions to repression, shaped by emotions, memory, personal experiences, and grievances (e.g., disengagement, radicalisation)"
+  },
+  {
+    "objectID": "slides/slides_12.html#al-anani2019---research-in-brief",
+    "href": "slides/slides_12.html#al-anani2019---research-in-brief",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "al-Anani (2019) - research in brief",
+    "text": "al-Anani (2019) - research in brief\n\n20 interviews between 2016 and 2018 with current and former members of Muslim Brotherhood\n\nany notes about Egyptian context or specifics of Muslim Brotherhood?\n\n\n\n\nrepression has differential (individual-specific) effect\n\n\nEmotions such as anger, hate, and despair have played a key role in shaping their response to repression. Members had different responses that ranged from adopting revolutionary and confrontational tactics to political apathy. [p. 8]"
+  },
+  {
+    "objectID": "slides/slides_12.html#discussion-point-pressure-against-höcke",
+    "href": "slides/slides_12.html#discussion-point-pressure-against-höcke",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Discussion point: pressure against Höcke",
+    "text": "Discussion point: pressure against Höcke\n\nGG Article 18 enables the BVerfG to suspend an individual’s fundamental rights (i.e., free expression, freedom of the press, and the right to vote and hold public office)\nthe federal government has filed against 4 people in history of BRD\n\n\nOtto Ernst Remer in 1960; 2. Gerhard Frey in 1974; 3. Heinz Reisz in 1992; 4. Thomas Dienel in 1992\n\nall rejected by BVerfG\n\n\n\n\n\n\n\ncalls to file against Björn Höcke (AfD Thüringen) (e.g., DPA 2024)\n\n2019: Verwaltungsgericht Meiningen rules that he may be described as ‘fascist’ (link); 2023: Hamburger Staatsanwaltschaft, it is not a legal offence (Beleidigung) to call Höcke a ‘Nazi’ (link)\n\n\n\n\nshould the government file the complaint? should it be granted?"
+  },
+  {
+    "objectID": "slides/slides_12.html#poll-results---ending-violence",
+    "href": "slides/slides_12.html#poll-results---ending-violence",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Poll results - ending violence",
+    "text": "Poll results - ending violence\nStrategy most likely to end political violence?\n\nend_pvCounts = aq.from(surveyResults)\n  .select(\"end_pv\")\n  .groupby(\"end_pv\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nend_pv_maxCountRE = Math.max(...end_pvCounts.objects().map(d =&gt; d.count));\n\nplot_end_pv = Plot.plot({\n  marks: [\n    Plot.barY(end_pvCounts, {\n      x: \"end_pv\",\n      y: \"count\",\n      fill: \"end_pv\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Repression alone\",\n      \"Concessions alone\",\n      \"Repression followed by concessions\",\n      \"Concessions followed by repression\",\n      \"Neither repression nor concessions\"\n    ],\n    range: [\n      \"indigo\",\n      \"goldenrod\",\n      \"cadetblue\",\n      \"forestgreen\",\n      \"violet\"\n    ]\n  },\n  marginBottom: 600,\n  x: { label: \"\", tickSize: 2, tickRotate: -60, padding: 0.2,\n    domain: [\"Repression alone\", \"Concessions alone\", \"Repression followed by concessions\", \"Concessions followed by repression\", \"Neither repression nor concessions\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(end_pvCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, end_pv_maxCountRE]\n  },\n  facet: { data: end_pvCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_12.html#poll-results---banning-groups",
+    "href": "slides/slides_12.html#poll-results---banning-groups",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Poll results - banning groups",
+    "text": "Poll results - banning groups\nWhy do you think states ban groups?\n\nbanningWhy = aq.from(surveyResults)\n  .select(\"banning\")\n  .filter(d =&gt; d.banning) // to exclude empty (\"\") strings, 0s, FALSEs, nulls, etc\n\nbanningWhy.array(\"banning\")"
+  },
+  {
+    "objectID": "slides/slides_12.html#al-anani2019---research-in-brief-1",
+    "href": "slides/slides_12.html#al-anani2019---research-in-brief-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "al-Anani (2019) - research in brief",
+    "text": "al-Anani (2019) - research in brief\n\n20 interviews between 2016 and 2018 with current and former members of Muslim Brotherhood\n\nany notes about Egyptian context or specifics of Muslim Brotherhood?\n\nconjunctural cause of disengagement\n\n\nThe high cost of protesting and political participation coupled with frustration from the Brotherhood’s incapable leadership disenchanted several members who not only broke ties with the Brotherhood but also with politics as a whole."
+  },
+  {
+    "objectID": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany",
+    "href": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banned & monitored (nationally) FR orgs in Germany",
+    "text": "Banned & monitored (nationally) FR orgs in Germany\n\n\n\n\n\nOrganisations monitored by Bundesverfassungsschutz (VfS)\n\no: monitored by VfS, but not banned\nx: banned by BRD interior ministry"
+  },
+  {
+    "objectID": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-1",
+    "href": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banned & monitored (nationally) FR orgs in Germany",
+    "text": "Banned & monitored (nationally) FR orgs in Germany\n\n\n\n\n\nOrganisations monitored by Bundesverfassungsschutz (VfS)\n\no: monitored by VfS, but not banned\nx: banned by BRD interior ministry\n\nmany groups/orgs. exist that are in violation of the law; they are monitored; but they are not banned. Why?"
+  },
+  {
+    "objectID": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-2",
+    "href": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-2",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banned & monitored (nationally) FR orgs in Germany",
+    "text": "Banned & monitored (nationally) FR orgs in Germany\n\n\n\n\n\nOrganisations monitored by Bundesverfassungsschutz (VfS)\n\no: monitored by VfS, but not banned\nx: banned by BRD interior ministry\n\nmany groups/orgs. exist that are in violation of the law; they are monitored; but they are not banned. Why?\na mixture of situational (and contextual, but that’s for cross-country comparison) and proximate conditions that lead to bans"
+  },
+  {
+    "objectID": "slides/slides_12.html#banning-fr-orgs-in-germany---necessity",
+    "href": "slides/slides_12.html#banning-fr-orgs-in-germany---necessity",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banning FR orgs in Germany - necessity",
+    "text": "Banning FR orgs in Germany - necessity\n\nhigh far-right visibility is necessary for banning decisions\n\n\nGerman governments banned far-right organisations only in years when far-right activity, in the form of violence or agitation, was highly visible. Conspicuous incidents of violence in particular were often a prod to proscriptive action. Organisational unlawfulness alone is not enough to explain banning decisions. Without public or political awareness, authorities appear unlikely to act, even if a group is technically illegal."
+  },
+  {
+    "objectID": "slides/slides_12.html#banning-fr-orgs-in-germany---sufficient-patterns",
+    "href": "slides/slides_12.html#banning-fr-orgs-in-germany---sufficient-patterns",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banning FR orgs in Germany - sufficient patterns",
+    "text": "Banning FR orgs in Germany - sufficient patterns\n\nNeo-Nazi movement groups – organisations promote National Socialist ideology—legally sufficient for banning in Germany and several other countries—as well as racial hatred and violence.\n\n\n\nLongstanding hubs – long existing organisations, serving as centres of far-right activism and networking (network disruption strategy in banning decisions?)\n\n\n\n\nMilitant organisations – organisations embody particularly aggressive, confrontational far-right activism\n\n\n\n\nNeo-Nazi sham parties – organisations presented as parties (hoping for status’s protection) but still spread neo-Nazi ideology"
+  },
+  {
+    "objectID": "slides/slides_12.html#case-1-nationale-offensive-no",
+    "href": "slides/slides_12.html#case-1-nationale-offensive-no",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Case 1: Nationale Offensive (NO)",
+    "text": "Case 1: Nationale Offensive (NO)\n\ntypical of neo-Nazi sham parties pattern\nfounded 1990 (by split from FAP) → linked to previously banned group\nnot serious electoral contestation:\n\n0.2 per cent at local elections in Singen-Konstanz\n1992 BW Landtag elections: 183 votes out of five million cast\n\nBAN: by Rudolf Seiters (CDU): the NO ‘created and fuelled a xenophobic mood.’\nNO appealed… → Federal Administrative Court quashed appeal \n\nmechanism: social and political pressure on minister ← indignation about high levels of far-right violence (HVIO) situation"
+  },
+  {
+    "objectID": "slides/slides_12.html#case-2-collegium-humanum-ch",
+    "href": "slides/slides_12.html#case-2-collegium-humanum-ch",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Case 2: Collegium Humanum (CH)",
+    "text": "Case 2: Collegium Humanum (CH)\n\ntypical of longstanding hubs pattern\nfounded 1963 by Haverbeck (d. 1999) and Haverbeck-Wetzel\n\nhad charitable status (Gemeinnützigkeit)\nmeeting point (Vlotho, NRW) for far-right activists from all over\n\nare there any banned orgs. to which the CH was not linked?!\n\npublication: Stimme des Gewissens\n\nBAN: by Wolfgang Schäuble (CDU): the CH was directed against Germany’s constitutional order and repeatedly violated laws against Holocaust denial"
+  },
+  {
+    "objectID": "slides/slides_12.html#case-2-collegium-humanum-ch-1",
+    "href": "slides/slides_12.html#case-2-collegium-humanum-ch-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Case 2: Collegium Humanum (CH)",
+    "text": "Case 2: Collegium Humanum (CH)\n\ntypical of longstanding hubs pattern\nCH appealed… – Federal Administrative Court denied appeal\n\nCH publications repeatedly denied the Holocaust\nCH publications showed an affinity to and attempt to promote National Socialism\n\n\nideology of CH publication was sufficient legal basis (cf. Bundesverfassungsgericht 2009) – many fit this qualification…\n\nMendel-Grundmann-Gesellschaft (MGG) active in Vlotho (research, then outreach)\nVlothoer Bündnis gegen das CH (by local Greens)\nmechanism: high specific visibility, driven by local counter-mobilisation"
+  },
+  {
+    "objectID": "slides/slides_12.html#informative-epilogue-to-these-cases",
+    "href": "slides/slides_12.html#informative-epilogue-to-these-cases",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "informative epilogue to these cases",
+    "text": "informative epilogue to these cases\nResponse to parliamentary inquiry (Deutscher Bundestag 1994). Asked about effects of banning, government asserted\n\nthe bans had achieved ‘widespread uncertainty and a lack of prospects in the right-wing extremist scene, far-reaching suppression of group activity by breaking up organisational structures and confiscating organisations’ assets, and the seizure of weapons’\n\nMoreover: government claimed a sort of chilling effect, that other groups ‘have at least restricted their agitation activities in order to prevent bans’."
+  },
+  {
+    "objectID": "slides/slides_12.html#informative-epilogue-to-these-cases-1",
+    "href": "slides/slides_12.html#informative-epilogue-to-these-cases-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "informative epilogue to these cases",
+    "text": "informative epilogue to these cases\nConversely, gov. acknowledged that …\n\nBfV intelligence-gathering perhaps disrupted by banning action,\nactivists might use banning as an opportunity to propagandise,\nbans could radicalise members (i.e., conspiratorial, aggressive),\nmembers might acquire more solidarity by enduring banning\n\n\n\nResponse concludes, negative effects are uncertain, visible only after time; positive effects are achieved directly through the enforcement of bans. instrumental logic"
+  },
+  {
+    "objectID": "slides/slides_12.html#conclusions",
+    "href": "slides/slides_12.html#conclusions",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Conclusions",
+    "text": "Conclusions\n\ninconsistency in German governments’ banning practices:\n\norg. characteristics alone are not enough to explain bans\nsituational factors are causally significant and cannot be ignored\n\nthe use of banning is sometimes a tool of politics rather than a targeted response to systemic threats\nhigh far-right visibility (HVIO+HPRO) necessary situation for ban\n\nbut that visibility is specific rather than generalised\n\nbuilds social/political pressure to ban\n\n\n\n\nbans do not just follow the law—they follow pressure. Public visibility, political will, and social mobilisation all shape outcomes. This means that organisational bans and perhaps other militant democracy decisions are not solely in the hands of governments. Societal actors inform and influence how states and governments respond to extremism."
+  },
+  {
+    "objectID": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-zeller2025ejpr",
+    "href": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-zeller2025ejpr",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banned & monitored (nationally) FR orgs in Germany (Zeller 2025)",
+    "text": "Banned & monitored (nationally) FR orgs in Germany (Zeller 2025)\n\n\n\n\n\nOrganisations monitored by Bundesverfassungsschutz (VfS)\n\no: monitored by VfS, but not banned\nx: banned by BRD interior ministry"
+  },
+  {
+    "objectID": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-zeller2025ejpr-1",
+    "href": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-zeller2025ejpr-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banned & monitored (nationally) FR orgs in Germany (Zeller 2025)",
+    "text": "Banned & monitored (nationally) FR orgs in Germany (Zeller 2025)\n\n\n\n\n\nOrganisations monitored by Bundesverfassungsschutz (VfS)\n\no: monitored by VfS, but not banned\nx: banned by BRD interior ministry\n\nmany groups/orgs. exist that are in violation of the law; they are monitored; but they are not banned. Why?"
+  },
+  {
+    "objectID": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-zeller2025ejpr-2",
+    "href": "slides/slides_12.html#banned-monitored-nationally-fr-orgs-in-germany-zeller2025ejpr-2",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banned & monitored (nationally) FR orgs in Germany (Zeller 2025)",
+    "text": "Banned & monitored (nationally) FR orgs in Germany (Zeller 2025)\n\n\n\n\n\nOrganisations monitored by Bundesverfassungsschutz (VfS)\n\no: monitored by VfS, but not banned\nx: banned by BRD interior ministry\n\nmany groups/orgs. exist that are in violation of the law; they are monitored; but they are not banned.\na mixture of situational (and contextual, but that’s for cross-country comparison) and proximate conditions that lead to bans"
+  },
+  {
+    "objectID": "slides/slides_12.html#banning-fr-orgs-in-germany---necessity-zeller2025ejpr",
+    "href": "slides/slides_12.html#banning-fr-orgs-in-germany---necessity-zeller2025ejpr",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banning FR orgs in Germany - necessity (Zeller 2025)",
+    "text": "Banning FR orgs in Germany - necessity (Zeller 2025)\n\nhigh far-right visibility is necessary for banning decisions\n\n\nGerman governments banned far-right organisations only in years when far-right activity, in the form of violence or agitation, was highly visible. Conspicuous incidents of violence in particular were often a prod to proscriptive action. Organisational unlawfulness alone is not enough to explain banning decisions. Without public or political awareness, authorities appear unlikely to act, even if a group is technically illegal."
+  },
+  {
+    "objectID": "slides/slides_12.html#banning-fr-orgs-in-germany---sufficient-patterns-zeller2025ejpr",
+    "href": "slides/slides_12.html#banning-fr-orgs-in-germany---sufficient-patterns-zeller2025ejpr",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banning FR orgs in Germany - sufficient patterns (Zeller 2025)",
+    "text": "Banning FR orgs in Germany - sufficient patterns (Zeller 2025)\n\nNeo-Nazi movement groups – organisations promote National Socialist ideology—legally sufficient for banning in Germany and several other countries—as well as racial hatred and violence.\n\n\n\nLongstanding hubs – long existing organisations, serving as centres of far-right activism and networking (network disruption strategy in banning decisions?)\n\n\n\n\nMilitant organisations – organisations embody particularly aggressive, confrontational far-right activism\n\n\n\n\nNeo-Nazi sham parties – organisations presented as parties (hoping for status’s protection) but still spread neo-Nazi ideology"
+  },
+  {
+    "objectID": "slides/slides_12.html#case-1-nationale-offensive-no-zeller2025ejpr",
+    "href": "slides/slides_12.html#case-1-nationale-offensive-no-zeller2025ejpr",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Case 1: Nationale Offensive (NO) (Zeller 2025)",
+    "text": "Case 1: Nationale Offensive (NO) (Zeller 2025)\n\ntypical of neo-Nazi sham parties pattern\nfounded 1990 (by split from FAP) → linked to previously banned group\nnot serious electoral contestation:\n\n0.2 per cent at local elections in Singen-Konstanz\n1992 BW Landtag elections: 183 votes out of five million cast\n\nBAN: by Rudolf Seiters (CDU): the NO ‘created and fuelled a xenophobic mood.’\nNO appealed… → Federal Administrative Court quashed appeal \n\nmechanism: social and political pressure on minister ← indignation about high levels of far-right violence (HVIO) situation"
+  },
+  {
+    "objectID": "slides/slides_12.html#case-2-collegium-humanum-ch-zeller2025ejpr",
+    "href": "slides/slides_12.html#case-2-collegium-humanum-ch-zeller2025ejpr",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Case 2: Collegium Humanum (CH) (Zeller 2025)",
+    "text": "Case 2: Collegium Humanum (CH) (Zeller 2025)\n\ntypical of longstanding hubs pattern\nfounded 1963 by Haverbeck (d. 1999) and Haverbeck-Wetzel\n\nhad charitable status (Gemeinnützigkeit)\nmeeting point (Vlotho, NRW) for far-right activists from all over\n\nare there any banned orgs. to which the CH was not linked?!\n\npublication: Stimme des Gewissens\n\nBAN: by Wolfgang Schäuble (CDU): the CH was directed against Germany’s constitutional order and repeatedly violated laws against Holocaust denial"
+  },
+  {
+    "objectID": "slides/slides_12.html#case-2-collegium-humanum-ch-zeller2025ejpr-1",
+    "href": "slides/slides_12.html#case-2-collegium-humanum-ch-zeller2025ejpr-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Case 2: Collegium Humanum (CH) (Zeller 2025)",
+    "text": "Case 2: Collegium Humanum (CH) (Zeller 2025)\n\ntypical of longstanding hubs pattern\nCH appealed… – Federal Administrative Court denied appeal\n\nCH publications repeatedly denied the Holocaust\nCH publications showed an affinity to and attempt to promote National Socialism\n\n\nideology of CH publication was sufficient legal basis (cf. Bundesverfassungsgericht 2009) – many fit this qualification…\n\nMendel-Grundmann-Gesellschaft (MGG) active in Vlotho (research, then outreach)\nVlothoer Bündnis gegen das CH (by local Greens)\nmechanism: high specific visibility, driven by local counter-mobilisation"
+  },
+  {
+    "objectID": "slides/slides_12.html#informative-epilogue-to-these-cases-zeller2025ejpr",
+    "href": "slides/slides_12.html#informative-epilogue-to-these-cases-zeller2025ejpr",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "informative epilogue to these cases (Zeller 2025)",
+    "text": "informative epilogue to these cases (Zeller 2025)\nResponse to parliamentary inquiry (Deutscher Bundestag 1994). Asked about effects of banning, government asserted\n\nthe bans had achieved ‘widespread uncertainty and a lack of prospects in the right-wing extremist scene, far-reaching suppression of group activity by breaking up organisational structures and confiscating organisations’ assets, and the seizure of weapons’\n\nMoreover: government claimed a sort of chilling effect, that other groups ‘have at least restricted their agitation activities in order to prevent bans’."
+  },
+  {
+    "objectID": "slides/slides_12.html#informative-epilogue-to-these-cases-zeller2025ejpr-1",
+    "href": "slides/slides_12.html#informative-epilogue-to-these-cases-zeller2025ejpr-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "informative epilogue to these cases (Zeller 2025)",
+    "text": "informative epilogue to these cases (Zeller 2025)\nConversely, gov. acknowledged that …\n\nBfV intelligence-gathering perhaps disrupted by banning action,\nactivists might use banning as an opportunity to propagandise,\nbans could radicalise members (i.e., conspiratorial, aggressive),\nmembers might acquire more solidarity by enduring banning\n\n\n\nResponse concludes, negative effects are uncertain, visible only after time; positive effects are achieved directly through the enforcement of bans. instrumental logic"
+  },
+  {
+    "objectID": "slides/slides_12.html#conclusions-zeller2025ejpr",
+    "href": "slides/slides_12.html#conclusions-zeller2025ejpr",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Conclusions (Zeller 2025)",
+    "text": "Conclusions (Zeller 2025)\n\ninconsistency in German governments’ banning practices:\n\norg. characteristics alone are not enough to explain bans\nsituational factors are causally significant and cannot be ignored\n\nthe use of banning is sometimes a tool of politics rather than a targeted response to systemic threats\nhigh far-right visibility (HVIO+HPRO) necessary situation for ban\n\nbut that visibility is specific rather than generalised\n\nbuilds social/political pressure to ban\n\n\n\n\nbans do not just follow the law—they follow pressure. Public visibility, political will, and social mobilisation all shape outcomes. This means that organisational bans and perhaps other militant democracy decisions are not solely in the hands of governments. Societal actors inform and influence how states and governments respond to extremism."
+  },
+  {
+    "objectID": "slides/slides_12.html#a-contentious-concluding-question",
+    "href": "slides/slides_12.html#a-contentious-concluding-question",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "A contentious concluding question",
+    "text": "A contentious concluding question\n\nwhat matters to BVerfG (Germany’s federal constitutional court)? … (https://www.bundesverfassungsgericht.de/EN/Verfahren/Wichtige-Verfahrensarten/Parteiverbotsverfahren/parteiverbotsverfahren_node.html) (cf. Backes 2019)\n\n“actively belligerent, aggressive stance vis-à-vis the free democratic basic order and must seek to abolish it”\nlarge/successful enough to potentially achieve its anti-constitutional goals\n\nthe Bundestag, the Bundesrat, and the federal government can file for a ban\n\n\n\ndo you think the AfD meets these criteria?\n\n\n\nleaked! Verfassungsschutzgutachten zur AfD (Bundesamt für Verfassungsschutz 2025)"
+  },
+  {
+    "objectID": "slides/slides_12.html#banning-1",
+    "href": "slides/slides_12.html#banning-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "banning",
+    "text": "banning\n\n(legal) justifications (in Germany, but similar in several other countries) (Arts. 21(2), 9(2) GG; Vereinsgesetz)\n\nseeks to undermine or abolish the free democratic basic order\nopposition to core constitutional principles (human dignity [(Art. 1 GG)], democracy, rule of law)\ndirected against ‘international understanding’\nin continual violation of criminal law\n\nconsequences\n\nfurther activity is criminalised\nre-forming the organisation is criminalised\nassets are confiscated"
+  },
+  {
+    "objectID": "slides/slides_12.html#comparative-case-selection",
+    "href": "slides/slides_12.html#comparative-case-selection",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Comparative case selection",
+    "text": "Comparative case selection\nx = causal variable; y = phenomenon to be explained\n\n\nMDSD (most different systems design)\n\n\n\nCase 1\nCase 2\n_\n\n\n\n\na\nd\noverall\n\n\nb\ne\ndifferences\n\n\nc\nf\n\n\n\nx\nx\ncrucial\n\n\ny\ny\nsimilarity\n\n\n\n\nMSSD (most similar systems design)\n\n\n\nCase 1\nCase 2\n_\n\n\n\n\na\na\noverall\n\n\nb\nb\nsimiliarities\n\n\nc\nc\n\n\n\nx\nnot x\ncrucial\n\n\ny\nnot y\ndifference\n\n\n\n\nFurther on case selection strategies, see Gerring (2007, e.g., pp. 89-90)"
+  },
+  {
+    "objectID": "slides/slides_12.html#banning-successor-parties---bourneveugelers2022",
+    "href": "slides/slides_12.html#banning-successor-parties---bourneveugelers2022",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banning successor parties - Bourne and Veugelers (2022)",
+    "text": "Banning successor parties - Bourne and Veugelers (2022)\n\n\n\n\ncase selection: DE and IT: similar right-authoritarian past [and banning law] but dissimilar in their tolerance of post-1945 right-authoritarian parties\n\nMSSD (sort of)\n\npopulation: militant democracies - what does this mean?\nobservations: (1) attitude towards violence, (2) alternatives to ban, (3) securitisation, (4) veto player agreement, (5) veto player incentives\nmethod: csQCA (Well, more a ‘focused paired comparison’)\n\n\nOtto Ernst Remer, SRP\n\n\nMovimento sociale italiano"
+  },
+  {
+    "objectID": "slides/slides_12.html#banning-successor-parties---bourneveugelers2022-1",
+    "href": "slides/slides_12.html#banning-successor-parties---bourneveugelers2022-1",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banning successor parties - Bourne and Veugelers (2022)",
+    "text": "Banning successor parties - Bourne and Veugelers (2022)"
+  },
+  {
+    "objectID": "slides/slides_12.html#banning-successor-parties---bourneveugelers2022-2",
+    "href": "slides/slides_12.html#banning-successor-parties---bourneveugelers2022-2",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "Banning successor parties - Bourne and Veugelers (2022)",
+    "text": "Banning successor parties - Bourne and Veugelers (2022)\n\n(slightly permeable) cordon sanitaire around MSI (ban alternative)\n\nfindings:\n\n\nattitude towards violence not a clearly important factor\ntwo key conditions: veto player agreement and (especially) securitization\n\n\n\n\n\nAny modern examples worth comparing to…?"
   }
 ]

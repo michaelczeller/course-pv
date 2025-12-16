@@ -838,7 +838,7 @@ ADD TABLE FROM OLD SLIDES
 
 ## Peaks of ETA's armed offensive [@lafaye2022MethodologicalApproachEvolution]
 
-```{r ETA, out.width='100%'}
+```{r ETA, echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
 library(reshape2)
 library(ggplot2)
 # library(wesanderson)
