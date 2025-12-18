@@ -682,6 +682,84 @@ findings:
 :::
 ::::
 
+
+## Monitored (nationally) FR orgs in Germany [@Zeller2025ejpr]
+
+```{r}
+library(mapview)
+library(leafpop)
+library(dplyr)
+library(sf)
+
+de_reos <- read.csv("slide_files/12/de_reos2023dec4.csv", row.names=1, header = TRUE) 
+germany <- readRDS("slide_files/12/germany.rds")
+
+de_reos$LATj <- jitter(de_reos$LAT, factor = 500)
+de_reos$LONj <- jitter(de_reos$LON, factor = 500)
+
+de_reos_banY <- subset(de_reos, BAN == 1)
+de_reos_banY <- as.data.frame(de_reos_banY)
+# rownames(de_reos_banY) = seq(length=nrow(de_reos_banY))
+de_reos_banN <- subset(de_reos, BAN == 0)
+de_reos_banN <- as.data.frame(de_reos_banN)
+# rownames(de_reos_banN) = seq(length=nrow(de_reos_banN))
+
+# SUBSETTING TO NATIONAL ORGS ONLY
+de_reos_national <- subset(de_reos, SCOPE=="national")
+de_reos_banN_national <- subset(de_reos_banN, SCOPE=="national")
+de_reos_banY_national <- subset(de_reos_banY, SCOPE=="national")
+
+de_reos_national$col = NA
+
+de_reos_national <- de_reos_national %>% 
+  mutate(col = case_when(
+    BANNED == 1 ~ "red",
+    BANNED == 0 ~ "seagreen1",
+    TRUE ~ "grey"
+  ))
+
+de_reos_national_banned <- subset(de_reos_national, col=="red")
+de_reos_national_Nbanned<- subset(de_reos_national, col=="seagreen1")
+
+de_reos_national_banned_sf <- de_reos_national_banned %>% 
+  st_as_sf(
+    coords = c("LONj", "LATj"),
+    crs = st_crs("EPSG:4326") 
+  )
+
+de_reos_national_Nbanned_sf <- de_reos_national_Nbanned %>% 
+  st_as_sf(
+    coords = c("LONj", "LATj"),
+    crs = st_crs("EPSG:4326") 
+  )
+
+st_crs(de_reos_national_banned_sf) <- st_crs(germany)
+st_crs(de_reos_national_Nbanned_sf) <- st_crs(germany)
+
+de_reos_national_banned_sf$FIRST_IN_VfS_REPORT <- de_reos_national_banned_sf$FIRST
+de_reos_national_banned_sf$LAST_IN_VfS_REPORT <- de_reos_national_banned_sf$LAST
+de_reos_national_Nbanned_sf$FIRST_IN_VfS_REPORT <- de_reos_national_Nbanned_sf$FIRST
+de_reos_national_Nbanned_sf$LAST_IN_VfS_REPORT <- de_reos_national_Nbanned_sf$LAST
+
+mapview(de_reos_national_banned_sf, col.regions = "red", 
+        label = "SHORT_NAME",
+        legend = T, 
+        layer.name = 'banned groups', 
+        map.types = c("CartoDB.DarkMatter", "CartoDB.Positron"),
+        popup = popupTable(de_reos_national_banned_sf,
+                           zcol=c("SHORT_NAME","SCOPE","REGION","LOCATION",
+                                  "FIRST_IN_VfS_REPORT","LAST_IN_VfS_REPORT","BAN_DATE")))+
+  mapview(de_reos_national_Nbanned_sf, col.regions = "seagreen1", 
+        label = "SHORT_NAME",
+        legend = T, 
+        layer.name = 'monitored groups', 
+        map.types = c("CartoDB.DarkMatter", "CartoDB.Positron"),
+        popup = popupTable(de_reos_national_Nbanned_sf,
+                           zcol=c("SHORT_NAME","SCOPE","REGION","LOCATION",
+                                  "FIRST_IN_VfS_REPORT","LAST_IN_VfS_REPORT")))
+
+```
+
 ## Banning FR orgs in Germany - necessity [@Zeller2025ejpr]
 
 - [high far-right visibility]{style="color:darkorange;"} is necessary for banning decisions
