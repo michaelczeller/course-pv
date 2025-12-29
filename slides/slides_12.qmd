@@ -30,7 +30,6 @@ bibliography: ../../../library.bib
 ```
 
 - **short synopsis** for final essay due **Friday (17 January)** (send to me via email)
-- 29 January: pre-Klausur review (incl. important course content and how to structure an exam essay)
 
 <!-- ## Presentation groups -->
 

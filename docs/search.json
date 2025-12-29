@@ -312,7 +312,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 2\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 5\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 6\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 7\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 8\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 9\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 10\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 11\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 12"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 2\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 5\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 6\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 7\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 8\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 9\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 10\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 11\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 12\n\n\nClass 13\n\n\nClass 14"
   },
   {
     "objectID": "syllabus/index.html#examination-klausur",
@@ -3413,7 +3413,7 @@
     "href": "slides/slides_11.html",
     "title": "Class 11: Responses to Political Violence",
     "section": "",
-    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\nshort synopsis for final essay due Friday (17 January) (send to me via email)\n29 January: pre-Klausur review (incl. important course content and how to structure an exam essay)"
+    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\nshort synopsis for final essay due Friday (17 January) (send to me via email)"
   },
   {
     "objectID": "slides/slides_11.html#starting-question",
@@ -3462,14 +3462,14 @@
     "href": "slides/slides_11.html#membrives2022counteringviolentextremism---initial-risk-evaluation",
     "title": "Class 11: Responses to Political Violence",
     "section": "Membrives and Alonso (2022) - initial risk evaluation",
-    "text": "Membrives and Alonso (2022) - initial risk evaluation\n\nwhat do you think of these ‘factors’ for assessing risk?\n\n\n\n\n\n\n\nFactor\nNadia\nOscar\nDafya\nThamir\nCaleb\n\n\n\n\n1. Past and present offenses and sentences\nlow\nlow\nlow\nlow\nlow\n\n\n2. educational guidelines in family environment\nmoderate\nmoderate\nlow\nmoderate\nmoderate\n\n\n3. formal education/ employment\nhigh\nmoderate\nmoderate\nlow\nlow\n\n\n4. relationship with peer group\nmoderate\nhigh\nlow\nhigh\nhigh\n\n\n5. Substance misuse\nlow\nmoderate\nlow\nlow*\nlow*\n\n\n6. leisure/hobbies\nhigh\nhigh\nmoderate\nhigh\nhigh\n\n\n7. Personality/ behavior\nmoderate\nmoderate\nmoderate\nmoderate\nmoderate\n\n\n8. Attitudes, values, and beliefs\nmoderate\nhigh\nmoderate\nhigh\nhigh\n\n\nGeneral risk level\n21\n22\n5\n19\n18\n\n\n\nfrom moderate (9–22) to very high\nfrom moderate (9–22) to very high\nfrom low (0–8) to moderate\nfrom moderate (9–22) to very high\nfrom moderate (9–22) to very high"
+    "text": "Membrives and Alonso (2022) - initial risk evaluation\n\nwhat do you think of these ‘factors’ for assessing risk?\n\n\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(kableExtra)\n\n\nAttaching package: 'kableExtra'\n\n\nThe following object is masked from 'package:dplyr':\n\n    group_rows\n\ndata &lt;- data.frame(\n  Factor = c(\n    \"1. Past and present offenses and sentences\",\n    \"2. educational guidelines in family environment\",\n    \"3. formal education/ employment\",\n    \"4. relationship with peer group\",\n    \"5. Substance misuse\",\n    \"6. leisure/hobbies\",\n    \"7. Personality/ behavior\",\n    \"8. Attitudes, values, and beliefs\",\n    \"General risk level\",\n    \"\",\n    \"\"),\n  Nadia = c(\"low\", \"moderate\", \"high\", \"moderate\", \"low\", \"high\", \"moderate\", \"moderate\", 21, \"from moderate (9–22) to very high\", \"\"),\n  Oscar = c(\"low\", \"moderate\", \"moderate\", \"high\", \"moderate\", \"high\", \"moderate\", \"high\", 22, \"from moderate (9–22) to very high\", \"\"),\n  Dafya = c(\"low\", \"low\", \"moderate\", \"low\", \"low\", \"moderate\", \"moderate\", \"moderate\", 5, \"from low (0–8) to moderate\", \"\"),\n  Thamir = c(\"low\", \"moderate\", \"low\", \"high\", \"low*\", \"high\", \"moderate\", \"high\", 19, \"from moderate (9–22) to very high\", \"\"),\n  Caleb = c(\"low\", \"moderate\", \"low\", \"high\", \"low*\", \"high\", \"moderate\", \"high\", 18, \"from moderate (9–22) to very high\", \"\")\n)\n\nkable(data, \"html\", col.names = c(\"Factor\", \"Nadia\", \"Oscar\", \"Dafya\", \"Thamir\", \"Caleb\")) %&gt;%\n  kable_styling(font_size = 23) %&gt;%\n  column_spec(1, width = \"9cm\") %&gt;%\n  column_spec(2:6, width = \"2.5cm\")\n\n\n\n\nFactor\nNadia\nOscar\nDafya\nThamir\nCaleb\n\n\n\n\n1. Past and present offenses and sentences\nlow\nlow\nlow\nlow\nlow\n\n\n2. educational guidelines in family environment\nmoderate\nmoderate\nlow\nmoderate\nmoderate\n\n\n3. formal education/ employment\nhigh\nmoderate\nmoderate\nlow\nlow\n\n\n4. relationship with peer group\nmoderate\nhigh\nlow\nhigh\nhigh\n\n\n5. Substance misuse\nlow\nmoderate\nlow\nlow*\nlow*\n\n\n6. leisure/hobbies\nhigh\nhigh\nmoderate\nhigh\nhigh\n\n\n7. Personality/ behavior\nmoderate\nmoderate\nmoderate\nmoderate\nmoderate\n\n\n8. Attitudes, values, and beliefs\nmoderate\nhigh\nmoderate\nhigh\nhigh\n\n\nGeneral risk level\n21\n22\n5\n19\n18\n\n\n\nfrom moderate (9–22) to very high\nfrom moderate (9–22) to very high\nfrom low (0–8) to moderate\nfrom moderate (9–22) to very high\nfrom moderate (9–22) to very high"
   },
   {
     "objectID": "slides/slides_11.html#membrives2022counteringviolentextremism---activities",
     "href": "slides/slides_11.html#membrives2022counteringviolentextremism---activities",
     "title": "Class 11: Responses to Political Violence",
     "section": "Membrives and Alonso (2022) - activities",
-    "text": "Membrives and Alonso (2022) - activities\n\nwhy these activities for a derad. programme? what’s the reasoning? do you think it would be effective?\n\n\n\n\n\n\n\nArea\nActivity\nNadia\nOscar\nDafya\nThamir\nCaleb\n\n\n\n\nformative\nSchool classroom at the Center\nX\nX\nX\nX\nX\n\n\nformative\nSchool support and encouragement for reading\n\n\nX\n\nX\n\n\nformative\nVocational training\n\n\nX\n\n\n\n\nPre-work\nBook binding\nX\nX\n\nX\n\n\n\nPre-work\nrestoration\nX\nX\n\n\nX\n\n\nPre-work\npottery\nX\n\n\n\n\n\n\nPre-work\nmodeling, sculpture, decoration\n\n\nX\n\nX\n\n\nPre-work\nhandcrafted wood turning\n\n\n\nX\nX\n\n\nPersonal development and social competence\nCentral educational and therapeutic treatment Program for Young offenders\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Personal development and Social Competence\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Personal development and Civic-ethic education\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Preparation for an independent life\n\nX\n\n\n\n\n\nPersonal development and social competence\nWorkshop on equal opportunities\nX\n\nX\nX\n\n\n\noccupational workshop\ndance workshop\nX\n\n\n\n\n\n\noccupational workshop\nPainting on canvas, decoration, models\nX\nX\nX\nX\nX\n\n\nleisure and free time\nSports\nX\nX\nX\nX\nX\n\n\nleisure and free time\nVideo-forum\nX\nX\nX\nX\nX\n\n\nleisure and free time\nGroup leisure\nX\nX\nX\nX\nX\n\n\nleisure and free time\nindividual leisure\nX\nX\nX\nX\nX"
+    "text": "Membrives and Alonso (2022) - activities\n\nwhy these activities for a derad. programme? what’s the reasoning? do you think it would be effective?\n\n\n\ndata &lt;- data.frame(\n  Area = c(\"formative\", \n           \"formative\", \n           \"formative\", \n           \"Pre-work\", \n           \"Pre-work\", \n           \"Pre-work\", \n           \"Pre-work\", \n           \"Pre-work\", \n           \"Personal development and social competence\", \n           \"Personal development and social competence\", \n           \"Personal development and social competence\", \n           \"Personal development and social competence\", \n           \"Personal development and social competence\", \n           \"occupational workshop\", \n           \"occupational workshop\", \n           \"leisure and free time\", \n           \"leisure and free time\", \n           \"leisure and free time\", \n           \"leisure and free time\"),\n  Activity = c(\"School classroom at the Center\", \n               \"School support and encouragement for reading\", \n               \"Vocational training\", \n               \"Book binding\", \n               \"restoration\", \n               \"pottery\", \n               \"modeling, sculpture, decoration\", \n               \"handcrafted wood turning\", \n               \"Central educational and therapeutic treatment Program for Young offenders\", \n               \"Program on Personal development and Social Competence\", \n               \"Program on Personal development and Civic-ethic education\", \n               \"Program on Preparation for an independent life\", \n               \"Workshop on equal opportunities\", \n               \"dance workshop\", \n               \"Painting on canvas, decoration, models\", \n               \"Sports\", \n               \"Video-forum\", \n               \"Group leisure\", \n               \"individual leisure\"),\n  Nadia = c(\"X\", \"\", \"\", \"X\", \"X\", \"X\", \"\", \"\", \"X\", \"X\", \"X\", \"\", \"X\", \"X\", \"X\", \"X\", \"X\", \"X\", \"X\"),\n  Oscar = c(\"X\", \"\", \"\", \"X\", \"X\",  \"\", \"\", \"\", \"X\", \"X\", \"X\",\"X\",  \"\",  \"\", \"X\", \"X\", \"X\", \"X\", \"X\"),\n  Dafya = c(\"X\",\"X\",\"X\",  \"\",  \"\",  \"\",\"X\", \"\", \"X\", \"X\", \"X\", \"\", \"X\",  \"\", \"X\", \"X\", \"X\", \"X\", \"X\"),\n  Thamir =c(\"X\", \"\", \"\", \"X\",  \"\",  \"\", \"\",\"X\", \"X\", \"X\", \"X\", \"\", \"X\",  \"\", \"X\", \"X\", \"X\", \"X\", \"X\"),\n  Caleb = c(\"X\",\"X\", \"\",  \"\", \"X\",  \"\",\"X\",\"X\", \"X\", \"X\", \"X\", \"\",  \"\",  \"\", \"X\", \"X\", \"X\", \"X\", \"X\")\n)\n\n# Create the table using kable for HTML output\nkable(data, format = \"html\", col.names = c(\"Area\", \"Activity\", \"Nadia\", \"Oscar\", \"Dafya\", \"Thamir\", \"Caleb\"), \n      # caption = \"Activity and Participation by Area and Person\", \n      escape = FALSE) %&gt;% \n  kable_styling(font_size = 21) # %&gt;%\n\n\n\n\nArea\nActivity\nNadia\nOscar\nDafya\nThamir\nCaleb\n\n\n\n\nformative\nSchool classroom at the Center\nX\nX\nX\nX\nX\n\n\nformative\nSchool support and encouragement for reading\n\n\nX\n\nX\n\n\nformative\nVocational training\n\n\nX\n\n\n\n\nPre-work\nBook binding\nX\nX\n\nX\n\n\n\nPre-work\nrestoration\nX\nX\n\n\nX\n\n\nPre-work\npottery\nX\n\n\n\n\n\n\nPre-work\nmodeling, sculpture, decoration\n\n\nX\n\nX\n\n\nPre-work\nhandcrafted wood turning\n\n\n\nX\nX\n\n\nPersonal development and social competence\nCentral educational and therapeutic treatment Program for Young offenders\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Personal development and Social Competence\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Personal development and Civic-ethic education\nX\nX\nX\nX\nX\n\n\nPersonal development and social competence\nProgram on Preparation for an independent life\n\nX\n\n\n\n\n\nPersonal development and social competence\nWorkshop on equal opportunities\nX\n\nX\nX\n\n\n\noccupational workshop\ndance workshop\nX\n\n\n\n\n\n\noccupational workshop\nPainting on canvas, decoration, models\nX\nX\nX\nX\nX\n\n\nleisure and free time\nSports\nX\nX\nX\nX\nX\n\n\nleisure and free time\nVideo-forum\nX\nX\nX\nX\nX\n\n\nleisure and free time\nGroup leisure\nX\nX\nX\nX\nX\n\n\nleisure and free time\nindividual leisure\nX\nX\nX\nX\nX\n\n\n\n\n\n\n  # column_spec(1, width = \"9cm\") %&gt;%\n  # column_spec(2:6, width = \"2.5cm\")"
   },
   {
     "objectID": "slides/slides_11.html#meier2022coercionrepresentationexploring---3-patterns",
@@ -3728,35 +3728,35 @@
     "href": "slides/slides_11.html#koehler2019---eu-context",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - EU context",
-    "text": "Koehler (2019) - EU context\nComparing right-wing extremist terrorism to other forms\n\nEven though the number of arrests related to right-wing extremist terrorism within the European Union almost doubled to 20 in 2017 from 12 in 2016, it pales in comparison to other forms of political violence, at least in terms of numbers (e.g. 705 jihadists in 2017)."
+    "text": "Koehler (2019) - EU context\nComparing right-wing extremist terrorism to other forms\n\nEven though the number of arrests related to right-wing extremist terrorism within the European Union almost doubled to 20 in 2017 from 12 in 2016, it pales in comparison to other forms of political violence, at least in terms of numbers (e.g. 705 jihadists in 2017).\n\n\nlibrary(reshape2)\nlibrary(ggplot2)\nlibrary(wesanderson)\n\ndf &lt;- data.frame(\n  year = c(2001:2021),\n  explosive = c(1,0,0,2,3,1,1,0,0,2,0,1,2,6,18,10,5,0,2,2,1), #Herbeiführen einer Sprengstoffexplosion\n  arson = c(16,20,24,37,14,18,24,29,18,29,20,21,11,21,99,113,42,11,6,25,11), #Brandstiftungen\n  gesamt = c(980,940,845,832,1034,1115,1054,1113,959,806,828,842,837,1029,1485,1600,1054,1088,925,1023,945), \n  open129 = c(2,1,4,1,1,3,3,1,0,0,1,15,2,2,1,4,6,4,16,1,\"-\"), #129(a, b)\n  closed129 = c(1,2,0,0,0,2,2,3,1,0,0,0,0,2,0,0,0,0,0,0,\"-\"),\n  charged129 = c(0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,1,1,\"-\"),\n  verdict129 = c(1,0,3,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,3,1,\"-\")\n)\n\n# SEE ANSWERS TO 12, SUBQUESTIONS 1a, 3, 4, 6\n# 2018 on 129: https://dserver.bundestag.de/btd/19/097/1909773.pdf\n# 2019 on 129: https://dserver.bundestag.de/btd/19/192/1919232.pdf\n# 2020 on 129: https://dserver.bundestag.de/btd/19/291/1929128.pdf\n# 2021 on 129: \n\ndfx = subset(df, select = c(year,explosive,arson))\ndf_melt &lt;- melt(dfx, id=\"year\")\ndf_melt$gesamt &lt;- df$gesamt\n\nk &lt;- ggplot(df_melt, aes(x=year))+\n  geom_col(aes(y=value,fill=variable), position=\"dodge\",colour=\"black\")+\n  scale_fill_manual(\"\", values= wes_palette(\"Darjeeling1\", n = 2))+\n  geom_point(aes(y=gesamt/12))+\n  geom_line(aes(y=gesamt/12))+\n  theme_bw()+\n  scale_x_continuous(\"\", breaks=seq(2001,2021,1),minor_breaks=seq(2001,2021,1)) +\n  scale_y_continuous(\"(bars)\", breaks = seq(0,130,10), sec.axis = sec_axis(~ . * 12, name = \"(line) RWE violent crimes\", breaks = seq(0,1700,100)))+\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+\n  theme(legend.position = \"bottom\")+\n  theme(text = element_text(size = 25))+\n  theme(legend.position = c(0.25,0.85))\n\nWarning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2\n3.5.0.\nℹ Please use the `legend.position.inside` argument of `theme()` instead.\n\ndfz &lt;- subset(df, select = c(year, open129, closed129, charged129, verdict129))\ndfz &lt;- subset(dfz, year &lt; 2021)\ndfz_melt &lt;- melt(dfz, id=\"year\")\ndfz_melt$value &lt;- as.numeric(dfz_melt$value)"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany",
-    "text": "Koehler (2019) - focusing in on Germany\n\nRWE explosives & arson crimes (bars); all RWE violent crimes (line)\nLooking at … explosives attacks or arson, crimes usually but not always (legally) framed as terrorism, statistics from Germany indicate a surge during the so-called “refugee crisis” between 2015 and 2016. …"
+    "text": "Koehler (2019) - focusing in on Germany\n\nk\n\n\nRWE explosives & arson crimes (bars); all RWE violent crimes (line)\nLooking at … explosives attacks or arson, crimes usually but not always (legally) framed as terrorism, statistics from Germany indicate a surge during the so-called “refugee crisis” between 2015 and 2016. …"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany, homicides",
-    "text": "Koehler (2019) - focusing in on Germany, homicides\nRecognised by BRD vs. identified by Amadeu Antonio Stiftung"
+    "text": "Koehler (2019) - focusing in on Germany, homicides\nRecognised by BRD vs. identified by Amadeu Antonio Stiftung\n\nlibrary(rvest)\nlibrary(stringr)\nlibrary(dplyr)\nlibrary(magrittr)\nlibrary(httr)\nlibrary(lubridate)\n\n\nAttaching package: 'lubridate'\n\n\nThe following objects are masked from 'package:base':\n\n    date, intersect, setdiff, union\n\n# scraping data -----------------------------------------------------------\n\n# links to news stories\n\n# LINK &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\"#main .text-grey-light a\") %&gt;% \n#   html_attr(\"href\")\n# \n# DATE &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\".bigdate\") %&gt;% \n#   html_text()\n# \n# DATE &lt;- dmy(DATE)\n# \n# YEAR &lt;- format(DATE, format=\"%Y\")\n# \n# VICTIM &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\"#main .no-underline\") %&gt;% \n#   html_text()\n# VICTIM &lt;- VICTIM[1:237]\n# \n# AGE &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\".md\\\\:block:nth-child(3)\") %&gt;% \n#   html_text()\n# # 27.07.2000 - no age; 04.04.1992 - no age\n# AGE &lt;- append(AGE, \"46\", after = 24)\n# AGE &lt;- append(AGE, \"0\", after = 130)\n# AGE &lt;- AGE[1:237]\n# AGE &lt;- gsub(\" Jahre\",\"\",as.character(AGE))\n# AGE &lt;- gsub(\"13 Monate\",\"1\",as.character(AGE))\n# \n# LOCATION &lt;- read_html(\"https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\") %&gt;% \n#   html_nodes(\".mt-2.md\\\\:block\") %&gt;% \n#   html_text()\n# \n# LAND &lt;- regmatches(LOCATION, gregexpr( \"(?&lt;=\\\\().+?(?=\\\\))\", LOCATION, perl = T))\n# LAND &lt;- str_remove_all(LAND, \"Saale\")\n# \n# OFFICIAL &lt;- c(F,T,F,T,F,F,F,T,F,T,T,T,F,T,T,F,F,F,F,F,F,T,T,T,F,T,T,T,T,F,F,F,T,T,T,T,F,T,T,T,T,F,F,T,F,T,T,F,F,T,F,T,T,T,T,T,T,F,F,F,T,F,F,F,F,T,F,F,F,F,F,F,T,F,F,F,F,F,F,F,F,F,F,F,F,T,T,T,F,F,F,T,T,F,T,T,T,F,F,T,F,T,F,F,F,T,T,T,F,T,T,T,T,T,F,F,F,F,T,F,F,T,T,T,F,F,F,F,F,T,F,T,T,T,T,F,F,F,F,T,T,T,F,F,T,F,T,F,F,F,T,F,F,F,F,F,F,F,T,T,T,T,F,F,F,F,F,F,F,T,F,F,T,T,F,F,T,T,F,F,T,F,F,F,T,F,T,F,F,T,F,T,F,F,F,F,T,F,F,F,T,F,F,T,T,T,T,T,T,T,T,T,F,T,T,F,T,F,T,T,T,F,T,T,T,T,T,T,T,T,T,F,F,T,T,T,T)\n# \n# COUNTRYCODE &lt;- rep(\"DE\",237)\n# \n# df &lt;- data.frame(YEAR, DATE, LOCATION, LAND, VICTIM, AGE, OFFICIAL, COUNTRYCODE, LINK)\n# df$AGE &lt;- as.numeric(df$AGE)\n# \n# df[119, 4] = \"Sachsen-Anhalt\"\n# df[220, 4] = \"Sachsen-Anhalt\"\n# df[221, 4] = \"Sachsen-Anhalt\"\n# \n# df$LOCATION &lt;- gsub(\"\\\\s*\\\\([^\\\\)]+\\\\)\",\"\",as.character(df$LOCATION))\n# \n# dfOFFIC &lt;- subset(df, OFFICIAL == T)\n# rownames(dfOFFIC) = seq(length=nrow(dfOFFIC))\n\ndf &lt;- read.csv(\"slide_files/11/FR_homicides2023-01-20.csv\", row.names=1, header = TRUE)\n\ndfUNOFFIC &lt;- subset(df, OFFICIAL == F)\nrownames(dfUNOFFIC) = seq(length=nrow(dfUNOFFIC))\n\ndfOFFIC &lt;- subset(df, OFFICIAL == T)\nrownames(dfOFFIC) = seq(length=nrow(dfOFFIC))\n\ndfplot &lt;- df %&gt;% \n  group_by(YEAR) %&gt;% \n  summarise(DEATHS = length(YEAR))\ndfplot$YEAR &lt;- as.numeric(dfplot$YEAR)\ndfplot$DEATHS &lt;- as.numeric(dfplot$DEATHS)\n\ndfplotofficial &lt;- dfOFFIC %&gt;% \n  group_by(YEAR) %&gt;% \n  summarise(OFFICIAL = length(YEAR))\ndfplotofficial$YEAR &lt;- as.numeric(dfplotofficial$YEAR)\ndfplotofficial$OFFICIAL &lt;- as.numeric(dfplotofficial$OFFICIAL)\n\n\ndfX &lt;- merge(dfplot, dfplotofficial, by=c(\"YEAR\"), all = TRUE)\ndfX[is.na(dfX)] &lt;- 0\n\nlibrary(ggplot2)\nlibrary(reshape2)\n\na &lt;- ggplot(dfX, aes(x=YEAR))+\n  geom_col(aes(y=DEATHS), colour = \"black\", fill = \"grey60\", width = 1)+\n  geom_col(aes(y=OFFICIAL), colour = \"black\", fill = \"black\", width = 0.5)+\n  scale_x_continuous(\"\", breaks = seq(1990,2021,1))+\n  scale_y_continuous(\"Deaths\", breaks = seq(0,30,5), minor_breaks = seq(0,30,1), limits = c(0,30))+\n  theme_bw()+\n  theme(text = element_text(size=15), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))\na\n\n# df_melt &lt;- melt(dfX, id=\"YEAR\")\n# \n# b &lt;- ggplot(df_melt, aes(x = YEAR, y = value, fill = variable)) +\n#   geom_col(position = \"dodge\", colour = \"black\", width = 0.8) +\n#   scale_y_continuous(\"Deaths\", breaks = seq(0,30,5), minor_breaks = seq(0,30,1), limits = c(0,30))+\n#   scale_fill_manual(\"\", values=c(\"grey60\",\"black\")) + # \"Darjeeling1\", n = 4)\n#   scale_x_continuous(\"\", breaks = seq(1990,2021,1), minor_breaks = seq(1990,2021,1))+\n#   theme_bw()+\n#   theme(text = element_text(size=15), axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+\n#   theme(legend.position = c(0.6, 0.8),\n#         text = element_text(size=15),\n#         legend.title=element_blank(),\n#         legend.box.background = element_rect(colour = \"black\"))\n# b"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides-1",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides-1",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany, homicides",
-    "text": "Koehler (2019) - focusing in on Germany, homicides\n\n\nlibrary(tmap)\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(rnaturalearth)\nlibrary(gganimate)\nlibrary(gifski)\n\ndfALLgrouped &lt;- dfALL %&gt;% \n  group_by(YEAR)\n\ndfALLgrouped &lt;- as.data.frame(dfALLgrouped)\n\ndfALLgrouped$Latitude &lt;- dfALLgrouped$LAT\ndfALLgrouped$Longitude &lt;- dfALLgrouped$LON\n\ndfALLgrouped$LATjit &lt;- jitter(dfALLgrouped$LAT, factor = 300)\ndfALLgrouped$LONjit &lt;- jitter(dfALLgrouped$LON, factor = 300)\n\ndfALLgrouped_sf &lt;- dfALLgrouped %&gt;% drop_na(LAT)\n\ndfALLgrouped_sf &lt;- dfALLgrouped_sf %&gt;% \n  st_as_sf(\n    coords = c(\"LONjit\", \"LATjit\"),\n    crs = st_crs(\"EPSG:32632\") # CRS for Germany\n  )\n\nDE = ne_states(returnclass = \"sf\") |&gt;\n  filter(admin == \"Germany\") \n\nst_crs(dfALLgrouped_sf) &lt;- st_crs(DE)\n\nfr_hom_anim &lt;- tm_shape(DE)+\n  tm_polygons(fill=\"gold\", col=\"darkolivegreen\")+\n  tm_shape(dfALLgrouped_sf)+\n  tm_bubbles(shape=21, \n             size=5, \n             col=\"CATEGORY\", \n             palette = c(\"Official\" = \"red\",\"Unofficial\" = \"blue\"),\n             scale=8, \n             alpha=0.5, \n             border.col=\"black\")+\n  tm_facets(pages=\"YEAR\")+\n  tm_layout(legend.show = FALSE,\n            panel.label.size = 4, \n            panel.label.color = 'black',\n            panel.label.bg.color = 'grey', \n            panel.label.height = 3,\n            legend.text.size = 1.5)\ntmap_animation(\n  fr_hom_anim, \n  filename = \"fr_hom_anim.gif\",\n  delay = 50, \n  width = 1200, \n  height = 1200\n)\no: recognised by BRD\no: identified by Amadeu Antonio Stiftung"
+    "text": "Koehler (2019) - focusing in on Germany, homicides\n\n# map plot -------------------------------------------\n\n# SOURCE DATA AND VISUALISATIONS\n# - https://www.amadeu-antonio-stiftung.de/todesopfer-rechter-gewalt/\n# - https://de.wikipedia.org/wiki/Todesopfer_rechtsextremer_Gewalt_in_der_Bundesrepublik_Deutschland\n# - https://www.zeit.de/gesellschaft/zeitgeschehen/2018-09/todesopfer-rechte-gewalt-karte-portraet\n# - https://www.zeit.de/gesellschaft/zeitgeschehen/2020-09/rechte-gewalt-todesopfer-bundeskriminalamt-wiedervereinigung/komplettansicht?utm_referrer=https%3A%2F%2Fde.wikipedia.org%2F\n\nlibrary(raster)\n\nLoading required package: sp\n\n\n\nAttaching package: 'raster'\n\n\nThe following object is masked from 'package:dplyr':\n\n    select\n\nlibrary(sf)\n\nWarning: package 'sf' was built under R version 4.5.2\n\n\nLinking to GEOS 3.13.0, GDAL 3.8.5, PROJ 9.5.1; sf_use_s2() is TRUE\n\n# germany &lt;- getData(country = \"Germany\", level = 1) \ngermany &lt;- readRDS(\"slide_files/11/germany.rds\")\n\n## ALTERNATIVE APPROACH USING sf PACKAGE\n# germany &lt;- \n#   getData(country = \"Germany\", level = 1) %&gt;% \n#   st_as_sf() %&gt;% \n#   left_join(dat, by = c(\"NAME_1\" = \"Bundesland\"))\n\ndiff_col2 &lt;- ggplot() +\n  geom_polygon(data = germany,\n               aes(x = long, y = lat, group = group),\n               colour = \"black\", fill = \"grey90\") +\n  geom_point(data = dfUNOFFIC,\n             aes(x = LON, y = LAT),\n             position = position_jitter(w = 0.1, h = 0.1),\n             shape = 1, size = 3, color = \"blue\", stroke = 0.8) +\n  geom_point(data = dfOFFIC,\n             aes(x = LON, y = LAT),\n             position = position_jitter(w = 0.1, h = 0.1),\n             shape = 1, size = 3, color = \"red\", stroke = 0.8) +\n  coord_map() +\n  theme_void() +\n  # xlab(\"Longitude\") + ylab(\"Latitude\") +\n  theme(legend.position = \"none\")\n\nWarning: `fortify(&lt;SpatialPolygonsDataFrame&gt;)` was deprecated in ggplot2 3.4.4.\nℹ Please migrate to sf.\nℹ The deprecated feature was likely used in the ggplot2 package.\n  Please report the issue at &lt;https://github.com/tidyverse/ggplot2/issues&gt;.\n\n\nRegions defined for each Polygons\n\n# labs(color = 'Record length')\n\n\n\nlibrary(tmap)\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(rnaturalearth)\nlibrary(gganimate)\nlibrary(gifski)\n\ndfALLgrouped &lt;- dfALL %&gt;% \n  group_by(YEAR)\n\ndfALLgrouped &lt;- as.data.frame(dfALLgrouped)\n\ndfALLgrouped$Latitude &lt;- dfALLgrouped$LAT\ndfALLgrouped$Longitude &lt;- dfALLgrouped$LON\n\ndfALLgrouped$LATjit &lt;- jitter(dfALLgrouped$LAT, factor = 300)\ndfALLgrouped$LONjit &lt;- jitter(dfALLgrouped$LON, factor = 300)\n\ndfALLgrouped_sf &lt;- dfALLgrouped %&gt;% drop_na(LAT)\n\ndfALLgrouped_sf &lt;- dfALLgrouped_sf %&gt;% \n  st_as_sf(\n    coords = c(\"LONjit\", \"LATjit\"),\n    crs = st_crs(\"EPSG:32632\") # CRS for Germany\n  )\n\nDE = ne_states(returnclass = \"sf\") |&gt;\n  filter(admin == \"Germany\") \n\nst_crs(dfALLgrouped_sf) &lt;- st_crs(DE)\n\nfr_hom_anim &lt;- tm_shape(DE)+\n  tm_polygons(fill=\"gold\", col=\"darkolivegreen\")+\n  tm_shape(dfALLgrouped_sf)+\n  tm_bubbles(shape=21, \n             size=5, \n             col=\"CATEGORY\", \n             palette = c(\"Official\" = \"red\",\"Unofficial\" = \"blue\"),\n             scale=8, \n             alpha=0.5, \n             border.col=\"black\")+\n  tm_facets(pages=\"YEAR\")+\n  tm_layout(legend.show = FALSE,\n            panel.label.size = 4, \n            panel.label.color = 'black',\n            panel.label.bg.color = 'grey', \n            panel.label.height = 3,\n            legend.text.size = 1.5)\ntmap_animation(\n  fr_hom_anim, \n  filename = \"fr_hom_anim.gif\",\n  delay = 50, \n  width = 1200, \n  height = 1200\n)\no: recognised by BRD\no: identified by Amadeu Antonio Stiftung"
   },
   {
     "objectID": "slides/slides_11.html#koehler2019---focusing-in-on-germany-law-enforcement",
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany-law-enforcement",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany, law enforcement",
-    "text": "Koehler (2019) - focusing in on Germany, law enforcement\n\n\n\n\n\n\n\n\n\n\n\n\nErmittlungsverfahren/opened 129 case\nclosed/discontinued 129 case\ncharges in 129 case\nverdict/conviction in 129 case\ncompare: jihadist terrorism in 2017: 952 opened cases, 460 closed\n\n\n\n§129: forming or membership in criminal or terrorist org.\nmore terror investigations paralleling spikes in right-wing extremist violence\n\n2012 (15) spike, reaction to NSU\ni.e., triggered by political and popular pressure \n\n\n\n\n\n“However, even if keeping in mind that one group could have been responsible for more than one arson or explosive attack, the number of new investigations still falls short of the overall level of severe violence (four and six new investigations in 2016 and 2017).”"
+    "text": "Koehler (2019) - focusing in on Germany, law enforcement\n\n\n\nggplot(dfz_melt, aes(x=year, y=value, color=variable, group=variable))+\n  geom_line(linewidth=2)+\n  scale_colour_manual(values = c(\"red\",\"blue\",\"green\",\"purple\"))+\n  theme_bw()+\n  scale_x_continuous(\"\", breaks = seq(2001,2020,1), minor_breaks = seq(2001,2020,1))+\n  scale_y_continuous(\"\", breaks = seq(0,16,2), minor_breaks = seq(0,16,1), limits = c(0,16))+\n  theme(legend.position = c(0.25,0.7))+\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+\n  theme(text = element_text(size = 30))\n\n\n\n\n\n\n\n\n\nErmittlungsverfahren/opened 129 case\nclosed/discontinued 129 case\ncharges in 129 case\nverdict/conviction in 129 case\ncompare: jihadist terrorism in 2017: 952 opened cases, 460 closed\n\n\n\n§129: forming or membership in criminal or terrorist org.\nmore terror investigations paralleling spikes in right-wing extremist violence\n\n2012 (15) spike, reaction to NSU\ni.e., triggered by political and popular pressure \n\n\n\n\n\n“However, even if keeping in mind that one group could have been responsible for more than one arson or explosive attack, the number of new investigations still falls short of the overall level of severe violence (four and six new investigations in 2016 and 2017).”"
   },
   {
     "objectID": "slides/slides_11.html#debate-raised-by-koehler2019-hate-crime---terrorism",
@@ -3861,14 +3861,14 @@
     "href": "slides/slides_11.html#koehler2019---focusing-in-on-germany-homicides-2",
     "title": "Class 11: Responses to Political Violence",
     "section": "Koehler (2019) - focusing in on Germany, homicides",
-    "text": "Koehler (2019) - focusing in on Germany, homicides\n\n\no: officially recognised by BRD\no: identified by Amadeu Antonio Stiftung"
+    "text": "Koehler (2019) - focusing in on Germany, homicides\n\ndiff_col2\n\n\n\no: officially recognised by BRD\no: identified by Amadeu Antonio Stiftung"
   },
   {
     "objectID": "slides/slides_12.html#course-feedback",
     "href": "slides/slides_12.html#course-feedback",
     "title": "Class 12: Responses to Political Violence",
-    "section": "Course feedback",
-    "text": "Course feedback\nPlease take a few minutes to fill in the course feedback survey (check your LMU email).\nIf have an opinion on these points in the comments:\n\nWould you have preferred getting a specific assigned organisation to independently study in depth? Yes/No\nWould you have liked more structured discussions (e.g., set debates on class topics)? Yes/No\nWould you rather that class readings are drawn from textbook(s) than journal articles? Yes/No\nchanges or additions to the course website?"
+    "section": "",
+    "text": "Please take a few minutes to fill in the course feedback survey (check your LMU email).\nIf have an opinion on these points in the comments:\n\nWould you have preferred getting a specific assigned organisation to independently study in depth? Yes/No\nWould you have liked more structured discussions (e.g., set debates on class topics)? Yes/No\nWould you rather that class readings are drawn from textbook(s) than journal articles? Yes/No\nchanges or additions to the course website?"
   },
   {
     "objectID": "slides/slides_12.html#references",
@@ -3903,7 +3903,7 @@
     "href": "slides/slides_12.html#dimensions-of-repressionsocial-control-earl2003",
     "title": "Class 12: Responses to Political Violence",
     "section": "3 dimensions of repression/social control (Earl 2003)",
-    "text": "3 dimensions of repression/social control (Earl 2003)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentity of repressive agent\nState agents tightly connected with national political elites (e.g., military units)\nState agents loosely connected with national political elites (e.g., local police departments)\nPrivate agents (e.g., counter-demonstrators)\n\n\nCharacter of repressive action\nCoercion (e.g., use of tear gas and rubber bullets)\nChannelling (e.g., restrictions on registered organisations)\n\n\n\nWhether repressive action is observable\nObservable (i.e., overt; e.g., Tiananmen Square)\nUnobserved (i.e., covert or latent; e.g., COINTELPRO)\n\n\n\n\n\n\n\n\n\nWhat sort of repression/social control in cases do you know of? Was it effective? Why/How?"
+    "text": "3 dimensions of repression/social control (Earl 2003)\n\nlibrary(tidyr)\nlibrary(kableExtra)\n\ntable_data &lt;- tribble(\n  ~a, ~b, ~c, ~d,\n  \"Identity of repressive agent\", \"State agents tightly connected with national political elites (e.g., military units)\", \"State agents loosely connected with national political elites (e.g., local police departments)\",  \"Private agents (e.g., counter-demonstrators)\",\n  \n  \"Character of repressive action\", \"Coercion (e.g., use of tear gas and rubber bullets)\", \"Channelling (e.g., restrictions on registered organisations)\", \"\", \n  \n  \"Whether repressive action is observable\", \"Observable (i.e., overt; e.g., Tiananmen Square)\", \"Unobserved (i.e., covert or latent; e.g., COINTELPRO)\", \"\",\n)\n\nkable(table_data, \"html\", escape = FALSE,\n      col.names = c(\"\", \"\", \"\", \"\")) %&gt;%\n  kable_styling(bootstrap_options = c(\"striped\", \"hover\", \"responsive\"), font_size = 24) %&gt;%\n  column_spec(1, bold = TRUE)\n\n\n\n\n\n\n\n\n\n\n\n\n\nIdentity of repressive agent\nState agents tightly connected with national political elites (e.g., military units)\nState agents loosely connected with national political elites (e.g., local police departments)\nPrivate agents (e.g., counter-demonstrators)\n\n\nCharacter of repressive action\nCoercion (e.g., use of tear gas and rubber bullets)\nChannelling (e.g., restrictions on registered organisations)\n\n\n\nWhether repressive action is observable\nObservable (i.e., overt; e.g., Tiananmen Square)\nUnobserved (i.e., covert or latent; e.g., COINTELPRO)\n\n\n\n\n\n\n\n\n\nWhat sort of repression/social control in cases do you know of? Was it effective? Why/How?"
   },
   {
     "objectID": "slides/slides_12.html#al-anani2019---responses-to-repression",
@@ -3917,14 +3917,14 @@
     "href": "slides/slides_12.html#al-anani2019---research-in-brief",
     "title": "Class 12: Responses to Political Violence",
     "section": "al-Anani (2019) - research in brief",
-    "text": "al-Anani (2019) - research in brief\n\n20 interviews between 2016 and 2018 with current and former members of Muslim Brotherhood\n\nany notes about Egyptian context or specifics of Muslim Brotherhood?\n\n\n\n\nrepression has differential (individual-specific) effect\n\n\nEmotions such as anger, hate, and despair have played a key role in shaping their response to repression. Members had different responses that ranged from adopting revolutionary and confrontational tactics to political apathy. [p. 8]"
+    "text": "al-Anani (2019) - research in brief\n\n20 interviews between 2016 and 2018 with current and former members of Muslim Brotherhood\n\nany notes about Egyptian context or specifics of Muslim Brotherhood?\n\n\n. . .\n\nrepression has differential (individual-specific) effect\n\n\nEmotions such as anger, hate, and despair have played a key role in shaping their response to repression. Members had different responses that ranged from adopting revolutionary and confrontational tactics to political apathy. [p. 8]"
   },
   {
     "objectID": "slides/slides_12.html#discussion-point-pressure-against-höcke",
     "href": "slides/slides_12.html#discussion-point-pressure-against-höcke",
     "title": "Class 12: Responses to Political Violence",
     "section": "Discussion point: pressure against Höcke",
-    "text": "Discussion point: pressure against Höcke\n\nGG Article 18 enables the BVerfG to suspend an individual’s fundamental rights (i.e., free expression, freedom of the press, and the right to vote and hold public office)\nthe federal government has filed against 4 people in history of BRD\n\n\nOtto Ernst Remer in 1960; 2. Gerhard Frey in 1974; 3. Heinz Reisz in 1992; 4. Thomas Dienel in 1992\n\nall rejected by BVerfG\n\n\n\n\n\n\n\ncalls to file against Björn Höcke (AfD Thüringen) (e.g., DPA 2024)\n\n2019: Verwaltungsgericht Meiningen rules that he may be described as ‘fascist’ (link); 2023: Hamburger Staatsanwaltschaft, it is not a legal offence (Beleidigung) to call Höcke a ‘Nazi’ (link)\n\n\n\n\nshould the government file the complaint? should it be granted?"
+    "text": "Discussion point: pressure against Höcke\n\nGG Article 18 enables the BVerfG to suspend an individual’s fundamental rights (i.e., free expression, freedom of the press, and the right to vote and hold public office)\nthe federal government has filed against 4 people in history of BRD\n\n\nOtto Ernst Remer in 1960; 2. Gerhard Frey in 1974; 3. Heinz Reisz in 1992; 4. Thomas Dienel in 1992\n\nall rejected by BVerfG\n\n\n\n\n. . .\n\n\ncalls to file against Björn Höcke (AfD Thüringen) (e.g., DPA 2024)\n\n2019: Verwaltungsgericht Meiningen rules that he may be described as ‘fascist’ (link); 2023: Hamburger Staatsanwaltschaft, it is not a legal offence (Beleidigung) to call Höcke a ‘Nazi’ (link)\n\n\n\n\nshould the government file the complaint? should it be granted?"
   },
   {
     "objectID": "slides/slides_12.html#poll-results---ending-violence",
@@ -4057,7 +4057,7 @@
     "href": "slides/slides_12.html#banning-fr-orgs-in-germany---sufficient-patterns-zeller2025ejpr",
     "title": "Class 12: Responses to Political Violence",
     "section": "Banning FR orgs in Germany - sufficient patterns (Zeller 2025)",
-    "text": "Banning FR orgs in Germany - sufficient patterns (Zeller 2025)\n\nNeo-Nazi movement groups – organisations promote National Socialist ideology—legally sufficient for banning in Germany and several other countries—as well as racial hatred and violence.\n\n\n\nLongstanding hubs – long existing organisations, serving as centres of far-right activism and networking (network disruption strategy in banning decisions?)\n\n\n\n\nMilitant organisations – organisations embody particularly aggressive, confrontational far-right activism\n\n\n\n\nNeo-Nazi sham parties – organisations presented as parties (hoping for status’s protection) but still spread neo-Nazi ideology"
+    "text": "Banning FR orgs in Germany - sufficient patterns (Zeller 2025)\n\nNeo-Nazi movement groups – organisations promote National Socialist ideology—legally sufficient for banning in Germany and several other countries—as well as racial hatred and violence.\n\n. . .\n\nLongstanding hubs – long existing organisations, serving as centres of far-right activism and networking (network disruption strategy in banning decisions?)\n\n. . .\n\nMilitant organisations – organisations embody particularly aggressive, confrontational far-right activism\n\n. . .\n\nNeo-Nazi sham parties – organisations presented as parties (hoping for status’s protection) but still spread neo-Nazi ideology"
   },
   {
     "objectID": "slides/slides_12.html#case-1-nationale-offensive-no-zeller2025ejpr",
@@ -4092,7 +4092,7 @@
     "href": "slides/slides_12.html#informative-epilogue-to-these-cases-zeller2025ejpr-1",
     "title": "Class 12: Responses to Political Violence",
     "section": "informative epilogue to these cases (Zeller 2025)",
-    "text": "informative epilogue to these cases (Zeller 2025)\nConversely, gov. acknowledged that …\n\nBfV intelligence-gathering perhaps disrupted by banning action,\nactivists might use banning as an opportunity to propagandise,\nbans could radicalise members (i.e., conspiratorial, aggressive),\nmembers might acquire more solidarity by enduring banning\n\n\n\nResponse concludes, negative effects are uncertain, visible only after time; positive effects are achieved directly through the enforcement of bans. instrumental logic"
+    "text": "informative epilogue to these cases (Zeller 2025)\nConversely, gov. acknowledged that …\n\nBfV intelligence-gathering perhaps disrupted by banning action,\nactivists might use banning as an opportunity to propagandise,\nbans could radicalise members (i.e., conspiratorial, aggressive),\nmembers might acquire more solidarity by enduring banning\n\n. . .\n\nResponse concludes, negative effects are uncertain, visible only after time; positive effects are achieved directly through the enforcement of bans. instrumental logic"
   },
   {
     "objectID": "slides/slides_12.html#conclusions-zeller2025ejpr",
@@ -4106,7 +4106,7 @@
     "href": "slides/slides_12.html#a-contentious-concluding-question",
     "title": "Class 12: Responses to Political Violence",
     "section": "A contentious concluding question",
-    "text": "A contentious concluding question\n\nwhat matters to BVerfG (Germany’s federal constitutional court)? … (https://www.bundesverfassungsgericht.de/EN/Verfahren/Wichtige-Verfahrensarten/Parteiverbotsverfahren/parteiverbotsverfahren_node.html) (cf. Backes 2019)\n\n“actively belligerent, aggressive stance vis-à-vis the free democratic basic order and must seek to abolish it”\nlarge/successful enough to potentially achieve its anti-constitutional goals\n\nthe Bundestag, the Bundesrat, and the federal government can file for a ban\n\n\n\ndo you think the AfD meets these criteria?\n\n\n\nleaked! Verfassungsschutzgutachten zur AfD (Bundesamt für Verfassungsschutz 2025)"
+    "text": "A contentious concluding question\n\nwhat matters to BVerfG (Germany’s federal constitutional court)? … (https://www.bundesverfassungsgericht.de/EN/Verfahren/Wichtige-Verfahrensarten/Parteiverbotsverfahren/parteiverbotsverfahren_node.html) (cf. Backes 2019)\n\n“actively belligerent, aggressive stance vis-à-vis the free democratic basic order and must seek to abolish it”\nlarge/successful enough to potentially achieve its anti-constitutional goals\n\nthe Bundestag, the Bundesrat, and the federal government can file for a ban\n\n. . .\n\ndo you think the AfD meets these criteria?\n\n. . .\nleaked! Verfassungsschutzgutachten zur AfD (Bundesamt für Verfassungsschutz 2025)"
   },
   {
     "objectID": "slides/slides_12.html#banning-1",
@@ -4120,7 +4120,7 @@
     "href": "slides/slides_12.html#comparative-case-selection",
     "title": "Class 12: Responses to Political Violence",
     "section": "Comparative case selection",
-    "text": "Comparative case selection\nx = causal variable; y = phenomenon to be explained\n\n\nMDSD (most different systems design)\n\n\n\nCase 1\nCase 2\n_\n\n\n\n\na\nd\noverall\n\n\nb\ne\ndifferences\n\n\nc\nf\n\n\n\nx\nx\ncrucial\n\n\ny\ny\nsimilarity\n\n\n\n\nMSSD (most similar systems design)\n\n\n\nCase 1\nCase 2\n_\n\n\n\n\na\na\noverall\n\n\nb\nb\nsimiliarities\n\n\nc\nc\n\n\n\nx\nnot x\ncrucial\n\n\ny\nnot y\ndifference\n\n\n\n\nFurther on case selection strategies, see Gerring (2007, e.g., pp. 89-90)"
+    "text": "Comparative case selection\nx = causal variable; y = phenomenon to be explained\n\n\nMDSD (most different systems design)\n\n\n\nCase 1\nCase 2\n_\n\n\n\n\na\nd\noverall\n\n\nb\ne\ndifferences\n\n\nc\nf\n\n\n\nx\nx\ncrucial\n\n\ny\ny\nsimilarity\n\n\n\n\nMSSD (most similar systems design)\n\n\n\nCase 1\nCase 2\n_\n\n\n\n\na\na\noverall\n\n\nb\nb\nsimiliarities\n\n\nc\nc\n\n\n\nx\nnot x\ncrucial\n\n\ny\nnot y\ndifference\n\n\n\n\n\nFurther on case selection strategies, see Gerring (2007, e.g., pp. 89-90)"
   },
   {
     "objectID": "slides/slides_12.html#banning-successor-parties---bourneveugelers2022",
@@ -4141,13 +4141,986 @@
     "href": "slides/slides_12.html#banning-successor-parties---bourneveugelers2022-2",
     "title": "Class 12: Responses to Political Violence",
     "section": "Banning successor parties - Bourne and Veugelers (2022)",
-    "text": "Banning successor parties - Bourne and Veugelers (2022)\n\n(slightly permeable) cordon sanitaire around MSI (ban alternative)\n\nfindings:\n\n\nattitude towards violence not a clearly important factor\ntwo key conditions: veto player agreement and (especially) securitization\n\n\n\n\n\nAny modern examples worth comparing to…?"
+    "text": "Banning successor parties - Bourne and Veugelers (2022)\n\n(slightly permeable) cordon sanitaire around MSI (ban alternative)\n\nfindings:\n. . .\n\nattitude towards violence not a clearly important factor\ntwo key conditions: veto player agreement and (especially) securitization\n\n\n\n. . .\nAny modern examples worth comparing to…?"
   },
   {
     "objectID": "slides/slides_12.html#monitored-nationally-fr-orgs-in-germany-zeller2025ejpr",
     "href": "slides/slides_12.html#monitored-nationally-fr-orgs-in-germany-zeller2025ejpr",
     "title": "Class 12: Responses to Political Violence",
     "section": "Monitored (nationally) FR orgs in Germany (Zeller 2025)",
-    "text": "Monitored (nationally) FR orgs in Germany (Zeller 2025)"
+    "text": "Monitored (nationally) FR orgs in Germany (Zeller 2025)\n\nlibrary(mapview)\nlibrary(leafpop)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following object is masked from 'package:kableExtra':\n\n    group_rows\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(sf)\n\nWarning: package 'sf' was built under R version 4.5.2\n\n\nLinking to GEOS 3.13.0, GDAL 3.8.5, PROJ 9.5.1; sf_use_s2() is TRUE\n\nde_reos &lt;- read.csv(\"slide_files/12/de_reos2023dec4.csv\", row.names=1, header = TRUE) \ngermany &lt;- readRDS(\"slide_files/12/germany.rds\")\n\nde_reos$LATj &lt;- jitter(de_reos$LAT, factor = 500)\nde_reos$LONj &lt;- jitter(de_reos$LON, factor = 500)\n\nde_reos_banY &lt;- subset(de_reos, BAN == 1)\nde_reos_banY &lt;- as.data.frame(de_reos_banY)\n# rownames(de_reos_banY) = seq(length=nrow(de_reos_banY))\nde_reos_banN &lt;- subset(de_reos, BAN == 0)\nde_reos_banN &lt;- as.data.frame(de_reos_banN)\n# rownames(de_reos_banN) = seq(length=nrow(de_reos_banN))\n\n# SUBSETTING TO NATIONAL ORGS ONLY\nde_reos_national &lt;- subset(de_reos, SCOPE==\"national\")\nde_reos_banN_national &lt;- subset(de_reos_banN, SCOPE==\"national\")\nde_reos_banY_national &lt;- subset(de_reos_banY, SCOPE==\"national\")\n\nde_reos_national$col = NA\n\nde_reos_national &lt;- de_reos_national %&gt;% \n  mutate(col = case_when(\n    BANNED == 1 ~ \"red\",\n    BANNED == 0 ~ \"seagreen1\",\n    TRUE ~ \"grey\"\n  ))\n\nde_reos_national_banned &lt;- subset(de_reos_national, col==\"red\")\nde_reos_national_Nbanned&lt;- subset(de_reos_national, col==\"seagreen1\")\n\nde_reos_national_banned_sf &lt;- de_reos_national_banned %&gt;% \n  st_as_sf(\n    coords = c(\"LONj\", \"LATj\"),\n    crs = st_crs(\"EPSG:4326\") \n  )\n\nde_reos_national_Nbanned_sf &lt;- de_reos_national_Nbanned %&gt;% \n  st_as_sf(\n    coords = c(\"LONj\", \"LATj\"),\n    crs = st_crs(\"EPSG:4326\") \n  )\n\nst_crs(de_reos_national_banned_sf) &lt;- st_crs(germany)\nst_crs(de_reos_national_Nbanned_sf) &lt;- st_crs(germany)\n\nde_reos_national_banned_sf$FIRST_IN_VfS_REPORT &lt;- de_reos_national_banned_sf$FIRST\nde_reos_national_banned_sf$LAST_IN_VfS_REPORT &lt;- de_reos_national_banned_sf$LAST\nde_reos_national_Nbanned_sf$FIRST_IN_VfS_REPORT &lt;- de_reos_national_Nbanned_sf$FIRST\nde_reos_national_Nbanned_sf$LAST_IN_VfS_REPORT &lt;- de_reos_national_Nbanned_sf$LAST\n\nmapview(de_reos_national_banned_sf, col.regions = \"red\", \n        label = \"SHORT_NAME\",\n        legend = T, \n        layer.name = 'banned groups', \n        map.types = c(\"CartoDB.DarkMatter\", \"CartoDB.Positron\"),\n        popup = popupTable(de_reos_national_banned_sf,\n                           zcol=c(\"SHORT_NAME\",\"SCOPE\",\"REGION\",\"LOCATION\",\n                                  \"FIRST_IN_VfS_REPORT\",\"LAST_IN_VfS_REPORT\",\"BAN_DATE\")))+\n  mapview(de_reos_national_Nbanned_sf, col.regions = \"seagreen1\", \n        label = \"SHORT_NAME\",\n        legend = T, \n        layer.name = 'monitored groups', \n        map.types = c(\"CartoDB.DarkMatter\", \"CartoDB.Positron\"),\n        popup = popupTable(de_reos_national_Nbanned_sf,\n                           zcol=c(\"SHORT_NAME\",\"SCOPE\",\"REGION\",\"LOCATION\",\n                                  \"FIRST_IN_VfS_REPORT\",\"LAST_IN_VfS_REPORT\")))"
+  },
+  {
+    "objectID": "slides/slides_13.html#klausur-essay-question-example",
+    "href": "slides/slides_13.html#klausur-essay-question-example",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Klausur essay question example",
+    "text": "Klausur essay question example\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat can states do to prevent or reduce political violence? Describe several options and discuss advantages and disadvantages."
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-1",
+    "href": "slides/slides_13.html#key-concepts-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (1)",
+    "text": "Key concepts (1)\n\npolitical violence  - the use of force by a person or group with a political motivation/purpose\n\ne.g., assault, robbery, rioting, insurgency, assassination, terrorism, rebellion, guerrilla warfare and civil war, revolution\ncan be differentiated by nature of the objectives, the targets of attacks, the organisational structure of groups, and by the repertoire of actions"
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-2",
+    "href": "slides/slides_13.html#key-concepts-2",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (2)",
+    "text": "Key concepts (2)\n\ncauses of politically violent activity\n\nbroad environment/contextual factors (macro-level)\n\npreconditions: factors that set the stage for PV over the long run\nprecipitants: specific events that immediately precede the occurrence of PV\n\ncircumstances and actors (meso-level)\n\nPV as part of ‘strategy’ (for certain goals) and may be ‘rational’\n\npsychological variables that encourage or inhibit (micro-level)\n\nego-defensive needs, cognitive processes, socialization — but also normality\nevolving dynamics of commitment, risk, solidarity, loyalty, guilt, revenge, isolation"
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-3",
+    "href": "slides/slides_13.html#key-concepts-3",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (3)",
+    "text": "Key concepts (3)\n\nradicalisation (attitudinal) - social and psychological process of increased commitment to extremist political or religious ideology\n\nmirrored by deradicalisation\ncognitive alignment - recognition of some conditions as wrong \\(\\rightarrow\\) framing of those conditions as unjust and violence as just \\(\\rightarrow\\) singling out of specific responsibilities, and the demonisation of the other\n\nengagement (behavioural) - participation in politically violent activity\n\nmirrored by disengagement"
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-4",
+    "href": "slides/slides_13.html#key-concepts-4",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (4)",
+    "text": "Key concepts (4)\n\nstrategy - a combination of a claim (or demand), a tactic, and a site (or venue); alternatively, consisting of 3 elements:\n\nTargeting - who/what is being acted upon by tactics\nTactics - types of collective action and manner of their performance\nTiming - some moments present greater opportunity than others"
+  },
+  {
+    "objectID": "slides/slides_13.html#notable-research-findings-1-by-class-number",
+    "href": "slides/slides_13.html#notable-research-findings-1-by-class-number",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Notable research findings (1), by class number",
+    "text": "Notable research findings (1), by class number\n–2. (a) economic factors are not reliable predictors of terrorist activity; (b) social factors help drive right-wing terrorism (Piazza 2017)\n–3. (a) paths of radicalisation: ideological, instrumental, solidaristic - (della Porta 2018; Bosi and Porta 2012); (b) 5 barriers to mass violence: i. viewed as counterproductive, ii. preference for interpersonal violence, iii. changes in focus availability, iv. internal org. conflict, v. moral apprehension (Simi and Windisch 2020)\n–5. post-conflict radical milieu can be key factor in mobilising for political violence (Metodieva 2022)\n–7. common profile of ISIS foreign fighters: male, well-educated, urban, unmarried, and young (Morris 2023)"
+  },
+  {
+    "objectID": "slides/slides_13.html#notable-research-findings-2-by-class-number",
+    "href": "slides/slides_13.html#notable-research-findings-2-by-class-number",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Notable research findings (2), by class number",
+    "text": "Notable research findings (2), by class number\n–8. violence decreases turnout but that the effect is larger for anti-systemic violence; intra-systemic violence appears intended to selectively depress turnout among opposition supporters (Harbers, Richetta, and van Wingerden 2022); non-violent more than twice as likely to achieve full or partial success compared to violent cases (Chenoweth and Stephan 2011), nonviolent campaigns are better at eliciting broad and diverse support, nonviolent campaigns create more defections among the opposition, nonviolent campaigns have a broader set of tactics at their disposal, nonviolent campaigns often maintain discipline even in the face of escalating oppression; violence complementing already and continuing high mobilisation is effective in making regime more sensitive to protest costs (Kudelia 2018)"
+  },
+  {
+    "objectID": "slides/slides_13.html#notable-research-findings-3-by-class-number",
+    "href": "slides/slides_13.html#notable-research-findings-3-by-class-number",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Notable research findings (3), by class number",
+    "text": "Notable research findings (3), by class number\n–10. people may shift their attitudes about political violence… when a different movement poses a new situational variation (Setter and Nepstad 2022); extremists (esp. Islamists) gain more discursive space after attacks, politicians from right-wing parties were more visible than politicians from left-wing parties in political debates after extreme right and Islamist attacks, the content of public debates after terrorist attacks was related to the ideological motive behind the attack, Terrorist attacks reduce the public legitimacy of extremist actors and their political agenda in public debates, legitimacy of Islam decreases to a greater extent after Islamist attacks than the legitimacy of nationalism does after extreme right attacks (issues) (Völker 2023)"
+  },
+  {
+    "objectID": "slides/slides_13.html#tips-for-preparing-for-klausur",
+    "href": "slides/slides_13.html#tips-for-preparing-for-klausur",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Tips for preparing for Klausur",
+    "text": "Tips for preparing for Klausur\n\n\n\nreview class slides\nreread your notes from readings\n\nmaybe (re-)read a couple of the required readings\n\nthink through cases you know of\nthink through other cases we discussed (through readings or your peers’ expertise)"
+  },
+  {
+    "objectID": "slides/slides_13.html#tips-for-preparing-for-klausur-1",
+    "href": "slides/slides_13.html#tips-for-preparing-for-klausur-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Tips for preparing for Klausur",
+    "text": "Tips for preparing for Klausur\n\n\n\nreview class slides\nreread your notes from readings\n\nmaybe (re-)read a couple of the required readings\n\nthink through cases you know of\nthink through other cases we discussed (through readings or your peers’ expertise)\ndon’t panic\n\n\n\nDont Be Alarmed Willy Wonka And The Chocolate Factory GIFfrom Dont Be Alarmed GIFs"
+  },
+  {
+    "objectID": "slides/slides_13.html#poll-results---ending-violence",
+    "href": "slides/slides_13.html#poll-results---ending-violence",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Poll results - ending violence",
+    "text": "Poll results - ending violence\nStrategy most likely to end political violence?\n\nend_pvCounts = aq.from(surveyResults)\n  .select(\"end_pv\")\n  .groupby(\"end_pv\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nend_pv_maxCountRE = Math.max(...end_pvCounts.objects().map(d =&gt; d.count));\n\nplot_end_pv = Plot.plot({\n  marks: [\n    Plot.barY(end_pvCounts, {\n      x: \"end_pv\",\n      y: \"count\",\n      fill: \"end_pv\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Repression alone\",\n      \"Concessions alone\",\n      \"Repression followed by concessions\",\n      \"Concessions followed by repression\",\n      \"Neither repression nor concessions\"\n    ],\n    range: [\n      \"indigo\",\n      \"goldenrod\",\n      \"cadetblue\",\n      \"forestgreen\",\n      \"violet\"\n    ]\n  },\n  marginBottom: 600,\n  x: { label: \"\", tickSize: 2, tickRotate: -60, padding: 0.2,\n    domain: [\"Repression alone\", \"Concessions alone\", \"Repression followed by concessions\", \"Concessions followed by repression\", \"Neither repression nor concessions\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(end_pvCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, end_pv_maxCountRE]\n  },\n  facet: { data: end_pvCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_13.html#poll-results---banning-groups",
+    "href": "slides/slides_13.html#poll-results---banning-groups",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Poll results - banning groups",
+    "text": "Poll results - banning groups\nWhy do you think states ban groups?\n\nbanningWhy = aq.from(surveyResults)\n  .select(\"banning\")\n  .filter(d =&gt; d.banning) // to exclude empty (\"\") strings, 0s, FALSEs, nulls, etc\n\nbanningWhy.array(\"banning\")"
+  },
+  {
+    "objectID": "slides/slides_13.html#references",
+    "href": "slides/slides_13.html#references",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "References",
+    "text": "References\n\n\n\n\nBailard, Catie Snow, Rebekah Tromble, Wei Zhong, Federico Bianchi, Pedram Hosseini, and David Broniatowski. 2024. “‘Keep Your Heads Held High Boys!’: Examining the Relationship Between the Proud Boys’ Online Discourse and Offline Activities.” American Political Science Review 118 (4): 2054–71. https://doi.org/10.1017/S0003055423001478.\n\n\nBiddle, Sam. 2021. “Revealed: Facebook’s Secret Blacklist of ‘Dangerous Individuals and Organizations’.” The Intercept, October.\n\n\nBosi, Lorenzo, and Donatella Della Porta. 2012. “Micro-Mobilization into Armed Groups: Ideological, Instrumental and Solidaristic Paths.” Qualitative Sociology 35 (4): 361–83. https://doi.org/10.1007/s11133-012-9237-1.\n\n\nBourne, Angela K., and John Veugelers. 2022. “Militant Democracy and Successors to Authoritarian Ruling Parties in Post-1945 West Germany and Italy.” Democratization 29 (4): 736–53. https://doi.org/10.1080/13510347.2021.2012160.\n\n\nChandrasekharan, Eshwar, Umashanthi Pavalanathan, Anirudh Srinivasan, Adam Glynn, Jacob Eisenstein, and Eric Gilbert. 2017. “You Can’t Stay Here: The Efficacy of Reddit’s 2015 Ban Examined Through Hate Speech.” Proceedings of the ACM on Human-Computer Interaction 1 (CSCW): 1–22. https://doi.org/10.1145/3134666.\n\n\nChenoweth, Erica, and Maria J. Stephan. 2011. Why Civil Resistance Works: The Strategic Logic of Nonviolent Conflict. New York: Columbia University Press.\n\n\nConway, Maura, Ashley A Mattheis, Sean McCafferty, and Miraji H Mohamed. 2023. “Violent Extremism and Terrorism Online in 2023.” Brussels: EU Radicalisation Awareness Network (RAN) Policy Report.\n\n\ndella Porta, Donatella. 2018. “Radicalization: A Relational Perspective.” Annual Review of Sociology 21: 461–74. https://doi.org/10.1146/annurev-polisci-042716.\n\n\nEarl, Jennifer. 2007. “Leaderless Movement The Case of Strategic Voting.” American Behavioral Scientist 50 (10): 1327–49.\n\n\nFielitz, Maik, and Holger Marcks. 2021. “When Counter-Speech Backfires: The Pitfalls of Strategic Online Interaction.” Global Network on Extremism & Technology. https://gnet-research.org/2021/07/26/when-counter-speech-backfires-the-pitfalls-of-strategic-online-interaction/.\n\n\nFroio, Caterina, Pietro Castelli Gattinara, Giorgia Bulli, and Matteo Albanese. 2020. CasaPound Italia: Contemporary Extreme-Right Politics. Abingdon: Routledge.\n\n\nGhaffary, Shirin. 2022. “Does Banning Extremists Online Work? It Depends.” Vox, February.\n\n\nGolia, Angelo Jr, and Rachel Behring. 2020. “Online Fascist Propaganda and Political Participation in CasaPound v. Facebook.” Verfassungsblog: On Matters Constitutional, February.\n\n\nGorwa, Robert. 2024. The Politics of Platform Regulation. Oxford: Oxford University Press.\n\n\nHarbers, Imke, Cécile Richetta, and Enrike van Wingerden. 2022. “Shaping Electoral Outcomes: Intra- and Anti-systemic Violence in Indian Assembly Elections.” British Journal of Political Science, October, 1–17. https://doi.org/10.1017/S0007123422000345.\n\n\nKudelia, Serhiy. 2018. “When Numbers Are Not Enough: The Strategic Use of Violence in Ukraine’s 2014 Revolution.” Comparative Politics 50 (4): 501–21.\n\n\nMetodieva, Asya. 2022. Foreign Fighters and Radical Influencers: Radical Milieus in the Postwar Balkans. Taylor & Francis.\n\n\nMitts, Tamar. 2025. Safe Havens for Hate: The Challenge of Moderating Online Extremism. Princeton, NJ: Princeton University Press.\n\n\nMorris, Andrea Michelle. 2023. “Who Becomes a Foreign Fighter? Characteristics of the Islamic State’s Soldiers.” Terrorism and Political Violence, January, 1–19. https://doi.org/10.1080/09546553.2022.2144730.\n\n\nPiazza, James A. 2017. “The Determinants of Domestic Right-Wing Terrorism in the USA: Economic Grievance, Societal Change and Political Resentment.” Conflict Management and Peace Science 34 (1): 52–80. https://doi.org/10.1177/0738894215570429.\n\n\nPradel, Franziska, Jan Zilinsky, Spyros Kosmidis, and Yannis Theocharis. 2024. “Toxic Speech and Limited Demand for Content Moderation on Social Media.” American Political Science Review 118 (4): 1895–1912. https://doi.org/10.1017/S000305542300134X.\n\n\nRauchfleisch, Adrian, and Jonas Kaiser. 2024. “The Impact of Deplatforming the Far Right: An Analysis of YouTube and BitChute.” Information, Communication & Society, May, 1–19. https://doi.org/10.1080/1369118X.2024.2346524.\n\n\nSaltman, Erin, Farshad Kooti, and Karly Vockery. 2021. “New Models for Deploying Counterspeech: Measuring Behavioral Change and Sentiment Analysis.” Studies in Conflict and Terrorism 0 (0): 1–24. https://doi.org/10.1080/1057610X.2021.1888404.\n\n\nSetter, Davyd, and Sharon Erickson Nepstad. 2022. “How Social Movements Influence Public Opinion on Political Violence: Attitude Shifts in the Wake of the George Floyd Protests.” Mobilization: An International Quarterly 27 (4): 429–44. https://doi.org/10.17813/1086-671X-27-4-429.\n\n\nSimi, Pete, and Steven Windisch. 2020. “Why Radicalization Fails: Barriers to Mass Casualty Terrorism.” Terrorism and Political Violence 32 (4): 831–50. https://doi.org/10.1080/09546553.2017.1409212.\n\n\nThomas, Daniel Robert, and Laila A. Wahedi. 2023. “Disrupting Hate: The Effect of Deplatforming Hate Organizations on Their Online Audience.” Proceedings of the National Academy of Sciences 120 (24): e2214080120. https://doi.org/10.1073/pnas.2214080120.\n\n\nVölker, Teresa. 2023. “How Terrorist Attacks Distort Public Debates: A Comparative Study of Right-Wing and Islamist Extremism.” Journal of European Public Policy, October, 1–28. https://doi.org/10.1080/13501763.2023.2269194."
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-5",
+    "href": "slides/slides_13.html#key-concepts-5",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (5)",
+    "text": "Key concepts (5)\n\nradical subcultures - a cultural group within a larger culture with its own traits, beliefs, and interests, typically distinct from and sometimes at odds with the larger culture\nleadership - Weber’s 3 ideal types: legal, traditional, charismatic\n\nleadership tasks (Earl 2007)"
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-7",
+    "href": "slides/slides_13.html#key-concepts-7",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (7)",
+    "text": "Key concepts (7)\n\nelectoral violence - coercion directed towards actors and/or objects during the electoral cycle … part of a menu of electoral manipulation\n\nintra-systemic violence - “try to win under the existing system”; “suppress or drown out the voices of political opponents”\nanti-systemic violence - “depress participation as much as possible in order to undermine the legitimacy of the election”"
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-4-1",
+    "href": "slides/slides_13.html#key-concepts-4-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (4)",
+    "text": "Key concepts (4)\n\nescalation: a rise in the frequency and/or severity of violent actions\n\nframing logics, strategic logics, organisational logics, constituency/social logics\n\nrestraint: a deliberate restriction (either reducing or completely stopping) of violent actions\n\nstrategic logics, moral logics, logic of ego maintenance, logic of outgroup definition, organisational logic\n\ndimensions of repression/social control - identity of repressive agent, character of repressive action, whether repressive action is observable\n\nmany repressive options…"
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-2---causes-of-pv-activity",
+    "href": "slides/slides_13.html#key-concepts-2---causes-of-pv-activity",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (2) - causes of PV activity",
+    "text": "Key concepts (2) - causes of PV activity\n\nbroad environment/contextual factors (macro-level)\n\npreconditions: factors that set the stage for PV over the long run\nprecipitants: specific events that immediately precede the occurrence of PV\n\ncircumstances and actors (meso-level)\n\nPV as part of ‘strategy’ (for certain goals) and may be ‘rational’\n\npsychological variables that encourage or inhibit (micro-level)\n\nego-defensive needs, cognitive processes, socialization — but also normality\nevolving dynamics of commitment, risk, solidarity, loyalty, guilt, revenge, isolation"
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-6",
+    "href": "slides/slides_13.html#key-concepts-6",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (6)",
+    "text": "Key concepts (6)\n\nforeign fighters - individuals who travel to a conflict zone from another territory (prima facie evidence of radicalism \\(\\rightarrow\\) engagement in political violence; a ‘security failure’ by authority of origin state?)\n\nmotivations: ideology, benefits, interpersonal connections, etc.\nstate response options: praise/support, ignore/disregard, programmatic intervention, criminal justice intervention, forceful intervention"
+  },
+  {
+    "objectID": "slides/slides_13.html#key-concepts-8",
+    "href": "slides/slides_13.html#key-concepts-8",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Key concepts (8)",
+    "text": "Key concepts (8)\n\nescalation: a rise in the frequency and/or severity of violent actions\n\nframing logics, strategic logics, organisational logics, constituency/social logics\n\nrestraint: a deliberate restriction (either reducing or completely stopping) of violent actions\n\nstrategic logics, moral logics, logic of ego maintenance, logic of outgroup definition, organisational logic\n\ndimensions of repression/social control - identity of repressive agent, character of repressive action, whether repressive action is observable\n\nmany repressive options…"
+  },
+  {
+    "objectID": "slides/slides_13.html#some-notable-research-findings",
+    "href": "slides/slides_13.html#some-notable-research-findings",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Some notable research findings",
+    "text": "Some notable research findings\n–2. (a) economic factors are not reliable predictors of terrorist activity; (b) social factors help drive right-wing terrorism (Piazza 2017)\n–3. (a) paths of radicalisation: ideological, instrumental, solidaristic - (della Porta 2018; Bosi and Porta 2012); (b) 5 barriers to mass violence: i. viewed as counterproductive, ii. preference for interpersonal violence, iii. changes in focus availability, iv. internal org. conflict, v. moral apprehension (Simi and Windisch 2020)\n–5. post-conflict radical milieu can be key factor in mobilising for political violence (Metodieva 2022)\n–7. common profile of ISIS foreign fighters: male, well-educated, urban, unmarried, and young (Morris 2023)"
+  },
+  {
+    "objectID": "slides/slides_13.html#notable-research-findings-4-by-class-number",
+    "href": "slides/slides_13.html#notable-research-findings-4-by-class-number",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Notable research findings (4), by class number",
+    "text": "Notable research findings (4), by class number\n–12. bans: attitude towards violence not a clearly important factor, two key conditions: veto player agreement and (especially) securitization (Bourne and Veugelers 2022); bans can be motivated by social pressure mechanisms, (specific) visibility is important for bans, German government applies instrumental logic rather than legal logic in banning decisions"
+  },
+  {
+    "objectID": "slides/slides_13.html#starting-question",
+    "href": "slides/slides_13.html#starting-question",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Starting question",
+    "text": "Starting question\n\n\nWhat is violence online?\n\nWhat forms does it take? (What qualifies as ‘violence’?)\nWhere does it happen?\nWho are the perpetrators? Who are the victims?\nAre there problems particular to violence online compared to elsewhere?\n\nHow have politically violent groups/actors that you know of used the internet?"
+  },
+  {
+    "objectID": "slides/slides_13.html#starting-questions",
+    "href": "slides/slides_13.html#starting-questions",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Starting questions",
+    "text": "Starting questions\n\n\nWhat is violence online?\n\nWhat forms does it take? (What qualifies as ‘violence’?)\nWhere does it happen?\nWho are the perpetrators? Who are the victims?\nAre there problems particular to violence online compared to elsewhere?\n\nHow have politically violent groups/actors that you know of used the internet?"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-1",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\nicons created by Flaticon \n\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-2",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-2",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\nicons created by Flaticon \n\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-3",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-3",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\nicons created by Flaticon \n\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-4",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-4",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\nicons created by Flaticon \n\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-5",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-5",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\nicons created by Flaticon \n\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---agitprop",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---agitprop",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - agitprop",
+    "text": "Extremist uses of online tools - agitprop\n\n\n‘agitprop’\n\n\n\n(agitation and propaganda)\nsetting agenda: what issue(s) to focus on\nspreading narratives: how to view those issue(s)\ncreate and/or distribute related content: writing, pictures, audio, videos, games, etc.\nuse multiple channels (e.g., mainstream, like FB, Twitter; fringe, like 4chan, 8kun, gettr)\n\nalternative news outlets"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-6",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-6",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---recruitment",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---recruitment",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - recruitment",
+    "text": "Extremist uses of online tools - recruitment\n\n\nrecruitment\n\n\n\ncreate/manage online spaces (forums, chatrooms, groups)\ncommunicate with sympathisers\n\naided by agitprop that resonates with susceptible individuals\nimpart sense of purpose or belonging"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-7",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-7",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---coordinating",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---coordinating",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - coordinating",
+    "text": "Extremist uses of online tools - coordinating\n\n\ncoordinating\n\n\n\nencrypted messaging among group members\nlogistical preparations\nplan and arrange (privately or publicly) meetings, events, protests, attacks"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-8",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-8",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---training",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---training",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - training",
+    "text": "Extremist uses of online tools - training\n\n\ntraining\n\n\n\nguides or tutorials to operational activity:\n\nfleeing to join group\navoiding detection\nskills training (fighting, weapons, tools, hacking)"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-9",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-9",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---financing",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---financing",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - financing",
+    "text": "Extremist uses of online tools - financing\n\n\nfinancing\n\n\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-10",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-10",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools-11",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools-11",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools",
+    "text": "Extremist uses of online tools\nSee further in (e.g.) Campelo et al. (2018), della Porta (2018), Fahey and Simi (2019), Jensen, Seate, and James (2018), Vergani et al. (2018)\n\n\nagitprop\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-financing-online",
+    "href": "slides/slides_13.html#extremist-financing-online",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist financing online",
+    "text": "Extremist financing online\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-financing-online-1",
+    "href": "slides/slides_13.html#extremist-financing-online-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist financing online",
+    "text": "Extremist financing online\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms\n\n\n\n\n1. Donations/self-funding"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-financing-online-2",
+    "href": "slides/slides_13.html#extremist-financing-online-2",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist financing online",
+    "text": "Extremist financing online\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms\n\n\n\n\n1. Donations/self-funding\n\n\n\n\n\n\n2a. Sale of goods (merchandise, music, real estate, etc)"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-financing-online-3",
+    "href": "slides/slides_13.html#extremist-financing-online-3",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist financing online",
+    "text": "Extremist financing online\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms\n\n\n\n\n1. Donations/self-funding\n\n\n\n\n\n\n2a. Sale of goods (merchandise, music, real estate, etc)\n\n\n\n\n\n\n2b. Sale of services (memberships, events, etc)"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-financing-online-4",
+    "href": "slides/slides_13.html#extremist-financing-online-4",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist financing online",
+    "text": "Extremist financing online\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms\n\n\n\n\n1. Donations/self-funding\n\n\n\n\n\n\n2a. Sale of goods (merchandise, music, real estate, etc)\n\n\n\n\n\n\n2b. Sale of services (memberships, events, etc)\n\n\n\n\n\n\n3. Criminal activities"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---financing-1",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---financing-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - financing",
+    "text": "Extremist uses of online tools - financing\n\n\nfinancing\n\n\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms\n\n\n\n\n1. Donations/self-funding"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---financing-2",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---financing-2",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - financing",
+    "text": "Extremist uses of online tools - financing\n\n\nfinancing\n\n\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms\n\n\n\n\n1. Donations/self-funding\n\n\n\n\n\n\n2a. Sale of goods (merchandise, music, real estate, etc)"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---financing-3",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---financing-3",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - financing",
+    "text": "Extremist uses of online tools - financing\n\n\nfinancing\n\n\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms\n\n\n\n\n1. Donations/self-funding\n\n\n\n\n\n\n2a. Sale of goods (merchandise, music, real estate, etc)\n\n\n\n\n\n\n2b. Sale of services (memberships, events, etc)"
+  },
+  {
+    "objectID": "slides/slides_13.html#extremist-uses-of-online-tools---financing-4",
+    "href": "slides/slides_13.html#extremist-uses-of-online-tools---financing-4",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Extremist uses of online tools - financing",
+    "text": "Extremist uses of online tools - financing\n\n\nfinancing\n\n\n\n\n\n\n\n\n\n\n\n\nLegality and/or Terms of Service Compliance\n\n\n\nLegal and/or Non-Violation of Terms\nIllegal and/or Violation of Terms\n\n\n\n\n1. Donations/self-funding\n\n\n\n\n\n\n2a. Sale of goods (merchandise, music, real estate, etc)\n\n\n\n\n\n\n2b. Sale of services (memberships, events, etc)\n\n\n\n\n\n\n3. Criminal activities"
+  },
+  {
+    "objectID": "slides/slides_13.html#multi-platform-activity-mitts2025safehavenshate---regulation-challenges",
+    "href": "slides/slides_13.html#multi-platform-activity-mitts2025safehavenshate---regulation-challenges",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Multi-platform activity (Mitts 2025) - regulation challenges",
+    "text": "Multi-platform activity (Mitts 2025) - regulation challenges\n\nassumption: stronger action by platform companies will decrease their ability to exploit the internet\n\nthis assumption is plausible in isolated platform perspective—less so in multi-platform perspective\nplatforms largely moderate content in isolation, but extremist actors coordinate activity across multiple platforms\n\nadaptation mechanisms:\n\nplatform migration: move to alternative platforms\nmessaging: moderate discourse on regulated platforms\nmobilisation: problematise platforms’ content moderation policies/practices"
+  },
+  {
+    "objectID": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation",
+    "href": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Regulation approaches (Gorwa 2024)",
+    "text": "Regulation approaches (Gorwa 2024)\n\ncontest\ncollaborate\nconvince"
+  },
+  {
+    "objectID": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-1",
+    "href": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Regulation approaches (Gorwa 2024)",
+    "text": "Regulation approaches (Gorwa 2024)\n\ncollaborate\nconvince\n\n\n\ncontest\n\n\n\nlegally binding, enforceable rules\n\nexecutive orders; legislatures pass laws (e.g., data protection, competition regulation, consumer safety; cybersecurity)"
+  },
+  {
+    "objectID": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-2",
+    "href": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-2",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Regulation approaches (Gorwa 2024)",
+    "text": "Regulation approaches (Gorwa 2024)\n\ncontest\ncollaborate\nconvince"
+  },
+  {
+    "objectID": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-3",
+    "href": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-3",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Regulation approaches (Gorwa 2024)",
+    "text": "Regulation approaches (Gorwa 2024)\n\ncontest\nconvince\n\n\n\ncollaborate\n\n\n\nnon-binding, voluntarily enacted rules designed with government input, occasionally featuring binding procedural constraints\n\nmay be agreed by a mix of industry, firm, and civil society stakeholders → implemented voluntarily by industry"
+  },
+  {
+    "objectID": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-4",
+    "href": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-4",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Regulation approaches (Gorwa 2024)",
+    "text": "Regulation approaches (Gorwa 2024)\n\ncontest\ncollaborate\nconvince"
+  },
+  {
+    "objectID": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-5",
+    "href": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-5",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Regulation approaches (Gorwa 2024)",
+    "text": "Regulation approaches (Gorwa 2024)\n\ncontest\ncollaborate\n\n\n\nconvince\n\n\n\nusing existing channels to raise grievances rather than striving for new rules\n\noften occurs in the shadows, few public-facing elements\n‘cheap’ to pursue and implement → but also ‘cheap’ consequences (no binding sanctions, probably least impactful)"
+  },
+  {
+    "objectID": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-6",
+    "href": "slides/slides_13.html#regulation-approaches-gorwa2024politicsplatformregulation-6",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Regulation approaches (Gorwa 2024)",
+    "text": "Regulation approaches (Gorwa 2024)\n\ncontest - legally binding, enforceable rules\ncollaborate - non-binding, voluntarily enacted rules designed with government input, occasionally featuring binding procedural constraints\nconvince - using existing channels to raise grievances rather than striving for new rules\n\n\n\nlikelihood of approach success depends on political will (sufficient demand for change) and power to intervene (shaped by state’s market power, regulatory capacity, domestic and international context, and norms)\ntrend of platform governance hybridization"
+  },
+  {
+    "objectID": "slides/slides_13.html#major-extant-regulation-forums-etc.-cf.-gorwa2024politicsplatformregulation-conway2023violentextremismterrorism",
+    "href": "slides/slides_13.html#major-extant-regulation-forums-etc.-cf.-gorwa2024politicsplatformregulation-conway2023violentextremismterrorism",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Major extant regulation, forums, etc. (cf. Gorwa 2024; Conway et al. 2023)",
+    "text": "Major extant regulation, forums, etc. (cf. Gorwa 2024; Conway et al. 2023)\n\nGermany’s ‘Network Enforcement Law’ (NetzDG)\nFrance’s Avia Law (declared unconstitutional and revised drastically)\nEU’s Digital Services Act (DSA)\nTerrorist Content Online (TCO) Regulation\nChristchurch Call\nEuropean Union Internet Forum (EUIF)\nGlobal Internet Forum for Countering Terrorism (GIFCT)\n\nhash-sharing database\n\nTech Against Terrorism"
+  },
+  {
+    "objectID": "slides/slides_13.html#dangerous-actors-on-meta-biddle2021-10-12",
+    "href": "slides/slides_13.html#dangerous-actors-on-meta-biddle2021-10-12",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "‘dangerous actors’ on Meta (Biddle 2021)",
+    "text": "‘dangerous actors’ on Meta (Biddle 2021)"
+  },
+  {
+    "objectID": "slides/slides_13.html#dangerous-actors-on-meta-biddle2021-10-12-1",
+    "href": "slides/slides_13.html#dangerous-actors-on-meta-biddle2021-10-12-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "‘dangerous actors’ on Meta (Biddle 2021)",
+    "text": "‘dangerous actors’ on Meta (Biddle 2021)\n\n\n\n\n\n\n\nCasaPound\n\nExtreme right, Islamist, Drug cartel, Extreme left, Buddhist nationalist, Separatist"
+  },
+  {
+    "objectID": "slides/slides_13.html#casapound-v.-facebook-e.g.-goliabehring2020-2-18",
+    "href": "slides/slides_13.html#casapound-v.-facebook-e.g.-goliabehring2020-2-18",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "CasaPound v. Facebook (e.g., Golia and Behring 2020)",
+    "text": "CasaPound v. Facebook (e.g., Golia and Behring 2020)\n\nCasaPound (e.g., Froio et al. 2020): (neo-)‘fascist’ organisation in Italy, highly active on digital media\n9.9.2019: Facebook deactivates CasaPound page (and representatives), arguing the content is ‘hate speech’ and ‘incitement to violence’, violating Facebook’s Terms of Use\nCP argues (before Court of Rome) ‘it proposed an update of historical fascism that exclusively values its social policies, and that it has publicly condemned racial laws’; that it does not violate Facebook’s terms of service — and that CP protected by article 21 of the Italian constitution\nsee further at: https://globalfreedomofexpression.columbia.edu/cases/casapound-v-facebook/"
+  },
+  {
+    "objectID": "slides/slides_13.html#casapound-v.-facebook-e.g.-goliabehring2020-2-18-1",
+    "href": "slides/slides_13.html#casapound-v.-facebook-e.g.-goliabehring2020-2-18-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "CasaPound v. Facebook (e.g., Golia and Behring 2020)",
+    "text": "CasaPound v. Facebook (e.g., Golia and Behring 2020)\n\nCourt decision:\n\n‘Facebook holds a special position and its mission aims to uphold freedom of expression’\nCP page deactivation violated its rights as a political party (under article 49 of the Constitution)\nordered FB to reactivate page(s) and pay a penalty of 800 EUR for each day of deactivation"
+  },
+  {
+    "objectID": "slides/slides_13.html#casapound-v.-facebook-e.g.-goliabehring2020-2-18-2",
+    "href": "slides/slides_13.html#casapound-v.-facebook-e.g.-goliabehring2020-2-18-2",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "CasaPound v. Facebook (e.g., Golia and Behring 2020)",
+    "text": "CasaPound v. Facebook (e.g., Golia and Behring 2020)\n\nFacebook appealed (unsuccessfully), saying it is ‘a private company operating for profit protected by art. 41 of the Constitution’, that:\n\n\n\nZuckerberg initially referred to Facebook as a ‘utility’…\n\n\n\nthe order had erroneously attributed a special nature to the contract between the social network and the user, when it was instead an ordinary contract under civil law. In the absence of any legal basis, according to Facebook, it is not possible to attribute public service obligations to private sector players such as the protection of freedom of association and expression. Likewise, Facebook argued that it is not required to ensure special protection to some users such as organizations engaged in political activities by virtue of their role in the political debate."
+  },
+  {
+    "objectID": "slides/slides_13.html#predominant-approach-and-deplatforming",
+    "href": "slides/slides_13.html#predominant-approach-and-deplatforming",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Predominant approach and deplatforming",
+    "text": "Predominant approach and deplatforming\n\n\nshould be predominant approach\n\napproachCounts = aq.from(surveyResults)\n  .select(\"approach\")\n  .groupby(\"approach\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\napproach_maxCountRE = Math.max(...approachCounts.objects().map(d =&gt; d.count));\n\nplot_approach = Plot.plot({\n  marks: [\n    Plot.barY(approachCounts, {\n      x: \"approach\",\n      y: \"count\",\n      fill: \"approach\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"do nothing\",\n      \"attach warning\",\n      \"reduce possible views\",\n      \"permanently remove post\",\n      \"suspend poster's account\"\n    ],\n    range: [\n      \"teal\",\n      \"goldenrod\",\n      \"darkorange\",\n      \"darkolivegreen\",\n      \"darkred\"\n    ]\n  },\n  marginBottom: 260,\n  x: { label: \"\", tickSize: 2, tickRotate: -30, padding: 0.2,\n    domain: [\"do nothing\", \"attach warning\", \"reduce possible views\", \"permanently remove post\", \"suspend poster's account\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(approachCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, approach_maxCountRE]\n  },\n  facet: { data: approachCounts, x: \"measure\", label: \"\" },\n  marginLeft: 80,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndeplatforming effective?\n\ndeplatformingCounts = aq.from(surveyResults)\n  .select(\"deplatforming\")\n  .groupby(\"deplatforming\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\ndeplatforming_maxCountRE = Math.max(...deplatformingCounts.objects().map(d =&gt; d.count));\n\nplot_deplatforming = Plot.plot({\n  marks: [\n    Plot.barY(deplatformingCounts, {\n      x: \"deplatforming\",\n      y: \"count\",\n      fill: \"deplatforming\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Strongly disagree\",\n      \"Disagree\",\n      \"Neutral\",\n      \"Agree\",\n      \"Strongly agree\"\n    ],\n    range: [\n      \"red\",\n      \"pink\",\n      \"lightgrey\",\n      \"lightgreen\",\n      \"forestgreen\"\n    ]\n  },\n  marginBottom: 180,\n  x: { label: \"\", tickSize: 2, tickRotate: -45,\n    domain: [\"Strongly disagree\", \"Disagree\", \"Neutral\", \"Agree\", \"Strongly agree\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(deplatformingCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, deplatforming_maxCountRE]\n  },\n  facet: { data: deplatformingCounts, x: \"measure\", label: \"\" },\n  marginLeft: 140,\n  style: {\n    width: 1350,\n    height: 500,\n    fontSize: 30,\n  }\n});"
+  },
+  {
+    "objectID": "slides/slides_13.html#deplatforming-effects",
+    "href": "slides/slides_13.html#deplatforming-effects",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Deplatforming effects",
+    "text": "Deplatforming effects\n\ndiminishing the scale of influence (Ghaffary 2022)\n\nFacebook, Youtube: billions of users\nParler, Gettr (e.g.): at most a few million users\nTelegram: a few hundred million users, little regulation\n\ne.g., Proud Boys’ use (Bailard et al. 2024) \nmore emphasis on content moderation after CEO’s arrest in 2024 …\n\n\n\n\n\nthe ‘whack-a-mole’ problem: extremist social media accounts removed, but reappear on other sites and/or under aliases"
+  },
+  {
+    "objectID": "slides/slides_13.html#deplatforming-effects-thomas2023disruptinghateeffect",
+    "href": "slides/slides_13.html#deplatforming-effects-thomas2023disruptinghateeffect",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Deplatforming effects (Thomas and Wahedi 2023)",
+    "text": "Deplatforming effects (Thomas and Wahedi 2023)\n\nRQ: How does removing the leadership of online hate organisations from online platforms change behaviour in their target audience?\ncases: six network disruptions (i.e., deplatforming) on Facebook\n\nNB: the researchers are/were Meta employees\n\nfinding: network disruptions reduced the consumption and production of hateful content\n\n\nThe results suggest that strategies of targeted removals, such as leadership removal and network degradation efforts, can reduce the ability of hate organizations to successfully operate online.\n\n\nBUT, finding comes from looking at one platform in isolation"
+  },
+  {
+    "objectID": "slides/slides_13.html#deplatforming-effects-chandrasekharan2017youcantstay",
+    "href": "slides/slides_13.html#deplatforming-effects-chandrasekharan2017youcantstay",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Deplatforming effects (Chandrasekharan et al. 2017)",
+    "text": "Deplatforming effects (Chandrasekharan et al. 2017)\n\n10 June 2015, Reddit banned several subreddits, including: r/fatpeoplehate and r/CoonTown\nRQ1: What effect did Reddit’s ban have on the contributors to banned subreddits?\nRQ2: What effect did the ban have on subreddits that saw an influx of banned subreddit users?\nfindings:\n\nmany users from banned subreddits became inactive\n\nled to a drop in Reddit users (some migrated to other platforms)… what’s the significance of this finding?\n\nvolume of active users’ posting mostly unchanged\na dramatic decrease in hate speech usage by the treatment users post-ban"
+  },
+  {
+    "objectID": "slides/slides_13.html#content-moderation-deplatforming-legitimacy-pradel2024toxicspeechlimited",
+    "href": "slides/slides_13.html#content-moderation-deplatforming-legitimacy-pradel2024toxicspeechlimited",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Content moderation, deplatforming legitimacy (Pradel et al. 2024)",
+    "text": "Content moderation, deplatforming legitimacy (Pradel et al. 2024)\n\nkey concept: Toxic speech as consisting of…\n\nincivility,\nintolerance, and\nviolent threats\n\nexperimental design: randomly exposed people (in U.S.) to toxic speech social media posts → effect on users’ content moderation preferences"
+  },
+  {
+    "objectID": "slides/slides_13.html#moderation-deplatforming-legitimacy-pradel2024toxicspeechlimited",
+    "href": "slides/slides_13.html#moderation-deplatforming-legitimacy-pradel2024toxicspeechlimited",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Moderation, deplatforming legitimacy (Pradel et al. 2024)",
+    "text": "Moderation, deplatforming legitimacy (Pradel et al. 2024)"
+  },
+  {
+    "objectID": "slides/slides_13.html#moderation-deplatforming-legitimacy-pradel2024toxicspeechlimited-1",
+    "href": "slides/slides_13.html#moderation-deplatforming-legitimacy-pradel2024toxicspeechlimited-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Moderation, deplatforming legitimacy (Pradel et al. 2024)",
+    "text": "Moderation, deplatforming legitimacy (Pradel et al. 2024)"
+  },
+  {
+    "objectID": "slides/slides_13.html#a-coda-disinformation-culpability",
+    "href": "slides/slides_13.html#a-coda-disinformation-culpability",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "A coda: disinformation culpability",
+    "text": "A coda: disinformation culpability\nShould criminal penalties exist for spreading disinformation?\n\ndisinformationCounts = aq.from(surveyResults)\n  .select(\"disinformation\")\n  .groupby(\"disinformation\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\ndisinformation_maxCountRE = Math.max(...disinformationCounts.objects().map(d =&gt; d.count));\n\nplot_disinformation = Plot.plot({\n  marks: [\n    Plot.barY(disinformationCounts, {\n      x: \"disinformation\",\n      y: \"count\",\n      fill: \"disinformation\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(disinformationCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, disinformation_maxCountRE]\n  },\n  facet: { data: disinformationCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-1",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\nicons created by Flaticon \n\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-2",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-2",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\nicons created by Flaticon \n\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-3",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-3",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\nicons created by Flaticon \n\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-4",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-4",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\nicons created by Flaticon \n\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-5",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-5",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\nicons created by Flaticon \n\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-6",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-6",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-7",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-7",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-8",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-8",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-9",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-9",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-10",
+    "href": "slides/slides_13.html#common-uses-of-online-tools-by-extremists-10",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Common uses of online tools by extremists",
+    "text": "Common uses of online tools by extremists\n\n\n‘agitprop’\n\n\nrecruitment\n\n\ncoordinating\n\n\ntraining\n\n\nfinancing"
+  },
+  {
+    "objectID": "slides/slides_12.html",
+    "href": "slides/slides_12.html",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "",
+    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\nshort synopsis for final essay due Friday (17 January) (send to me via email)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlease take a few minutes to fill in the course feedback survey (check your LMU email).\nIf have an opinion on these points in the comments:\n\nWould you have preferred getting a specific assigned organisation to independently study in depth? Yes/No\nWould you have liked more structured discussions (e.g., set debates on class topics)? Yes/No\nWould you rather that class readings are drawn from textbook(s) than journal articles? Yes/No\nchanges or additions to the course website?"
+  },
+  {
+    "objectID": "slides/slides_12.html#states-and-civil-society-responding-to-far-right-organisations",
+    "href": "slides/slides_12.html#states-and-civil-society-responding-to-far-right-organisations",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "states and civil society responding to far-right organisations",
+    "text": "states and civil society responding to far-right organisations\n(Pedahzur 2001)\n(Pedahzur 2003)"
+  },
+  {
+    "objectID": "slides/slides_12.html#overview-of-proscriptionbanning-of-far-right-organisations",
+    "href": "slides/slides_12.html#overview-of-proscriptionbanning-of-far-right-organisations",
+    "title": "Class 12: Responses to Political Violence",
+    "section": "overview of proscription/banning of far-right organisations",
+    "text": "overview of proscription/banning of far-right organisations"
+  },
+  {
+    "objectID": "slides/slides_13.html#models-of-counterspeech---saltman2021",
+    "href": "slides/slides_13.html#models-of-counterspeech---saltman2021",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Models of ‘counterspeech’ - Saltman, Kooti, and Vockery (2021)",
+    "text": "Models of ‘counterspeech’ - Saltman, Kooti, and Vockery (2021)\nRQs:\n\nBeyond measuring the basic metrics of reach and engagement, can [online intervention programmes] show behavioral change and/or sentiment shift in the intended target audience exposed to this content? Could exposure to counterspeech in at-risk or radicalized audiences perhaps have the unintended consequence of further radicalization, or act as a catalyst to the radicalization process? How best can private tech companies work with non-governmental organizations (NGOs) and experts in the PVE/ CVE space?\n\n\n\ngoal? deradicalisation or disengagement?\nmodel of policy remedy? (what actors are involved?)"
+  },
+  {
+    "objectID": "slides/slides_13.html#saltman2021---fbs-pcve-concept",
+    "href": "slides/slides_13.html#saltman2021---fbs-pcve-concept",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Saltman, Kooti, and Vockery (2021) - FB’s P/CVE concept",
+    "text": "Saltman, Kooti, and Vockery (2021) - FB’s P/CVE concept"
+  },
+  {
+    "objectID": "slides/slides_13.html#saltman2021---two-counterspeech-modes-to-test",
+    "href": "slides/slides_13.html#saltman2021---two-counterspeech-modes-to-test",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "Saltman, Kooti, and Vockery (2021) - two counterspeech modes to test",
+    "text": "Saltman, Kooti, and Vockery (2021) - two counterspeech modes to test\n\n\ndeveloped with FB’s Counterterrorism and Dangerous Organizations Policy team and the Safety Research team.\n\n. . .\n\n\nA/B: model activated by “a hard indicator of engagement with a violent extremist group or piece of content; sends relevant counterspeech over a period of time.\n\ntested in English (UK) and Arabic (Iraq) spaces\npartnered with (1) International Center on Security and Violent Extremism (ICSVE) (U.S.), (2) ConnectFutures (UK), and (3) Adyan Foundation (Lebanon)\n\n\n\n\nRedirect initiative: assumes passive viewing and engagement with content can be a gateway to active engagements with extremism; aims to intervene ‘early’, connecting certain search terms to resources and redirects\n\ninformed by Life After Hate (U.S.) NGO"
+  },
+  {
+    "objectID": "slides/slides_13.html#fbs-pcve-concept---saltman2021",
+    "href": "slides/slides_13.html#fbs-pcve-concept---saltman2021",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "FB’s P/CVE concept - (Saltman, Kooti, and Vockery 2021)",
+    "text": "FB’s P/CVE concept - (Saltman, Kooti, and Vockery 2021)"
+  },
+  {
+    "objectID": "slides/slides_13.html#two-counterspeech-modes-to-test---saltman2021",
+    "href": "slides/slides_13.html#two-counterspeech-modes-to-test---saltman2021",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "two counterspeech modes to test - (Saltman, Kooti, and Vockery 2021)",
+    "text": "two counterspeech modes to test - (Saltman, Kooti, and Vockery 2021)\n\n\ndeveloped with FB’s Counterterrorism and Dangerous Organizations Policy team and the Safety Research team.\n\n\n\nA/B: model activated by “a hard indicator of engagement with a violent extremist group or piece of content; sends relevant counterspeech over a period of time.\n\ntested in English (UK) and Arabic (Iraq) spaces\npartnered with (1) International Center on Security and Violent Extremism (ICSVE) (U.S.), (2) ConnectFutures (UK), and (3) Adyan Foundation (Lebanon)\n\n\n\n\nRedirect initiative: assumes passive viewing and engagement with content can be a gateway to active engagements with extremism; aims to intervene ‘early’, connecting certain search terms to resources and redirects\n\ninformed by Life After Hate (U.S.) NGO"
+  },
+  {
+    "objectID": "slides/slides_13.html#two-counterspeech-modes-to-test----saltman2021",
+    "href": "slides/slides_13.html#two-counterspeech-modes-to-test----saltman2021",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "two counterspeech modes to test - (2021)",
+    "text": "two counterspeech modes to test - (2021)\n\n\ndeveloped with FB’s Counterterrorism and Dangerous Organizations Policy team and the Safety Research team.\n\n\n\nA/B: model activated by “a hard indicator of engagement with a violent extremist group or piece of content; sends relevant counterspeech over a period of time.\n\ntested in English (UK) and Arabic (Iraq) spaces\npartnered with (1) International Center on Security and Violent Extremism (ICSVE) (U.S.), (2) ConnectFutures (UK), and (3) Adyan Foundation (Lebanon)\n\n\n\n\nRedirect initiative: assumes passive viewing and engagement with content can be a gateway to active engagements with extremism; aims to intervene ‘early’, connecting certain search terms to resources and redirects\n\ninformed by Life After Hate (U.S.) NGO"
+  },
+  {
+    "objectID": "slides/slides_13.html#two-counterspeech-modes-to-test----saltman2021-1",
+    "href": "slides/slides_13.html#two-counterspeech-modes-to-test----saltman2021-1",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "two counterspeech modes to test - (2021)",
+    "text": "two counterspeech modes to test - (2021)\n\n\nA/B mode\n\n\nRedirect mode"
+  },
+  {
+    "objectID": "slides/slides_13.html#findings---saltman2021",
+    "href": "slides/slides_13.html#findings---saltman2021",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "findings - (Saltman, Kooti, and Vockery 2021)",
+    "text": "findings - (Saltman, Kooti, and Vockery 2021)\n\nno evidence that counterspeech does harm\nA/B test: among highest risk group, decreased engagement with violent extremist content observed\nfocusing on behavioural signals to define an at-risk audience is helpful\nsingle, isolated signals of one shared piece of violent extremist content are misleading indicators of individual attitudes\ncounterspeech videos must be short and clear\nRedirect Initiative (intervening on passive content searches) model yields increases in engagement with online resources and off-line practitioners and resources"
+  },
+  {
+    "objectID": "slides/slides_13.html#a-coda-from-recent-research-fielitzmarcks2021-7-26",
+    "href": "slides/slides_13.html#a-coda-from-recent-research-fielitzmarcks2021-7-26",
+    "title": "Class 13: Responses to Political Violence",
+    "section": "a coda from recent research (Fielitz and Marcks 2021)",
+    "text": "a coda from recent research (Fielitz and Marcks 2021)\n\n\n(Authors are writing about right-wing extremism—but their points apply more broadly.)\n\n\n\nCounter-speech has become the most important form of action for projects against right-wing extremism on the Internet.\n\n\n“supporters of far-right organisations are highly resistant to fact-based arguments”\npoorly handled counter-speech risks “triggering defensive reflexes or serving as a stooge [that] far-right online activists can easily [instrumentalise]” — so may sometimes be better to remain silent, avoid elevating FR narratives\nthree dilemmas democratic actors face (cannot ‘fight fire with fire’):\n\nPolarisation dilemma: using emotional speech (similar to extremists’ speech) to counter extremist speech can fuel polarisation, undermining democracy\nTruth dilemma: spreading fake news (as some extremists do) is inconsistent with good-faith democratic values\nMobilisation dilemma: (digital) mobilisation against extremist speech (a) likely increases attention for extremist speech and (b) can lead to a ‘digital arms race’"
+  },
+  {
+    "objectID": "slides/slides_14.html#klausur-instructions",
+    "href": "slides/slides_14.html#klausur-instructions",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Klausur instructions",
+    "text": "Klausur instructions\n\n2 February (Monday) at (promptly!) 8.00 in the AudiMax\n\n\n\narrive at 7.45 to get checked in\nbring your ID!\nconsider going to the toilet before entering Audimax…"
+  },
+  {
+    "objectID": "slides/slides_14.html#klausur-instructions-1",
+    "href": "slides/slides_14.html#klausur-instructions-1",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Klausur instructions",
+    "text": "Klausur instructions\n\ntime management: e.g., 15 minutes each for 3 Vorlesung questions; 45 minutes for 1 essay question\nFIVE questions provided — THREE must be answered\nQuestions consist of factual knowledge component and analytical component\nOverview of central topics in the lecture plan (under ‘Organisatorisches’). Exam questions relate to these central topics\nReference to central articles of the Basic Law relevant for some questions (e.g. Eternity clause Art. 79, Paragraph 3 of the Basic Law; Art. 21 bz Regulation of parties)\ndetails about other countries are not required knowledge"
+  },
+  {
+    "objectID": "slides/slides_14.html#quick-review-of-prof.-bolleyers-course-material",
+    "href": "slides/slides_14.html#quick-review-of-prof.-bolleyers-course-material",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Quick review of Prof. Bolleyer’s course material",
+    "text": "Quick review of Prof. Bolleyer’s course material\n\nFIVE themes in the Vorlesung course\n\nGermany as system shaped by historical experience\nFederal Constitutional Court as above day-to-day politics vs. strategic actor (Vanberg model)\nGermany classified as parliamentary system that invites executive dominance\nGermany classified as case of cooperative federalism\nElections, parties, and party system change"
+  },
+  {
+    "objectID": "slides/slides_14.html#germany-as-system-shaped-by-history---basics",
+    "href": "slides/slides_14.html#germany-as-system-shaped-by-history---basics",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "1. Germany as system shaped by history - basics",
+    "text": "1. Germany as system shaped by history - basics\n\nConstitutional state based on fundamental rights & parliamentary representative democracy\nDesigned for power sharing/taming the power of the executive\n“Semi-sovereign” state – democratic principle restricted by constitutionality/court\nCentral role of the parties; simultaneously multi-party system (numerous “veto players”)\nState of grand coalitions: tension between party competition and cooperation pressures (federalism)\n“Delegating state” (e.g. collective bargaining, central bank)\n“Open state” transfer of sovereignty (EU) –&gt; elements counteract the concentration of power in the executive"
+  },
+  {
+    "objectID": "slides/slides_14.html#germany-as-system-shaped-by-history",
+    "href": "slides/slides_14.html#germany-as-system-shaped-by-history",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "1. Germany as system shaped by history",
+    "text": "1. Germany as system shaped by history\n\nLessons from Weimar: e.g., Eternity clause Art. 79 Abs. 3\nAreas of focus:\n\nconstitutional principle vs. democratic principle (BRD: constitutional sovereignty, UK: parliamentary sovereignty);\nsubstantive vs. procedural understanding of democracy (different from the Weimar Constitution)\n\nKey concept: wehrhafte Demokratie\n\n“defensive democracy” –&gt; intended to prevent democracy from abolishing itself through democratic procedures\ne.g., Eternity clause; forfeiture of basic rights (Art. 18 GG); group ban (Art. 9 Abs 2 GG); party ban (Art. 21 Abs 2 GG); constitutional protection offices; officials’ duty to be loyal to the constitution (Article 5, 33 GG)\n\nLogic of consensus democracy: gov. responsive to as many citizens as possible; maximal interests integrated into decision-making process –&gt; prevent tyrannous majority"
+  },
+  {
+    "objectID": "slides/slides_14.html#federal-constitutional-court",
+    "href": "slides/slides_14.html#federal-constitutional-court",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "2. Federal Constitutional Court",
+    "text": "2. Federal Constitutional Court\n\nindependence of BVerfG as sign of separation of powers (checks and balances): “guardian of the constitution”; appointment of judges, required qualifications of judges\nForms of (self-)limitation\n\nhow political context influences whether the BVerfG declares laws unconstitutional (abstract norm control)\nCourt relies on enforceability and acceptance\nCourt tend to exercise restraint in times of crisis (e.g. Corona)\nLegislators can change the organisation and resources of the court (with a simple majority, no Federal Council veto)\nLegislators can change rules by amending the constitution\nFederal Constitutional Court only takes action after a lawsuit"
+  },
+  {
+    "objectID": "slides/slides_14.html#germany-parliamentary-system-executive-dominance",
+    "href": "slides/slides_14.html#germany-parliamentary-system-executive-dominance",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "3. Germany: parliamentary system, executive dominance",
+    "text": "3. Germany: parliamentary system, executive dominance\n\n\nseparation of powers (less helpful to understand exec.-leg. relation in parliamentarism — different in presidentialism)\nPrimary characteristic of parliamentarism: dependence of the executive on the legislature\n\nresult: functional interlocking of powers - government & government majority/factions dominate legislation (“interlocking” also through the government’s right of initiative)\nopposition factions exercise ‘control rights’\n\nCentral institutional mechanisms:\n\nelection of the chancellor (chancellor majority)\nconfidence vote and constructive vote of no confidence – promotes stability (cf. Weimar!)"
+  },
+  {
+    "objectID": "slides/slides_14.html#germany-classified-as-case-of-cooperative-federalism",
+    "href": "slides/slides_14.html#germany-classified-as-case-of-cooperative-federalism",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "4. Germany classified as case of cooperative federalism",
+    "text": "4. Germany classified as case of cooperative federalism\n\nCooperative federalism in Germany (vs. dual federalism/separate federalism (e.g. USA))\n\nEssentially an executive federalism (state governments in the Bundesrat influence the national constitution, implementation of laws by state administrations centrally)\nDistribution of powers that encourages cooperation: e.g. competing legislation; community tasks; also: financial integration (community taxes) (vs. clear “separation” in dual/separate federalism)\nArticle 72, Paragraph 2 of the Basic Law “establishment of equal living conditions in the federal territory” (“unitary federalism”) –&gt; Political integration also through voluntary, horizontal cooperation: Conferences of Ministerpräsidenten\n\nBundesrat - strong second chamber: legislative power of consent\n\nComposition: government representatives of the states (unlike the classic Senate model)"
+  },
+  {
+    "objectID": "slides/slides_14.html#elections-parties-and-party-system-change",
+    "href": "slides/slides_14.html#elections-parties-and-party-system-change",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "5. Elections, parties, and party system change",
+    "text": "5. Elections, parties, and party system change\n\nPolitical participation: all activities that citizens do voluntarily with the goal to influence the political system\n\nconventional (e.g., voting) vs. unconventional (e.g., protesting)\n\ntrend towards individual participation forms—away from collective forms (societal changes such as individualisation, secularisation)\n\nVoting/elections are central form of participation\n\nresponsiveness mechanism (according to voter preference) –&gt; increasing tension here\ngenerates: legitimation, mobilisation, recruitment, representation, etc."
+  },
+  {
+    "objectID": "slides/slides_14.html#elections-parties-and-party-system-change-1",
+    "href": "slides/slides_14.html#elections-parties-and-party-system-change-1",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "5. Elections, parties, and party system change",
+    "text": "5. Elections, parties, and party system change\n\nParties: political groups that present candidates for public office (Sartori 1976/2000)\n\nparties as “transmission belts” (like interest groups), but operate in society and within political institutions\nin DE, parties are ‘institutional actors’ or ‘state organs’ (Art. 21 GG)\ncentral aspects: participation in political decision-making; obligation of intra-party democracy; state financing (and accountability); possible party ban"
+  },
+  {
+    "objectID": "slides/slides_14.html#elections-parties-and-party-system-change-2",
+    "href": "slides/slides_14.html#elections-parties-and-party-system-change-2",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "5. Elections, parties, and party system change",
+    "text": "5. Elections, parties, and party system change\n\n\nparty system: the system of interactions resulting from inter-party competition (Sartori 1976)\nfocus on new ‘players’ in the system or on system characteristics\ncontext: established parties face challenges (shrinking membership, sinking trust, greater vote competition from newcomers [Grüne, AfD, BSW], new cleavages)\nrelevant system elements:\n\nformat: number of parties\nfragmentation: parties relative size/strength\ncontent: policy/ideological position of a parties\npolarisation: ideological/policy distance between parties\nsegmentation: coalition potential of parties"
+  },
+  {
+    "objectID": "slides/slides_14.html#vorlesung-example-question",
+    "href": "slides/slides_14.html#vorlesung-example-question",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Vorlesung: example question",
+    "text": "Vorlesung: example question\n“How has political participation in Germany changed over the last four decades and what are the key explanatory factors for this?”\n„Wie hat sich politische Partizipation in Deutschland in den letzten vier Jahrzehnten gewandelt und was sind zentrale Erklärungsfaktoren dessen?“\n\nRemember: questions consist of factual knowledge component and analytical component\n\nno Pro/Contra discussion – not enough time\n\nHere, political participation is the key concept (factual knowledge)\n\nwhat does it mean? Explain it briefly in your answer\nDiscuss briefly: less party participation; expansion of participation forms (e.g., protests, petitions); emergence of online participation –&gt; more individualised participation, less collective\n\nCauses for these changes (analytical knowlege)\n\nsecularisation (less religious adherence), expansion in education, change in values, technological innovations (for digital participation) –&gt; all favour more individual participation, less collective"
+  },
+  {
+    "objectID": "slides/slides_14.html#basics-of-a-good-paper---introduction",
+    "href": "slides/slides_14.html#basics-of-a-good-paper---introduction",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Basics of a good paper - introduction",
+    "text": "Basics of a good paper - introduction\n\nWhat?\n\nWhat is the puzzle or research question?\nThere are two types of questions: interesting questions and researchable questions — unfortunately, there is quite limited overlap between them…\n\na main challenge in research is to find a way to transform a big, interesting question into a researchable one (this is the intricacy of research design)\n\n\nWhy? Theoretical, methodological, and/or practical relevance\nHow? Structure of the argument/paper\nAbout 10% of entire paper"
+  },
+  {
+    "objectID": "slides/slides_14.html#basics-of-a-good-paper---main-body",
+    "href": "slides/slides_14.html#basics-of-a-good-paper---main-body",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Basics of a good paper - main body",
+    "text": "Basics of a good paper - main body\n\nCase selection\n\nWhich cases (what population)? When? Why?\nScope conditions\n\nPhenomenon of interest\n\nDefinitions \\(\\rightarrow\\) systematised concepts \\(\\rightarrow\\) indicators/operationalisation \\(\\rightarrow\\) data source\nspecify what kind of data you will use and where it comes from\n\nFor descriptive analysis\n\nConsider creating a typology/multi-dimensional concept\n\nFor causal analysis: potential causes of your DV/outcome\n\ntheories, hypotheses, and causal mechanisms"
+  },
+  {
+    "objectID": "slides/slides_14.html#basics-of-a-good-paper---conclusion",
+    "href": "slides/slides_14.html#basics-of-a-good-paper---conclusion",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Basics of a good paper - conclusion",
+    "text": "Basics of a good paper - conclusion\n\nBrief summary of argument (and findings)\nWhat is it that you are NOT saying and investigating?\nFuture research\nMaximum 10% of text"
+  },
+  {
+    "objectID": "slides/slides_14.html#golden-rules-for-any-paper",
+    "href": "slides/slides_14.html#golden-rules-for-any-paper",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Golden rules for any paper",
+    "text": "Golden rules for any paper\n\n\nStructure: paper should have a structure which is\n\nclear, summarised in introduction, explicit as the paper unfolds\nOne paragraph = one idea\nHelp your reader: (i) sum up a section, (ii) link to/justify next section\n\nAnswer the question you have chosen:\n\na tragic mistake is to give a brilliant answer to a question that is subtly different to the one you asked\n\nWriting:\n\nwords have precise meanings, use them with care—they are the tools of the scholarly trade!\nKISS (keep it simple, stupid): clear words; short sentences"
+  },
+  {
+    "objectID": "slides/slides_14.html#references",
+    "href": "slides/slides_14.html#references",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "References",
+    "text": "References\n\n\n\n\nCronin, Audrey Kurth. 2006. “How Al-Qaida Ends: The Decline and Demise of Terrorist Groups.” International Security 31 (1): 7–48.\n\n\nDavenport, Christian. 2015. How Social Movements Die. Cambridge: Cambridge University Press. https://doi.org/10.1017/cbo9781139649728.\n\n\nFillieule, Olivier. 2009. “Disengagement from Radical Organizations. A Process and Multi-Level Model of Analysis.” In Movements in Times of Transition, edited by Bert Klandermans and Cornelius van Stralen, 1–29. Minneapolis: University of Minnesota Press.\n\n\nGaudette, Tiana, Ryan Scrivens, and Vivek Venkatesh. 2022. “Disengaged but Still Radical? Pathways Out of Violent Right-Wing Extremism.” Terrorism and Political Violence 00 (00): 1–26. https://doi.org/10.1080/09546553.2022.2082288.\n\n\nHorgan, John. 2008. “From Profiles to Pathways and Roots to Routes: Perspectives from Psychology on Radicalization into Terrorism.” Annals of the American Academy of Political and Social Science 618 (1): 80–94. https://doi.org/10.1177/0002716208317539.\n\n\nHorgan, John G. 2014. The Psychology of Terrorism. Abingdon: Routledge."
+  },
+  {
+    "objectID": "slides/slides_14.html#refresher-deradicalisation---core-concepts",
+    "href": "slides/slides_14.html#refresher-deradicalisation---core-concepts",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Refresher: (de)radicalisation - core concepts",
+    "text": "Refresher: (de)radicalisation - core concepts\n\nradicalisation (change in belief): process of connecting with and adopting radical or extremist ideology—does not necessarily result in violence or ‘engaging’ in extremist activity\nengagement (change in behaviour): (in this context) process or act of performing radical or extremist activity, especially violence\nderadicalisation (change in belief): “process by which an individual is diverted from an extremist ideology, eventually rejecting an extremist ideology and moderating their beliefs” (Gaudette, Scrivens, and Venkatesh 2022, 1)\ndisengagement (change in behaviour): “process by which an individual decides to leave their associated extremist group or movement in order to reintegrate into society” (Ibid.)"
+  },
+  {
+    "objectID": "slides/slides_14.html#refresher-deradicalisation---core-concepts-1",
+    "href": "slides/slides_14.html#refresher-deradicalisation---core-concepts-1",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Refresher: (de)radicalisation - core concepts",
+    "text": "Refresher: (de)radicalisation - core concepts\n\nderadicalisation (change in belief): “process by which an individual is diverted from an extremist ideology, eventually rejecting an extremist ideology and moderating their beliefs” (Gaudette, Scrivens, and Venkatesh 2022, 1)\ndisengagement (change in behaviour): “process by which an individual decides to leave their associated extremist group or movement in order to reintegrate into society” (Ibid.)\n\nWhy might individuals disengage from politically violent organisations? And deradicalise? Who might be susceptible to disengage and deradicalise, what types of persons?"
+  },
+  {
+    "objectID": "slides/slides_14.html#some-good-discussion-points-to-ponder",
+    "href": "slides/slides_14.html#some-good-discussion-points-to-ponder",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Some good discussion points to ponder",
+    "text": "Some good discussion points to ponder\n\nHow has the process of disengagement and deradicalisation changed over the centuries, if it has at all?\n\n\n\nAre there (predictable) differences in disengagement and deradicalisation depending on the politically violent group?\n\nconsider group-community interwovenness; perhaps easier to relocate now; but also easier to remain in contact\n\n\n\n\n\nCan police, social workers or penal system workers meaningfully influence the process of disengagement and deradicalization?\n\npolicy evaluation of EXIT programmes?\nexamples of EXIT programmes reaching out to radical communities (operation ‘Trojan T-Shirt’)"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---forms-of-defection",
+    "href": "slides/slides_14.html#fillieule2009---forms-of-defection",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - ‘forms of defection’",
+    "text": "Fillieule (2009) - ‘forms of defection’\n\n\n\ndefection, disengagement, withdrawal, disaffiliation, leaving - some conceptual muddle to address\ncollective defection (group splintering or departure of an “entire affinity group”)\nisolated defection (changes to biographical availability, lost commitment)\n\nDavenport (2015), two types: burnout/exhaustion (inability to continue) and lost commitment (unwillingness to continue)\n\nIntrovigne’s (1999) types:\n\ndefectors - leaving org by negotiation/agreement\napostates - becoming org’s professional enemy\nordinary leave takers - disappear, disengage quietly\nFillieule (2009): this typology is incomplete, needs augmenting"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---methodological-approach",
+    "href": "slides/slides_14.html#fillieule2009---methodological-approach",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - methodological approach",
+    "text": "Fillieule (2009) - methodological approach\n\ncommon ground with Horgan (2008; 2014)\n‘move away from focus on determinants and factors to focus instead on process’\n\nconsequent methodological choices …"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---methodological-approach-1",
+    "href": "slides/slides_14.html#fillieule2009---methodological-approach-1",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - methodological approach",
+    "text": "Fillieule (2009) - methodological approach\n\n\ncommon ground with Horgan (2008; 2014)\n‘move away from focus on determinants and factors to focus instead on process’\n\nconsequent methodological choices …\n\n\n\n\nwe must first investigate the individuals and their life story and then question the manner in which their existence is partly determined by structural factors at the meso and macro levels. Which means adopting the framework of a comprehensive sociology, attentive to the justifications of the actors.\n\n\n\n\n\n\n\nnecessity of ‘multi-level analysis’\n\nmicro: dispositions, socialisation; meso: secondary socialisation in protest groups, ‘organisational modelling,’ strength of ‘role taking,’ dependence on the group, etc.; macro: political context, repression and opportunities"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---some-additional-definitions",
+    "href": "slides/slides_14.html#fillieule2009---some-additional-definitions",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - some additional definitions",
+    "text": "Fillieule (2009) - some additional definitions\n\nradical organisation - “any form of organization ready to operate outside of the legal framework and to resort to violence, whether because it feels that the conventional forms of action are ineffective, or because repression leaves no other alternative than violence or the dissolution of the group.”\nviolent action - “a vast array of more or less long lasting or extreme forms of commitment, including violence against oneself (e.g. immolation, suicide attacks) or against others (e.g. assassination, so called ‘terrorist’ acts, guerilla, etc.).”"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---theory-building",
+    "href": "slides/slides_14.html#fillieule2009---theory-building",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - theory-building",
+    "text": "Fillieule (2009) - theory-building\n\ntwo series of mechanisms\n\nthe complex effects of organisational moulding on individuals caught up in radical groups\nthe ambivalent effects of repression and the criminalisation of radical activities"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---ideology-weakening-socialisation",
+    "href": "slides/slides_14.html#fillieule2009---ideology-weakening-socialisation",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - ideology, weakening socialisation",
+    "text": "Fillieule (2009) - ideology, weakening socialisation\n\n\ntwo modes of weakening ideological commitment\n\ndue to a change of political climate\n\n“Whalen and Flacks (1989) show that after The Vietnam War ended and the repression of leftist movements intensified in the US, militant groups began to re-evaluate the chances of success of the revolutionary project, as well as the cost of commitment.”\n\ncracks in consensus, factions, splits\n\ne.g., “… in the context of the failed Red Brigades kidnapping of Aldo Moro in 1977, conflicts emerged between the groups of prisoners and the external management of the movement, at the same time as the state was creating a special category for those who left the organisation and accepted to collaborate with the State, thus providing opportunities for withdrawal and treason (Moretti, 2004).”"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---resources-rewards",
+    "href": "slides/slides_14.html#fillieule2009---resources-rewards",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - resources, rewards",
+    "text": "Fillieule (2009) - resources, rewards\n\nrewards - the material or symbolic benefits individuals think they receive from their commitment\ncomplex dynamic with rewards, though\n\n“the more one had to sacrifice to enter the group and remain a member, the higher the cost of defection” (cf. Kanter 1968)\n\nsymbolic level, must account for:\n\npublic image of the group\nsocial legitimacy\nacceptance of justification to use of violence"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---social-networks-and-identities",
+    "href": "slides/slides_14.html#fillieule2009---social-networks-and-identities",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - social networks and identities",
+    "text": "Fillieule (2009) - social networks and identities\n\nforms of attachment (Kanter)\n\nmaintenance: sacrifice and investment enhance attachment (individual)\ncohesion: affective links between individuals and emotions enhance attachment (collective)\n\nrenunciation: withdrawal from relationships outside group\ncommunion: the ‘we’ feeling\n\ncontrol: reciprocal (asserting and giving up of) control relationship enhances attachment\n\nmortification: loss of individuals’ sense of self-determination (replaced by group identification)\ndenial: unconditional dedication to an authority"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---inconsistency-of-effects-of-repression",
+    "href": "slides/slides_14.html#fillieule2009---inconsistency-of-effects-of-repression",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - inconsistency of effects of repression",
+    "text": "Fillieule (2009) - inconsistency of effects of repression\n\nRepression benefiting mobilisation:\n\nmoral shocks, incidents of emotional mobilisation\ntheory of frustration\n\nRepression hindering mobilisation:\n\ndecapitate a movement\ndrive up costs/risks"
+  },
+  {
+    "objectID": "slides/slides_14.html#responding-to-perceived-repression-a-recent-example-25.6.2023-london",
+    "href": "slides/slides_14.html#responding-to-perceived-repression-a-recent-example-25.6.2023-london",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "responding to (perceived) repression, a recent example (25.6.2023, London)",
+    "text": "responding to (perceived) repression, a recent example (25.6.2023, London)"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---effects-of-repression",
+    "href": "slides/slides_14.html#fillieule2009---effects-of-repression",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - effects of repression",
+    "text": "Fillieule (2009) - effects of repression\n\nmay lead to block recruitment: mobilising entire families from the same villages and associations\n\nPKK, IRA, ETA\n\nencourages clandestine activity\nintensifies competition among rival groups"
+  },
+  {
+    "objectID": "slides/slides_14.html#fillieule2009---methods-recommendations",
+    "href": "slides/slides_14.html#fillieule2009---methods-recommendations",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Fillieule (2009) - methods recommendations",
+    "text": "Fillieule (2009) - methods recommendations\n\nmove away from IVs and DVs, towards ‘thick description’\nmove away from mono causal explanations by discerning factors explaining individual behaviour at the three interrelated micro-meso, micro-macro and meso-macro levels\nmove from synchronic (i.e., at one point in time) to diachronic (i.e., over time) mechanisms for context, organisational, individual change\nmove away from purely agency or purely structural approaches, towards ‘interactionist sociology’\nfocus on individual level (i.e., one’s life course and the justifications they give for their actions) and, through individuals, manifestation of micro-, meso-, and macro-level factors"
+  },
+  {
+    "objectID": "slides/slides_14.html#gaudetteetal2022---disengaged-but-still-radical",
+    "href": "slides/slides_14.html#gaudetteetal2022---disengaged-but-still-radical",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Gaudette, Scrivens, and Venkatesh (2022) - disengaged but still radical",
+    "text": "Gaudette, Scrivens, and Venkatesh (2022) - disengaged but still radical\n\n\n\n\n\nin-depth interviews with Canadian former right-wing extremists (RWEs)\n\ninterview questions provided by Canadian law enforcement officials and local community activists\n\n\n\nprior to conducting the interviews with formers, we consulted with key stakeholders, namely Canadian law enforcement officials and local community activists, and they developed a list of interview questions that they would ask formers and those questions were incorporated into the interview guide. The purpose of this approach was simple: rather than developing an interview guide that was derived from an academic perspective only, we included interview questions from key stakeholders for the purposes of developing a multidimensional, multi-perspective interview guide.\n\n\nethical implications?\ndata: 10 former RWEs, recruited using a snowball sampling technique"
+  },
+  {
+    "objectID": "slides/slides_14.html#disengaged-but-still-radical---gaudette-et-al.--gaudetteetal2022",
+    "href": "slides/slides_14.html#disengaged-but-still-radical---gaudette-et-al.--gaudetteetal2022",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "disengaged but still radical - Gaudette et al. (2022)",
+    "text": "disengaged but still radical - Gaudette et al. (2022)\n\n\n\n\n\nin-depth interviews with Canadian former right-wing extremists\n\ninterview questions provided by Canadian law enforcement officials and local community activists\n\n\n\n\nprior to conducting the interviews with formers, we consulted with key stakeholders, namely Canadian law enforcement officials and local community activists, and they developed a list of interview questions that they would ask formers and those questions were incorporated into the interview guide. The purpose of this approach was simple: rather than developing an interview guide that was derived from an academic perspective only, we included interview questions from key stakeholders for the purposes of developing a multidimensional, multi-perspective interview guide.\n\n\nethical implications?\ndata: 10 former RWEs, recruited using a snowball sampling technique"
+  },
+  {
+    "objectID": "slides/slides_14.html#data-gaudetteetal2022",
+    "href": "slides/slides_14.html#data-gaudetteetal2022",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "data (Gaudette, Scrivens, and Venkatesh 2022)",
+    "text": "data (Gaudette, Scrivens, and Venkatesh 2022)"
+  },
+  {
+    "objectID": "slides/slides_14.html#findings-gaudetteetal2022",
+    "href": "slides/slides_14.html#findings-gaudetteetal2022",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "findings (Gaudette, Scrivens, and Venkatesh 2022)",
+    "text": "findings (Gaudette, Scrivens, and Venkatesh 2022)\n\n\nReasons for leaving (note multiplicity of reasons)\n\n\n\n\nFreq.\n\n\n\n\nBirth of a child\n4\n\n\nReunite with family\n1\n\n\nEmotional burnout\n3\n\n\nPhysical burnout\n1\n\n\nDisillusionment\n6\n\n\n\n\ndisengagement: multifaceted and multidimensional process composed of various interrelated reasons\ngeneralisability? across movements (other RWE? Islamists? left-wing?)? across countries? across periods?\n\n\n\nstrategies of disengagement\n\ntime away from and placing physical distance between themselves and movement adherents (including imprisonment (p12))\nleaning on family and friends outside of extremism for support during early disengagement stages\n\n‘hard-wired beliefs’: disengaged but not deradicalised\n\nretention of radical beliefs are strong predictors of reengagement in violent extremism (Altier, MB, Boyle, EL, & Horgan, J. (2021))"
+  },
+  {
+    "objectID": "slides/slides_14.html#a-tricky-case-of-individual-deradicalisation",
+    "href": "slides/slides_14.html#a-tricky-case-of-individual-deradicalisation",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "a tricky case of individual deradicalisation",
+    "text": "a tricky case of individual deradicalisation\n(in German)\n\n\nClick to listen\n\n\nYour browser does not support the audio element.\n\n\nhttps://www.zeit.de/politik/2023-07/sterbehilfe-gesetz-bundestag-nachrichtenpodcast\n\nshould Beate Zschäpe be eligible for a deradicalisation programme? Including the incentives for participation (i.e., sentence reduction)?"
+  },
+  {
+    "objectID": "slides/slides_14.html#thank-you",
+    "href": "slides/slides_14.html#thank-you",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "THANK YOU!",
+    "text": "THANK YOU!\n\nNo class next week – good luck on your exam!\nEssays (for those not taking Klausur) due 2026-03-07\nThank you for the feedback on course evaluations: if you have any follow-ups, please write to me or see me during office hours\n\n\nThanks for coming and being great students!"
+  },
+  {
+    "objectID": "slides/slides_14.html#organisational-demobilisation---kurthcronin2006",
+    "href": "slides/slides_14.html#organisational-demobilisation---kurthcronin2006",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Organisational demobilisation - Cronin (2006)",
+    "text": "Organisational demobilisation - Cronin (2006)\n\n\nBackground: grappling with U.S. combat against al-Qaida\nCronin (2006) argues: past experience can (must!) inform attempts to combat al-Qaida (and politically violent groups)\n\n\n\nOn average, modern terrorist groups do not exist for long. According to David Rapoport, 90 percent of terrorist organisations have a life span of less than one year; and of those that make it to a year, more than half disappear within a decade.\n\n\n\nIdeology seems to matter: of left-wing, right-wing, or ethnonationlist/separatist groups, ethnonationalist/separatist have had the longest average life span\n\nwhy might this be?"
+  },
+  {
+    "objectID": "slides/slides_14.html#organisational-demobilisation---kurthcronin2006-1",
+    "href": "slides/slides_14.html#organisational-demobilisation---kurthcronin2006-1",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Organisational demobilisation - Cronin (2006)",
+    "text": "Organisational demobilisation - Cronin (2006)\n\n\nBackground: grappling with U.S. combat against al-Qaida\nCronin (2006) argues: past experience can (must!) inform attempts to combat al-Qaida (and politically violent groups)\n\n\n\nOn average, modern terrorist groups do not exist for long. According to David Rapoport, 90 percent of terrorist organisations have a life span of less than one year; and of those that make it to a year, more than half disappear within a decade.\n\n\n\nIdeology seems to matter: of left-wing, right-wing, or ethnonationlist/separatist groups, ethnonationalist/separatist have had the longest average life span\n\nwhy might this be?\n“their greater average longevity seems to result, at least in part, from support among the local populace of the same ethnicity for the group’s political or territorial objectives.”"
+  },
+  {
+    "objectID": "slides/slides_14.html#organisational-demobilisation---kurthcronin2006-2",
+    "href": "slides/slides_14.html#organisational-demobilisation---kurthcronin2006-2",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Organisational demobilisation - Cronin (2006)",
+    "text": "Organisational demobilisation - Cronin (2006)\n\n\nTerrorist groups generally cannot survive without either active or passive support from a surrounding population.\n\n\n\nActive support: hiding members, raising money, joining the organization\nPassive support: ignoring obvious signs of terrorist group activity, declining to cooperate with police investigations, sending money to organizations that act as fronts for the group, expressing support for the group’s objectives\nthe need to overcome apathy\n\n\n\nApathy is a powerful force; all else being equal, most people naturally prefer to carry on their daily lives without the threat of being targeted by counterterrorism laws, regulations, sanctions, and raids."
+  },
+  {
+    "objectID": "slides/slides_14.html#org.-demobilisation---kurthcronin2006",
+    "href": "slides/slides_14.html#org.-demobilisation---kurthcronin2006",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Org. demobilisation - Cronin (2006)",
+    "text": "Org. demobilisation - Cronin (2006)\n\n\n\n\n\n\n\nKey factors\nNotable historical examples\n\n\n\n\nCapture/Kill leader(s)\nShining Path; Kurdistan Workers’ Party; Real Irish Republican Army; Aum Shinrikyo\n\n\nUnsuccessful generational transition\nRed Brigades; Second of June Movement; Weather Underground; Baader-Meinhof group (Red Army Faction); The Order; Aryan Resistance Army\n\n\nAchievement of the cause\nIrgun/Stern Gang; African National Congress\n\n\nTransition to a legitimate political process/negotiations\nProvisional Irish Republican Army; Palestinian Liberation Organization; Liberation Tigers of Tamil Eelam; Moro Islamic Liberation Front\n\n\nLoss of popular support\nReal Irish Republican Army; Basque Homeland and Freedom (ETA); Shining Path\n\n\nTransition toward criminality\nAbu Sayyaf; Revolutionary Armed Forces of Colombia\n\n\nTransition toward full insurgency\nKhmer Rouge; Guatemalan Labor Party/Guatemalan National Revolutionary Unit; Communist Party of Nepal-Maoists; Kashmiri separatist groups (e.g., Lashkare-Toiba and Hizbul Mujahideen); Armed Islamic Group (Algeria)"
+  },
+  {
+    "objectID": "slides/slides_14.html#uniqueness-of-al-qaida-kurthcronin2006",
+    "href": "slides/slides_14.html#uniqueness-of-al-qaida-kurthcronin2006",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Uniqueness of al-Qaida? Cronin (2006)",
+    "text": "Uniqueness of al-Qaida? Cronin (2006)\n\nFour characteristics distinguish al-Qaida:\n\nfluid organisation; 2. recruitment methods; 3. funding; 4. means of communication\n\n\n\n\n“No previous terrorist organization has exhibited the complexity, agility, and global reach of al-Qaida, with its fluid operational style based increasingly on a common mission statement and objectives, rather than on standard operating procedures and an organizational structure.”\n\n\n“…many terrorism experts agreed that al-Qaida could best be described as a franchise organization with a marketable ‘brand.’”"
+  },
+  {
+    "objectID": "slides/slides_14.html#organisational-demobilisation---kurthcronin2006-3",
+    "href": "slides/slides_14.html#organisational-demobilisation---kurthcronin2006-3",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "Organisational demobilisation - Cronin (2006)",
+    "text": "Organisational demobilisation - Cronin (2006)\n\n\n\n\n\n\n\n\nKey factors\nNotable historical examples\n\n\n\n\nCapture/Kill leader(s)\nShining Path; Kurdistan Workers’ Party; Real Irish Republican Army; Aum Shinrikyo\n\n\nUnsuccessful generational transition\nRed Brigades; Second of June Movement; Weather Underground; Baader-Meinhof group (Red Army Faction); The Order; Aryan Resistance Army\n\n\nAchievement of the cause\nIrgun/Stern Gang; African National Congress\n\n\nTransition to a legitimate political process/negotiations\nProvisional Irish Republican Army; Palestinian Liberation Organization; Liberation Tigers of Tamil Eelam; Moro Islamic Liberation Front\n\n\nLoss of popular support\nReal Irish Republican Army; Basque Homeland and Freedom (ETA); Shining Path\n\n\nTransition toward criminality\nAbu Sayyaf; Revolutionary Armed Forces of Colombia\n\n\nTransition toward full insurgency\nKhmer Rouge; Guatemalan Labor Party/Guatemalan National Revolutionary Unit; Communist Party of Nepal-Maoists; Kashmiri separatist groups (e.g., Lashkare-Toiba and Hizbul Mujahideen); Armed Islamic Group (Algeria)"
+  },
+  {
+    "objectID": "slides/slides_14.html",
+    "href": "slides/slides_14.html",
+    "title": "Class 14: Responses to Political Violence",
+    "section": "",
+    "text": "Open Stickerfrom Open Stickers"
   }
 ]
