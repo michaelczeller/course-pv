@@ -882,6 +882,12 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_12.html"))
 ```
 
+<hr>
+
+<!-- [ -->
+[Questions about groups]{style="color:violet;"}: (1) Is online activity is essential for the group? (2) Do platform algorithms amplify the group? (3) What does online activity by this group involve? (4) Does the group depend more on open platforms or encrypted/private channels? (5) Most important platform?
+<!-- ]{style="font-size: 0.7em;"} -->
+
 ## References
 
 

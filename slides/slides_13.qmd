@@ -926,7 +926,7 @@ Redirect mode
 
 ::: 
 
-# Poll: addressing extremism online {background-color="#2c844c"}
+# Poll: extremism online {background-color="#2c844c"}
 
 :::: {.columns}
 :::{.column width="35%"}
@@ -945,8 +945,340 @@ Take the survey at **<https://forms.gle/91eNe9j9fPzkqRVz5>**
 :::
 :::: 
 
+::: {style="margin-top: -40px;"}
 - Is [deplatforming]{style="color:violet;"} effective for dealing with online extremism?
 - Should criminal penalties exist for spreading [disinformation]{style="color:violet;"}?
+
+:::
+
+
+::: {style="margin-top: -40px;"}
+[[Questions about groups]{style="color:violet;"}: (1) Is online activity is essential for the group? (2) Do platform algorithms amplify the group? (3) What does online activity by this group involve? (4) Does the group depend more on open platforms or encrypted/private channels? (5) Most important platform?]{style="font-size: 0.7em;"}
+
+:::
+
+## Groups online
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vRCCNFiUVI8VclRPb-6-teUiMvqZyDKKGIeCZOQYU7JhYwrLPBPKH337eqnrb6YiaVzCSraYw7CeRBC/" +
+    "pub?gid=920297838&single=true&output=csv",
+  10000, 1, 12); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
+
+```
+
+:::: {.columns}
+:::{.column width="48%"}
+Online is essential to group's activity
+
+
+```{ojs}
+g_online_essentialCounts = aq.from(surveyResults)
+  .groupby("g_online_essential", "group")
+  .count()
+  .objects();
+
+plot_g_online_essential = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_online_essentialCounts, {
+      fx: "g_online_essential",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+ 
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+Online primarily for...
+
+```{ojs}
+// need to replace 'g_online_primarily'
+
+g_online_primarilyCounts = aq.from(surveyResults)
+  .groupby("g_online_primarily", "group")
+  .count()
+  .objects();
+
+plot_g_online_primarily = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_online_primarilyCounts, {
+      fx: "g_online_primarily",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 170,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+::::
+
+## Groups online
+
+:::: {.columns}
+:::{.column width="48%"}
+Algorithm amplification?
+
+```{ojs}
+g_algo_amplifyCounts = aq.from(surveyResults)
+  .groupby("g_algo_amplify", "group")
+  .count()
+  .objects();
+
+plot_g_algo_amplify = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_algo_amplifyCounts, {
+      fx: "g_algo_amplify",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+ 
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+Most important platform for group?
+
+```{ojs}
+// need to replace 'g_platform_important'
+
+g_platform_importantCounts = aq.from(surveyResults)
+  .groupby("g_platform_important", "group")
+  .count()
+  .objects();
+
+plot_g_platform_important = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_platform_importantCounts, {
+      fx: "g_platform_important",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 170,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+::::
+
 
 ## Multi-platform activity [@mitts2025SafeHavensHate] - regulation challenges
 
@@ -1616,22 +1948,6 @@ md`## Poll results (Respondents: ${respondentCount}) and CasaPound v. Facebook`
 
 - *what is at stake here? who decides? who ought to?*
 
-```{ojs}
-
-import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
-import { aq, op } from "@uwdata/arquero";
-
-// UPDATE THE LINK FOR A NEW POLL
-surveyResults = liveGoogleSheet(
-  "https://docs.google.com/spreadsheets/d/e/" +
-    "2PACX-1vRCCNFiUVI8VclRPb-6-teUiMvqZyDKKGIeCZOQYU7JhYwrLPBPKH337eqnrb6YiaVzCSraYw7CeRBC/" +
-    "pub?gid=920297838&single=true&output=csv",
-  10000, 1, 6); // adjust the last number to select all relevant columns 
-
-respondentCount = surveyResults.length;
-
-```
-
 :::: {.columns}
 :::{.column width="50%"}
 *define* what is impermissible
@@ -2049,12 +2365,6 @@ plot_disinformation = Plot.plot({
 ```
 
 
-
-
-
-
-
-
 # Any questions, concerns, feedback for this class? {background-color="#2c844c"}
 
 Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
@@ -2064,6 +2374,10 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_13.html"))
 ```
+
+<hr>
+
+[Questions about groups next week]{style="color:violet;"}: (1) is disengagement from this group primarily voluntary? (2) Is most disengagement gradual rather than abrupt? (3) What is the most common 'exit pathway' from this group? (4) Is fear of state repression a major driver of disengagement? (5) Do most members who disengage also deradicalise? 
 
 ## References
 

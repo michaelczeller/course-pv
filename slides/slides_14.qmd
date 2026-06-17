@@ -271,7 +271,7 @@ bibliography: ../../../library.bib
 
 ::: 
 
-# Disengage, deradicalise, demobilise {background-color="#2c844c"}
+# Disengage, deradicalise {background-color="#2c844c"}
 
 :::: {.columns}
 :::{.column width="65%"}
@@ -293,7 +293,6 @@ bibliography: ../../../library.bib
 ::: {style="margin-top: -40px;"} 
 - Gaudette et al. [-@GaudetteETAL2022], disengaged but still radical 
 - tricky case of deradicalisation 
-- organisational demobilisation 
 
 ::: 
 
@@ -528,6 +527,432 @@ Reasons for leaving ([note multiplicity of reasons]{style="color:red;"})
 . . . 
 
 [should Beate Zschäpe be eligible for a deradicalisation programme? Including the incentives for participation (i.e., sentence reduction)?]{style="color:indigo;"}
+
+# Poll: disengagement in studied groups {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/13/PVclass13_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/8brVvDPCmGZFzQ1K6>**
+
+- [Disengagement]{style="color:violet;"} from this group is primarily [voluntary]{style="color:violet;"}.
+- Most [disengagement]{style="color:violet;"} is [gradual]{style="color:violet;"} rather than abrupt.
+- most common "[exit pathway]{style="color:violet;"}" from this group?
+
+:::
+:::: 
+
+- Fear of state [repression]{style="color:violet;"} is a major [driver of disengagement]{style="color:violet;"}?
+- Most members who [disengage]{style="color:violet;"} also [deradicalise]{style="color:violet;"}.
+
+--- 
+
+```{ojs}
+md`## Poll results (Respondents: ${respondentCount})`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vTDMrktWyutD4kjgE1IFF6K5wawuYuaLtmdFsAZqBjFz-daxhHuLHufm5uZAUA0uyz-InMqR8Lb4XF7/" +
+    "pub?gid=1285259553&single=true&output=csv",
+  10000, 1, 7); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
+
+```
+
+:::: {.columns}
+:::{.column width="48%"}
+Disengagement from this group is primarily voluntary
+
+```{ojs}
+voluntary_disengageCounts = aq.from(surveyResults)
+  .groupby("voluntary_disengage", "group")
+  .count()
+  .objects();
+
+plot_voluntary_disengage = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(voluntary_disengageCounts, {
+      fx: "voluntary_disengage",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+ 
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+Most disengagement is gradual
+
+```{ojs}
+gradual_disengageCounts = aq.from(surveyResults)
+  .groupby("gradual_disengage", "group")
+  .count()
+  .objects();
+
+plot_gradual_disengage = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(gradual_disengageCounts, {
+      fx: "gradual_disengage",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+```
+
+:::
+::::
+
+## Most common 'exit pathways' 
+
+```{ojs}
+// need to replace 'exit_pathway'
+
+exit_pathwayCounts = aq.from(surveyResults)
+  .groupby("exit_pathway", "group")
+  .count()
+  .objects();
+
+plot_exit_pathway = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(exit_pathwayCounts, {
+      fx: "exit_pathway",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 170,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+## Disengagement driver and deradicalisation
+
+:::: {.columns}
+:::{.column width="48%"}
+Fear of repression helps drive disengagement?
+
+```{ojs}
+repression_fearCounts = aq.from(surveyResults)
+  .groupby("repression_fear", "group")
+  .count()
+  .objects();
+
+plot_repression_fear = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(repression_fearCounts, {
+      fx: "repression_fear",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+ 
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+::: {.column width="48%"}
+disengagement *and* deradicalisation?
+
+```{ojs}
+disengage_deradCounts = aq.from(surveyResults)
+  .groupby("disengage_derad", "group")
+  .count()
+  .objects();
+
+plot_disengage_derad = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(disengage_deradCounts, {
+      fx: "disengage_derad",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+::::
+
+
+# Demobilisation {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="65%"}
+- organisational demobilisation  
+    + survival/resilience of terrorist groups  
+        * active support
+        * passive support
+    + key factors of demobilisation 
+    + example of al Qaeda 
+
+:::
+
+::: {.column width="35%"}
+<div class="tenor-gif-embed" data-postid="20490322" data-share-method="host" data-aspect-ratio="0.765625" data-width="100%"><a href="https://tenor.com/view/destroyed-gif-20490322">Destroyed GIF</a>from <a href="https://tenor.com/search/destroyed-gifs">Destroyed GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> 
+:::
+::::
+
+<!-- ::: {style="margin-top: -40px;"}  -->
+
+<!-- :::  -->
 
 ## Organisational demobilisation - @KurthCronin2006
 
