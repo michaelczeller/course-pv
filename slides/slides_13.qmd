@@ -838,7 +838,7 @@ kable(df, "html", escape=FALSE, align="cc") %>%
 :::
 ::::
 
-## Models of 'counterspeech' - @Saltman2021 
+## Models of 'counterspeech' - Saltman et al. [-@Saltman2021] 
 
 RQs: 
 

@@ -214,9 +214,43 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vTZQp7fXXtMesfkjSS-tdlb0ra7RlDl2qrXrKQbGrCSSxFj0jTh07P_c7cEC5287yMvtPfaVGOznb03/" +
     "pub?gid=1923031727&single=true&output=csv",
-  10000, 1, 5); // adjust the last number to select all relevant columns 
+  10000, 1, 11); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
 
 ```
 
@@ -463,6 +497,335 @@ banningWhy = aq.from(surveyResults)
 banningWhy.array("banning")
 
 ```
+
+## Groups and repression 
+
+:::: {.columns}
+:::{.column width="50%"}
+The state infiltrated or monitored the group.
+
+```{ojs}
+// need to replace 'g_infiltrate'
+
+g_infiltrateCounts = aq.from(surveyResults)
+  .groupby("g_infiltrate", "group")
+  .count()
+  .objects();
+
+plot_g_infiltrate = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_infiltrateCounts, {
+      fx: "g_infiltrate",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+
+:::
+
+::: {.column width="50%"}
+Repression is a central to the state's strategy
+
+```{ojs}
+// need to replace 'g_repress_central'
+
+g_repress_centralCounts = aq.from(surveyResults)
+  .groupby("g_repress_central", "group")
+  .count()
+  .objects();
+
+plot_g_repress_central = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_repress_centralCounts, {
+      fx: "g_repress_central",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+:::: 
+
+## Groups and repression 
+
+Repression viewed as legitimate
+
+```{ojs}
+// need to replace 'g_repress_legit'
+
+g_repress_legitCounts = aq.from(surveyResults)
+  .groupby("g_repress_legit", "group")
+  .count()
+  .objects();
+
+plot_g_repress_legit = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_repress_legitCounts, {
+      fx: "g_repress_legit",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+## Groups and repression
+
+:::: {.columns}
+:::{.column width="50%"}
+Repression reduced group's operational capacity
+
+```{ojs}
+// need to replace 'g_repress_success'
+
+g_repress_successCounts = aq.from(surveyResults)
+  .groupby("g_repress_success", "group")
+  .count()
+  .objects();
+
+plot_g_repress_success = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_repress_successCounts, {
+      fx: "g_repress_success",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+
+::: {.column width="50%"}
+State cooperates internationally against group
+
+```{ojs}
+// need to replace 'g_state_coop'
+
+g_state_coopCounts = aq.from(surveyResults)
+  .groupby("g_state_coop", "group")
+  .count()
+  .objects();
+
+plot_g_state_coop = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_state_coopCounts, {
+      fx: "g_state_coop",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+:::: 
+
 
 # Banning {background-color="#2c844c"}
 
