@@ -340,19 +340,28 @@ kable(data, format = "html", col.names = c("Area", "Activity", "Nadia", "Oscar",
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/WskY6kmGLEjXvo586>**
 
-- policy approach to pacify ethnic/sectarian conflict?
-- de-radicalisation programmes more successful than punishment?
+::: {style="margin-top: -20px; font-size: 0.7em;"} 
+- policy to pacify ethnic/sectarian conflict? 
+- de-radicalisation more successful than punishment? 
 - criminalising hate speech and incitement? 
+- most important support during *disengagement*? 
+- effective policy measures preventing radicalisation?
+- participation in de-radicalisation programmes be mandatory?
+
+:::
 
 :::
 :::: 
 
-::: {style="margin-top: -40px;"} 
-- most important support during *disengagement*?
-- effective policy measures preventing radicalisation?
-- participation in de-radicalisation programmes be mandatory?
+::: {style="margin-top: -40px; font-size: 0.7em;"} 
 - should states fund religious or ideological mentors? 
+
 ::: 
+
+::: {style="margin-top: -20px;"}
+[[Questions about groups]{style="color:violet;"}: (1) State response primarily driven by security concerns? (2) State mostly uses policy-based responses? (3) State has a coherent long-term strategy toward group? (4) The group is primarily treated as...? (5) State has engaged group in negotiation? (6) Foreign gov(s). shape state response toward group?]{style="font-size: 0.7em;"}
+
+:::
 
 --- 
 
@@ -371,9 +380,43 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vSPyp6CIK_YgBLLJa_9102x68NIz6cjOfC67UTad0alyXY6cngKS6fOdxzh4zAG4WV0YtHx7_P8eZ34/" +
     "pub?gid=1695767618&single=true&output=csv",
-  10000, 1, 8); // adjust the last number to select all relevant columns 
+  10000, 1, 15); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
 
 ```
 
@@ -858,7 +901,406 @@ plot_mentors = Plot.plot({
 :::
 ::::
 
-# criminal justice responses {background-color="#2c844c"}
+## Group responses 
+
+The group is primarily treated as a: 
+
+```{ojs}
+// need to replace 'g_treated_as'
+
+g_treated_asCounts = aq.from(surveyResults)
+  .groupby("g_treated_as", "group")
+  .count()
+  .objects();
+
+plot_g_treated_as = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_treated_asCounts, {
+      fx: "g_treated_as",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 160,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+
+## Group responses 
+State has a coherent long-term strategy toward this group?
+
+```{ojs}
+// need to replace 'g_long_strategy'
+
+g_long_strategyCounts = aq.from(surveyResults)
+  .groupby("g_long_strategy", "group")
+  .count()
+  .objects();
+
+plot_g_long_strategy = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_long_strategyCounts, {
+      fx: "g_long_strategy",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+## Group responses 
+
+:::: {.columns}
+:::{.column width="48%"}
+State response primarily driven by security concerns?
+
+```{ojs}
+// need to replace 'g_security_or_political'
+
+g_security_or_politicalCounts = aq.from(surveyResults)
+  .groupby("g_security_or_political", "group")
+  .count()
+  .objects();
+
+plot_g_security_or_political = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_security_or_politicalCounts, {
+      fx: "g_security_or_political",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+State mostly uses policy-based responses?
+
+```{ojs}
+// need to replace 'g_mostly_policy'
+
+g_mostly_policyCounts = aq.from(surveyResults)
+  .groupby("g_mostly_policy", "group")
+  .count()
+  .objects();
+
+plot_g_mostly_policy = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_mostly_policyCounts, {
+      fx: "g_mostly_policy",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+::: 
+::::
+
+## Group responses 
+
+:::: {.columns}
+:::{.column width="48%"}
+State has engaged group in negotiation? 
+
+```{ojs}
+g_state_negotiationCounts = aq.from(surveyResults)
+  .groupby("g_state_negotiation", "group")
+  .count()
+  .objects();
+
+plot_g_state_negotiation = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_state_negotiationCounts, {
+      fx: "g_state_negotiation",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+ 
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+::: {.column width="48%"}
+Foreign gov(s). shape state response?
+
+```{ojs}
+g_foreign_gov_influenceCounts = aq.from(surveyResults)
+  .groupby("g_foreign_gov_influence", "group")
+  .count()
+  .objects();
+
+plot_g_foreign_gov_influence = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_foreign_gov_influenceCounts, {
+      fx: "g_foreign_gov_influence",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+ 
+
+
+::: 
+::::
+
+# Criminal justice responses {background-color="#2c844c"}
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -1470,7 +1912,7 @@ This argument, it should be clarified, is [probabilistic, not lawlike]{style="co
 <!-- @darby1986intimidation -->
 <!-- John Darby, for example, has studied three local communities in Greater Belfast?Kileen/Banduff, the Upper Ash bourne Estates, and Dunville.56 All three communities have mixed populations, but the first two have seen a lot of violence since the late 1960s, whereas the third has been quiet. Darby found that churches, schools, and political parties were segregated in all three communities, but Dunville had some distinctive features not shared by the other two. In contrast to the segregated voluntary groups in the first two commu nities, Dunville had mixed rotary and lions clubs, soccer clubs, and bowling clubs, as well as clubs for cricket, athletics, boxing, field hockey, swimming, table tennis, and golf. There was also a vigorous and mixed single parents club. These results are quite consistent with my Indian findings. -->
 
-# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+# Any feedback for this class? {background-color="#2c844c"}
 
 Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
 
@@ -1479,6 +1921,10 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_11.html"))
 ```
+
+<hr>
+
+[Questions about groups next week]{style="color:violet;"}: (1) The state infiltrated or monitored the group? (2) Repression is a central to the state's strategy? (3) Repression against group viewed as legitimate? (4) Repression reduced group's operational capacity? (5) State cooperates internationally against group?  
 
 ## References
 
