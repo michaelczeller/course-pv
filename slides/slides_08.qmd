@@ -191,6 +191,351 @@ bibliography: ../../../library.bib
 **[how should states respond to electoral violence?]{style="color:indigo; font-size:40px;"}** 
 :::
 
+# Poll: election-related violence {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/08/PVclass8_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/aFgvV521ZFGC8Rih9>**
+
+:::
+:::: 
+
+::: {style="margin-top: -20px;"}
+[[Questions about groups]{style="color:violet;"}: (1) Does the group's violence increase around elections? (2) How is the group's violence connected to elections? (3) Has the group intimidated/targeted voters? (4) Has the group intimidated/targeted candidates/office-holders?]{style="font-size: 0.7em;"}
+
+:::
+
+--- 
+
+```{ojs}
+md`## Poll results (Respondents: ${respondentCount}) - election violence`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vTX7RA8W_OCk1yCnikyaDz7WbZBF8AlFLTXcKm81JRCt_2Jyny_MoV0gEIqttuCJFcTrFN6S95B_nEV/" +
+    "pub?gid=1764934299&single=true&output=csv",
+  10000, 1, 6); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
+
+```
+
+Does the group's violence increase around elections?
+
+```{ojs}
+// need to replace 'g_vio_increase_elections'
+
+g_vio_increase_electionsCounts = aq.from(surveyResults)
+  .groupby("g_vio_increase_elections", "group")
+  .count()
+  .objects();
+
+plot_g_vio_increase_elections = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_vio_increase_electionsCounts, {
+      fx: "g_vio_increase_elections",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 140,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+## Group responses - election violence
+
+How is the group's violence connected to elections?
+
+```{ojs}
+// need to replace 'g_connection_to_elections'
+
+g_connection_to_electionsCounts = aq.from(surveyResults)
+  .groupby("g_connection_to_elections", "group")
+  .count()
+  .objects();
+
+plot_g_connection_to_elections = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_connection_to_electionsCounts, {
+      fx: "g_connection_to_elections",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 200,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+## Group responses - election targeting 
+
+:::: {.columns}
+:::{.column width="48%"}
+group intimidated/targeted voters?
+
+```{ojs}
+// need to replace 'g_target_voters'
+
+g_target_votersCounts = aq.from(surveyResults)
+  .groupby("g_target_voters", "group")
+  .count()
+  .objects();
+
+plot_g_target_voters = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_target_votersCounts, {
+      fx: "g_target_voters",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+group intimidated/targeted candidates/office-holders? 
+
+```{ojs}
+// need to replace 'g_target_candidates'
+
+g_target_candidatesCounts = aq.from(surveyResults)
+  .groupby("g_target_candidates", "group")
+  .count()
+  .objects();
+
+plot_g_target_candidates = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_target_candidatesCounts, {
+      fx: "g_target_candidates",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+
+::: 
+::::
+
+
+
+
 # Back to Violence / Nonviolence {background-color="#2c844c"}
 
 :::: {.columns}
@@ -335,6 +680,10 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_08.html"))
 ```
+
+<hr>
+    
+[Questions about groups next meeting]{style="color:violet;"}: (1) How does the group’s use of violence evolve over time? (2) How are major acts of violence perpetrated? (3) Does the group show restraint in choosing targets? (4) Is the group's restraint more strategic or moral? (5) Does the group have internal mechanisms to prevent uncontrolled violence? (6) Does the group escalate violence in response to state actions?  
 
 ## References
 

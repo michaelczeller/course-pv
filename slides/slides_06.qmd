@@ -179,16 +179,24 @@ FYI: intro [lecture on QTA]{style="color:blue;"}: <https://www.youtube.com/watch
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/QxENrdB3qNpT1jSa8>**
 
+::: {style="margin-top: -20px; font-size: 0.7em;"} 
 - militants more shaped by leaders than 'ideologies'?
 - *charismatic* leaders more likely to lead to violence?
 - more horizontally organised groups less likely to be violent?
+- leaders responsible/liable for violence of their followers?
+- incitement through rhetoric similar to explicit orders?
+- leaders' ability to control ongoing violence overstated?
+
+::: 
 
 :::
 :::: 
 
-- leaders responsible/liable for violence of their followers?
-- incitement through rhetoric similar to explicit orders?
-- leaders' ability to control ongoing violence overstated?
+
+::: {style="margin-top: -20px;"}
+[[Questions about groups]{style="color:violet;"}: (1) Did the group rely on centralised leadership? (2) Is group leadership based on formal hierarchy (i.e., not informal influence or reputation)? (3) Is the group's network resilient to arrests or leadership loss? (4) How would you describe the group's organisation?]{style="font-size: 0.7em;"}
+
+:::
 
 <!-- Leaders should be held criminally responsible for the violent acts committed by their followers. -->
 <!-- Format: SA / A / D / SD -->
@@ -216,9 +224,43 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vTHArn6wAcAH6pniKyOHgZVbrScYn4aFMgEfpRWE_s-E_e1ZGogYOv5jgJTXv7n_99XH0LvWC9KvYWh/" +
     "pub?gid=892835238&single=true&output=csv",
-  10000, 1, 7); // adjust the last number to select all relevant columns 
+  10000, 1, 12); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
 
 ```
 
@@ -879,6 +921,274 @@ three reasons:
 <!-- - How can a (nationalist) leader hinder or even stop political violence and terror? Is there an antidote for nationalism? -->
 <!-- - How can an ethnic conflict be transformed? -->
 
+## Group responses - leadership 
+
+:::: {.columns}
+:::{.column width="48%"}
+
+group relies on centralised leadership
+
+```{ojs}
+// need to replace 'g_central_leadership'
+
+g_central_leadershipCounts = aq.from(surveyResults)
+  .groupby("g_central_leadership", "group")
+  .count()
+  .objects();
+
+plot_g_central_leadership = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_central_leadershipCounts, {
+      fx: "g_central_leadership",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+Leadership based on formal hierarchy?
+
+```{ojs}
+// need to replace 'g_formal_hierarchy'
+
+g_formal_hierarchyCounts = aq.from(surveyResults)
+  .groupby("g_formal_hierarchy", "group")
+  .count()
+  .objects();
+
+plot_g_formal_hierarchy = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_formal_hierarchyCounts, {
+      fx: "g_formal_hierarchy",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+::: 
+::::
+
+## Group responses - org structure
+
+group’s network is resilient to arrests or leadership loss
+
+
+```{ojs}
+// need to replace 'g_network_resilience'
+
+g_network_resilienceCounts = aq.from(surveyResults)
+  .groupby("g_network_resilience", "group")
+  .count()
+  .objects();
+
+plot_g_network_resilience = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_network_resilienceCounts, {
+      fx: "g_network_resilience",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+## Group responses - org structure
+
+group's organisation is best described as...
+
+```{ojs}
+// need to replace 'g_org_desc'
+
+g_org_descCounts = aq.from(surveyResults)
+  .groupby("g_org_desc", "group")
+  .count()
+  .objects();
+
+plot_g_org_desc = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_org_descCounts, {
+      fx: "g_org_desc",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
 
 # Any questions, concerns, feedback for this class? {background-color="#2c844c"}
 
@@ -890,6 +1200,10 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_06.html"))
 ```
+
+<hr>
+    
+[Questions about groups next meeting]{style="color:violet;"}: (1) Did the group emerge in response to political repression? (2) Did the absence of (opportunity for) peaceful political participation contribute to the group's use of violence? (3) Did the group actively recruit members from outside its primary country of operation? (4) How important were cross-border networks to this group's activities? (5) Was the group's cause was framed as an international struggle?  
 
 ## References
 

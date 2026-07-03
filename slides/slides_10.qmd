@@ -113,16 +113,410 @@ bibliography: ../../../library.bib
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/VZJuzHbzXXtNW2KN9>**
 
+::: {style="margin-top: -20px; font-size: 0.7em;"} 
 - local support necessary violent group to have success?
-- violent escalation tends to alienate the public, reducing support?
-- most common reason people support politically violent groups?
+- violent escalation alienates public, reducing support?
+- reason people support politically violent groups?
+- citizens react differently to political violence depending on the the ideological motivations underlying the violence.
+- when states respond repressively, it usually strengthens politically violent groups' legitimacy?
+- After an attack, demand for punishment rises. Should policymakers shift toward harsher policies?
+
+:::
 
 :::
 :::: 
 
-- citizens react differently to political violence depending on the the ideological motivations underlying the violence.
-- when states respond repressively, it usually strengthens politically violent groups' legitimacy?
-- After an attack, demand for punishment rises. Should policymakers shift toward harsher policies?
+::: {style="margin-top: -30px;"}
+[[Questions about groups]{style="color:violet;"}: (1) Does the group try to grow its popular support? (2) Does the group's violence increase local support for it? (3) What type of participation does the group most rely on? (4) Do most civilians in areas where the group is active support the group? (5) Does the group provide services (security, justice, welfare) that generate legitimacy?]{style="font-size: 0.7em;"}
+
+:::
+
+--- 
+
+```{ojs}
+md`## Group responses (Respondents: ${respondentCount}) - popular support`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vROlIm6z3iEJH16_NhePQ5TQJKNti8GrDmGTH5dPJ0SPtPNbKc_WVmfu463ijQzJrsrnwcPf-2KZo_g/" +
+    "pub?gid=870695621&single=true&output=csv",
+  10000, 1, 13); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
+
+```
+
+:::: {.columns}
+:::{.column width="48%"}
+group tries to grow its popular support?
+
+
+```{ojs}
+// need to replace 'g_grow_pop_support'
+
+g_grow_pop_supportCounts = aq.from(surveyResults)
+  .groupby("g_grow_pop_support", "group")
+  .count()
+  .objects();
+
+plot_g_grow_pop_support = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_grow_pop_supportCounts, {
+      fx: "g_grow_pop_support",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+group's violence increases local support? 
+
+```{ojs}
+// need to replace 'g_vio_increases_support'
+
+g_vio_increases_supportCounts = aq.from(surveyResults)
+  .groupby("g_vio_increases_support", "group")
+  .count()
+  .objects();
+
+plot_g_vio_increases_support = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_vio_increases_supportCounts, {
+      fx: "g_vio_increases_support",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+::: 
+::::
+
+
+## Group responses - type of participation 
+
+What type of participation does the group most rely on?
+
+
+```{ojs}
+// need to replace 'g_relies_on'
+
+g_relies_onCounts = aq.from(surveyResults)
+  .groupby("g_relies_on", "group")
+  .count()
+  .objects();
+
+plot_g_relies_on = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_relies_onCounts, {
+      fx: "g_relies_on",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+## Group responses - civilian support 
+
+Do civilians where the group is active support the group? 
+
+
+```{ojs}
+// need to replace 'g_civ_support'
+
+g_civ_supportCounts = aq.from(surveyResults)
+  .groupby("g_civ_support", "group")
+  .count()
+  .objects();
+
+plot_g_civ_support = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_civ_supportCounts, {
+      fx: "g_civ_support",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+## Group responses - service provisions
+
+Does the group provide services (security, justice, welfare) that generate legitimacy?
+
+```{ojs}
+// need to replace 'g_provides_services'
+
+g_provides_servicesCounts = aq.from(surveyResults)
+  .groupby("g_provides_services", "group")
+  .count()
+  .objects();
+
+plot_g_provides_services = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_provides_servicesCounts, {
+      fx: "g_provides_services",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
 
 ## A recent controversy
 
@@ -157,28 +551,7 @@ In October 2023, the Irish Women's Football team qualified for the Women's World
 see also 8-minute roundtable: <https://www.youtube.com/watch?v=KkGfRbh2_Vw>
 ::: 
 
---- 
-
-```{ojs}
-md`## Poll results (Respondents: ${respondentCount})`
-```
-
-
-```{ojs}
-
-import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
-import { aq, op } from "@uwdata/arquero";
-
-// UPDATE THE LINK FOR A NEW POLL
-surveyResults = liveGoogleSheet(
-  "https://docs.google.com/spreadsheets/d/e/" +
-    "2PACX-1vROlIm6z3iEJH16_NhePQ5TQJKNti8GrDmGTH5dPJ0SPtPNbKc_WVmfu463ijQzJrsrnwcPf-2KZo_g/" +
-    "pub?gid=870695621&single=true&output=csv",
-  10000, 1, 7); // adjust the last number to select all relevant columns 
-
-respondentCount = surveyResults.length;
-
-```
+## Poll results 
 
 <!-- Is local support necessary for a politically violent group to have success? -->
 <!-- y/n/m -->

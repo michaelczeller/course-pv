@@ -841,15 +841,23 @@ Long: Enthusiastic. Some of them were in it for there own reason. I remember a f
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/XjqgU7Xwnwaoio638>**
 
-- Is there a difference between how individuals radicalise depending on ideology?
-- Are younger people more open/vulnerable to radicalisation?
+::: {style="margin-top: -20px; font-size: 0.7em;"} 
+- difference between how individuals radicalise depending on ideology?
+- younger people more open/vulnerable to radicalisation?
+- Has social media changed radicalisation processes?
+- Can government programmes deradicalise individuals?
+- Should there be incentives for radical/extreme individuals to participate in deradicalisation programmes?
+
+:::
 
 :::
 :::: 
 
-- Has social media changed radicalisation processes?
-- Can government programmes effectively deradicalise individuals?
-- Should there be incentives for radical/extreme individuals to participate in deradicalisation programmes?
+
+::: {style="margin-top: -20px;"}
+[[Questions about groups]{style="color:violet;"}: (1) Was radicalisation of members was motivated more by identity than by ideology? (2) Could individuals realistically have become radicalised without joining a social group connected to the organisation? (3) Was radicalisation into the group mostly *sudden* or *gradual*? (4) How did the group's narratives portray its members/community: victims, defenders, revolutionaries, religious warriors, other? (5) Did major political events accelerate radicalisation?]{style="font-size: 0.7em;"}
+
+:::
 
 --- 
 
@@ -868,9 +876,43 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vSi2B1vG4uov3Vjgrliic4xdhNDenSaK2H91a0phOVJlNheSBybnmTJ91ubqfmUCkU7XLuGYliBV1Xx/" +
     "pub?gid=1654703300&single=true&output=csv",
-  10000, 1, 7); // adjust the last number to select all relevant columns 
+  10000, 1, 13); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
 
 ```
 
@@ -1277,6 +1319,345 @@ plot_emphasis = Plot.plot({
 :::
 ::::
 
+## Group responses - radicalisation
+
+:::: {.columns}
+:::{.column width="48%"}
+radicalisation motivated more by identity than by ideology?
+
+```{ojs}
+// need to replace 'g_rad_identity_or_ideology'
+
+g_rad_identity_or_ideologyCounts = aq.from(surveyResults)
+  .groupby("g_rad_identity_or_ideology", "group")
+  .count()
+  .objects();
+
+plot_g_rad_identity_or_ideology = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_rad_identity_or_ideologyCounts, {
+      fx: "g_rad_identity_or_ideology",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+how are members portrayed?
+
+```{ojs}
+// need to replace 'g_portrayed_members'
+
+g_portrayed_membersCounts = aq.from(surveyResults)
+  .groupby("g_portrayed_members", "group")
+  .count()
+  .objects();
+
+plot_g_portrayed_members = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_portrayed_membersCounts, {
+      fx: "g_portrayed_members",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+::: 
+::::
+
+## Group responses - radicalisation
+
+:::: {.columns}
+:::{.column width="48%"}
+radicalised without joining a social group connected to organisation?
+
+```{ojs}
+// need to replace 'g_rad_without_joining'
+
+g_rad_without_joiningCounts = aq.from(surveyResults)
+  .groupby("g_rad_without_joining", "group")
+  .count()
+  .objects();
+
+plot_g_rad_without_joining = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_rad_without_joiningCounts, {
+      fx: "g_rad_without_joining",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+radicalisation *sudden* or *gradual*?
+
+```{ojs}
+// need to replace 'g_rad_mostly'
+
+g_rad_mostlyCounts = aq.from(surveyResults)
+  .groupby("g_rad_mostly", "group")
+  .count()
+  .objects();
+
+plot_g_rad_mostly = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_rad_mostlyCounts, {
+      fx: "g_rad_mostly",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+::: 
+::::
+
+## Group responses - radicalisation
+
+Did major political events accelerate radicalisation?
+
+```{ojs}
+// need to replace 'g_major_events'
+
+g_major_eventsCounts = aq.from(surveyResults)
+  .groupby("g_major_events", "group")
+  .count()
+  .objects();
+
+plot_g_major_events = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_major_eventsCounts, {
+      fx: "g_major_events",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
 
 # Why radicalisation fails {background-color="#2c844c"}
 
@@ -1432,6 +1813,9 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_03.html"))
 ```
 
+<hr>
+    
+[Questions about groups next meeting]{style="color:violet;"}: (1) Could the group's goals plausibly be achieved through nonviolence? (2) Would you characterise the group's strategy as mostly nonviolent, mostly violent, or mixed? (3) Who were/are the group's primary targets? (4) Does the group make efforts to avoid civilian casualties? (5) Was the group's use of violence effective, helping to achieve their goals?  
 
 ## References
 

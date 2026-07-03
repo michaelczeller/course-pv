@@ -168,16 +168,22 @@ recent journal article: @jones2024GhostlyMilitanzLoss
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/12tV7fgjcAyC8iVG6>**
 
+::: {style="margin-top: -20px; font-size: 0.7em;"} 
 - ideology secondary to pragmatic issues in choosing to use violence?
 - most important in allowing *restraint*?
 - most likely to provoke *escalation*?
+- should states remain open to negotiating with violent groups? 
+- groups more likely to escalate violence if they feel they are losing support?
+
+:::
 
 :::
 :::: 
 
-- should states remain open to negotiating with violent groups? 
-- groups more likely to escalate violence if they feel they are losing support?
+::: {style="margin-top: -20px;"}
+[[Questions about groups]{style="color:violet;"}: (1) How does the group’s use of violence evolve over time? (2) How are major acts of violence perpetrated? (3) Does the group show restraint in choosing targets? (4) Is the group's restraint more strategic or moral? (5) Does the group have internal mechanisms to prevent uncontrolled violence? (6) Does the group escalate violence in response to state actions?]{style="font-size: 0.7em;"}
 
+:::
 
 <!-- The ideology of a group is secondary to pragmatic considerations when it comes to use violence or not -->
 <!-- - strongly agree/agree/disagree/strongly disagree -->
@@ -223,9 +229,43 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vSzXDDMtCvL7AeQx2C5Qwg_FEhFHA6dWov5vprYGiQLzzFJARc0RJQniUe-InSkwTCCqTdTv_XXKeEi/" +
     "pub?gid=720467942&single=true&output=csv",
-  10000, 1, 6); // adjust the last number to select all relevant columns 
+  10000, 1, 13); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
 
 ```
 
@@ -647,6 +687,413 @@ relates to our Week 11-12 classes on state responses
 3. **[organisational logic]{style="color:goldenrod;"}** (declining moderate influence, logistical/practical preparation for violence)
 4. **[constituency/social logic]{style="color:violet;"}** (endorsement/legitimation from elites and/or public, politics/media focuses on radical flank)
 
+## Group responses - violence over time
+
+How does the group’s use of violence evolve over time? 
+
+```{ojs}
+// need to replace 'g_vio_evolution'
+
+g_vio_evolutionCounts = aq.from(surveyResults)
+  .groupby("g_vio_evolution", "group")
+  .count()
+  .objects();
+
+plot_g_vio_evolution = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_vio_evolutionCounts, {
+      fx: "g_vio_evolution",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+## Group responses - characteristic violence 
+
+Major acts of violence are typically... 
+
+```{ojs}
+// need to replace 'g_major_violence'
+
+g_major_violenceCounts = aq.from(surveyResults)
+  .groupby("g_major_violence", "group")
+  .count()
+  .objects();
+
+plot_g_major_violence = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_major_violenceCounts, {
+      fx: "g_major_violence",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 250,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+## Group responses - restraint
+
+:::: {.columns}
+:::{.column width="48%"}
+group demonstrates restraint in choosing targets?
+
+```{ojs}
+// need to replace 'g_restrained_targeting'
+
+g_restrained_targetingCounts = aq.from(surveyResults)
+  .groupby("g_restrained_targeting", "group")
+  .count()
+  .objects();
+
+plot_g_restrained_targeting = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_restrained_targetingCounts, {
+      fx: "g_restrained_targeting",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+restraint is more often strategic than moral.
+
+```{ojs}
+// need to replace 'g_restraint_strategic'
+
+g_restraint_strategicCounts = aq.from(surveyResults)
+  .groupby("g_restraint_strategic", "group")
+  .count()
+  .objects();
+
+plot_g_restraint_strategic = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_restraint_strategicCounts, {
+      fx: "g_restraint_strategic",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+::: 
+::::
+
+## Group responses - breaks and accelerators
+
+:::: {.columns}
+:::{.column width="48%"}
+group has internal mechanisms to prevent uncontrolled violence?
+
+```{ojs}
+// need to replace 'g_internal_mechanisms'
+
+g_internal_mechanismsCounts = aq.from(surveyResults)
+  .groupby("g_internal_mechanisms", "group")
+  .count()
+  .objects();
+
+plot_g_internal_mechanisms = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_internal_mechanismsCounts, {
+      fx: "g_internal_mechanisms",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+group escalates primarily responding to state action.
+
+
+```{ojs}
+// need to replace 'g_escalates_in_response'
+
+g_escalates_in_responseCounts = aq.from(surveyResults)
+  .groupby("g_escalates_in_response", "group")
+  .count()
+  .objects();
+
+plot_g_escalates_in_response = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_escalates_in_responseCounts, {
+      fx: "g_escalates_in_response",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+::: 
+::::
+
+
+
 # A case of RWE restraint? {background-color="#2c844c"}
 
 :::: {.columns}
@@ -711,10 +1158,13 @@ Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
 
 Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 
-
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_09.html"))
 ```
+
+<hr>
+
+[Questions about groups next meeting]{style="color:violet;"}: (1) Does the group try to grow its popular support? (2) Does the group's violence increase local support for it? (3) What type of participation does the group most rely on? (4) Do most civilians in areas where the group is active support the group? (5) Does the group provide services (security, justice, welfare) that generate legitimacy?  
 
 ## References
 

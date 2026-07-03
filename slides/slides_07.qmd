@@ -117,21 +117,27 @@ bibliography: ../../../library.bib
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/JJ7ufLwrLJYKAbvg8>**
 
+::: {style="margin-top: -20px; font-size: 0.7em;"} 
 - should states have laws banning travel to conflict zones?
 - most effective for addressing foreign fighters phenomenon?
 - top policy priority for dealing with returning fighters?
+- are returning foreign fighters a significant threat?
+- should states be able to revoke fighters' citizenship?
+
+:::
 
 :::
 :::: 
 
-- are returning foreign fighters a significant threat?
-- should states be able to revoke fighters' citizenship?
+::: {style="margin-top: -20px;"}
+[[Questions about groups]{style="color:violet;"}: (1) Did the group emerge in response to political repression? (2) Did the absence of (opportunity for) peaceful political participation contribute to the group's use of violence? (3) Did the group actively recruit members from outside its primary country of operation? (4) How important were cross-border networks to this group's activities? (5) Was the group's cause was framed as an international struggle?]{style="font-size: 0.7em;"}
 
+:::
 
 --- 
 
 ```{ojs}
-md`## Poll results (Respondents: ${respondentCount})`
+md`## Group responses (Respondents: ${respondentCount}) - emergence`
 ```
 
 
@@ -145,12 +151,500 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vTCOL_6dhwjrpQW9BGa1-p-uRlIknFTjWEkgBgHyaML3dziFgSxIgMU1pUmTfxJyHHm27Jv4_ZZUYT3/" +
     "pub?gid=164736256&single=true&output=csv",
-  10000, 1, 6); // adjust the last number to select all relevant columns 
+  10000, 1, 12); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
 
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
+
 ```
 
+:::: {.columns}
+:::{.column width="48%"}
+group emerged in response to repression?
+
+```{ojs}
+// need to replace 'g_emerge_after_repress'
+
+g_emerge_after_repressCounts = aq.from(surveyResults)
+  .groupby("g_emerge_after_repress", "group")
+  .count()
+  .objects();
+
+plot_g_emerge_after_repress = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_emerge_after_repressCounts, {
+      fx: "g_emerge_after_repress",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+
+lack of peaceful participation led to group's use of violence
+
+```{ojs}
+// need to replace 'g_absence_of_peaceful_part'
+
+g_absence_of_peaceful_partCounts = aq.from(surveyResults)
+  .groupby("g_absence_of_peaceful_part", "group")
+  .count()
+  .objects();
+
+plot_g_absence_of_peaceful_part = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_absence_of_peaceful_partCounts, {
+      fx: "g_absence_of_peaceful_part",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+::: 
+::::
+
+## Group responses - external connections 
+
+:::: {.columns}
+:::{.column width="48%"}
+group recruited from outside primary country?
+
+```{ojs}
+// need to replace 'g_recruit_outside'
+
+g_recruit_outsideCounts = aq.from(surveyResults)
+  .groupby("g_recruit_outside", "group")
+  .count()
+  .objects();
+
+plot_g_recruit_outside = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_recruit_outsideCounts, {
+      fx: "g_recruit_outside",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+cross-border networks importance?
+
+```{ojs}
+// need to replace 'g_crossborder_netz'
+
+g_crossborder_netzCounts = aq.from(surveyResults)
+  .groupby("g_crossborder_netz", "group")
+  .count()
+  .objects();
+
+plot_g_crossborder_netz = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_crossborder_netzCounts, {
+      fx: "g_crossborder_netz",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
+::: 
+::::
+
+## Group responses - framing of violence
+
+group's cause framed as an international struggle rather than local?
+
+```{ojs}
+// need to replace 'g_international_struggle'
+
+g_international_struggleCounts = aq.from(surveyResults)
+  .groupby("g_international_struggle", "group")
+  .count()
+  .objects();
+
+plot_g_international_struggle = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_international_struggleCounts, {
+      fx: "g_international_struggle",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+# Who becomes a foreign fighter, how are returnees addressed {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="80%"}
+- @morris2023WhoBecomesForeign - Who Becomes a Foreign Fighter? Characteristics of the Islamic State's Soldiers
+    + context, casing, data, locales of fighter mobilisation
+    + results and findings 
+- dealing with returning foreign fighters 
+
+:::
+
+::: {.column width="20%"}
+
+  
+:::
+::::
+
+## @morris2023WhoBecomesForeign - Context
+
+**MENA (Middle East, North Africa) countries have sent the largest numbers of foreign fighters to Syria**
+
+- Why is this the case? What are the relevant contextual factors?
+
+## @morris2023WhoBecomesForeign - Context
+
+**MENA (Middle East, North Africa) countries have sent the largest numbers of foreign fighters to Syria**
+
+- Why is this the case? What are the relevant contextual factors?
+    + religious ideology (*jihad*)
+    + religious internationalism (history of MENA alliance, e.g., in wars and campaigns against Israel)
+    + contexts of deprivation? travelling to fight as a 'way out'
+
+## @morris2023WhoBecomesForeign - Casing {.scrollable}
+
+- Three countries analysed: **Morocco**, **Egypt**, and **Turkey**
+    + Morocco represents foreign fighters from the Maghreb (Northwest Africa). (_**[representative country context]{style="color:blue;"}**_)
+    + Egyptian foreign fighters are more alike to ISIS recruits from the Levant than North Africa. (_**[representative country context]{style="color:blue;"}**_)
+    + Turkey,
+        * Turkey’s historical, political, and socioeconomic traits make it as a \textcolor{red}{least likely case of jihadi foreign fighter mobilisation} (_**[least likely mobilisation context]{style="color:blue;"}**_)
+        * Turkish foreign fighters may be more like Islamic State members from the Middle East and Central Asia than the other two countries. (_**[representative country context]{style="color:blue;"}**_)
+
+- NB: Two [casing logics]{style="color:blue;"} at work here: (1) thinking in terms of population of foreign fighters and clusters therein and (2) thinking in terms of country cases in comparison with other country cases
+
+## @morris2023WhoBecomesForeign - data
+
+- data from leaked IS personnel records
+- [explanatory variables]{style="color:blue;"} 
+    + **occupation**: unemployed, unskilled, student, skilled
+    + **education**: none, primary, secondary, university
+    + **marital status**: single, married
+    + **children**: yes, no
+    + **age**
+- any major factors that seem [omitted]{style="color:blue;"}?
+
+## @morris2023WhoBecomesForeign - locales of fighter mobilisation
+
+:::: {.columns}
+:::{.column width="50%"}
+![](slide_files/07/morris_morocco.png){width="400"}
+![](slide_files/07/morris_turkey.png){width="400"}
+
+:::
+
+::: {.column width="50%"}
+![](slide_files/07/morris_egypt.png){width="400"}
+
+*Major centres*: Tangier, Tetouan, and surrounding region, and Fes; Cairo, Alexandria, and lower Nile area; Istanbul and Antep
+
+[any visualisation problems?]{style="color:indigo;"}
+
+:::
+::::
+
+## @morris2023WhoBecomesForeign - regression results (*how to interpret*?)
+
+![](slide_files/07/morris_reg.png)
+
+## Reading a regression table
+
+<!-- http://svmiller.com/blog/2014/08/reading-a-regression-table-a-guide-for-students/ -->
+
+Remember: regression is a tool for understanding a phenomenon as a linear function (generally) &rarr; (y = mx + b)
+
+1. Numbers not in parentheses next to a variable: __[regression coefficient]{style="color:blue;"}__: expected change in DV for a one-unit increase in IV. NB: ositive or negative relationship?
+
+2. Numbers inside parentheses next to a variable: __[standard error]{style="color:blue;"}__: estimate of the standard deviation of the coefficient
+
+3. Asterisks/'stars': __[statistical significance]{style="color:blue;"}__: probability of results as extreme as observed result, under the assumption that the null hypothesis is correct. Smaller p-value means such an observation would be less likely under null hypothesis; hence, significance. Statistical significance suggests more precise estimates---NOT necessarily that one IV is more important than another.
+
+## @morris2023WhoBecomesForeign - regression results (*how to interpret*?)
+
+> a university education is the strongest correlate of joining a terrorist organization.
+
+![](slide_files/07/morris_reg.png)
+
+## @morris2023WhoBecomesForeign - regression results
+
+![](slide_files/07/morris_reg_est.png)
+
+## Findings
+
+> Despite the difference in space and time, ISIS foreign fighters have a similar profile to members of Hamas, Hezbollah, the Palestinian Islamic Jihad, and even violent political activists in Bengal. The men in all these samples are predominately **[male]{style="color:darkorange;"}**, **[well-educated]{style="color:darkorange;"}**, **[urban]{style="color:darkorange;"}**, **[unmarried]{style="color:darkorange;"}**, and **[young]{style="color:darkorange;"}**.
+
+. . . 
+
+>> a university education is the strongest correlate of joining a terrorist organization.
+
+. . . 
+
+::: {style="margin-top: -50px;"} 
+- [any of characteristics stand out for]{style="color:indigo;"}... theoretical reasons? compared to other cases you know?
+- [IS attracted both unskilled and skilled workers]{style="color:darkorange;"} = offered to improve the livelihood of its members
+:::
+
+
+## Poll results - dealing with potential FFs
 
 :::: {.columns}
 :::{.column width="50%"}
@@ -279,121 +773,6 @@ plot_effective_addressing = Plot.plot({
 
 :::
 ::::
-
-
-# Who becomes a foreign fighter, how are returnees addressed {background-color="#2c844c"}
-
-:::: {.columns}
-:::{.column width="80%"}
-- @morris2023WhoBecomesForeign - Who Becomes a Foreign Fighter? Characteristics of the Islamic State's Soldiers
-    + context, casing, data, locales of fighter mobilisation
-    + results and findings 
-- dealing with returning foreign fighters 
-
-:::
-
-::: {.column width="20%"}
-
-  
-:::
-::::
-
-## @morris2023WhoBecomesForeign - Context
-
-**MENA (Middle East, North Africa) countries have sent the largest numbers of foreign fighters to Syria**
-
-- Why is this the case? What are the relevant contextual factors?
-
-## @morris2023WhoBecomesForeign - Context
-
-**MENA (Middle East, North Africa) countries have sent the largest numbers of foreign fighters to Syria**
-
-- Why is this the case? What are the relevant contextual factors?
-    + religious ideology (*jihad*)
-    + religious internationalism (history of MENA alliance, e.g., in wars and campaigns against Israel)
-    + contexts of deprivation? travelling to fight as a 'way out'
-
-## @morris2023WhoBecomesForeign - Casing {.scrollable}
-
-- Three countries analysed: **Morocco**, **Egypt**, and **Turkey**
-    + Morocco represents foreign fighters from the Maghreb (Northwest Africa). (_**[representative country context]{style="color:blue;"}**_)
-    + Egyptian foreign fighters are more alike to ISIS recruits from the Levant than North Africa. (_**[representative country context]{style="color:blue;"}**_)
-    + Turkey,
-        * Turkey’s historical, political, and socioeconomic traits make it as a \textcolor{red}{least likely case of jihadi foreign fighter mobilisation} (_**[least likely mobilisation context]{style="color:blue;"}**_)
-        * Turkish foreign fighters may be more like Islamic State members from the Middle East and Central Asia than the other two countries. (_**[representative country context]{style="color:blue;"}**_)
-
-- NB: Two [casing logics]{style="color:blue;"} at work here: (1) thinking in terms of population of foreign fighters and clusters therein and (2) thinking in terms of country cases in comparison with other country cases
-
-## @morris2023WhoBecomesForeign - data
-
-- data from leaked IS personnel records
-- [explanatory variables]{style="color:blue;"} 
-    + **occupation**: unemployed, unskilled, student, skilled
-    + **education**: none, primary, secondary, university
-    + **marital status**: single, married
-    + **children**: yes, no
-    + **age**
-- any major factors that seem [omitted]{style="color:blue;"}?
-
-## @morris2023WhoBecomesForeign - locales of fighter mobilisation
-
-:::: {.columns}
-:::{.column width="50%"}
-![](slide_files/07/morris_morocco.png){width="400"}
-![](slide_files/07/morris_turkey.png){width="400"}
-
-:::
-
-::: {.column width="50%"}
-![](slide_files/07/morris_egypt.png){width="400"}
-
-*Major centres*: Tangier, Tetouan, and surrounding region, and Fes; Cairo, Alexandria, and lower Nile area; Istanbul and Antep
-
-[any visualisation problems?]{style="color:indigo;"}
-
-:::
-::::
-
-## @morris2023WhoBecomesForeign - regression results (*how to interpret*?)
-
-![](slide_files/07/morris_reg.png)
-
-## Reading a regression table
-
-<!-- http://svmiller.com/blog/2014/08/reading-a-regression-table-a-guide-for-students/ -->
-
-Remember: regression is a tool for understanding a phenomenon as a linear function (generally) &rarr; (y = mx + b)
-
-1. Numbers not in parentheses next to a variable: __[regression coefficient]{style="color:blue;"}__: expected change in DV for a one-unit increase in IV. NB: ositive or negative relationship?
-
-2. Numbers inside parentheses next to a variable: __[standard error]{style="color:blue;"}__: estimate of the standard deviation of the coefficient
-
-3. Asterisks/'stars': __[statistical significance]{style="color:blue;"}__: probability of results as extreme as observed result, under the assumption that the null hypothesis is correct. Smaller p-value means such an observation would be less likely under null hypothesis; hence, significance. Statistical significance suggests more precise estimates---NOT necessarily that one IV is more important than another.
-
-## @morris2023WhoBecomesForeign - regression results (*how to interpret*?)
-
-> a university education is the strongest correlate of joining a terrorist organization.
-
-![](slide_files/07/morris_reg.png)
-
-## @morris2023WhoBecomesForeign - regression results
-
-![](slide_files/07/morris_reg_est.png)
-
-## Findings
-
-> Despite the difference in space and time, ISIS foreign fighters have a similar profile to members of Hamas, Hezbollah, the Palestinian Islamic Jihad, and even violent political activists in Bengal. The men in all these samples are predominately **[male]{style="color:darkorange;"}**, **[well-educated]{style="color:darkorange;"}**, **[urban]{style="color:darkorange;"}**, **[unmarried]{style="color:darkorange;"}**, and **[young]{style="color:darkorange;"}**.
-
-. . . 
-
->> a university education is the strongest correlate of joining a terrorist organization.
-
-. . . 
-
-::: {style="margin-top: -50px;"} 
-- [any of characteristics stand out for]{style="color:indigo;"}... theoretical reasons? compared to other cases you know?
-- [IS attracted both unskilled and skilled workers]{style="color:darkorange;"} = offered to improve the livelihood of its members
-:::
 
 ## Dealing with returning foreign fighters (1)
 
@@ -769,10 +1148,13 @@ Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
 
 Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 
-
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_07.html"))
 ```
+
+<hr>
+    
+[Questions about groups next meeting]{style="color:violet;"}: (1) Does the group's violence increase around elections? (2) How is the group's violence connected to elections? (3) Has the group intimidated/targeted voters? (4) Has the group intimidated/targeted candidates/office-holders?  
 
 ## References
 

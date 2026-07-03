@@ -417,14 +417,21 @@ post-war Labour government, witnessing low-level fascist-party organising and ag
 <!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
 Take the survey at **<https://forms.gle/r9YgxUNgRx4RfGQz7>**
 
-- most important factor shaping the strategy of a (possibly) politically violent group?
+::: {style="margin-top: -20px; font-size: 0.7em;"} 
+- most important factor shaping the strategy of a group?
 - do maximalist goals require more violent/extreme strategies?
+- popular support important for a group to act violently?
+- main possible strategic advantage of using violence?
+
+:::
 
 :::
 :::: 
 
-- is popular support important for a group to take politically violent action?
-- main possible strategic advantage of using violence?
+::: {style="margin-top: -20px;"}
+[[Questions about groups]{style="color:violet;"}: (1) Could the group's goals plausibly be achieved through nonviolence? (2) Would you characterise the group's strategy as mostly nonviolent, mostly violent, or mixed? (3) Who were/are the group's primary targets? (4) Does the group make efforts to avoid civilian casualties? (5) Was the group's use of violence effective, helping to achieve their goals?]{style="font-size: 0.7em;"}
+
+:::
 
 --- 
 
@@ -443,9 +450,43 @@ surveyResults = liveGoogleSheet(
   "https://docs.google.com/spreadsheets/d/e/" +
     "2PACX-1vR_AWq1VK8f0CuelA36QMeOJtwhfuUTQ83J_aDc0mNLGHf7dDSW_avWQcZ2GDd4dY9E39kQ__f15mHe/" +
     "pub?gid=962363123&single=true&output=csv",
-  10000, 1, 5); // adjust the last number to select all relevant columns 
+  10000, 1, 11); // adjust the last number to select all relevant columns 
 
 respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
 
 ```
 
@@ -793,6 +834,347 @@ plot_advantage = Plot.plot({
 
 - FARC violence used strategically and not randomly ... more likely to be exercised when it can be legitimised, **but also that the members adhered to this strategy**. *How and why does FARC manage to maintain this discipline?* - [Possible explanations?]{style="color:indigo;"}
 
+## Group responses - strategy
+
+:::: {.columns}
+:::{.column width="48%"}
+group's goals achievable through nonviolence?
+
+```{ojs}
+// need to replace 'g_achieve_with_nonviolence'
+
+g_achieve_with_nonviolenceCounts = aq.from(surveyResults)
+  .groupby("g_achieve_with_nonviolence", "group")
+  .count()
+  .objects();
+
+plot_g_achieve_with_nonviolence = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_achieve_with_nonviolenceCounts, {
+      fx: "g_achieve_with_nonviolence",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+characterise the group's strategy?
+
+```{ojs}
+// need to replace 'g_characterise_strategy'
+
+g_characterise_strategyCounts = aq.from(surveyResults)
+  .groupby("g_characterise_strategy", "group")
+  .count()
+  .objects();
+
+plot_g_characterise_strategy = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_characterise_strategyCounts, {
+      fx: "g_characterise_strategy",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+::: 
+::::
+
+## Group responses - strategy
+
+:::: {.columns}
+:::{.column width="48%"}
+group's primary targets?
+
+```{ojs}
+// need to replace 'g_primary_targets'
+
+g_primary_targetsCounts = aq.from(surveyResults)
+  .groupby("g_primary_targets", "group")
+  .count()
+  .objects();
+
+plot_g_primary_targets = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_primary_targetsCounts, {
+      fx: "g_primary_targets",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+Group made efforts to avoid civilian casualties.
+
+```{ojs}
+// need to replace 'g_avoid_civ_casualties'
+
+g_avoid_civ_casualtiesCounts = aq.from(surveyResults)
+  .groupby("g_avoid_civ_casualties", "group")
+  .count()
+  .objects();
+
+plot_g_avoid_civ_casualties = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_avoid_civ_casualtiesCounts, {
+      fx: "g_avoid_civ_casualties",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
+::: 
+::::
+
+## Group responses - strategy
+
+Group's violence was effective, helping to achieve their goals.
+
+```{ojs}
+// need to replace 'g_vio_effective'
+
+g_vio_effectiveCounts = aq.from(surveyResults)
+  .groupby("g_vio_effective", "group")
+  .count()
+  .objects();
+
+plot_g_vio_effective = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_vio_effectiveCounts, {
+      fx: "g_vio_effective",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+
 # Example of *Euskadi Ta Askatasuna* {background-color="#2c844c"}
 
 :::: {.columns}
@@ -922,7 +1304,7 @@ Woolworth's lunch counter. Seated activists: John Salter, Joan Trumpauer, and An
 :::
 
 
-# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+# Any feedback for this class? {background-color="#2c844c"}
 
 Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
 
@@ -932,5 +1314,9 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_04.html"))
 ```
+
+<hr>
+    
+[Questions about groups next meeting]{style="color:violet;"}: (1) Does a distinct subculture exist around this group? (2) Did participation in the group's social scene (events, meeting places, online spaces, music, symbols, etc.) was an important step toward deeper involvement? (3) Is the group's subculture primarily in-person, online, or mixed? (4) Are most people were likely recruited through pre-existing social ties (e.g., friends, family, classmates)? (5) What was the most important factor in mobilisation for your group?  
 
 ## References

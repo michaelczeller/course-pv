@@ -334,6 +334,422 @@ some methodological points: scope for generalisation
 <!-- ([Bosi and Porta, 2012, p. 380](zotero://select/library/items/WQLWKHLS)) SUMMARY OF THREE PATHS   -->
 <!-- In the ideological path, we singled out the relevance of deeply rooted family and local traditions, which allowed participants to frame the choice ofjoining armed struggles within a narrative of continuity. The family and the immediate environment provided political socialization into an ideological background in which rebellion could be framed as a sort of obligation in a context perceived as ripe for the successful continuation of the old struggle. Within the instrumental path, mobilization passed instead through the belief that non-violent forms of political protest were no longer helpful in the face of closing political opportunities. They were driven mainly by political grievances. Those who followed this path tended to break more with their past when mobilizing in armed groups in comparison to those who followed an ideological path. A third path developed out of solidarity with a community in struggle in an environment characterized by intense emotions (amongst which anger and revenge were often cited). At least initially, violence was not legitimized by reference to ideology or political strategies, but rather as an everyday element in handling conflicts. It appeared to result from a search for meaning and loyalty to the peer group. -->
 
+# Poll: subculture and recruitment {background-color="#2c844c"}
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/05/PVclass5_poll_QR.png){fig-alt="A QR code for the survey."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+Take the survey at **<https://forms.gle/oUEhq9W19sBD4E9R9>**
+
+:::
+:::: 
+
+::: {style="margin-top: -20px;"}
+[[Questions about groups]{style="color:violet;"}: (1) Does a distinct subculture exist around this group? (2) Did participation in the group's social scene (events, meeting places, online spaces, music, symbols, etc.) was an important step toward deeper involvement? (3) Is the group's subculture primarily in-person, online, or mixed? (4) Are most people were likely recruited through pre-existing social ties (e.g., friends, family, classmates)? (5) What do you think was the single most important factor in mobilisation for your group?]{style="font-size: 0.7em;"}
+
+:::
+
+--- 
+
+```{ojs}
+md`## Poll results (Respondents: ${respondentCount}) - subculture`
+```
+
+
+```{ojs}
+
+import { liveGoogleSheet } from "@jimjamslam/live-google-sheet";
+import { aq, op } from "@uwdata/arquero";
+
+// UPDATE THE LINK FOR A NEW POLL
+surveyResults = liveGoogleSheet(
+  "https://docs.google.com/spreadsheets/d/e/" +
+    "2PACX-1vSSwGAaIviE0BRA9cn-hLDew4_L7tv8HiR9meT_nuRaShGInM75Eeg6pmR6ttTx5QAiJltUL3AHi7OM/" +
+    "pub?gid=1280605096&single=true&output=csv",
+  10000, 1, 7); // adjust the last number to select all relevant columns 
+
+respondentCount = surveyResults.length;
+
+likertOrder = [
+  "Strongly disagree",
+  "Disagree",
+  "Neutral",
+  "Agree",
+  "Strongly agree"
+];
+
+ynmOrder = [
+  "Yes",
+  "No",
+  "Maybe"
+];
+
+groupOrder = [
+  "Antifa",
+  "RAF",
+  "IS",
+  "alQaeda",
+  "NPD/Heimat",
+  "NSU",
+  "PKK"
+];
+
+groupColors = [
+  "pink",
+  "red",
+  "grey",
+  "black",
+  "#d2b48c", // lightbrown - could also use 'peru'
+  "brown",
+  "green"
+];
+
+```
+
+:::: {.columns}
+:::{.column width="48%"}
+Group has a distinct subculture?
+
+
+```{ojs}
+// need to replace 'g_distinct_subculture'
+
+g_distinct_subcultureCounts = aq.from(surveyResults)
+  .groupby("g_distinct_subculture", "group")
+  .count()
+  .objects();
+
+plot_g_distinct_subculture = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_distinct_subcultureCounts, {
+      fx: "g_distinct_subculture",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: ynmOrder,
+    label: "",
+    tickRotate: 0
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+``` 
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+Subculture is primarily... 
+
+```{ojs}
+// need to replace 'g_subculture_primarily'
+
+g_subculture_primarilyCounts = aq.from(surveyResults)
+  .groupby("g_subculture_primarily", "group")
+  .count()
+  .objects();
+
+plot_g_subculture_primarily = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_subculture_primarilyCounts, {
+      fx: "g_subculture_primarily",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+::: 
+::::
+
+## Group responses - recruitment
+
+:::: {.columns}
+:::{.column width="48%"}
+Being in group's social scene precedes membership
+
+```{ojs}
+// need to replace 'g_social_participation'
+
+g_social_participationCounts = aq.from(surveyResults)
+  .groupby("g_social_participation", "group")
+  .count()
+  .objects();
+
+plot_g_social_participation = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_social_participationCounts, {
+      fx: "g_social_participation",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+:::
+
+:::{.column width="4%"}
+<div style="height: 600px; border-left: 2px solid #999; margin: 0 auto;"></div>
+:::
+
+
+::: {.column width="48%"}
+Most recruited through existing social ties.
+
+```{ojs}
+// need to replace 'g_most_recruitment'
+
+g_most_recruitmentCounts = aq.from(surveyResults)
+  .groupby("g_most_recruitment", "group")
+  .count()
+  .objects();
+
+plot_g_most_recruitment = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_most_recruitmentCounts, {
+      fx: "g_most_recruitment",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    domain: likertOrder,
+    label: "",
+    tickRotate: -55
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+```
+
+::: 
+::::
+
+## Group responses - overall importance
+
+single most important factor in mobilisation for the group?
+
+```{ojs}
+// need to replace 'g_most_important_factor'
+
+g_most_important_factorCounts = aq.from(surveyResults)
+  .groupby("g_most_important_factor", "group")
+  .count()
+  .objects();
+
+plot_g_most_important_factor = Plot.plot({
+  marks: [
+    Plot.frame({
+      fill: "#f7f7f7",
+      stroke: "black",
+      strokeWidth: 1
+    }),
+    
+    Plot.barY(g_most_important_factorCounts, {
+      fx: "g_most_important_factor",
+      x: "group",
+      y: "count",
+      fill: "group",
+      stroke: "white"
+    })
+  ],
+
+  color: {
+    domain: groupOrder,
+    range: groupColors,
+    legend: true,
+    style: { fontSize: "20px" }
+  },
+
+  fx: {
+    // domain: likertOrder,
+    label: "",
+    tickRotate: -45
+  },
+
+  x: {
+    domain: groupOrder,
+    axis: null, // clears the entire x-axis (ticks and labels)
+    // tickFormat: () => "",
+    label: ""
+  },
+
+  y: {
+    label: ""
+  },
+
+  marginBottom: 130,
+  style: {
+    width: 900,
+    height: 500,
+    fontSize: 20
+  }
+});
+
+
+```
+
+
 # @meier2022SpatiotemporalVariationArmed - Armed Group Recruitment of the LTTE {background-color="#2c844c"}
 
 :::: {.columns}
@@ -409,4 +825,9 @@ Alternatively, please send me an email: [m.zeller\@lmu.de]{style="color:red;"}
 pagedown::chrome_print(file.path("..", "docs/slides", "slides_05.html"))
 ```
 
+<hr>
+    
+[Questions about groups next meeting]{style="color:violet;"}: (1) Did the group rely on centralised leadership? (2) Is group leadership based on formal hierarchy (i.e., not informal influence or reputation)? (3) Is the group's network resilient to arrests or leadership loss? (4) How would you describe the group's organisation?  
+
 ## References
+
