@@ -312,7 +312,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 2 Lecture video - part 2\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8\n\n\nClass 9\n\n\nClass 10\n\n\nClass 11\n\n\nClass 12\n\n\nClass 13\n\n\nClass 14"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8\n\n\nClass 9\n\n\nClass 10\n\n\nClass 11\n\n\nClass 12\n\n\nClass 13\n\n\nClass 14"
   },
   {
     "objectID": "syllabus/index.html#examination-klausur",
@@ -1691,21 +1691,21 @@
     "href": "slides/slides_02.html",
     "title": "Class 2: Causes, Radicalisation, Mobilisation",
     "section": "",
-    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\n\nRemember: topic to me at least by Week 4\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
+    "text": "Open Stickerfrom Open Stickers\n\n\n\n\n\n\n\nlibrary(ggplot2)\nlibrary(ggrepel)\nlibrary(rnaturalearth)\nlibrary(rnaturalearthdata)\nlibrary(dplyr)\n\nplaces &lt;- data.frame(\n  city = c(\"Galway\", \"Munich\", \"Taormina\"),\n  country = c(\"Ireland\", \"Germany\", \"Italy\"),\n  likes = c(1, 2, 1),\n  stringsAsFactors = FALSE\n)\n\nplaces_geo &lt;- places %&gt;% \n  tidygeocoder::geocode(\n    city = city,\n    country = country,\n    method = \"osm\"\n    )\n\nworld &lt;- ne_countries(scale = \"medium\", returnclass = \"sf\")\n\nggplot(data=world) +\n  geom_sf(fill=\"pink\") +\n  geom_point(data=places_geo, aes(x=long, y=lat, size=likes), color=\"blue\") +\n  geom_point(data=places_geo, aes(x=long, y=lat, size=likes), \n             shape=1, color=\"black\") +\n  geom_text_repel(data=places_geo, aes(x=long, y=lat, label=city), size=4) +\n  # coord_sf() +\n  coord_sf(xlim = c(-20, 50), ylim = c(30, 60), expand = FALSE) +\n  scale_size_continuous(breaks=c(1, 2, 5), range=c(3, 6), name=\"Likes\") + \n  theme_void() + # + labs(title=\"Favorite Cities\", x=\"\", y=\"\")\n  theme(legend.position=c(0.05, 0.5), \n        legend.background=element_rect(fill=\"white\", color=\"black\", linewidth=0.5), \n        legend.box.background=element_rect(fill=\"white\", color=\"black\", linewidth=0.5))\n\n\n\n\n\n\n\n\n\n\n\nRemember: topic to me at least by Week 4\n\nDecemberJanuary\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\n\nTBD\n\n\n11 Dec:\n\nTBD\n\n\n18 Dec:\n\nTBD\n\n\n\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n8 Jan:\n\nTBD\n\n\n15 Jan:\n\nTBD\n\n\n22 Jan:\n\nTBD\n\n\n29 Jan:\n\nTBD"
   },
   {
     "objectID": "slides/slides_04.html#presentation-groups",
     "href": "slides/slides_04.html#presentation-groups",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
-    "section": "Presentation groups",
-    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nShahadaan, Kristine, Daichi\nethnography\n\n\n11 Dec:\nBérénice, Zorka, Victoria, Katharina\nTBD\n\n\n18 Dec:\nShoam, Aidan, Tara, Sebastian\nTBD"
+    "section": "",
+    "text": "Presentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nShahadaan, Kristine, Daichi\nethnography\n\n\n11 Dec:\nBérénice, Zorka, Victoria, Katharina\nTBD\n\n\n18 Dec:\nShoam, Aidan, Tara, Sebastian\nTBD"
   },
   {
     "objectID": "slides/slides_04.html#klausur-preview-1",
     "href": "slides/slides_04.html#klausur-preview-1",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Klausur preview (1)",
-    "text": "Klausur preview (1)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?"
+    "text": "Klausur preview (1)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?"
   },
   {
     "objectID": "slides/slides_04.html#references",
@@ -1719,63 +1719,63 @@
     "href": "slides/slides_04.html#klausur-preview-2",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Klausur preview (2)",
-    "text": "Klausur preview (2)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?"
+    "text": "Klausur preview (2)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?"
   },
   {
     "objectID": "slides/slides_04.html#klausur-preview-1-1",
     "href": "slides/slides_04.html#klausur-preview-1-1",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Klausur preview (1)",
-    "text": "Klausur preview (1)\n\n\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?\n\n\nBroad introduction\n\n\nForeign fighters are individuals who travel to a conflict zone from another territory. In other words, foreign fighters are individuals who engage [remember, about behaviours] in violent activity, which also suggests they have radicalised [remember, about attitudes] to some extent. Home countries have a variety of options for dealing with returning foreign fighters …"
+    "text": "Klausur preview (1)\n\n\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?\n\n\nBroad introduction\n\n\nForeign fighters are individuals who travel to a conflict zone from another territory. In other words, foreign fighters are individuals who engage [remember, about behaviours] in violent activity, which also suggests they have radicalised [remember, about attitudes] to some extent. Home countries have a variety of options for dealing with returning foreign fighters …"
   },
   {
     "objectID": "slides/slides_04.html#klausur-preview-2-1",
     "href": "slides/slides_04.html#klausur-preview-2-1",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Klausur preview (2)",
-    "text": "Klausur preview (2)\n\n\n\nBroad introduction\n\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?\n\n\nElaborate in detail\n\n\n\nForeign fighters travel to engage in violent conflict. They might do so for ideological reasons (including religious motivations), for material benefit, or because of connection to others who travel to the conflict zone (network/interpersonal causes). The extent of radicalisation underlying these reasons for becoming a foreign fighter vary, but the engagement in violence is clear. Given the fighters’ engagement in violence and possible criminal consequences of their activities, home countries face a challenge of how to deal with their return. Broadly, state authorities might praise returning foreign fighters, ignore/disregard, refer to intervention programmes, arrest and/or prosecute, or even take measures to prevent their return (e.g., revoke citizenship) …"
+    "text": "Klausur preview (2)\n\n\n\nBroad introduction\n\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?\n\n\nElaborate in detail\n\n\n\nForeign fighters travel to engage in violent conflict. They might do so for ideological reasons (including religious motivations), for material benefit, or because of connection to others who travel to the conflict zone (network/interpersonal causes). The extent of radicalisation underlying these reasons for becoming a foreign fighter vary, but the engagement in violence is clear. Given the fighters’ engagement in violence and possible criminal consequences of their activities, home countries face a challenge of how to deal with their return. Broadly, state authorities might praise returning foreign fighters, ignore/disregard, refer to intervention programmes, arrest and/or prosecute, or even take measures to prevent their return (e.g., revoke citizenship) …"
   },
   {
     "objectID": "slides/slides_04.html#klausur-preview-3",
     "href": "slides/slides_04.html#klausur-preview-3",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Klausur preview (3)",
-    "text": "Klausur preview (3)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?"
+    "text": "Klausur preview (3)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?"
   },
   {
     "objectID": "slides/slides_04.html#klausur-preview-3-1",
     "href": "slides/slides_04.html#klausur-preview-3-1",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Klausur preview (3)",
-    "text": "Klausur preview (3)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\n\n\nConcluding summary\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?\n\n\nDescribe examples\n\n\nRecent research on ISIS foreign fighters (Morris 2023) identified common profiles for foreign fighters in the conflict in Syria: young, male, unmarried, urban, well-educated. These characteristics might be applicable to other cases. To assess whether such profiles of foreign fighters are generalizable, one might examine foreign fighters in historical cases, such as the Spanish Civil War where whole brigades of combatants were composed of volunteers from abroad, or contemporary conflicts, such as the Russian war on Ukraine where foreign fighters have formed part of both sides of the conflict. In any case, foreign fighters returning to their home countries can pose a dilemma for state authorities. German state authorities, for instance, might praise and heroise, such as (some) UK authorities did for fighters returning from Spain in the 1930s; the state might criminalise them, prosecuting and jailing for violent activity, such as with some fighters for ISIS returning from Syria…"
+    "text": "Klausur preview (3)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\n\n\nConcluding summary\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?\n\n\nDescribe examples\n\n\nRecent research on ISIS foreign fighters (Morris 2023) identified common profiles for foreign fighters in the conflict in Syria: young, male, unmarried, urban, well-educated. These characteristics might be applicable to other cases. To assess whether such profiles of foreign fighters are generalizable, one might examine foreign fighters in historical cases, such as the Spanish Civil War where whole brigades of combatants were composed of volunteers from abroad, or contemporary conflicts, such as the Russian war on Ukraine where foreign fighters have formed part of both sides of the conflict. In any case, foreign fighters returning to their home countries can pose a dilemma for state authorities. German state authorities, for instance, might praise and heroise, such as (some) UK authorities did for fighters returning from Spain in the 1930s; the state might criminalise them, prosecuting and jailing for violent activity, such as with some fighters for ISIS returning from Syria…"
   },
   {
     "objectID": "slides/slides_04.html#klausur-preview-4",
     "href": "slides/slides_04.html#klausur-preview-4",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Klausur preview (4)",
-    "text": "Klausur preview (4)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?"
+    "text": "Klausur preview (4)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\nConcluding summary\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?"
   },
   {
     "objectID": "slides/slides_04.html#klausur-preview-4-1",
     "href": "slides/slides_04.html#klausur-preview-4-1",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Klausur preview (4)",
-    "text": "Klausur preview (4)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?\n\n\nConcluding summary\n\n\nThe existence of foreign fighters is a longstanding and common form of political violence. Their motivations and characteristics may vary, but by definition they all engage in violence. Their exposure to and engagement in violence can pose threats to their home state and society when they return from conflict zones. States therefore may respond in several ways to minimise the danger of fighters acting violent upon their return."
+    "text": "Klausur preview (4)\n\n\n\nBroad introduction\n\n\n\nElaborate in detail\n\n\n\n\nDescribe examples\n\n\n\n\n\nWhat does ‘foreign fighter’ mean? Who becomes a foreign fighter? How can ‘home’ countries deal with returning foreign fighters?\n\n\nConcluding summary\n\n\nThe existence of foreign fighters is a longstanding and common form of political violence. Their motivations and characteristics may vary, but by definition they all engage in violence. Their exposure to and engagement in violence can pose threats to their home state and society when they return from conflict zones. States therefore may respond in several ways to minimise the danger of fighters acting violent upon their return."
   },
   {
     "objectID": "slides/slides_04.html#basic-intuitive-definition-of-strategy",
     "href": "slides/slides_04.html#basic-intuitive-definition-of-strategy",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Basic, intuitive definition of strategy",
-    "text": "Basic, intuitive definition of strategy\nstrategy refers to the approach of an actor(s) to achieve their (political) objectives—connecting actions to goals (means to an end)\n\n\nextant definitions identify some elements, e.g.,\n\n“a combination of a claim (or demand), a tactic, and a site (or venue)” (Meyer 2007, 82)\nGanz (2010, 9): targeting, tactics, timing\n\nsome overlap with the ‘patterns of violence’ framework discussed in Class 1\n\n\n\n\n\n\nBUT strategy does NOT always or in every situation include using violent tactics\n\nmany groups use mixed strategies of violence and non-violence"
+    "text": "Basic, intuitive definition of strategy\nstrategy refers to the approach of an actor(s) to achieve their (political) objectives—connecting actions to goals (means to an end)\n. . .\n\nextant definitions identify some elements, e.g.,\n\n“a combination of a claim (or demand), a tactic, and a site (or venue)” (Meyer 2007, 82)\nGanz (2010, 9): targeting, tactics, timing\n\nsome overlap with the ‘patterns of violence’ framework discussed in Class 1\n\n\n\n. . .\n\nBUT strategy does NOT always or in every situation include using violent tactics\n\nmany groups use mixed strategies of violence and non-violence"
   },
   {
     "objectID": "slides/slides_04.html#elements-of-strategy",
     "href": "slides/slides_04.html#elements-of-strategy",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Elements of strategy",
-    "text": "Elements of strategy\n\ninformative element: objective(s) (why): what are the actor(s) goals? minimalist vs. maximalist objectives\n\n\n\ntarget (what/who) - what entity is being acted upon?\n\ninvolves choice to commit resources to specific outcomes\n\n\n\n\n\ntactics (how) - types of collective action and their form\n\nattempt to deploy strengths, exploit target’s weaknesses\n\n\n\n\n\nsite/venue (where) - what place or what forum type is action taken?\n\n\n\n\ntiming (when) - when are tactics employed against targets\n\n‘some moments, often fleeting, promise greater opportunity than others’ … (cf. Grzymala-Busse 2011)"
+    "text": "Elements of strategy\n\ninformative element: objective(s) (why): what are the actor(s) goals? minimalist vs. maximalist objectives\n\n. . .\n\ntarget (what/who) - what entity is being acted upon?\n\ninvolves choice to commit resources to specific outcomes\n\n\n. . .\n\ntactics (how) - types of collective action and their form\n\nattempt to deploy strengths, exploit target’s weaknesses\n\n\n. . .\n\nsite/venue (where) - what place or what forum type is action taken?\n\n. . .\n\ntiming (when) - when are tactics employed against targets\n\n‘some moments, often fleeting, promise greater opportunity than others’ … (cf. Grzymala-Busse 2011)"
   },
   {
     "objectID": "slides/slides_04.html#elements-of-strategy-1",
@@ -1789,7 +1789,7 @@
     "href": "slides/slides_04.html#drivers-of-strategy-selection",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Drivers of strategy selection",
-    "text": "Drivers of strategy selection\n\nstrategy is be a product of (rational) choice\n\nBUT…\n\n\nit is also a part collective identity (cf. Polletta and Jasper 2001)\n\nstrategy also involves moral and emotional committments"
+    "text": "Drivers of strategy selection\n\nstrategy is be a product of (rational) choice\n\nBUT…\n. . .\n\nit is also a part collective identity (cf. Polletta and Jasper 2001)\n\nstrategy also involves moral and emotional committments"
   },
   {
     "objectID": "slides/slides_04.html#an-example-from-the-news",
@@ -1845,21 +1845,21 @@
     "href": "slides/slides_04.html#violent-strategy-timing-and-three-climacterics-1",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Violent strategy, TIMING, and three climacterics",
-    "text": "Violent strategy, TIMING, and three climacterics\n\n1964: FARC, leftist militant organisation mobilises\n\nDomestic factors: (longstanding and extreme) inequality, emerging from a 10-year civil war, La Violencia\nInternational factors: Castro in Cuba, for one…\n\n\n\n\n1982: FARC shifts strategic orientation to seize power\n\nInternational factors:"
+    "text": "Violent strategy, TIMING, and three climacterics\n\n1964: FARC, leftist militant organisation mobilises\n\nDomestic factors: (longstanding and extreme) inequality, emerging from a 10-year civil war, La Violencia\nInternational factors: Castro in Cuba, for one…\n\n\n. . .\n\n1982: FARC shifts strategic orientation to seize power\n\nInternational factors:"
   },
   {
     "objectID": "slides/slides_04.html#violent-strategy-timing-and-three-climacterics-2",
     "href": "slides/slides_04.html#violent-strategy-timing-and-three-climacterics-2",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Violent strategy, TIMING, and three climacterics",
-    "text": "Violent strategy, TIMING, and three climacterics\n\n1964: FARC, leftist militant organisation mobilises\n\nDomestic factors: (longstanding and extreme) inequality, emerging from a 10-year civil war, La Violencia\nInternational factors: Castro in Cuba, for one…\n\n1982: FARC shifts strategic orientation to seize power\n\nInternational factors: revolutions in Nicaragua, El Salvador, Guatemala\n\n\n\n\n2012: (new) peace talks between FARC and government\n\nDomestic factors:\nInternational factors:"
+    "text": "Violent strategy, TIMING, and three climacterics\n\n1964: FARC, leftist militant organisation mobilises\n\nDomestic factors: (longstanding and extreme) inequality, emerging from a 10-year civil war, La Violencia\nInternational factors: Castro in Cuba, for one…\n\n1982: FARC shifts strategic orientation to seize power\n\nInternational factors: revolutions in Nicaragua, El Salvador, Guatemala\n\n\n. . .\n\n2012: (new) peace talks between FARC and government\n\nDomestic factors:\nInternational factors:"
   },
   {
     "objectID": "slides/slides_04.html#violent-strategy-timing-and-three-climacterics-3",
     "href": "slides/slides_04.html#violent-strategy-timing-and-three-climacterics-3",
     "title": "Class 4: Causes, Radicalisation, Mobilisation",
     "section": "Violent strategy, TIMING, and three climacterics",
-    "text": "Violent strategy, TIMING, and three climacterics\n\n1964: FARC, leftist militant organisation mobilises\n\nDomestic factors: (longstanding and extreme) inequality, emerging from a 10-year civil war, La Violencia\nInternational factors: Castro in Cuba, for one…\n\n1982: FARC shifts strategic orientation to seize power\n\nInternational factors: revolutions in Nicaragua, El Salvador, Guatemala\n\n2012: (new) peace talks between FARC and government\n\nDomestic factors: (1) ‘Plan Colombia’ (esp. under Uribe) cracks down on narcotics trafficking and guerrillas; (2) FARC commander, Alfonso Cano, killed by army in late 2011; (3) FARC membership/strength sinks from highs of $$20,000 to 7,000\nInternational factors: U.S. funding ‘Plan Colombia’ (upwards of $10 billion) — though also funding the FARC through population’s cocaine purchases…\n\n\n\n\nPlus, 2016: peace deal rejected in referendum — quo vadis\n\nfrom The Times: https://www.youtube.com/watch?v=8ZHT3fOJTXQ&t=429s"
+    "text": "Violent strategy, TIMING, and three climacterics\n\n1964: FARC, leftist militant organisation mobilises\n\nDomestic factors: (longstanding and extreme) inequality, emerging from a 10-year civil war, La Violencia\nInternational factors: Castro in Cuba, for one…\n\n1982: FARC shifts strategic orientation to seize power\n\nInternational factors: revolutions in Nicaragua, El Salvador, Guatemala\n\n2012: (new) peace talks between FARC and government\n\nDomestic factors: (1) ‘Plan Colombia’ (esp. under Uribe) cracks down on narcotics trafficking and guerrillas; (2) FARC commander, Alfonso Cano, killed by army in late 2011; (3) FARC membership/strength sinks from highs of $$20,000 to 7,000\nInternational factors: U.S. funding ‘Plan Colombia’ (upwards of $10 billion) — though also funding the FARC through population’s cocaine purchases…\n\n\n. . .\n\nPlus, 2016: peace deal rejected in referendum — quo vadis\n\nfrom The Times: https://www.youtube.com/watch?v=8ZHT3fOJTXQ&t=429s"
   },
   {
     "objectID": "slides/slides_04.html#points-for-consideration",
@@ -1942,8 +1942,8 @@
     "objectID": "slides/slides_05.html#presentation-groups",
     "href": "slides/slides_05.html#presentation-groups",
     "title": "Class 5: Causes, Radicalisation, Mobilisation",
-    "section": "Presentation groups",
-    "text": "Presentation groups\n\n\n\nPresentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nShahadaan, Kristine, Daichi\nethnography\n\n\n11 Dec:\nBérénice, Zorka, Victoria, Katharina\nTBD\n\n\n18 Dec:\nShoam, Aidan, Tara, Sebastian\nTBD"
+    "section": "",
+    "text": "Presentations line-up\n\n\nDate\nPresenters\nMethod\n\n\n\n\n4 Dec:\nShahadaan, Kristine, Daichi\nethnography\n\n\n11 Dec:\nBérénice, Zorka, Victoria, Katharina\nTBD\n\n\n18 Dec:\nShoam, Aidan, Tara, Sebastian\nTBD"
   },
   {
     "objectID": "slides/slides_05.html#subculture-definition-and-example",
@@ -1985,21 +1985,21 @@
     "href": "slides/slides_05.html#for-those-interested-in-a-more-recent-example",
     "title": "Class 5: Causes, Radicalisation, Mobilisation",
     "section": "For those interested in a more recent example…",
-    "text": "For those interested in a more recent example…\n\n\nA short documentary about the Rechtsrock concert in Ostritz in 2019:\n\n\n\n\n\nBut no alcohol allowed… (see further in Spiegel article)\n\ntranslatedDeutsch (original)\n\n\n\nGiven the context of the other events and the resulting encounter between the various political camps, as well as the obviously combative and aggressive nature of the event, alcohol consumption would undoubtedly further increase the risk of violent clashes.\n\n\n\n\nVor dem Hintergrund der weiteren Veranstaltungen und der damit einhergehenden Begegnung der verschiedenen politischen Lager sowie des offensichtlich kämpferisch-aggressiven Charakters der Veranstaltung würde ein Alkoholkonsum unzweifelhaft die Gefahr von gewaltsamen Auseinandersetzungen weiter erhöhen."
+    "text": "For those interested in a more recent example…\n\n\nA short documentary about the Rechtsrock concert in Ostritz in 2019:\n\n\n\n\n\n\nBut no alcohol allowed… (see further in Spiegel article)\n\ntranslatedDeutsch (original)\n\n\n\nGiven the context of the other events and the resulting encounter between the various political camps, as well as the obviously combative and aggressive nature of the event, alcohol consumption would undoubtedly further increase the risk of violent clashes.\n\n\n\n\nVor dem Hintergrund der weiteren Veranstaltungen und der damit einhergehenden Begegnung der verschiedenen politischen Lager sowie des offensichtlich kämpferisch-aggressiven Charakters der Veranstaltung würde ein Alkoholkonsum unzweifelhaft die Gefahr von gewaltsamen Auseinandersetzungen weiter erhöhen."
   },
   {
     "objectID": "slides/slides_05.html#other-subculture-examples",
     "href": "slides/slides_05.html#other-subculture-examples",
     "title": "Class 5: Causes, Radicalisation, Mobilisation",
     "section": "Other subculture examples?",
-    "text": "Other subculture examples?\nAny subculture examples you know? Any overlap with extremist groups? What are the distinguishing characteristics? Certain clothing, music, symbols, practices?\n\n\nFrom the right-wing extremist scene: Skinheads and Rechtsrock, football hooligans, Incels, sovereign citizens and Reichsbürger, neo-pagan, occultists, military veterans (and active service personnel), biker gangs\n\nDer NSU war nicht zu dritt\n\n\n\n\n\nWhat is the explanatory power of the subculture concept? Why is it important?"
+    "text": "Other subculture examples?\nAny subculture examples you know? Any overlap with extremist groups? What are the distinguishing characteristics? Certain clothing, music, symbols, practices?\n. . .\n\nFrom the right-wing extremist scene: Skinheads and Rechtsrock, football hooligans, Incels, sovereign citizens and Reichsbürger, neo-pagan, occultists, military veterans (and active service personnel), biker gangs\n\nDer NSU war nicht zu dritt\n\n\n. . .\n\nWhat is the explanatory power of the subculture concept? Why is it important?"
   },
   {
     "objectID": "slides/slides_05.html#subculture-radical-milieu-and-mobilisation---an-empirical-puzzle",
     "href": "slides/slides_05.html#subculture-radical-milieu-and-mobilisation---an-empirical-puzzle",
     "title": "Class 5: Causes, Radicalisation, Mobilisation",
     "section": "Subculture, radical milieu, and mobilisation - an empirical puzzle",
-    "text": "Subculture, radical milieu, and mobilisation - an empirical puzzle\n\nMore than 1000 people from the Balkan region travelled between 2012 and 2016 to become foreign fighters (Azinović & Bećirević 2017), a disproportionately high number.\n\n\nWhy might the Balkans account for a disproportionate (compared to western Europe and to the U.S.) number of ISIS foreign fighters? Let’s hear some hypotheses!\n\n\n\nMetodieva (2022) argues that the post-conflict radical milieu is the key factor (cf. Metodieva and Zeller 2023)"
+    "text": "Subculture, radical milieu, and mobilisation - an empirical puzzle\n\nMore than 1000 people from the Balkan region travelled between 2012 and 2016 to become foreign fighters (Azinović & Bećirević 2017), a disproportionately high number.\n\n\nWhy might the Balkans account for a disproportionate (compared to western Europe and to the U.S.) number of ISIS foreign fighters? Let’s hear some hypotheses!\n\n. . .\n\nMetodieva (2022) argues that the post-conflict radical milieu is the key factor (cf. Metodieva and Zeller 2023)"
   },
   {
     "objectID": "slides/slides_05.html#subculture-and-mobilisation---an-empirical-puzzle",
@@ -3370,8 +3370,8 @@
     "objectID": "slides/slides_05.html#follow-up-from-last-week",
     "href": "slides/slides_05.html#follow-up-from-last-week",
     "title": "Class 5: Causes, Radicalisation, Mobilisation",
-    "section": "Follow-up from last week",
-    "text": "Follow-up from last week\n\nfactors shaping politically violent groups’ strategy\n\nmultiple simultaneously\nsome more based around ‘rational’ calculation (e.g., available resources, state posture); others less so (e.g., ideology, emotional dynamics)\n\n\n\n\nreminder: cases discussed in course are meant to help clarify theory and concepts\n\n\na great deal of charged politics behind many of these cases—but the justifiability of causes in these cases is not part of this course"
+    "section": "",
+    "text": "factors shaping politically violent groups’ strategy\n\nmultiple simultaneously\nsome more based around ‘rational’ calculation (e.g., available resources, state posture); others less so (e.g., ideology, emotional dynamics)\n\n\n. . .\n\nreminder: cases discussed in course are meant to help clarify theory and concepts\n\n\na great deal of charged politics behind many of these cases—but the justifiability of causes in these cases is not part of this course"
   },
   {
     "objectID": "slides/slides_05.html#follow-up-from-last-week-1",
