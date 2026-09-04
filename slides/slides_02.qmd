@@ -236,7 +236,7 @@ Remember: topic to me at least by Week 4
 
 <!-- It is possible that anarchist or millenarian terrorists are so preoccupied with the splendor of the future that they lose sight of the present. Less theoretical nationalists who concentrate on the short run have simpler aims but sharper plans. -->
 
-## Circumstances (meso-level): variety of goals [@Crenshaw1981] 
+## Circumstances (meso-level): variety of goals [-@Crenshaw1981] 
 
 - can serve long-term [strategy]{style="color:darkred;"} and/or proximate objectives
 - gain attention, win support
@@ -611,6 +611,124 @@ discourage a change in behaviour (and at the organisational level, strategy)---e
 :::
 ::::
 
+# Open data - Global Terrorism Database {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation 
+
+```{r w2-MZ, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(highcharter)
+library(purrr)
+library(readxl)
+
+gtd_data <- read_csv("../resources/data/gtd_germany_subset.csv")
+
+gtd_wide <- gtd_data %>%
+  pivot_wider(
+    names_from = gname,
+    values_from = attacks,
+    values_fill = 0
+  ) %>%
+  arrange(iyear)
+
+#terrorist groups' names
+group_names <- names(gtd_wide)[-1]
+
+hc <- highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_xAxis(
+    categories = gtd_wide$iyear,
+    labels = list(
+      style = list(fontSize = "18px")
+    )
+  ) %>%
+  hc_yAxis(
+    title = list(
+      text = "Attacks",
+      style = list(fontSize = "20px")
+    ),
+    labels = list(
+      style = list(fontSize = "18px")
+    )
+  ) %>%
+  hc_legend(
+    itemStyle = list(
+      fontSize = "18px"
+    )
+  ) %>%
+  hc_tooltip(
+    style = list(
+      fontSize = "18px"
+    )
+  ) %>%
+  hc_plotOptions(
+    column = list(stacking = "normal")
+  )
+
+## add all groups dynamically
+for(g in group_names){
+
+  hc <- hc %>%
+    hc_add_series(
+      name = g,
+      data = gtd_wide[[g]]
+    )
+}
+
+hc
+
+```
+
+### Explanatory note
+
+The visualisation is of a small subset of the [Global Terrorism Database](https://www.start.umd.edu/data-tools/GTD) (GTD) and illustrates the temporal development of different actors behind political violence in Germany. The incidents include ideologically distinct actors and movements, such as neo-Nazi extremism, PKK-related violence, jihadi-inspired attacks, and National Socialist Underground (NSU) activity. The data shows the frequency of these actors' political violence over time.
+
+### Data table
+
+```{r}
+library(reactable)
+
+reactable::reactable(gtd_data,
+  defaultPageSize = 5,
+  style = list(fontSize = "30px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  ),
+  columns=list(
+    iyear=colDef(name="Year", align="center", minWidth=50),
+    gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+    attacks=colDef(name="Attacks", minWidth=100)
+  )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+gtd_data %>% download_this(
+    output_name = "GTD_germany_subset",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+
+:::
+
+
+:::
+
+
 # Other PV groups that will crop up in readings
 
 ## al-Qaeda 
@@ -703,6 +821,38 @@ discourage a change in behaviour (and at the organisational level, strategy)---e
 :::
 ::::
 
+# Assigning groups for in-depth study {background-color="#2c844c"}
+
+<!-- Deployment ID: AKfycbwZ8ht1c8OKYI5vLXMe1iHc3lmBazgij-lBj3Reeut6LryLNZqTjtOqU2k22NcXqoJF -->
+
+<!-- Web app link: <https://script.google.com/macros/s/AKfycbwZ8ht1c8OKYI5vLXMe1iHc3lmBazgij-lBj3Reeut6LryLNZqTjtOqU2k22NcXqoJF/exec> -->
+
+:::: {.columns}
+:::{.column width="35%"}
+![](slide_files/pv_group_assignment_app.png){fig-alt="A QR code to get an assigned group to study."}
+
+:::
+
+::: {.column width="65%" .center}
+<!-- go to <https://www.qr-code-generator.com/>, add the link, and screen shot the QR code -->
+To get assigned a group to study in depth, scan the QR code or click this **[LINK](https://script.google.com/macros/s/AKfycbwZ8ht1c8OKYI5vLXMe1iHc3lmBazgij-lBj3Reeut6LryLNZqTjtOqU2k22NcXqoJF/exec)**
+
+::: {style="margin-top: -5px; font-size: 0.9em;"} 
+You will be randomly assigned one of these groups:
+
+- Antifa
+- RAF - Rote Armee Fraktion
+- IS - Islamic State
+- alQaeda
+- NPD/Heimat
+- NSU - Nationalsozialistischer Untergrund
+- PKK - Partiya Karkerên Kurdistanê
+
+:::
+
+:::
+:::: 
+
 
 # Testing: determinants of right-wing terrorism in the U.S. {background-color="#2c844c"}
 
@@ -738,7 +888,7 @@ Lays out differing theoretical/empirical contentions/findings about these motiva
 
 Let's break this down:
 
-## @Piazza2017 - research design
+## @Piazza2017 - research design {.scrollable}
 
 ::: {style="text-align: left;"}
 **[the study uses a cross-sectional panel time series design to examine the predictive quality of a series of state and national-level economic, social and political indicators on counts of domestic terrorist attacks launched by right-wing terrorist movements and individuals in the 50 US states for the period 1970–2011]{style="font-size:15px;"}** 

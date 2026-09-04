@@ -312,7 +312,7 @@
     "href": "content/index.html",
     "title": "Slides",
     "section": "",
-    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8\n\n\nClass 9\n\n\nClass 10\n\n\nClass 11\n\n\nClass 12\n\n\nClass 13\n\n\nClass 14"
+    "text": "battery warning: several of the slide decks have running scripts (for the live polls), so saving the PDF copy and following it offline would use less of your battery.\n\n\nClass 1\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\nClass 2\n\n View all slides in new window  Download PDF of all slides\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClass 3\n\n\nClass 4\n\n\nClass 5\n\n\nClass 6\n\n\nClass 7\n\n\nClass 8\n\n\nClass 9\n\n\nClass 10\n\n\nClass 11\n\n\nClass 12\n\n\nClass 13\n\n\nClass 14"
   },
   {
     "objectID": "syllabus/index.html#examination-klausur",
@@ -5395,5 +5395,12 @@
     "title": "Class 10: Politically Violent Activity",
     "section": "Poll results",
     "text": "Poll results\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlocal support necessary violent group to have success?\n\nlocal_supportCounts = aq.from(surveyResults)\n  .select(\"local_support\")\n  .groupby(\"local_support\")\n  .count()\n  .derive({ measure: d =&gt; \"\" })\n\n// Calculate the maximum count from your dataset\nlocal_support_maxCountRE = Math.max(...local_supportCounts.objects().map(d =&gt; d.count));\n\nplot_local_support = Plot.plot({\n  marks: [\n    Plot.barY(local_supportCounts, {\n      x: \"local_support\",\n      y: \"count\",\n      fill: \"local_support\",\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.ruleY([respondentCount], { stroke: \"#ffffff99\" })\n  ],\n  color: {\n    domain: [\n      \"Yes\",\n      \"No\",\n      \"Maybe\"\n    ],\n    range: [\n      \"forestgreen\",\n      \"darkred\",\n      \"goldenrod\"\n    ]\n  },\n  marginBottom: 80,\n  x: { label: \"\", tickSize: 2, tickRotate: -1, padding: 0.2,\n    domain: [\"Yes\", \"No\", \"Maybe\"]\n  },  \n  y: {\n    label: \"\",\n    tickSize: 10,\n    tickFormat: d =&gt; d,\n    tickValues: Array.from(\n      new Set(local_supportCounts.objects().map(d =&gt; d.count))\n    ).sort((a, b) =&gt; a - b),\n    domain: [0, local_support_maxCountRE]\n  },\n  facet: { data: local_supportCounts, x: \"measure\", label: \"\" },\n  marginLeft: 60,\n  style: {\n    width: 1600,\n    height: 500,\n    fontSize: 40,\n  },\n});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy do you think so? What might ‘success’ mean and does that affect the ‘necessity’ of local support?"
+  },
+  {
+    "objectID": "slides/slides_02.html#circumstances-meso-level-variety-of-goals--crenshaw1981",
+    "href": "slides/slides_02.html#circumstances-meso-level-variety-of-goals--crenshaw1981",
+    "title": "Class 2: Causes, Radicalisation, Mobilisation",
+    "section": "Circumstances (meso-level): variety of goals (1981)",
+    "text": "Circumstances (meso-level): variety of goals (1981)\n\ncan serve long-term strategy and/or proximate objectives\ngain attention, win support\ndisrupt/discredit government/state\nprovoke reactions:\n\naffects public attitudes positively and negatively, creating either sympathy in a potential constituency or fear and hostility in an audience identified as the “enemy.”\ngovernment counteraction\n\ninternal organisation functions: control, discipline, morale-building\nactors’ impatience"
   }
 ]
