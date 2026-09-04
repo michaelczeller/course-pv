@@ -975,7 +975,7 @@ pagedown::chrome_print(file.path("..", "docs/slides", "slides_02.html"))
 
 <hr>
 
-[Questions about groups next meeting]{style="color:violet;"}: (1) Was radicalisation of members was motivated more by identity than by ideology? (2) Could individuals realistically have become radicalised without joining a social group connected to the organisation? (3) Was radicalisation into the group mostly *sudden* or *gradual*? (4) How did the group's narratives portray its members/community: victims, defenders, revolutionaries, religious warriors, other? (5) Did major political events accelerate radicalisation?
+[Questions about groups next meeting]{style="color:violet;"}: (1) Was radicalisation of members motivated more by identity than by ideology? (2) Could individuals realistically have become radicalised without joining a social group connected to the organisation? (3) Was radicalisation into the group mostly *sudden* or *gradual*? (4) How did the group's narratives portray its members/community: victims, defenders, revolutionaries, religious warriors, other? (5) Did major political events accelerate radicalisation?
 
 ## References
 
