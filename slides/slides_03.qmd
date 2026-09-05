@@ -671,6 +671,228 @@ See further in (e.g.) @Campelo2018, @dellaPorta2018-radicalization, @Fahey2019, 
 :::
 ::::
 
+## Open data - Profiles of Individual Radicalisation (PIRUS)  {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation 
+
+```{r w3-MZ, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(ggplot2)
+library(ggiraph)
+
+pirus_data <- read_csv("../resources/data/PIRUS_February_2025/pirus_radicalization_subset.csv")
+
+#tooltip text
+pirus_data <- pirus_data %>%
+  mutate(tooltip_text = paste0("Ideology: ", ideology, "\nCases: ", count))
+
+p <- ggplot(pirus_data, aes(
+  x = internet_role,
+  y = count,
+  fill = ideology,
+  tooltip = tooltip_text,
+  data_id = ideology  # needed for ggiraph interactivity
+)) +
+  geom_bar_interactive(stat = "identity", position = position_dodge(width = 0.8)) +
+  labs(
+    x = "Role of internet in radicalisation",
+    y = "Number of cases",
+    fill = "Ideology",
+    title = "The role of internet in different ideological categories of radicalisation"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 18),
+    axis.title = element_text(size = 19), 
+    plot.title = element_text(size = 20), 
+    legend.text = element_text(size = 18), 
+    legend.title = element_text(size = 19) 
+  )
+
+#make interactive
+girafe_plot <- girafe(ggobj = p) %>% # , width_svg = 8, height_svg = 5
+  girafe_options(
+    opts_hover(css = "stroke:black;stroke-width:4px;")
+  )
+girafe_plot
+```
+
+
+### Explanatory note
+
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
+
+::: {style="text-align: left;"}
+**[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
+:::
+
+### Data table 
+
+```{r}
+library(reactable)
+
+pirus_data <- read_csv("../resources/data/PIRUS_February_2025/pirus_radicalization_subset.csv")
+
+library(readxl)
+pirus_full <- read_excel("../resources/data/PIRUS_February_2025/PIRUS V5.xlsx")
+
+
+reactable::reactable(pirus_data,
+  defaultPageSize = 5,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+pirus_data %>% download_this(
+    output_name = "PIRUS_subset",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+:::
+
+## Open data - Profiles of Individual Radicalisation (PIRUS)  {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation 
+
+```{r w3-MZpirus-longitudinal, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(readxl)
+library(dygraphs)
+library(xts)
+
+pirus_full <- read_excel("../resources/data/PIRUS_February_2025/PIRUS V5.xlsx")
+
+pirus_full_sub <- pirus_full %>% select(Subject_ID, Year_Exposure, Radicalization_Islamist, Radicalization_Far_Right, Radicalization_Far_Left, Radicalization_Single_Issue)
+
+annual_counts <- pirus_full_sub %>%
+  group_by(Year_Exposure) %>%
+  summarise(
+    Islamist = sum(Radicalization_Islamist, na.rm = TRUE),
+    Far_Right = sum(Radicalization_Far_Right, na.rm = TRUE),
+    Far_Left = sum(Radicalization_Far_Left, na.rm = TRUE),
+    Single_Issue = sum(Radicalization_Single_Issue, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+pirus_annual_long <- pirus_full_sub %>%
+  group_by(Year_Exposure) %>%
+  summarise(
+    Islamist = sum(Radicalization_Islamist, na.rm = TRUE),
+    Far_Right = sum(Radicalization_Far_Right, na.rm = TRUE),
+    Far_Left = sum(Radicalization_Far_Left, na.rm = TRUE),
+    Single_Issue = sum(Radicalization_Single_Issue, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  tidyr::pivot_longer(
+    cols = -Year_Exposure,
+    names_to = "Category",
+    values_to = "Count"
+  )
+
+annual_xts <- xts(
+  annual_counts %>% select(-Year_Exposure),
+  order.by = as.Date(paste0(annual_counts$Year_Exposure, "-01-01"))
+)
+
+# Create dygraph
+dygraph(annual_xts, main = "Annual Radicalization Counts") %>%
+  dyBarChart() %>%
+  dyRangeSelector() %>%
+  dyOptions(
+    colors = c(
+      "#66BD63",  # Islamist
+      "#4575B4",  # Far Right
+      "#D73027",  # Far Left
+      "#FDAE61"   # Single Issue
+    ),
+    stackedGraph = FALSE
+  ) %>%
+  dyLegend(show = "always") 
+
+```
+
+
+### Explanatory note
+
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
+
+::: {style="text-align: left;"}
+**[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
+:::
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(annual_counts,
+  defaultPageSize = 5,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+annual_counts %>% download_this(
+    output_name = "PIRUS_annual_radicalisation_subset",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
+
+
+
 ## Radicalisation pathways [@Fahey2019] {visibility="hidden"}
 
 ## Radicalisation pathways [@Fahey2019]

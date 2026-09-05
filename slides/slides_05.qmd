@@ -349,7 +349,7 @@ Take the survey at **<https://forms.gle/oUEhq9W19sBD4E9R9>**
 :::
 :::: 
 
-::: {style="margin-top: -20px;"}
+::: {style="margin-top: -50px;"}
 [[Questions about groups]{style="color:violet;"}: (1) Does a distinct subculture exist around this group? (2) Did participation in the group's social scene (events, meeting places, online spaces, music, symbols, etc.) was an important step toward deeper involvement? (3) Is the group's subculture primarily in-person, online, or mixed? (4) Are most people were likely recruited through pre-existing social ties (e.g., friends, family, classmates)? (5) What do you think was the single most important factor in mobilisation for your group?]{style="font-size: 0.7em;"}
 
 :::
@@ -750,6 +750,468 @@ plot_g_most_important_factor = Plot.plot({
 ```
 
 
+# Open data - Profiles of Radicalisation {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation 
+
+Recruitment and Organisational Involvement (PIRUS)
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+library(plotly)
+
+mobilisation_data <- read_csv("../resources/data/PIRUS_February_2025/week5_pirus_mobilisation.csv")
+
+plot_ly(
+  data = mobilisation_data,
+  x = ~group_status,
+  y = ~count,
+  color = ~recruitment,
+  type = "bar",
+  width = "100%",
+  height = "100%",
+  hovertemplate = paste(
+    "<b>Group Status:</b> %{x}<br>",
+    "<b>Recruitment:</b> %{fullData.name}<br>",
+    "<b>Count:</b> %{y}<extra></extra>"
+  )
+) %>% 
+  layout(
+    barmode = "group",
+    xaxis = list(
+      title = list(
+        text = "Organisational Involvement",
+        font = list(size = 22)
+      ),
+      tickfont = list(size = 18)
+    ),
+    yaxis = list(
+      title = list(
+        text = "Number of Individuals",
+        font = list(size = 22)
+      ),
+      tickfont = list(size = 18)
+    ),
+    legend = list(
+      font = list(size = 18)
+    ),
+    hoverlabel = list(
+      font = list(size = 18)
+    )
+  )
+
+```
+
+
+### Explanatory note
+
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
+
+::: {style="text-align: left;"}
+**[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
+:::
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(mobilisation_data,
+  defaultPageSize = 8,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+
+::: 
+
+## Open data - Profiles of Radicalisation (PIRUS) {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation 
+
+
+```{r w5-MZ, warning=FALSE, message=FALSE}
+library(readxl)
+
+PIRUS <- read_excel("../resources/data/PIRUS_February_2025/PIRUS V5.xlsx")
+
+PIRUS <- PIRUS %>% select(Subject_ID, Year_Exposure, Role_Group, Actively_Recruited, Recruiter1)
+## Role_Group: 1 = Loose Associate; 2 = Follower; 3 = Leader; -99 = Unknown; -88 = Not Applicable (individual was not part of a group)
+## Actively_Recruited: 0 = No; 1 = Yes; -99 = Unknown
+## Recruiter1: 1 = Associate(s) or member(s) of a terrorist or violent extremist group; 2 = Family Member; 3 = Friend; 19; 4 = Other; -99 = Unknown; -88 = N/A (was not recruited)
+
+PIRUS_recoded <- PIRUS %>%
+  mutate(
+    Role_Group = case_when(
+      Role_Group == 1   ~ "Associate",
+      Role_Group == 2   ~ "Follower",
+      Role_Group == 3   ~ "Leader",
+      Role_Group == -88 ~ "NoGroup",
+      Role_Group == -99 ~ "Unknown",
+      TRUE ~ NA_character_
+    ),
+    Actively_Recruited = case_when(
+      Actively_Recruited == 0   ~ "NotRecruited",
+      Actively_Recruited == 1   ~ "Recruited",
+      Actively_Recruited == -99 ~ "Unknown",
+      TRUE ~ NA_character_
+    )
+  )
+
+plot_data <- PIRUS_recoded %>%
+  select(Year_Exposure, Role_Group, Actively_Recruited) %>%
+  pivot_longer(
+    cols = c(Role_Group, Actively_Recruited),
+    names_to = "Variable",
+    values_to = "Category"
+  ) %>%
+  filter(
+    !(Variable == "Role_Group" &
+        Category == "Unknown")
+  ) %>%
+  count(
+    Year_Exposure,
+    Variable,
+    Category,
+    name = "N"
+  )
+
+# write_csv(plot_data, "PIRUS_plot_data.csv")
+```
+
+
+```{ojs}
+pirus = FileAttachment("../resources/data/PIRUS_February_2025/PIRUS_plot_data.csv")
+  .csv({typed: true})
+  .then(data => data.filter(d => d.Year_Exposure >= 1990))
+
+//pirus = FileAttachment("PIRUS_plot_data.csv").csv({typed: true})
+```
+
+::: {style="margin-top: -30px;"}
+
+```{ojs}
+viewof vars = Inputs.checkbox(
+  ["Role_Group", "Actively_Recruited"],
+  {
+    label: "Vars.",
+    value: ["Role_Group"]
+  }
+)
+
+plotData = pirus.filter(d => vars.includes(d.Variable))
+
+plotData2 = plotData.map(d => ({
+  ...d,
+  Group: d.Variable === "Role_Group" ? "Role" : "Recruit"
+}))
+
+Plot.plot({
+  width: 1800,
+  height: 800,
+  marginBottom: 100,
+  marginLeft: 80,
+
+  style: { fontSize: "30px" },
+
+  x: {
+    label: "",
+    tickRotate: -90,
+    tickFormat: d => String(d)
+  },
+
+  y: {
+    label: "Count",
+    grid: true
+  },
+
+  color: {
+    legend: true,
+    legendFontSize: 30,
+    domain: [
+      "Associate",
+      "Follower",
+      "Leader",
+      "NoGroup",
+      "Recruited",
+      "NotRecruited",
+      "Unknown"
+    ],
+    range: [
+      "#1b9e77",
+      "#d95f02",
+      "#7570b3",
+      "#666666",
+      "#e7298a",
+      "#66a61e",
+      "#cccccc"
+    ]
+  },
+
+  marks: [
+    Plot.barY(
+      plotData2,
+      Plot.stackY({
+        x: "Year_Exposure",
+        y: "N",
+        fill: "Category",
+        fx: "Group",   // This creates the side-by-side dodge
+        tip: true,
+        title: d => `${d.Year_Exposure}\n${d.Group}\n${d.Category}\nN = ${d.N}`
+      })
+    )
+  ]
+})
+
+```
+
+::: 
+
+### Explanatory note
+
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
+
+::: {style="text-align: left;"}
+**[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
+:::
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(PIRUS_recoded,
+  defaultPageSize = 5,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+PIRUS_recoded %>% download_this(
+    output_name = "PIRUS_recruitment_subset",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
+## Open data - Profiles of Radicalisation (PIRUS) {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation 
+
+```{r w5-MZ-map, warning=FALSE, message=FALSE}
+library(readxl)
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+library(mapview)
+library(leafpop)
+
+PIRUS <- read_excel("../resources/data/PIRUS_February_2025/PIRUS V5.xlsx")
+
+PIRUS <- PIRUS %>% select(Subject_ID, Year_Exposure, Role_Group, Actively_Recruited, Recruiter1, Loc_Habitation_State1, Loc_Habitation_City1)
+## Role_Group: 1 = Loose Associate; 2 = Follower; 3 = Leader; -99 = Unknown; -88 = Not Applicable (individual was not part of a group)
+## Actively_Recruited: 0 = No; 1 = Yes; -99 = Unknown
+## Recruiter1: 1 = Associate(s) or member(s) of a terrorist or violent extremist group; 2 = Family Member; 3 = Friend; 19; 4 = Other; -99 = Unknown; -88 = N/A (was not recruited)
+
+PIRUS_recoded <- PIRUS %>%
+  mutate(
+    Role_Group = case_when(
+      Role_Group == 1   ~ "Associate",
+      Role_Group == 2   ~ "Follower",
+      Role_Group == 3   ~ "Leader",
+      Role_Group == -88 ~ "NoGroup",
+      Role_Group == -99 ~ "Unknown",
+      TRUE ~ NA_character_
+    ),
+    Actively_Recruited = case_when(
+      Actively_Recruited == 0   ~ "NotRecruited",
+      Actively_Recruited == 1   ~ "Recruited",
+      Actively_Recruited == -99 ~ "Unknown",
+      TRUE ~ NA_character_
+    ),
+    Recruiter1 = case_when(
+      Recruiter1 == 1   ~ "Group member",
+      Recruiter1 == 2   ~ "Family",
+      Recruiter1 == 3   ~ "Friend",
+      Recruiter1 == 4   ~ "Other",
+      Recruiter1 == -88 ~ "Not recruited",
+      Recruiter1 == -99 ~ "Unknown",
+      TRUE ~ NA_character_
+    ),
+    Country = "United States"
+  )
+
+## this gets latitude and longitude for the locations, but it takes awhile to
+## run (because 1679 distinct locations...)
+# PIRUS_geo <- PIRUS_recoded %>% 
+#   tidygeocoder::geocode(
+#     city = Loc_Habitation_City1,
+#     state = Loc_Habitation_State1,
+#     country = Country,
+#     method = "osm"
+#   )
+
+# write_csv(PIRUS_geo, "PIRUS_geo.csv")
+PIRUS_geo <- read_csv("../resources/data/PIRUS_February_2025/PIRUS_geo.csv")
+
+us_states <- ne_states(iso_a2="US", returnclass="sf")
+
+bbox <- c(xmin = -127, ymin = 20, xmax = -60, ymax = 50)
+us_states_cropped <- st_crop(us_states, bbox)
+
+PIRUS_geo <- PIRUS_geo[!is.na(PIRUS_geo$lat), ]
+
+PIRUS_geo <- PIRUS_geo[!PIRUS_geo$Loc_Habitation_State1 %in% c("Alaska", "Hawaii"), ]
+
+PIRUS_geo_sf <- PIRUS_geo %>% 
+  st_as_sf(
+    coords = c("long", "lat"),
+    crs = st_crs("EPSG:4269") # CRS for US 
+  )
+
+st_crs(PIRUS_geo_sf) <- st_crs(us_states_cropped)
+
+PIRUS_geo_sf$Year_chr <- as.character(PIRUS_geo_sf$Year_Exposure)
+
+PIRUS_geo_sf$Decade <- paste0(floor(PIRUS_geo_sf$Year_Exposure / 10) * 10, "s")
+
+leaders   <- subset(PIRUS_geo_sf, Role_Group == "Leader")
+followers <- subset(PIRUS_geo_sf, Role_Group == "Follower")
+associate <- subset(PIRUS_geo_sf, Role_Group == "Associate")
+nogroup   <- subset(PIRUS_geo_sf, Role_Group == "NoGroup")
+unknown   <- subset(PIRUS_geo_sf, Role_Group == "Unknown")
+
+mapview(leaders, zcol="Decade", legend=T, layer.name="Leaders",
+        label="Role_Group", cex=6,
+        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+        popup=popupTable(leaders,
+                           zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+                                    "Recruiter1","Loc_Habitation_State1",
+                                    "Loc_Habitation_City1")))+
+  mapview(followers, zcol="Decade", legend=T, layer.name="Followers",
+        label="Role_Group", cex=4,
+        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+        popup=popupTable(followers,
+                           zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+                                    "Recruiter1","Loc_Habitation_State1",
+                                    "Loc_Habitation_City1")))+
+  mapview(associate, zcol="Decade", legend=T, layer.name="Associates",
+        label="Role_Group", cex=3,
+        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+        popup=popupTable(associate,
+                           zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+                                    "Recruiter1","Loc_Habitation_State1",
+                                    "Loc_Habitation_City1")))+
+  mapview(nogroup, zcol="Decade", legend=T, layer.name="No Group",
+        label="Role_Group", cex=2,
+        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+        popup=popupTable(nogroup,
+                           zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+                                    "Recruiter1","Loc_Habitation_State1",
+                                    "Loc_Habitation_City1")))+
+  mapview(unknown, zcol="Decade", legend=T, layer.name="Unknown",
+        label="Role_Group", cex=1,
+        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+        popup=popupTable(unknown,
+                           zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+                                    "Recruiter1","Loc_Habitation_State1",
+                                    "Loc_Habitation_City1")))
+
+```
+
+
+### Explanatory note
+
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
+
+::: {style="text-align: left;"}
+**[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
+:::
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(PIRUS_geo,
+  defaultPageSize = 5,
+  style = list(fontSize = "17px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+PIRUS_geo %>% download_this(
+    output_name = "PIRUS_geo",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+
+::: 
+
+
 # @meier2022SpatiotemporalVariationArmed - Armed Group Recruitment of the LTTE {background-color="#2c844c"}
 
 :::: {.columns}
@@ -814,7 +1276,7 @@ plot_g_most_important_factor = Plot.plot({
 ![](slide_files/05/meier_table.png)
 
 
-# Any questions, concerns, feedback for this class? {background-color="#2c844c"}
+# Any feedback for this class? {background-color="#2c844c"}
 
 Anonymous feedback here: <https://forms.gle/NfF1pCfYMbkAT3WP6>
 

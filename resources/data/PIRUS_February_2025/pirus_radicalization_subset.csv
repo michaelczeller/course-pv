@@ -1,0 +1,15 @@
+ideology,internet_role,count
+Anarchist,Primary role,3
+Anarchist,Secondary role,28
+Anti-Capitalist,No role,1
+Anti-Capitalist,Primary role,3
+Anti-Capitalist,Secondary role,9
+Islamist,No role,43
+Islamist,Primary role,134
+Islamist,Secondary role,257
+Militia,No role,14
+Militia,Primary role,15
+Militia,Secondary role,219
+White Supremacist,No role,48
+White Supremacist,Primary role,59
+White Supremacist,Secondary role,260

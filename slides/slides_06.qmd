@@ -660,6 +660,188 @@ plot_violence_begun = Plot.plot({
 
 ```
 
+## Open data - Networks of American Radicals (SoNAR) {background-color="#ffe0b2"}
+
+::: panel-tabset
+### 2020s Network 
+
+```{r w6-MZ, warning=FALSE, message=FALSE}
+library(readxl)
+library(dplyr)
+library(igraph)
+library(visNetwork)
+library(RColorBrewer)
+library(visNetwork)
+
+SoNAR_Edges <- read_excel("../resources/data/PIRUS_February_2025/SoNAR_Edges.xlsx")
+SoNAR_Nodes <- read_excel("../resources/data/PIRUS_February_2025/SoNAR_Nodes.xlsx")
+
+### ISOLATES (NODES WITHOUT CONNECTIONS) INCLUDED
+
+# dec2020s <- "2020s"
+# 
+# nodes_dec2020s <- SoNAR_Nodes %>% filter(Decade == dec2020s)
+# 
+# nodes_dec2020s <- nodes_dec2020s %>% filter(!is.na(ID))
+# 
+# edges_dec2020s <- SoNAR_Edges %>%
+#   filter(
+#     Source %in% nodes_dec2020s$ID,
+#     Target %in% nodes_dec2020s$ID
+#   )
+# 
+# g_2020s <- igraph::graph_from_data_frame(
+#   d = edges_dec2020s,
+#   vertices = nodes_dec2020s,
+#   directed = FALSE
+# )
+# 
+# ideology_cols <- c(
+#   "Jihadist" = "gold",                                   
+#   "Anarchist/Anti-Capitalist" = "#4575B4",                  # blue
+#   "White Supremacist/Xenophobic" = "brown",              
+#   "Militia/Sovereign Citizen/Anti-Government" = "darkorange", # orange
+#   "Conspiracy Theory" = "#984EA3",                          # purple
+#   "Anti-Abortion" = "#F781BF",                              # pink
+#   "Other" = "#BDBDBD",                                      # light grey
+#   "Black Nationalist/Separatist" = "#000000",              # black
+#   "Environmental/Animal Rights" = "#1A9850"                # green
+# )
+# 
+# V(g_2020s)$color <- ideology_cols[V(g_2020s)$Ideology]
+# 
+# V(g_2020s)$label <- V(g_2020s)$name
+# 
+# legend_nodes <- data.frame(
+#   label = names(ideology_cols),
+#   color = unname(ideology_cols),
+#   shape = "dot"
+# )
+# 
+# visIgraph(
+#     g_2020s,
+#     physics = FALSE,
+#     smooth = F,
+#     idToLabel = FALSE
+# ) %>%
+#     visLegend(
+#         addNodes = legend_nodes,
+#         useGroups = FALSE
+#     )
+
+### NO ISOLATES (NODES WITHOUT CONNECTIONS)
+
+dec2020s <- "2020s"
+
+nodes_dec2020s <- SoNAR_Nodes %>%
+  filter(
+    Decade == dec2020s,
+    !is.na(ID)
+  )
+
+edges_dec2020s <- SoNAR_Edges %>%
+  filter(
+    Source %in% nodes_dec2020s$ID,
+    Target %in% nodes_dec2020s$ID
+  )
+
+# Remove isolates from node list
+connected_ids <- unique(c(edges_dec2020s$Source,
+                          edges_dec2020s$Target))
+
+nodes_dec2020s <- nodes_dec2020s %>%
+  filter(ID %in% connected_ids)
+
+g_2020s <- igraph::graph_from_data_frame(
+  d = edges_dec2020s,
+  vertices = nodes_dec2020s,
+  directed = FALSE
+)
+
+ideology_cols <- c(
+  "Jihadist" = "gold", 
+  "Anarchist/Anti-Capitalist" = "#4575B4",
+  "White Supremacist/Xenophobic" = "brown", 
+  "Militia/Sovereign Citizen/Anti-Government" = "darkorange", 
+  "Conspiracy Theory" = "#984EA3",
+  "Anti-Abortion" = "#F781BF", 
+  "Other" = "#BDBDBD",
+  "Black Nationalist/Separatist" = "#000000", 
+  "Environmental/Animal Rights" = "#1A9850" 
+)
+
+V(g_2020s)$color <- ideology_cols[V(g_2020s)$Ideology]
+
+V(g_2020s)$label <- V(g_2020s)$name
+
+legend_nodes <- data.frame(
+  label = names(ideology_cols),
+  color = unname(ideology_cols),
+  shape = "dot",
+  font.size = 20
+)
+
+visIgraph(
+    g_2020s,
+    physics = T,
+    smooth = F,
+    idToLabel = FALSE
+) %>%
+    visLegend(
+        addNodes = legend_nodes,
+        useGroups = FALSE
+        # ,
+        # main = list(
+        #   text = "Ideo. Grouping",
+        #   style = "font-size: 30px;"
+        #   )
+    )
+
+```
+
+### Centrality vis.
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+library(plotly)
+
+network_data <- read_csv("../resources/data/PIRUS_February_2025/week6_sonar_leadership_networks.csv")
+
+plot_ly(
+  data = network_data,
+  x = ~Ideology,
+  y = ~avg_degree_centrality,
+  type = "bar",
+  width = "100%",
+  height = "100%",
+  hovertemplate = paste(
+    "<b>Ideology:</b> %{x}<br>",
+    "<b>Average Centrality:</b> %{y}<extra></extra>"
+  )
+) %>%
+  layout(
+    title = "Network Centrality Across Ideological Milieus (SoNAR)",
+    xaxis = list(title = ""),
+    yaxis = list(title = "Average Degree Centrality")
+  )
+```
+
+### Explanatory note
+
+This visualisation uses data from the Social Networks of American Radicals (SoNAR) project, which maps relationships among extremist offenders in the United States. The network visualisation shows network connections among radicals in the 2020s. The bar chart compares average network centrality across ideological milieus and illustrates differences in the structural positions occupied by actors within extremist networks. Network centrality provides an indication of how connected individuals are within a broader organisational environment and offers insight into patterns of influence, coordination, and leadership.
+
+::: {style="text-align: left;"}
+**[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
+:::
+
+::: 
+
+## could add into this a visualisation of PIRA network {visibility="hidden"}
+
+<!-- <https://sites.google.com/site/ucinetsoftware/datasets/covert-networks> -->
+
+<!-- <https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/provisional-irish-republican-army> -->
+
 # Research closer look {background-color="#2c844c"}
 
 :::: {.columns}
