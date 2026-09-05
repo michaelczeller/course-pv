@@ -1379,9 +1379,70 @@ dfz <- subset(df, select = c(year, open129, closed129, charged129, verdict129))
 dfz <- subset(dfz, year < 2021)
 dfz_melt <- melt(dfz, id="year")
 dfz_melt$value <- as.numeric(dfz_melt$value)
+
 ```
 
 ## @Koehler2019 - focusing in on Germany
+
+```{r}
+library(dygraphs)
+library(xts)
+library(dplyr)
+library(htmlwidgets)
+
+df <- data.frame(
+  year = c(2001:2021),
+  explosive = c(1,0,0,2,3,1,1,0,0,2,0,1,2,6,18,10,5,0,2,2,1), #Herbeiführen einer Sprengstoffexplosion
+  arson = c(16,20,24,37,14,18,24,29,18,29,20,21,11,21,99,113,42,11,6,25,11), #Brandstiftungen
+  all_RWE_violence = c(980,940,845,832,1034,1115,1054,1113,959,806,828,842,837,1029,1485,1600,1054,1088,925,1023,945), 
+  open129 = c(2,1,4,1,1,3,3,1,0,0,1,15,2,2,1,4,6,4,16,1,"-"), #129(a, b)
+  closed129 = c(1,2,0,0,0,2,2,3,1,0,0,0,0,2,0,0,0,0,0,0,"-"),
+  charged129 = c(0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,1,1,"-"),
+  verdict129 = c(1,0,3,0,2,0,0,0,0,0,0,0,0,0,0,0,0,2,3,1,"-")
+)
+
+df$year <- as.Date(paste(df$year, "01", "01", sep = "-"))
+
+### convert entire df (excluding the 'year' column) to xts
+dfxts <- xts(x = df[, -1], order.by = df$year)
+
+# dfxts_subset <- dfxts[, c("explosive", "arson")]
+dfxts_subset <- dfxts[, c("explosive", "arson", "all_RWE_violence")]
+
+## https://rstudio.github.io/dygraphs/gallery-custom-plotters.html
+
+# dygraph(dfxts_subset) %>%
+#   dyRangeSelector(dateWindow = c("2000-06-01", "2022-06-01")) %>%
+#   # dyBarChart() %>%
+#   ## without automatic bar dodge, make sure larger bars go first (behind)
+#   dyBarSeries("arson", color = "blue") %>%
+#   dyBarSeries("explosive", color = "red") %>%
+#   dyFilledLine("all_RWE_violence", axis = 'y2') %>% 
+#   dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }"))
+
+# dygraph(dfxts_subset) %>%
+#   dyRangeSelector(dateWindow = c("2000-06-01", "2022-06-01")) %>%
+#   dyMultiColumn() %>% 
+#   dyFilledLine("all_RWE_violence", axis = 'y2') %>% 
+#   dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }"))
+
+dygraph(dfxts_subset,
+        ylab = "(bars) explosive/arson incidents") %>%
+  dyRangeSelector(dateWindow = c("2000-06-01", "2022-06-01")) %>%
+  # dyBarChart() %>%
+  dyMultiColumnGroup(c("arson", "explosive")) %>% 
+  dyFilledLine("all_RWE_violence", axis = 'y2') %>% 
+  dyAxis("x", axisLabelFormatter = JS("function(d){ return d.getFullYear() }")) 
+# %>% dyAxis("y2", label = "(line) RWE violent crimes")
+
+```
+
+RWE explosives & arson crimes (bars); all RWE violent crimes (line)
+
+[Looking at ... explosives attacks or arson, crimes usually but not always (legally) framed as terrorism, statistics from Germany indicate a surge during the so-called “refugee crisis” between 2015 and 2016. ...]{style="font-size:20px;"}
+
+
+## @Koehler2019 - focusing in on Germany {visibility="hidden"}
 
 ```{r k, out.width='100%'}
 k
@@ -1705,7 +1766,9 @@ tmap_animation(
 <!-- :::: -->
 
 
-## @Koehler2019 - focusing in on Germany, homicides
+## @Koehler2019 - focusing in on Germany, homicides 
+
+<!-- {visibility="hidden"} -->
 
 ```{r}
 diff_col2
@@ -1765,6 +1828,95 @@ y
 # plot(y)
 # dev.off()
 ```
+
+## @Koehler2019 - focusing in on Germany, homicides {visibility="hidden"}
+
+
+```{r w5-MZ-map, message=FALSE, warning=FALSE}
+#| eval: false
+#| include: false
+library(readxl)
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+library(mapview)
+library(leafpop)
+
+df <- read.csv("slide_files/11/FR_homicides2023-01-20.csv", row.names=1, header = TRUE)
+
+dfUNOFFIC <- subset(df, OFFICIAL == F)
+rownames(dfUNOFFIC) = seq(length=nrow(dfUNOFFIC))
+
+dfOFFIC <- subset(df, OFFICIAL == T)
+rownames(dfOFFIC) = seq(length=nrow(dfOFFIC))
+
+
+
+# 
+# bbox <- c(xmin = -127, ymin = 20, xmax = -60, ymax = 50)
+# us_states_cropped <- st_crop(us_states, bbox)
+# 
+# PIRUS_geo <- PIRUS_geo[!is.na(PIRUS_geo$lat), ]
+# 
+# PIRUS_geo <- PIRUS_geo[!PIRUS_geo$Loc_Habitation_State1 %in% c("Alaska", "Hawaii"), ]
+# 
+# PIRUS_geo_sf <- PIRUS_geo %>% 
+#   st_as_sf(
+#     coords = c("long", "lat"),
+#     crs = st_crs("EPSG:4269") # CRS for US 
+#   )
+# 
+# st_crs(PIRUS_geo_sf) <- st_crs(us_states_cropped)
+# 
+# PIRUS_geo_sf$Year_chr <- as.character(PIRUS_geo_sf$Year_Exposure)
+# 
+# PIRUS_geo_sf$Decade <- paste0(floor(PIRUS_geo_sf$Year_Exposure / 10) * 10, "s")
+# 
+# leaders   <- subset(PIRUS_geo_sf, Role_Group == "Leader")
+# followers <- subset(PIRUS_geo_sf, Role_Group == "Follower")
+# associate <- subset(PIRUS_geo_sf, Role_Group == "Associate")
+# nogroup   <- subset(PIRUS_geo_sf, Role_Group == "NoGroup")
+# unknown   <- subset(PIRUS_geo_sf, Role_Group == "Unknown")
+# 
+# mapview(leaders, zcol="Decade", legend=T, layer.name="Leaders",
+#         label="Role_Group", cex=6,
+#         map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+#         popup=popupTable(leaders,
+#                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+#                                     "Recruiter1","Loc_Habitation_State1",
+#                                     "Loc_Habitation_City1")))+
+#   mapview(followers, zcol="Decade", legend=T, layer.name="Followers",
+#         label="Role_Group", cex=4,
+#         map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+#         popup=popupTable(followers,
+#                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+#                                     "Recruiter1","Loc_Habitation_State1",
+#                                     "Loc_Habitation_City1")))+
+#   mapview(associate, zcol="Decade", legend=T, layer.name="Associates",
+#         label="Role_Group", cex=3,
+#         map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+#         popup=popupTable(associate,
+#                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+#                                     "Recruiter1","Loc_Habitation_State1",
+#                                     "Loc_Habitation_City1")))+
+#   mapview(nogroup, zcol="Decade", legend=T, layer.name="No Group",
+#         label="Role_Group", cex=2,
+#         map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+#         popup=popupTable(nogroup,
+#                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+#                                     "Recruiter1","Loc_Habitation_State1",
+#                                     "Loc_Habitation_City1")))+
+#   mapview(unknown, zcol="Decade", legend=T, layer.name="Unknown",
+#         label="Role_Group", cex=1,
+#         map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
+#         popup=popupTable(unknown,
+#                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
+#                                     "Recruiter1","Loc_Habitation_State1",
+#                                     "Loc_Habitation_City1")))
+
+```
+
+
 
 ## @Koehler2019 - focusing in on Germany, law enforcement
 
