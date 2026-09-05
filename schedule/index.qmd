@@ -90,16 +90,16 @@ library(lubridate) # for submission date of assignments
 #You can set days of the week for course meetings (e.g. Monday and Wednesday).
 #Semester start and end dates are selected and then university holidays like spring break are specified.
 #Days of the week that the course meets. Must be full day name in quotes.
-Days <- c("Thursday")
+Days <- c("Monday")
 #Semester start date for classes as YYYY/M/D.
-SemesterStart <- as.Date("2025/10/15")
+SemesterStart <- as.Date("2026/10/11")
 #Semester end date for classes as YYYY/M/D.
-SemesterEnd <- as.Date("2026/2/7")
+SemesterEnd <- as.Date("2027/2/5")
 #Fall break start and stop date.
 WinterBreak <-
   seq.Date(
-    from = as.Date("2025/12/22"),
-    to = as.Date("2026/1/6"),
+    from = as.Date("2026/12/24"),
+    to = as.Date("2027/1/6"),
     by = "day"
   )
 #Spring break start and stop date.
