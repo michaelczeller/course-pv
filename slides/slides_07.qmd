@@ -36,11 +36,15 @@ bibliography: ../../../library.bib
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography | 
-| 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    | 
-| 18 Dec: | Shoam, Aidan, Tara, Sebastian    | QCA    | 
+|         |                                  |        | 
 
 : Presentations line-up
+
+<!-- | Date    | Presenters                       | Method | -->
+<!-- | -------:|:---------------------------------|:------:| -->
+<!-- | 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography |  -->
+<!-- | 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    |  -->
+<!-- | 18 Dec: | Shoam, Aidan, Tara, Sebastian    | QCA    |  -->
 
 <!-- ## January -->
 
@@ -778,12 +782,11 @@ plot_effective_addressing = Plot.plot({
 
 Spain example 
 
-<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
-<!-- aspect-ratio="21x9"  -->
-{{< video https://www.youtube.com/watch?v=Ec-nhQ6jt2Q 
-    start="1"
-    width="80%" 
-    height="80%" >}}
+<video src="slide_files/07/ff_spain_return.mp4" width="80%" 
+controls controlslist="nodownload"></video>
+
+<!-- poster="slide_files/03/spotlight_cover.png" -->
+
 
 ## Dealing with returning foreign fighters (2)
 
@@ -800,12 +803,11 @@ Economist (a bit sensationalist and some graphic imagery)
 
 David Malet 
 
-<!-- Aspect ratios include 1x1, 4x3, 16x9 (the default), and 21x9. -->
-<!-- aspect-ratio="21x9"  -->
-{{< video https://www.youtube.com/watch?v=ripWaGOboq8 
-    start="1"
-    width="80%" 
-    height="80%" >}}
+<!-- https://www.youtube.com/watch?v=ripWaGOboq8 -->
+
+<video src="slide_files/07/ff_malet.mp4" width="99%" 
+controls controlslist="nodownload"></video>
+
 
 ## Poll results - returning foreign fighters
 
@@ -1015,6 +1017,123 @@ plot_revoke = Plot.plot({
 
 :::
 ::::
+
+# Open data - Rebel Foreign Fighters {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation
+
+Foreign Fighters and Rebel Organisation Characteristics
+
+```{r w7-foreign-fighters, warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(haven)
+library(plotly)
+
+ff <- read_dta("../resources/data/Schwartz_ReplicationData/RFFD_Output_.dta")
+
+ff <- ff %>%
+  mutate(
+
+    ideology = case_when(
+      islamist == 1 ~ "Islamist",
+      nationalist == 1 ~ "Nationalist",
+      leftist == 1 ~ "Leftist",
+      TRUE ~ "Other"
+    ),
+
+    foreign_territory_label = ifelse(
+      foreign_territory == 1,
+      "Foreign Territory",
+      "Domestic Conflict"
+    ),
+
+    support_label = ifelse(
+      transconstsupp > 0,
+      "Transnational Support",
+      "No Transnational Support"
+    )
+
+  )
+
+plot_ly(
+  data = ff,
+
+  x = ~rebestimate_ln,
+
+  y = ~log1p(best_fatality),
+
+  color = ~ideology,
+
+  size = ~foreign_f,
+
+  type = "scatter",
+  width = "100%",
+  height = "100%",
+  mode = "markers",
+
+  text = ~paste(
+    "<b>Organisation:</b>", side_b,
+    "<br><b>Country:</b>", country,
+    "<br><b>Foreign Fighters:</b>", foreign_f,
+    "<br><b>Foreign Fighter Type:</b>", ff_type,
+    "<br><b>Transnational Support:</b>", support_label,
+    "<br><b>Conflict Type:</b>", foreign_territory_label,
+    "<br><b>Fatalities:</b>", best_fatality
+  ),
+
+  hoverinfo = "text"
+) %>%
+layout(
+  xaxis = list(
+      title = list(
+        text = "Rebel Strength (log)",
+        font = list(size = 20)
+      ),
+      tickfont = list(size = 18)
+    ),
+  yaxis = list(
+      title = list(
+        text = "Conflict Fatalities (log)",
+        font = list(size = 20)
+      ),
+      tickfont = list(size = 18)
+    ),
+    legend = list(
+      font = list(size = 18)
+    ),
+    hoverlabel = list(
+      font = list(size = 18)
+    )
+)
+```
+
+### Explanatory note
+
+This visualisation is of the [Rebel Foreign Fighter Dataset](https://doi.org/10.1177/00223433231168183) (RFFD), which contains information on insurgent organisations involved in civil wars. It charts the relationship between rebel strength, conflict fatalities, and ideological orientation. Each bubble represents a rebel organisation. The x-axis indicates estimated rebel strength, while the y-axis reflects conflict fatalities. Bubble size corresponds to the presence of foreign fighters, and colours indicate ideological orientation. The visualisation allows comparison of organisations that successfully attract foreign fighters with those that do not.
+
+### Data download  
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+ff %>% download_this(
+    output_name = "ff",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
 
 # Political violence in an authoritarian contexts {background-color="#2c844c"}
 

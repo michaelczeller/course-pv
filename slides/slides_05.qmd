@@ -46,13 +46,18 @@ bibliography: ../../../library.bib
 <!-- ::: panel-tabset -->
 <!-- ## December -->
 
+
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography | 
-| 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    | 
-| 18 Dec: | Shoam, Aidan, Tara, Sebastian    | TBD    | 
+|         |                                  |        | 
 
 : Presentations line-up
+
+<!-- | Date    | Presenters                       | Method | -->
+<!-- | -------:|:---------------------------------|:------:| -->
+<!-- | 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography |  -->
+<!-- | 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    |  -->
+<!-- | 18 Dec: | Shoam, Aidan, Tara, Sebastian    | QCA    |  -->
 
 <!-- ## January -->
 
@@ -806,7 +811,7 @@ plot_ly(
 
 ### Explanatory note
 
-This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares levels of organisational involvement with recruitment experiences and highlights the role of group environments in processes of radicalisation and mobilisation. 
 
 ::: {style="text-align: left;"}
 **[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
@@ -983,7 +988,7 @@ Plot.plot({
 
 ### Explanatory note
 
-This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. The bar charts show distributions of group roles and recruitment patterns over time.
 
 ::: {style="text-align: left;"}
 **[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
@@ -1161,7 +1166,9 @@ mapview(leaders, zcol="Decade", legend=T, layer.name="Leaders",
 
 ### Explanatory note
 
-This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It plots the primary location of radicalised individuals and the bubble reflect their role within groups
+
+compares the number of individuals associated with different ideological categories, including Islamist, White Supremacist, Militia, Anarchist, and Anti-Capitalist movements. The data cover cases recorded between 1948 and 2022 and provide an overview of the ideological diversity represented within the PIRUS database. This allows us to compare the relative prevalence of different ideological backgrounds among radicalised individuals included in the dataset.
 
 ::: {style="text-align: left;"}
 **[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 

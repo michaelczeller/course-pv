@@ -1092,6 +1092,107 @@ plot_g_escalates_in_response = Plot.plot({
 ::: 
 ::::
 
+# Open data - Profiles of Radicalisation {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation 
+
+Violent Outcomes Across Ideological Movements
+
+```{r w9-ideology-violence, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(readxl)
+library(plotly)
+
+PIRUS <- read_excel("../resources/data/PIRUS_February_2025/PIRUS V5.xlsx")
+
+week9 <- PIRUS %>%
+  mutate(
+    ideology = case_when(
+      Radicalization_Islamist == 1 ~ "Islamist",
+      Radicalization_Far_Right == 1 ~ "Far Right",
+      Radicalization_Far_Left == 1 ~ "Far Left",
+      Radicalization_Single_Issue == 1 ~ "Single Issue",
+      TRUE ~ "Other"
+    )
+  ) %>%
+  filter(!is.na(Violent)) %>%
+  group_by(ideology) %>%
+  summarise(
+    violent_cases = sum(Violent == 1, na.rm = TRUE),
+    total_cases = n(),
+    violent_share = violent_cases / total_cases
+  )
+
+plot_ly(
+  data = week9,
+  x = ~ideology,
+  y = ~violent_share,
+
+  type = "bar",
+  width = "100%",
+  height = "100%",
+  text = ~paste(
+    "Violent Share:",
+    round(violent_share, 2),
+    "<br>Cases:",
+    total_cases
+  ),
+
+  hoverinfo = "text"
+) %>%
+layout(
+  xaxis = list(
+      title = list(
+        text = ""
+      ),
+      tickfont = list(size = 18)
+    ),
+  yaxis = list(
+      title = list(
+        text = "Share of Violent Individuals",
+        font = list(size = 20)
+      ),
+      tickfont = list(size = 18)
+    )
+)
+
+
+```
+
+
+### Explanatory note
+
+This visualisation is based on a subset of the [Profiles of Individual Radicalization in the United States](https://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus) (PIRUS) dataset. It compares the proportion of individuals who engaged in violent extremist activities across different ideological milieus.
+
+::: {style="text-align: left;"}
+**[National Consortium for the Study of Terrorism and Responses to Terrorism (START), University of Maryland. (2024). Profiles of Individual Radicalization in the United States (PIRUS) [Data file]. Retrieved from <http://www.start.umd.edu/data-tools/profiles-individual-radicalization-united-states-pirus>. Copyright University of Maryland 2024.]{style="font-size:18px;"}** 
+:::
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(week9,
+  defaultPageSize = 5,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: 
 
 
 # A case of RWE restraint? {background-color="#2c844c"}

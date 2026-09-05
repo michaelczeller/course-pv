@@ -36,9 +36,7 @@ bibliography: ../../../library.bib
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography | 
-| 11 Dec: | Bérénice, Zorka, Victoria, Katharina | content analysis | 
-| 18 Dec: | Shoam, Aidan, Tara, Sebastian    | QCA | 
+|         |                                  |        | 
 
 : Presentations line-up
 
@@ -661,7 +659,102 @@ Pay attention to the mechanisms that Prof. Chenoweth specifies in her brief expl
 
 - [your thoughts on these findings?]{style="color:indigo;"}
 
-## Concluding discussion 
+# Open data - Big Allied and Dangerous {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation
+
+Criminal Activity and Conflict Intensity of Insurgent Organisations
+
+```{r w8-baad-profile, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(readxl)
+library(plotly)
+
+baad <- read_excel("../resources/data/BAAD2_files/BAAD2 Insurgency Crime Dataset.xlsx")
+
+baad <- baad %>%
+  mutate(
+
+    crime_score =
+      coalesce(fddrugtk, 0) +
+      coalesce(fdextort, 0) +
+      coalesce(fdkidnap, 0) +
+      coalesce(fdrob, 0) +
+      coalesce(fdsmuggl, 0),
+
+    ideology = case_when(
+      reli == 1 ~ "Religious",
+      left == 1 ~ "Leftist",
+      ethn == 1 ~ "Ethnic",
+      TRUE ~ "Other"
+    ),
+
+    territory = ifelse(
+      terrcntrl == 1,
+      "Territorial Control",
+      "No Territorial Control"
+    )
+  )
+
+plot_ly(
+  data = baad,
+
+  x = ~crime_score,
+  y = ~ucdpbd,
+
+  color = ~ideology,
+  size = ~size_rec,
+
+  type = "scatter",
+  width = "100%",
+  height = "100%",
+  mode = "markers",
+
+  text = ~paste(
+    "<b>Organisation:</b>", org,
+    "<br><b>Country:</b>", hbase,
+    "<br><b>Year:</b>", year,
+    "<br><b>Ideology:</b>", ideology,
+    "<br><b>Battle deaths:</b>", ucdpbd,
+    "<br><b>Crime score:</b>", crime_score,
+    "<br><b>Territorial control:</b>", territory
+  ),
+
+  hoverinfo = "text"
+) %>%
+  layout(
+    xaxis = list(
+      title = list(
+        text = "Criminal Activity Score",
+        font = list(size = 20)
+      ),
+      tickfont = list(size = 18)
+    ),
+    yaxis = list(
+      title = list(
+        text = "Battle Deaths",
+        font = list(size = 20)
+      ),
+      tickfont = list(size = 18)
+    ),
+    legend = list(
+      font = list(size = 18)
+    ),
+    hoverlabel = list(
+      font = list(size = 18)
+    )
+  )
+
+```
+
+### Explanatory note
+
+This scatter plot shows the relationship between criminal activity and conflict intensity among insurgent organisations in the [Big Allied and Dangerous Dataset](https://www.start.umd.edu/using-baad) (BAAD2). Each bubble is an organisation in a specific year. The x-axis shows a criminal activity score, which measures how many different forms of criminal financing an organisation uses, including drug trafficking, extortion, kidnapping, robbery, and smuggling. The y-axis shows the number of battle-related deaths associated with the conflict. Bubble size reflects organisational size; colours show different ideological types. By hovering over individual bubbles, you can view additional information about the organisation, the country in which it operated, the year of observation, and whether it exercised territorial control.
+
+::: 
+
+# Concluding discussion 
 
 Relationship across a movement: 
 

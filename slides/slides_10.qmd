@@ -980,6 +980,125 @@ plot_repression = Plot.plot({
 :::
 ::::
 
+# Open data - Rebel Foreign Fighters {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Visualisation 
+
+Average Rebel Strength by Ideology Over Time
+
+```{r w10-local-support, warning=FALSE, message=FALSE}
+
+library(tidyverse)
+library(haven)
+library(plotly)
+
+ff <- read_dta("../resources/data/Schwartz_ReplicationData/RFFD_Output_.dta")
+
+week10 <- ff %>%
+  mutate(
+    ideology = case_when(
+      islamist == 1 ~ "Islamist",
+      nationalist == 1 ~ "Nationalist",
+      leftist == 1 ~ "Leftist",
+      TRUE ~ "Other"
+    )
+  ) %>%
+  filter(
+    !is.na(year),
+    !is.na(rebstrength)
+  ) %>%
+  group_by(year, ideology) %>%
+  summarise(
+    mean_strength = mean(rebstrength),
+    organisations = n(),
+    .groups = "drop"
+  )
+
+plot_ly(
+  data = week10,
+  x = ~year,
+  y = ~mean_strength,
+  color = ~ideology,
+  type = "scatter",
+  width = "100%",
+  height = "100%",
+  mode = "lines+markers",
+  text = ~paste(
+    "<b>Year:</b>", year,
+    "<br><b>Ideology:</b>", ideology,
+    "<br><b>Average Rebel Strength:</b>", round(mean_strength,2),
+    "<br><b>Number of organisations:</b>", organisations
+  ),
+  hoverinfo = "text"
+) %>%
+layout(
+  xaxis = list(tickfont = list(size = 18)),
+  yaxis = list(
+    title = list(
+      text="Average Rebel Strength (1=Weak, 5=Strong)",
+      font = list(size = 18)
+    ),
+    tickfont = list(size = 18),
+    range = c(1,5)
+  ),
+  legend = list(
+      font = list(size = 18)
+    ),
+    hoverlabel = list(
+      font = list(size = 18)
+    )
+)
+
+```
+
+### Explanatory note
+
+This visualisation is of the [Rebel Foreign Fighter Dataset](https://doi.org/10.1177/00223433231168183) (RFFD), which contains information on insurgent organisations involved in civil wars. It shows how the average strength of rebel organisations has changed over time (between 1989 and 2011) across different ideological movements. The x-axis represents the year, while the y-axis shows the average rebel strength, measured on a scale from 1 (weak) to 5 (very strong). Colours distinguish ideological categories, and hovering over each point reveals the average strength and the number of organisations represented in that year.
+
+### Data table 
+
+```{r}
+library(reactable)
+
+reactable::reactable(week10,
+  defaultPageSize = 5,
+  style = list(fontSize = "25px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  )
+  # ,
+  # columns=list(
+  #   iyear=colDef(name="Year", align="center", minWidth=50),
+  #   gname=colDef(name="Group", minWidth=300), # , maxWidth=200
+  #   attacks=colDef(name="Attacks", minWidth=100)
+  # )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+week10 %>% download_this(
+    output_name = "RFFD_rebel_strength",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: 
+
 
 # Public opinion on political violence {background-color="#2c844c"}
 
