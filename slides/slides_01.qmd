@@ -82,7 +82,7 @@ Take the survey at **<https://forms.gle/iXweLEsJ7VTANrmGA>**
 . . . 
 
 - Lots of different languages represented in the room &rarr; but please don't be shy: [feel [empowered]{style="color:cadetblue;"} to participate, even if you are not so confident in your English skills]{style="color:red;"}
-    + I will avoid 'calling on' people to contribute 
+    <!-- + I will avoid 'calling on' people to contribute -->
     + when you speak, please speak up (*I'm rapidly ageing and my hearing is not what it once was*)
 
 ## First task...
@@ -110,7 +110,7 @@ Take the survey at **<https://forms.gle/iXweLEsJ7VTANrmGA>**
 
 - This course is one of the Grundkurse for Prof. Bolleyer's **Einführung in das politische System Deutschlands**
 - This course is a detailed investigation of a related topic---not a tutorial on the material in Prof. Bolleyer's lecture
-    + So---as should go without saying---for both the lecture and GK: read and attend classes 
+    + So---as should go without saying---for both the lecture and GK: [read and attend classes]{style="color:red;"} 
 
 ## Structure of the course {.scrollable}
 
@@ -133,26 +133,38 @@ library(lubridate) # for submission date of assignments
 #You can set days of the week for course meetings (e.g. Monday and Wednesday).
 #Semester start and end dates are selected and then university holidays like spring break are specified.
 #Days of the week that the course meets. Must be full day name in quotes.
-Days <- c("Thursday")
+Days <- c("Monday")
 #Semester start date for classes as YYYY/M/D.
-SemesterStart <- as.Date("2025/10/16")
+SemesterStart <- as.Date("2026/10/11")
 #Semester end date for classes as YYYY/M/D.
-SemesterEnd <- as.Date("2026/2/7")
+SemesterEnd <- as.Date("2027/2/5")
 #Fall break start and stop date.
 WinterBreak <-
   seq.Date(
-    from = as.Date("2025/12/22"),
-    to = as.Date("2026/1/6"),
+    from = as.Date("2026/12/24"),
+    to = as.Date("2027/1/6"),
     by = "day"
   )
+#Spring break start and stop date.
+# SpringBreak <-
+#   seq.Date(
+#     from = as.Date("2022/02/28"),
+#     to = as.Date("2022/03/06"),
+#     by = "day"
+#   )
 #Creates a list of days within the semester.
 SemesterDays <-
   seq.Date(from = SemesterStart, to = SemesterEnd, by = "day")
+#Add day before Thanksgiving.
+#Add day before Thanksgiving.
+# DayBeforeThnks<-as.Date(holiday(
+#     year = getRmetricsOptions("currentYear"),
+#     Holiday = c("USThanksgivingDay")))-1
 #Full list of holidays that there are no classes including breaks.
 Holidays <-
   c(as.Date(holiday(
     year = getRmetricsOptions("currentYear"),
-    Holiday = c("USLaborDay", "USThanksgivingDay", "USMLKingsBirthday")
+    Holiday = c("USLaborDay", "USMLKingsBirthday")
   )), WinterBreak)
 #Create a list of semester days excluding holidays.
 SemesterDays <- SemesterDays[!SemesterDays %in% Holidays]
@@ -183,8 +195,8 @@ Lecture_Topic <- c("Introduction and types of political violence", # Class 1
                    "State responses: policies", # Class 11
                    "State responses: repression", # Class 12
                    "Addressing violence online", # Class 13
-                   "Disengagement, deradicalisation (individual), demobilisation (organisational)") # Class 14
-                   # "NO CLASS MEETING TODAY") # Class 15"
+                   "Disengagement, deradicalisation (individual), demobilisation (organisational)", # Class 14
+                   "NO CLASS MEETING TODAY") # Class 15"
 
 MeetingDays <- bind_cols(MeetingDays, Lecture = Lecture_Topic)
 
@@ -297,12 +309,13 @@ kable(data.frame(
 ## Course assessment - *Participation*
 
 - No examination in this course, BUT there is in '*Einführung Politisches System der BRD*'. There, you respond to an essay question from this course.
-    + Exam on [2 February (Monday) at 8.00]{style="color:red;"} in the [AudiMax](https://www.lmu.de/raumfinder/#/building/bw0000/map?room=000000100_)
+    + Exam on [1 February (Monday) at 14.00]{style="color:red;"} in the [AudiMax](https://www.lmu.de/raumfinder/#/building/bw0000/map?room=000000100_)
     + 90-minutes written exam: response to 3 of 5 short-answer prompts from Prof. Bolleyer's lecture and to 1 of 3 essay prompts from this course
+    + [Exam registration deadline]{style="color:red;"} sometime in December---careful not to miss it 
 
 - attend class and actively participate
     + do required reading
-    <!-- + develop knowledge of assigned politically violent group -->
+    + develop knowledge of assigned politically violent group
     
 ## Course assessment - *Presentation*
 
@@ -313,17 +326,26 @@ kable(data.frame(
         (2) explain its utility for studying political violence, 
         (3) [the crucial part] and *discuss one applied example*
 
+. . . 
+
+- [recipe for success]{style="color:cadetblue;"}: search for a journal article on a topic of interest to you and select your *method* on that basis 
+
 ## Essay (*Hausarbeit*): Data report
 
 - data report on a political violence phenomenon (e.g., attacks, organisational membership)
     + why a dataset? Helpful preparation for thinking about [validity]{style="color:red;"}, [reliability]{style="color:red;"}, etc. &rarr; relevant for quant. and qual. 
 - gather and present data, generate analytical insights
 - 2000-3000 words (excluding citations)
-- [17 January]{style="color:red;"}: short synopsis due. [7 March]{style="color:red;"}: full, final report due. 
-- consider working with data visualisation and analysis software!
-- A rule: **no drawing any data from or citing Statista or other data curation services**.
+- [`r SemesterEnd - (21)`]{style="color:red;"}: short synopsis due. [`r SemesterEnd + (28)`]{style="color:red;"}: full, final report due. 
+- consider working with data visualisation and analysis software
+    * but not required! Students have aced essay with Excel/Word 
+- A [rule]{style="color:cadetblue;"}: **no data from or use of Statista or data curation services**.
 
 **submit all assignments by email: [m.zeller@lmu.de](mailto:m.zeller@lmu.de)**
+
+<!-- Deadline for short synopsis submission: **[`r SemesterEnd - (21)`]{style="color:red;"}** -->
+
+<!-- Deadline for full report submission (including full dataframe): **[`r SemesterEnd + (28)`]{style="color:red;"}** -->
 
 ## For the paper, and writing in general...
 
@@ -336,19 +358,29 @@ kable(data.frame(
 - quantitative (and qual.) data analysis software: e.g., R (and R Studio), Stata
 - typesetting programmes: LaTeX  (through [TexStudio](https://www.texstudio.org/)) and RMarkdown
 
-## Typical class meeting
+## Elements of a typical class meeting
+
+::: {style="margin-top: -30px;"}
 
 - Opening question(s)/discussion point(s)
     + e.g., theoretical dilemma, typology forming, news item
-- Summarising lecture on theory/findings related to week's topic
-    + discussion points
+- Summarising lecture on theory/findings related to week's topic 
+- A live poll: general questions and about your group 
+    + questions about groups shown on last slide of preceding week
 - Short video relevant to topic
-- Discussing the reading(s)
-    + highlighting important points (esp. theory, research design)
-- Presentation of further research relevant to week's topic
+- Discussing the reading(s), highlighting important points
+<!-- - Presentation of further research relevant to week's topic -->
+- Student presentation(s)
+- Open data for you to explore 
 - Summative discussion: takeaways, new ideas, lingering questions
 
+::: 
+
+. . . 
+
+::: {style="margin-top: -30px;"}
 [Throughout, we will use _cases_ to link _theory_ to _real-world events_]{style="color:red;"}
+::: 
 
 <!-- - Opening question(s)/discussion point(s) -->
 <!--     + e.g., theoretical dilemma, typology forming, news item  -->
@@ -362,6 +394,55 @@ kable(data.frame(
 <!-- - Summative discussion: takeaways, new ideas, lingering questions -->
 
 <!-- **Throughout, we will use _cases_ (especially the groups you study) to link _theory_ to _real-world events_.** -->
+
+## Cases for students 
+
+- to be assigned in Week 2
+
+<!-- - Antifa -->
+<!-- - RAF - Rote Armee Fraktion -->
+<!-- - IS - Islamic State -->
+<!-- - alQaeda -->
+<!-- - NPD/Heimat -->
+<!-- - NSU - Nationalsozialistischer Untergrund -->
+<!-- - PKK - Partiya Karkerên Kurdistanê -->
+
+![](slide_files/01/antifa.png){.fragment .absolute top=150 left=30 width=280}
+
+![](slide_files/01/aq.png){.fragment .absolute bottom=30 right=30 width=280}
+
+![](slide_files/01/IS.png){.fragment .absolute top=30 right=30 width=280}
+
+![](slide_files/01/npd.png){.fragment .absolute bottom=30 left=30 width=280}
+
+![](slide_files/01/nsu.png){.fragment .absolute top=290 right=100 width=280}
+
+![](slide_files/01/pkk.png){.fragment .absolute bottom=100 left=400 width=280}
+
+![](slide_files/01/raf.png){.fragment .absolute top=150 left=400 width=280}
+
+## Open data - on slides coloured like this {background-color="#ffe0b2"}
+
+- data from published research and ongoing projects 
+    + available for download (in slides or from external website) 
+- interactive visualisations 
+    + scalable line/bar plots 
+    + network graphs 
+    + maps 
+- a chance to explore data related to a topic 
+    + recognised patterns and *describe* the world of social movements 
+    + opportunity to go further, if it interests you 
+
+## Blessed with too much material 
+
+- most classes are overfull with videos, research snapshots, poll questions, etc. 
+    + this is a *seminar* 
+        * **_discussion_** is the priority 
+    + makes it even more important to do required reading, review any slides that we cannot cover in class 
+
+. . . 
+
+- in extreme case (lots of material uncovered) I will upload a video to the course website
 
 ## In case class cannot meet... 
 
@@ -400,10 +481,13 @@ kable(data.frame(
 ## Course website 
 
 - no use of Moodle
-- [we have a new, shiny, developing, purpose-built website]{style="color:red;"}: <https://michaelzeller.de/course-pv/>
+- [a purpose-built website]{style="color:red;"}: <https://michaelzeller.de/course-pv/>
     + all readings available
-    + slides available before class
-    + in case of class cancellation, video lecture will be available 
+    + slides available before class 
+        * PDF copies may omit some parts of HTML slides (e.g., animations, data visualisations)---but those HTML copies will always be available for you too
+    + (if necessary) video lectures 
+    + example data report 
+    + some resources 
 
 ## Resources
 
