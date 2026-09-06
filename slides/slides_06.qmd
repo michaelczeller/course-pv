@@ -836,11 +836,504 @@ This visualisation uses data from the Social Networks of American Radicals (SoNA
 
 ::: 
 
-## could add into this a visualisation of PIRA network {visibility="hidden"}
+## Open data - Provisional IRA, 1969-1998 {background-color="#ffe0b2"}
 
-<!-- <https://sites.google.com/site/ucinetsoftware/datasets/covert-networks> -->
+::: panel-tabset
+### 1969–1976
 
-<!-- <https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/provisional-irish-republican-army> -->
+```{r p1_PIRA, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(dplyr)
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(visNetwork)
+
+p1_att <- read_csv("../resources/data/PIRA_Gill/60_PERIOD1_ATT.csv")
+p1_net <- read_csv("../resources/data/PIRA_Gill/60_PERIOD1_NET.csv")
+
+# Node IDs
+node_ids <- p1_net$...1
+
+# adjacency matrix to matrix
+adj_mat <- p1_net %>%
+  select(-...1) %>%
+  as.matrix()
+
+rownames(adj_mat) <- node_ids
+colnames(adj_mat) <- colnames(p1_net)[-1]
+
+g <- graph_from_adjacency_matrix(
+  adj_mat,
+  mode = "undirected",
+  diag = FALSE
+)
+
+att <- p1_att %>%
+  rename(ID = ...1) %>%
+  mutate(
+    Brigade = case_when(
+      `Antrim Brigade` == 1 ~ "Antrim",
+      `Derry Brigade` == 1 ~ "Derry",
+      `Armagh Brigade` == 1 ~ "Armagh",
+      `Down Brigade` == 1 ~ "Down",
+      `Tyrone Brigade` == 1 ~ "Tyrone",
+      TRUE ~ "Unknown"
+    )
+  )
+
+# match attributes to network nodes
+V(g)$Brigade <- att$Brigade[match(V(g)$name, att$ID)]
+
+brigade_cols <- c(
+  "Antrim"  = "#E41A1C",
+  "Derry"   = "#377EB8",
+  "Armagh"  = "#4DAF4A",
+  "Down"    = "#984EA3",
+  "Tyrone"  = "#FF7F00",
+  "Unknown" = "grey70"
+)
+
+V(g)$Brigade <- factor(
+  V(g)$Brigade,
+  levels = names(brigade_cols)
+)
+
+V(g)$color <- unname(
+  brigade_cols[as.character(V(g)$Brigade)]
+)
+
+V(g)$title <- paste0(
+  "<b>ID:</b> ", V(g)$name,
+  "<br><b>Brigade:</b> ", V(g)$Brigade
+)
+
+# V(g)$size <- igraph::degree(g, mode = "all") + 6
+
+# visIgraph(g) %>%
+#   visOptions(
+#     highlightNearest = list(
+#       enabled = TRUE,
+#       degree = 1,
+#       hover = TRUE
+#     )
+#   ) %>%
+#   visInteraction(
+#     navigationButtons = TRUE,
+#     zoomView = TRUE,
+#     dragNodes = TRUE,
+#     dragView = TRUE
+#   ) %>%
+#   visPhysics(
+#     enabled = TRUE,
+#     solver = "forceAtlas2Based",
+#     forceAtlas2Based = list(
+#       gravitationalConstant = -50,
+#       centralGravity = 0.01,
+#       springLength = 100,
+#       springConstant = 0.08
+#     ),
+#     stabilization = list(
+#       iterations = 1000
+#     )
+#   )
+
+ggraph(g, layout = "fr") +
+  geom_edge_link(
+    alpha = 0.95,
+    colour = "grey10"
+  ) +
+  geom_node_point(
+    aes(colour = Brigade), # , size = 3
+    size = igraph::degree(g, mode = "all") 
+  ) +
+  scale_colour_manual(
+    values = brigade_cols,
+    na.value = "grey70"
+  ) +
+  theme_void() +
+  labs(
+    colour = "Brigade"
+  )
+
+```
+
+### 1977–1980
+
+```{r p2_PIRA, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(dplyr)
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(visNetwork)
+
+p2_att <- read_csv("../resources/data/PIRA_Gill/60_PERIOD2_ATT.csv")
+p2_net <- read_csv("../resources/data/PIRA_Gill/60_PERIOD2_NET.csv")
+
+# Node IDs
+node_ids <- p2_net$...1
+
+# adjacency matrix to matrix
+adj_mat <- p2_net %>%
+  select(-...1) %>%
+  as.matrix()
+
+rownames(adj_mat) <- node_ids
+colnames(adj_mat) <- colnames(p2_net)[-1]
+
+g <- graph_from_adjacency_matrix(
+  adj_mat,
+  mode = "undirected",
+  diag = FALSE
+)
+
+att <- p2_att %>%
+  rename(ID = ...1) %>%
+  mutate(
+    Brigade = case_when(
+      `Antrim Brigade` == 1 ~ "Antrim",
+      `Derry Brigade` == 1 ~ "Derry",
+      `Armagh Brigade` == 1 ~ "Armagh",
+      `Down Brigade` == 1 ~ "Down",
+      `Tyrone Brigade` == 1 ~ "Tyrone",
+      TRUE ~ "Unknown"
+    )
+  )
+
+# match attributes to network nodes
+V(g)$Brigade <- att$Brigade[match(V(g)$name, att$ID)]
+
+brigade_cols <- c(
+  "Antrim"  = "#E41A1C",
+  "Derry"   = "#377EB8",
+  "Armagh"  = "#4DAF4A",
+  "Down"    = "#984EA3",
+  "Tyrone"  = "#FF7F00",
+  "Unknown" = "grey70"
+)
+
+V(g)$Brigade <- factor(
+  V(g)$Brigade,
+  levels = names(brigade_cols)
+)
+
+V(g)$color <- unname(
+  brigade_cols[as.character(V(g)$Brigade)]
+)
+
+V(g)$title <- paste0(
+  "<b>ID:</b> ", V(g)$name,
+  "<br><b>Brigade:</b> ", V(g)$Brigade
+)
+
+# V(g)$size <- igraph::degree(g, mode = "all") + 6
+
+ggraph(g, layout = "fr") +
+  geom_edge_link(
+    alpha = 0.95,
+    colour = "grey10"
+  ) +
+  geom_node_point(
+    aes(colour = Brigade), # , size = 3
+    size = igraph::degree(g, mode = "all") 
+  ) +
+  scale_colour_manual(
+    values = brigade_cols,
+    na.value = "grey70"
+  ) +
+  theme_void() +
+  labs(
+    colour = "Brigade"
+  )
+
+```
+
+
+### 1981–1989
+
+
+```{r p3_PIRA, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(dplyr)
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(visNetwork)
+
+p3_att <- read_csv("../resources/data/PIRA_Gill/60_PERIOD3_ATT.csv")
+p3_net <- read_csv("../resources/data/PIRA_Gill/60_PERIOD3_NET.csv")
+
+# Node IDs
+node_ids <- p3_net$...1
+
+# adjacency matrix to matrix
+adj_mat <- p3_net %>%
+  select(-...1) %>%
+  as.matrix()
+
+rownames(adj_mat) <- node_ids
+colnames(adj_mat) <- colnames(p3_net)[-1]
+
+g <- graph_from_adjacency_matrix(
+  adj_mat,
+  mode = "undirected",
+  diag = FALSE
+)
+
+att <- p3_att %>%
+  rename(ID = ...1) %>%
+  mutate(
+    Brigade = case_when(
+      `Antrim Brigade` == 1 ~ "Antrim",
+      `Derry Brigade` == 1 ~ "Derry",
+      `Armagh Brigade` == 1 ~ "Armagh",
+      `Down Brigade` == 1 ~ "Down",
+      `Tyrone Brigade` == 1 ~ "Tyrone",
+      TRUE ~ "Unknown"
+    )
+  )
+
+# match attributes to network nodes
+V(g)$Brigade <- att$Brigade[match(V(g)$name, att$ID)]
+
+brigade_cols <- c(
+  "Antrim"  = "#E41A1C",
+  "Derry"   = "#377EB8",
+  "Armagh"  = "#4DAF4A",
+  "Down"    = "#984EA3",
+  "Tyrone"  = "#FF7F00",
+  "Unknown" = "grey70"
+)
+
+V(g)$Brigade <- factor(
+  V(g)$Brigade,
+  levels = names(brigade_cols)
+)
+
+V(g)$color <- unname(
+  brigade_cols[as.character(V(g)$Brigade)]
+)
+
+V(g)$title <- paste0(
+  "<b>ID:</b> ", V(g)$name,
+  "<br><b>Brigade:</b> ", V(g)$Brigade
+)
+
+# V(g)$size <- igraph::degree(g, mode = "all") + 6
+
+ggraph(g, layout = "fr") +
+  geom_edge_link(
+    alpha = 0.95,
+    colour = "grey10"
+  ) +
+  geom_node_point(
+    aes(colour = Brigade), # , size = 3
+    size = igraph::degree(g, mode = "all") 
+  ) +
+  scale_colour_manual(
+    values = brigade_cols,
+    na.value = "grey70"
+  ) +
+  theme_void() +
+  labs(
+    colour = "Brigade"
+  )
+
+```
+
+### 1990–1998
+
+
+```{r p4_5_PIRA, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(dplyr)
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(visNetwork)
+
+p4_5_att <- read_csv("../resources/data/PIRA_Gill/60_PERIOD4_5_ATT.csv")
+p4_5_net <- read_csv("../resources/data/PIRA_Gill/60_PERIOD4_5_NET.csv")
+
+# Node IDs
+node_ids <- p4_5_net$...1
+
+# adjacency matrix to matrix
+adj_mat <- p4_5_net %>%
+  select(-...1) %>%
+  as.matrix()
+
+rownames(adj_mat) <- node_ids
+colnames(adj_mat) <- colnames(p4_5_net)[-1]
+
+g <- graph_from_adjacency_matrix(
+  adj_mat,
+  mode = "undirected",
+  diag = FALSE
+)
+
+att <- p4_5_att %>%
+  rename(ID = ...1) %>%
+  mutate(
+    Brigade = case_when(
+      `Antrim Brigade` == 1 ~ "Antrim",
+      `Derry Brigade` == 1 ~ "Derry",
+      `Armagh Brigade` == 1 ~ "Armagh",
+      `Down Brigade` == 1 ~ "Down",
+      `Tyrone Brigade` == 1 ~ "Tyrone",
+      TRUE ~ "Unknown"
+    )
+  )
+
+# match attributes to network nodes
+V(g)$Brigade <- att$Brigade[match(V(g)$name, att$ID)]
+
+brigade_cols <- c(
+  "Antrim"  = "#E41A1C",
+  "Derry"   = "#377EB8",
+  "Armagh"  = "#4DAF4A",
+  "Down"    = "#984EA3",
+  "Tyrone"  = "#FF7F00",
+  "Unknown" = "grey70"
+)
+
+V(g)$Brigade <- factor(
+  V(g)$Brigade,
+  levels = names(brigade_cols)
+)
+
+V(g)$color <- unname(
+  brigade_cols[as.character(V(g)$Brigade)]
+)
+
+V(g)$title <- paste0(
+  "<b>ID:</b> ", V(g)$name,
+  "<br><b>Brigade:</b> ", V(g)$Brigade
+)
+
+# V(g)$size <- igraph::degree(g, mode = "all") + 6
+
+ggraph(g, layout = "fr") +
+  geom_edge_link(
+    alpha = 0.95,
+    colour = "grey10"
+  ) +
+  geom_node_point(
+    aes(colour = Brigade), # , size = 3
+    size = igraph::degree(g, mode = "all") 
+  ) +
+  scale_colour_manual(
+    values = brigade_cols,
+    na.value = "grey70"
+  ) +
+  theme_void() +
+  labs(
+    colour = "Brigade"
+  )
+
+```
+
+### post-1998
+
+```{r p6_PIRA, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(dplyr)
+library(igraph)
+library(ggraph)
+library(ggplot2)
+library(visNetwork)
+
+p6_att <- read_csv("../resources/data/PIRA_Gill/60_PERIOD6_ATT.csv")
+p6_net <- read_csv("../resources/data/PIRA_Gill/60_PERIOD6_NET.csv")
+
+# Node IDs
+node_ids <- p6_net$...1
+
+# adjacency matrix to matrix
+adj_mat <- p6_net %>%
+  select(-...1) %>%
+  as.matrix()
+
+rownames(adj_mat) <- node_ids
+colnames(adj_mat) <- colnames(p6_net)[-1]
+
+g <- graph_from_adjacency_matrix(
+  adj_mat,
+  mode = "undirected",
+  diag = FALSE
+)
+
+att <- p6_att %>%
+  rename(ID = ...1) %>%
+  mutate(
+    Brigade = case_when(
+      `Antrim Brigade` == 1 ~ "Antrim",
+      `Derry Brigade` == 1 ~ "Derry",
+      `Armagh Brigade` == 1 ~ "Armagh",
+      `Down Brigade` == 1 ~ "Down",
+      `Tyrone Brigade` == 1 ~ "Tyrone",
+      TRUE ~ "Unknown"
+    )
+  )
+
+# match attributes to network nodes
+V(g)$Brigade <- att$Brigade[match(V(g)$name, att$ID)]
+
+brigade_cols <- c(
+  "Antrim"  = "#E41A1C",
+  "Derry"   = "#377EB8",
+  "Armagh"  = "#4DAF4A",
+  "Down"    = "#984EA3",
+  "Tyrone"  = "#FF7F00",
+  "Unknown" = "grey70"
+)
+
+V(g)$Brigade <- factor(
+  V(g)$Brigade,
+  levels = names(brigade_cols)
+)
+
+V(g)$color <- unname(
+  brigade_cols[as.character(V(g)$Brigade)]
+)
+
+V(g)$title <- paste0(
+  "<b>ID:</b> ", V(g)$name,
+  "<br><b>Brigade:</b> ", V(g)$Brigade
+)
+
+# V(g)$size <- igraph::degree(g, mode = "all") + 6
+
+ggraph(g, layout = "fr") +
+  geom_edge_link(
+    alpha = 0.95,
+    colour = "grey10"
+  ) +
+  geom_node_point(
+    aes(colour = Brigade), # , size = 3
+    size = igraph::degree(g, mode = "all") 
+  ) +
+  scale_colour_manual(
+    values = brigade_cols,
+    na.value = "grey70"
+  ) +
+  theme_void() +
+  labs(
+    colour = "Brigade"
+  )
+
+```
+
+### Note
+
+This visualisation is of data on active Provisional IRA (hereafter PIRA) members between 1970 and 1998, collected by the International Center for the Study of Terrorism, Pennsylvania State University, and [archived](https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/provisional-irish-republican-army) by The University of Manchester's [Mitchell Centre for Social Network Analysis](https://www.humanities.manchester.ac.uk/research/centres-institutes/mitchell-centre/research/past-projects/covert-networks/outputs/).
+
+Originally published in: Gill, P., Lee, J., Rethemeyer, K. R., Horgan, J., & Asal, V. (2014). [Lethal connections: The determinants of network connections in the Provisional Irish Republican Army, 1970–1998](https://doi.org/10.1080/03050629.2013.863190). *International Interactions, 40*(1), 52-78.
+
+
+
+::: 
 
 # Research closer look {background-color="#2c844c"}
 
