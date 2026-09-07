@@ -444,6 +444,33 @@ kable(data.frame(
 
 - in extreme case (lots of material uncovered) I will upload a video to the course website
 
+## Classroom air quality 
+
+::: {style="margin-top: -35px;"} 
+- in an earlier term, a student with respiratory issues took CO2 readings in classes with closed and then slightly open window... 
+:::
+
+::: {.fragment .fade-up style="margin-top: -35px;"} 
+
+:::: {.columns}
+:::{.column width="50%"}
+![closed window](slide_files/01/airquality2025-11-06.jpeg){height="400"} 
+
+:::
+
+::: {.column width="50%" .right}
+![slightly open window](slide_files/01/airquality2026-01-08.jpeg){height="400"} 
+
+:::
+:::: 
+
+:::
+
+::: {.fragment .fade-up style="margin-top: -35px;"} 
+since [lower indoor C02 improves cognition](https://doi.org/10.1111/ina.12706)... we will air before class and (unless it is way too cold) at least tilt a window during class
+
+:::
+
 ## In case class cannot meet... 
 
 - If it is not possible to convene in-person,
