@@ -1282,6 +1282,240 @@ PIRUS_geo %>% download_this(
 
 ![](slide_files/05/meier_table.png)
 
+## Open data - racist incidents in Italy {visibility="hidden"}
+
+<!-- {background-color="#ffe0b2"} -->
+
+::: panel-tabset
+### Regions map 
+
+```{r it-reg-map, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+library(mapview)
+library(dplyr)
+library(leafpop)
+library(ggiraph)
+library(readxl)
+
+IT_rac <- read_excel("../resources/data/chronik_IT2026-01-31.xlsx")
+
+IT_rac$Latitude <- IT_rac$lat
+IT_rac$Longitude <- IT_rac$long
+
+## Regions map ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+IT_reg_grouped <- IT_rac %>% 
+  group_by(REGION) %>% 
+  summarise(COUNT=n())
+
+IT_reg_grouped <- IT_reg_grouped %>%
+  mutate(
+    REGION = case_when(
+      REGION == "Puglia"       ~ "Apulia",
+      TRUE ~ REGION
+    )
+  )
+
+IT_reg_grouped$TOT <- sum(IT_reg_grouped$COUNT)
+IT_reg_grouped$PROP <- IT_reg_grouped$COUNT / IT_reg_grouped$TOT
+IT_reg_grouped$PERCENT <- IT_reg_grouped$PROP*100
+
+IT = ne_states(country = "italy", returnclass = "sf")
+
+IT <- IT %>% dplyr::select(province = name, region, geometry)
+
+IT_REGION <- IT %>% group_by(region) %>% summarise(n = n())
+
+map_IT_reg <- IT_REGION %>%
+  left_join(IT_reg_grouped, # df.sf
+            by = c("region" = "REGION"))
+
+map_IT_reg[is.na(map_IT_reg)] <- 0
+
+plot_map_IT_reg <- ggplot(map_IT_reg) +
+  geom_sf(aes(fill = COUNT))+
+  geom_sf_text(aes(label=COUNT), colour="red")+
+  # geom_sf_text(aes(label = scales::percent(PROP)))+
+  scale_fill_gradient("Number of racist incidents", low = "white", high = "gray20")+
+  theme_void()+ # theme(legend.position = "none")+
+  labs(title="")+theme(plot.title = element_text(hjust = 0.5))
+# plot_map_IT_reg
+
+inter_map_IT_reg <- map_IT_reg %>% ggplot(aes(geometry = geometry))+
+  geom_sf(aes(fill = PERCENT), color = "black", linewidth = 0.5)+
+  geom_sf_interactive(
+    fill = NA, 
+    aes(
+      data_id = region,
+      tooltip = glue::glue('{region}<br>2007-(Jan.)2026:<br>{COUNT} incidents')
+    ),
+    linewidth = 0.1
+  )+
+  theme_void() +
+  scale_fill_gradient(low = "gold", high = "red")+
+  theme(
+    legend.position = 'none'
+  )
+
+girafe(ggobj = inter_map_IT_reg,
+       options = list(
+         opts_hover(
+           css = girafe_css(
+             css = '',
+             area = 'stroke: black; fill: black;'
+           )
+         )
+       ))
+
+```
+
+### Provinces map 
+
+```{r it-prov-map, warning=FALSE, message=FALSE}
+
+## Provinces map ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+IT_prov_grouped <- IT_rac %>% 
+  group_by(PROVINCE) %>% 
+  summarise(COUNT=n())
+
+IT_prov_grouped$TOT <- sum(IT_prov_grouped$COUNT)
+IT_prov_grouped$PROP <- IT_prov_grouped$COUNT / IT_prov_grouped$TOT
+IT_prov_grouped$PERCENT <- IT_prov_grouped$PROP*100
+
+IT_PROV <- IT %>% group_by(province) %>% summarise(n = n())
+
+map_IT_prov <- IT_PROV %>%
+  left_join(IT_prov_grouped, # df.sf
+            by = c("province" = "PROVINCE"))
+
+map_IT_prov[is.na(map_IT_prov)] <- 0
+
+plot_map_IT_prov <- ggplot(map_IT_prov) +
+  geom_sf(aes(fill = COUNT))+
+  geom_sf_text(aes(label=COUNT), colour="red")+
+  # geom_sf_text(aes(label = scales::percent(PROP)))+
+  scale_fill_gradient("Number of racist incidents", low = "white", high = "gray20")+
+  theme_void()+ # theme(legend.position = "none")+
+  labs(title="")+theme(plot.title = element_text(hjust = 0.5))
+# plot_map_IT_prov
+
+inter_map_IT_prov <- map_IT_prov %>% ggplot(aes(geometry = geometry))+
+  geom_sf(aes(fill = PERCENT), color = "black", linewidth = 0.5)+
+  geom_sf_interactive(
+    fill = NA, 
+    aes(
+      data_id = province,
+      tooltip = glue::glue('{province}<br>2007-(Jan.)2026:<br>{COUNT} incidents')
+    ),
+    linewidth = 0.1
+  )+
+  theme_void() +
+  scale_fill_gradient(low = "gold", high = "red")+
+  theme(
+    legend.position = 'none'
+  )
+
+girafe(ggobj = inter_map_IT_prov,
+       options = list(
+         opts_hover(
+           css = girafe_css(
+             css = '',
+             area = 'stroke: black; fill: black;'
+           )
+         )
+       ))
+
+```
+
+### Point map
+
+```{r it-point-map, warning=FALSE, message=FALSE, eval=FALSE, include=FALSE}
+
+IT_rac_trim <- IT_rac %>% drop_na(long)
+IT_rac_trim <- as.data.frame(IT_rac_trim)
+
+IT_rac_trim$latJIT <- jitter(IT_rac_trim$lat, factor = 5)
+IT_rac_trim$longJIT <- jitter(IT_rac_trim$long, factor = 5)
+
+IT_rac_trim_sf_JIT <- IT_rac_trim %>% 
+  st_as_sf(
+    coords = c("longJIT", "latJIT"),
+    crs = st_crs("EPSG:6875") # CRS for Italy
+  )
+
+st_crs(IT_rac_trim_sf_JIT) <- st_crs(IT)
+
+IT_rac_trim_sf_JIT <- IT_rac_trim_sf_JIT %>%
+  mutate(YEAR = format(DATE, "%Y"),
+         DESC_EN_wrap = stringr::str_wrap(DESC_EN, width = 20))
+
+years <- sort(unique(IT_rac_trim_sf_JIT$YEAR))
+
+year_cols <- setNames(
+  hcl.colors(length(years), palette = "Dynamic"),
+  years
+)
+
+IT_by_year <- split(IT_rac_trim_sf_JIT, IT_rac_trim_sf_JIT$YEAR)
+
+mapping <- NULL
+
+for (yr in years) {
+  
+  m <- mapview(
+    IT_by_year[[yr]],
+    col.regions = year_cols[yr],
+    color = year_cols[yr],
+    alpha.regions = 0.7,
+    cex = 6,
+    label = "LOC",
+    legend = FALSE,
+    layer.name = yr,
+    
+    # Only 2026 visible initially
+    hide = yr != "2026",
+    
+    map.types = c(
+      "CartoDB.Positron",
+      "CartoDB.DarkMatter"
+    ),
+    
+    popup = popupTable(
+      IT_by_year[[yr]],
+      zcol = c(
+        "DATE",
+        "LOC",
+        "PROVINCE",
+        "REGION",
+        "REPORT",
+        "AREA",
+        "DESC_EN"
+      )
+    )
+  )
+  
+  if (is.null(mapping)) {
+    mapping <- m
+  } else {
+    mapping <- mapping + m
+  }
+}
+
+mapping
+
+```
+
+
+### Explanatory note
+
+The visualisations are based on data from 'Lunaria,' an association in Italy that manages an observatory called "[Chronicles of Ordinary Racism](https://www.cronachediordinariorazzismo.org/il-razzismo-quotidiano/?fwp_data=2007-01-04%2C)," in which they collect all discrimination events that occur in Italy, mainly through media reports. 
+
+::: 
+
+
 
 # Any feedback for this class? {background-color="#2c844c"}
 
