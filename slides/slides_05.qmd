@@ -190,6 +190,512 @@ But no alcohol allowed... (see further in [Spiegel](https://www.spiegel.de/polit
 
 <!-- ALSO: <https://www.youtube.com/watch?v=zKX9OjNy_NI> -->
 
+## Open data - right-wing extremist codes {background-color="#ffe0b2"}
+
+::: panel-tabset
+### Data table 
+
+```{r}
+library(reactable)
+library(tidyverse)
+
+fash_fashion_de <- read_csv("../resources/data/FASHION_AGAINST_FASCISM_(DE).csv")
+fash_fashion <- read_csv("../resources/data/FASHION AGAINST FASCISM.csv")
+
+reactable::reactable(fash_fashion,
+  defaultPageSize = 5,
+  style = list(fontSize = "23px"),
+  defaultColDef = colDef(
+    align = "left",
+    minWidth = 50,
+    headerStyle = list(background = "#fabf68", fontWeight = "bold") # #f7f7f8
+  ),
+  columns=list(
+    Code=colDef(name="Code", align="right", minWidth=70), # , maxWidth=200
+    Description=colDef(name="Description", minWidth=300) 
+  )
+)
+  
+```
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download (English)
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+fash_fashion %>% download_this(
+    output_name = "fash_fashion",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+::: {.callout-note collapse="true" style="margin-top: -15px;"}
+#### Data download (German)
+
+```{r echo = F, collapse = TRUE, comment = "#>", message = FALSE, warning=FALSE}
+library(downloadthis)
+
+fash_fashion_de %>% download_this(
+    output_name = "fash_fashion_de",
+    output_extension = ".csv",
+    button_label = "Download dataset as csv",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+:::
+
+
+### Code similarity net 
+
+```{r fash_fashion_netz, message=FALSE, warning=FALSE}
+
+library(dplyr)
+library(stringr)
+library(tidytext)
+library(tidyr)
+library(purrr)
+library(proxy)
+library(visNetwork)
+
+fash <- fash_fashion %>%
+  mutate(
+    Code = str_squish(Code),
+    Description = str_squish(Description)
+  )
+
+## make categories for the codes
+fash <- fash %>%
+  mutate(
+    Category = case_when(
+      # NUMERIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "18", "28", "74", "84", "88",
+        "124", "192", "311",
+        "1488", "1888",
+        "13/4/2007", "19/8",
+        "68686", "168:1",
+        "33/6", "4/19", "4/20",
+        "44+44", "444",
+        "111", "87+1",
+        "1919", "191"
+      ) ~ "numeric",
+      # ORGANISATIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "Aryan Brotherhood", "AB",
+        "AWB",
+        "B & H", "B.B.N.", "BN",
+        "C18", "318",
+        "CI",
+        "Firm 22",
+        "Landvolkbewegung",
+        "Freie Sachsen",
+        "Hagida", "Hamgida",
+        "HoGeSa", "HooNaRa", "Hoygida",
+        "HS", "HSN",
+        "IB",
+        "Kagida",
+        "KKK",
+        "KO51 / Knockout 51",
+        "Kögida",
+        "Legida",
+        "Magida",
+        "Mvgida",
+        "Pagan Front", "Heidnische Front",
+        "proud boys",
+        "NSB", "NSBA",
+        "Wotan's folk", "Wotansvolk",
+        "WAW",
+        "Rusich Group",
+        "Chetnik",
+        "MHP",
+        "Identitarian Movement",
+        "NSAA",
+        "3. Weg"
+      ) ~ "organisation",
+      # PERSONALITY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "Varg Vikernes",
+        "Count Grishnackh",
+        "Elliot Rodger",
+        "Makss Damage"
+      ) ~ "personality",
+      # MUSIC ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "Absurd",
+        "B.E.D.", "BED",
+        "Burzum",
+        "NSBM", "NSHC",
+        "RAC",
+        "Mgla",
+        "N'socialist Soundsystem",
+        "essess"
+      ) ~ "music",
+      # MERCHANDISE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "AA",
+        "BXNCNCTN", "BOX CON", "BC",
+        "GRFVGL",
+        "ISEGRIM",
+        "S.T.O.G.",
+        "Brachial",
+        "Consdaple",
+        "Dobermans Aggressive",
+        "Erik & sons",
+        "Homefront",
+        "Masterrace",
+        "Natural Instinct Germany",
+        "One Family",
+        "Phalanx Europe"
+      ) ~ "merchandise",
+      # SYMBOLS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "Bozkurtlar", "Ülkücü", "MHP", "Graue Wölfe",
+        "HKNKRZ", "HKN KRZ",
+        "I ♥ HK",
+        "Triskele",
+        "Doppelblitz"
+      ) ~ "symbol",
+      # MEME ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "FTWR", "YOTR", "NFTRH",
+        "Great Awakening", "Großes Erwachen",
+        "Kekistan", "Make Kekistan Great Again",
+        "Moon Man",
+        "NWO",
+        "Pepe the Frog",
+        "Q", "Q.Anon",
+        "Red Pill", "Redpilling", "Red Piller",
+        "Sheeple", "Schlafschaf",
+        "The Great Reset",
+        "WWG1WGA",
+        "17Anon", "2q2q"
+      ) ~ "meme",
+      # SLOGANS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "All Lives Matter",
+        "Black Rifles Matter",
+        "Black Guns Matter",
+        "Blut und Ehre",
+        "Burn Loot Murder",
+        "Deutsche wehrt euch!",
+        "Eine Kugel reicht nicht",
+        "FAFO",
+        "Fuck Around and Find Out",
+        "FCK ANTIFA",
+        "FCK BLM",
+        "FCK RFGS",
+        "FCK MRKL",
+        "FGRN",
+        "From the River to the Sea",
+        "GNLS",
+        "HTLR SCHNTZL",
+        "ITSUB",
+        "KABARK",
+        "KIGY",
+        "Klagt nicht, kämpft",
+        "KLASP",
+        "Let's Go Brandon",
+        "Lügenpresse",
+        "Meine Ehre heißt Treue",
+        "MEHT",
+        "RAHOWA",
+        "ROA",
+        "RRR",
+        "SGH",
+        "Small HATS BIG problems",
+        "Stolzmonat",
+        "SWP",
+        "TWITB",
+        "UAO",
+        "Ultra MAGA",
+        "VTR LND",
+        "W.A.P.",
+        "W.O.T.A.N.",
+        "WAR",
+        "WBS",
+        "Wenn dich diese Flagge stört, dann helfe ich dir packen.",
+        "White Lives Matter",
+        "WP",
+        "WPWW"
+      ) ~ "slogan",
+      # DEROGATORY TERMINOLOGY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "ASAB",
+        "DDD",
+        "Ernegl",
+        "JOGGER",
+        "Jewish Question",
+        "JQ",
+        "JOG",
+        "N.A.Z.I.",
+        "NTNL SZLST",
+        "pureblood",
+        "rapefugee",
+        "Siege Pill",
+        "Umvolkung"
+      ) ~ "derogatory",
+      # HISTORICAL / NAZI REFERENCES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      Code %in% c(
+        "Decima Flottiglia MAS",
+        "KdF",
+        "Kraft durch Freude",
+        "Landser",
+        "TWR",
+        "TYP VII C",
+        "Zyklon B"
+      ) ~ "historical",
+      TRUE ~ "other" # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    )
+  )
+
+# text prep ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+extra_stopwords <- tibble(
+  word = c(
+    "stands", "standing", "means", "meaning",
+    "refers", "referring", "used", "use",
+    "term", "name", "code", "acronym",
+    "expression", "phrase", "slogan",
+    "group", "movement", "popular",
+    "right", "wing", "extreme", "extremist",
+    "far", "german", "germany",
+    "american", "us", "usa"
+  )
+)
+
+words <- fash %>%
+  mutate(id = row_number()) %>%
+  select(id, Code, Description) %>%
+  unnest_tokens(word, Description) %>%
+  anti_join(stop_words, by = "word") %>%
+  anti_join(extra_stopwords, by = "word") %>%
+  filter(
+    str_detect(word, "[a-z]"),
+    str_length(word) > 2
+  )
+
+# ## check
+# words %>% count(word, sort = TRUE) %>% slice_head(n = 30)
+
+## calculate TF-IDF: gives each word a weight according to how informative it is
+tfidf <- words %>%
+  count(id, word) %>%
+  bind_tf_idf(
+    term = word,
+    document = id,
+    n = n
+  )
+
+# document-term matrix
+tfidf_wide <- tfidf %>%
+  select(id, word, tf_idf) %>%
+  pivot_wider(
+    names_from = word,
+    values_from = tf_idf,
+    values_fill = 0
+  )
+
+## calculate cosine similarity
+tfidf_matrix <- tfidf_wide %>%
+  arrange(id) %>%
+  select(-id) %>%
+  as.matrix()
+
+similarity_matrix <- proxy::simil(
+  tfidf_matrix,
+  method = "cosine"
+) %>%
+  as.matrix()
+
+## adjust this as needed
+similarity_threshold <- 0.20
+
+edges <- expand.grid(
+  from = seq_len(nrow(similarity_matrix)),
+  to   = seq_len(ncol(similarity_matrix))
+) %>%
+  filter(from < to) %>%
+  mutate(
+    similarity = similarity_matrix[
+      cbind(from, to)
+    ]
+  ) %>%
+  filter(similarity >= similarity_threshold)
+
+## network prep ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+degree <- bind_rows(
+  edges %>% select(node = from),
+  edges %>% select(node = to)
+) %>%
+  count(node, name = "degree")
+
+nodes <- fash %>%
+  mutate(id = row_number()) %>%
+  left_join(
+    degree,
+    by = c("id" = "node")
+  ) %>%
+  mutate(
+    degree = replace_na(degree, 0)
+  )
+
+category_colours <- c(
+  "other"         = "#9E9E9E",
+  "merchandise"   = "#E69F00",
+  "music"         = "#56B4E9",
+  "slogan"        = "#009E73",
+  "organisation"  = "#0072B2",
+  "derogatory"    = "#D55E00",
+  "symbol"        = "#CC79A7",
+  "personality"   = "#F0E442",
+  "historical"    = "#8C6BB1",
+  "meme"          = "#66A61E",
+  "numeric"       = "#A6761D"
+)
+
+nodes <- nodes %>% mutate(color = category_colours[Category])
+
+nodes <- nodes %>%
+  mutate(
+    size = scales::rescale(
+      sqrt(degree + 1),
+      to = c(8, 30)
+    )
+  )
+
+nodes <- nodes %>%
+  mutate(
+    label = Code,
+
+    title = paste0(
+      "<div style='max-width:350px; ",
+      "font-family:Arial,sans-serif;'>",
+      "<h3 style='margin-bottom:5px;'>",
+      Code,
+      "</h3>",
+      "<p><strong>Category:</strong> ",
+      Category,
+      "</p>",
+      "<p>",
+      Description,
+      "</p>",
+      "<p><strong>Connections:</strong> ",
+      degree,
+      "</p>",
+      "</div>"
+    )
+  )
+
+edges_vis <- edges %>%
+  mutate(
+    width = scales::rescale(
+      similarity,
+      to = c(1, 5)
+    ),
+    title = paste0(
+      "Similarity: ",
+      round(similarity, 2)
+    )
+  )
+
+## make vis 
+network <- visNetwork(
+  nodes,
+  edges_vis,
+  width = "100%",
+  height = "850px"
+) %>%
+
+  visNodes(
+    shape = "dot",
+    borderWidth = 1,
+    borderWidthSelected = 3,
+    font = list(
+      size = 14,
+      face = "Arial"
+    ),
+    scaling = list(
+      min = 8,
+      max = 30
+    )
+  ) %>%
+
+  visEdges(
+    color = list(
+      color = "#D0D0D0",
+      highlight = "#555555",
+      hover = "#777777"
+    ),
+    smooth = list(
+      type = "continuous"
+    ),
+    selectionWidth = 3
+  ) %>%
+
+  visInteraction(
+    hover = TRUE,
+    navigationButtons = TRUE,
+    keyboard = TRUE,
+    multiselect = FALSE
+  ) %>%
+
+  visOptions(
+    highlightNearest = list(
+      enabled = TRUE,
+      degree = 1,
+      hover = TRUE
+    ),
+    nodesIdSelection = list(
+      enabled = TRUE,
+      useLabels = TRUE,
+      main = "Find a code:"
+    )
+  ) %>%
+
+  visPhysics(
+    solver = "forceAtlas2Based",
+    forceAtlas2Based = list(
+      gravitationalConstant = -35,
+      centralGravity = 0.01,
+      springLength = 120,
+      springConstant = 0.04,
+      damping = 0.4,
+      avoidOverlap = 1
+    ),
+    stabilization = list(
+      enabled = TRUE,
+      iterations = 1000,
+      updateInterval = 100
+    )
+  )
+
+network
+
+```
+
+::: {.fragment .absolute top=100 left=10}
+Why are these two codes connected?  
+Is the connection meaningful? 
+
+::: 
+
+### Explanatory note
+
+This visualisation is drawn from '[Fashion against Fascism](https://fashionagainstfascism.com/en)' project of the '[Laut gegen Nazis](https://www.lautgegennazis.de/)' association. As part of the association's goal to stymie right-wing extremist activity (particularly in Germany), they support efforts to trademark certain symbols and codes, intending to prevent right-wing extremists from using them on merchandise, etc.. This denies them an important source of financing.
+
+The network shows similarities in code descriptions in the dataset. (*Term Frequency-Inverse Document Frequency*: statistical measure of the importance of a word in a document relative to a corpus.) Each code is a node; nodes are coloured based on a quick categorisation; larger nodes have more connections; connections represent textual similarity (just based on the 'Description') between two codes. 
+
+::: 
+
 ## Other subculture examples?
 
 [Any [subculture]{style="color:darkred;"} examples you know? Any overlap with extremist groups? What are the distinguishing characteristics? Certain clothing, music, symbols, practices?]{style="color:indigo;"} 
