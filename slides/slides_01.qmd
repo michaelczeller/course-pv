@@ -477,6 +477,7 @@ since [lower indoor C02 improves cognition](https://doi.org/10.1111/ina.12706)..
     + you will receive an email: 
     1. the class will meet online via Zoom (link in email), or
     2. the class will be cancelled, a recorded lecture uploaded on the 'Slides' page of the website, and a short review at the start of the next meeting
+        * 7 December (Class 9) will be cancelled and replaced with a video lecture
 
 ## Colour scheme for course slides 
 
