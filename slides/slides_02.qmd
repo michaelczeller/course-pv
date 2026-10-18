@@ -29,6 +29,10 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+## Syllabus reading check 
+
+![](slide_files/02/pv_syllabus_check.png)
+
 ## Students' favourite cities
 
 ```{r}
@@ -84,9 +88,9 @@ Remember: topic to me at least by Week 4
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  |                                  | TBD    | 
-| 11 Dec: |                                  | TBD    | 
-| 18 Dec: |                                  | TBD    | 
+| 7 Dec:  |                                  | TBD    | 
+| 14 Dec: |                                  | TBD    | 
+| 21 Dec: |                                  | TBD    | 
 
 : Presentations line-up
 
@@ -94,14 +98,14 @@ Remember: topic to me at least by Week 4
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 8 Jan:  |                                  | TBD    | 
-| 15 Jan: |                                  | TBD    | 
-| 22 Jan: |                                  | TBD    | 
-| 29 Jan: |                                  | TBD    | 
+| 11 Jan: |                                  | TBD    | 
+| 18 Jan: |                                  | TBD    | 
+| 25 Jan: |                                  | TBD    | 
 
 : Presentations line-up
 
 :::
+
 
 <!-- []{style="font-size:10px;"} -->
 
@@ -321,8 +325,9 @@ discourage a change in behaviour (and at the organisational level, strategy)---e
 
 :::: {.columns}
 :::{.column width="50%"}
-- roster of organisations
-- discussion of causes
+- open to discussion on all sorts of non-state (potentially) politically violent groups
+- highlighting roster of PV organisations to be assigned 
+- introduction of those (and other) cases
 
 :::
 
@@ -335,27 +340,61 @@ discourage a change in behaviour (and at the organisational level, strategy)---e
 
 > “Those who only know one country, know no country” - Seymour Martin Lipset (inspired by Alexis de Tocqueville)
 
+::: {.fragment style="margin-top: -35px;"} 
 - well-known and covered in research literature
 - diverse strategies, objectives, and ideological characteristics
 - active in Germany and/or banned by Germany (or EU)
 
+:::
+
+::: {.fragment style="margin-top: -35px;"} 
+- we will also discuss other cases (e.g., IRA), including ones you know of, just remember: 
+    + aim is to *analyse* and *understand* 
+    + most PV groups involve charged political issues, so remember: 
+        * treat each other with mutual respect 
+        * most are working in 2nd/3rd/4th language, so do not assume provocation if you disagree with an expression 
+
+::: 
+
+
+
+
 ## (In)famous PV groups in or connected to Germany {.scrollable}
 
+*[al-Qaeda]{style="color:goldenrod;"}* (alQaeda, transnational),   
 *[Antifaschistische Aktion]{style="color:goldenrod;"}* (Antifa, Germany and elsewhere),   
-*[Blood and Honour]{style="color:goldenrod;"}* (B&H, transnational),   
-*[Grey Wolves]{style="color:goldenrod;"}* (Turkey, but also transnational),   
-*[Hammerskins]{style="color:goldenrod;"}* (transnational),   
-*[Hezbollah]{style="color:goldenrod;"}* (Lebanon, but also transnational),   
-*[Hizb ut-Tahrir]{style="color:goldenrod;"}* (HT, transnational),   
+<!-- *[Blood and Honour]{style="color:goldenrod;"}* (B&H, transnational),    -->
+<!-- *[Grey Wolves]{style="color:goldenrod;"}* (Turkey, but also transnational),    -->
+<!-- *[Hammerskins]{style="color:goldenrod;"}* (transnational),    -->
+<!-- *[Hezbollah]{style="color:goldenrod;"}* (Lebanon, but also transnational),    -->
+<!-- *[Hizb ut-Tahrir]{style="color:goldenrod;"}* (HT, transnational),    -->
 *[Islamic State]{style="color:goldenrod;"}* (IS, transnational),   
-*[Kommunistische Partei Deutschlands]{style="color:goldenrod;"}* ('Communist Party of Germany,' KPD, Germany),   
-*[Liberation Tigers of Tamil Eelam]{style="color:goldenrod;"}* (LTTE, Sri Lanka),   
+<!-- *[Kommunistische Partei Deutschlands]{style="color:goldenrod;"}* ('Communist Party of Germany,' KPD, Germany),    -->
+<!-- *[Liberation Tigers of Tamil Eelam]{style="color:goldenrod;"}* (LTTE, Sri Lanka),    -->
 *[Nationaldemokratische Partei Deutschlands]{style="color:goldenrod;"}* ('National Democratic Party of Germany,' NPD, Germany),   
 *[National Socialist Underground]{style="color:goldenrod;"}* (NSU, Germany),   
 *[Partiya Karkerên Kurdistanê]{style="color:goldenrod;"}* ('Kurdistan Workers' Party,' PKK, Turkey, Syria and several other countries including Germany),   
 *[Rote Armee Fraktion]{style="color:goldenrod;"}* ('Red Army Fraction,' RAF, Germany),   
-*[Sozialistische Reichspartei]{style="color:goldenrod;"}* ('Socialist Reich Party,' SRP, Germany),    
-*[Die Rechte]{style="color:goldenrod;"}* ('The Right', Germany)    
+<!-- *[Sozialistische Reichspartei]{style="color:goldenrod;"}* ('Socialist Reich Party,' SRP, Germany),     -->
+<!-- *[Die Rechte]{style="color:goldenrod;"}* ('The Right', Germany)     -->
+
+## al-Qaeda 
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international
+- Organisational structure: (hierarchical) network
+- Membership: large
+- (main) Objective: global Islamic caliphate
+- (common) Targets: U.S. and Western institutions and societies
+- Repertoire of actions: terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/aq.png)
+:::
+::::
 
 ## Antifa
 
@@ -372,96 +411,6 @@ discourage a change in behaviour (and at the organisational level, strategy)---e
 
 :::{.column width="50%"}
 ![](slide_files/02/groups/antifa.png)
-:::
-::::
-
-## Blood & Honour
-
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: international (originally U.K.)
-- Organisational structure: network
-- Membership: large
-- (main) Objective: white ethnostate
-- (common) Targets: political and ethnic opponents
-- Repertoire of actions: low-level violence, terrorism
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/de_bh4.png)
-:::
-::::
-
-## Grey Wolves
-
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: international (originally Turkish)
-- Organisational structure: hierarchical
-- Membership: large
-- (main) Objective: promote Turkish nationalism
-- (common) Targets: political opponents
-- Repertoire of actions: low-level violence
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/greywolves.png)
-:::
-::::
-
-## Hammerskins
-
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: international (originally U.S.)
-- Organisational structure: network
-- Membership: large
-- (main) Objective: white ethnostate
-- (common) Targets: political and ethnic opponents
-- Repertoire of actions: low-level violence, terrorism
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/h.png)
-:::
-::::
-
-## Hezbollah
-
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: Lebanon, but also transnational 
-- Organisational structure: hierarchical 
-- Membership: large 
-- (main) Objective: Islamic state in Lebanon 
-- (common) Targets: Western forces, the power-sharing in Lebanon 
-- Repertoire of actions: terrorism 
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/hezbollah.png)
-:::
-::::
-
-## Hizb ut-Tahrir
-
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: international 
-- Organisational structure: network 
-- Membership: large 
-- (main) Objective: united Islamic caliphate 
-- (common) Targets: political and ethnic opponents 
-- Repertoire of actions: low-level violence, incitement to violence, terrorism 
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/HuT.png)
 :::
 ::::
 
@@ -483,41 +432,7 @@ discourage a change in behaviour (and at the organisational level, strategy)---e
 :::
 ::::
 
-## Kommunistische Partei Deutschlands (KPD)
 
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: Germany, but with important international links
-- Organisational structure: hierarchical
-- Membership: large
-- (main) Objective: communist/socialist revolution
-- (common) Targets: political opponents
-- Repertoire of actions: low-level violence and agitation for revolution
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/kpd.png)
-:::
-::::
-
-## Liberation Tigers of Tamil Eelam
-
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: Sri Lanka, but also transnational
-- Organisational structure: hierarchical
-- Membership: large
-- (main) Objective: independent Tamil state
-- (common) Targets: Sinhalese dominated Sri Lankan state
-- Repertoire of actions: assassination, guerrilla activity
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/ltte.png)
-:::
-::::
 
 ## National Socialist Underground
 
@@ -592,24 +507,6 @@ discourage a change in behaviour (and at the organisational level, strategy)---e
 :::
 ::::
 
-## Sozialistische Reichspartei (SRP)
-
-
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: Germany
-- Organisational structure: hierarchical
-- Membership: large
-- (main) Objective: revive national socialist movement
-- (common) Targets: political opponents
-- Repertoire of actions: low-level violence, support for state violence
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/srp.png)
-:::
-::::
 
 # Open data - Global Terrorism Database {background-color="#ffe0b2"}
 
@@ -731,23 +628,6 @@ gtd_data %>% download_this(
 
 # Other PV groups that will crop up in readings
 
-## al-Qaeda 
-
-:::: {.columns}
-:::{.column width="50%"}
-- Territory of action: international
-- Organisational structure: (hierarchical) network
-- Membership: large
-- (main) Objective: global Islamic caliphate
-- (common) Targets: U.S. and Western institutions and societies
-- Repertoire of actions: terrorism
-
-:::
-
-:::{.column width="50%"}
-![](slide_files/02/groups/aq.png)
-:::
-::::
 
 ## Brigate Rosse
 
@@ -766,6 +646,25 @@ gtd_data %>% download_this(
 ![](slide_files/02/groups/br.png)
 :::
 ::::
+
+## Blood & Honour
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international (originally U.K.)
+- Organisational structure: network
+- Membership: large
+- (main) Objective: white ethnostate
+- (common) Targets: political and ethnic opponents
+- Repertoire of actions: low-level violence, terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/de_bh4.png)
+:::
+::::
+
 
 ## Euskadi Ta Askatasuna (ETA, 'Basque Homeland and Liberty')
 
@@ -803,6 +702,78 @@ gtd_data %>% download_this(
 :::
 ::::
 
+## Grey Wolves
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international (originally Turkish)
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: promote Turkish nationalism
+- (common) Targets: political opponents
+- Repertoire of actions: low-level violence
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/greywolves.png)
+:::
+::::
+
+## Hammerskins
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international (originally U.S.)
+- Organisational structure: network
+- Membership: large
+- (main) Objective: white ethnostate
+- (common) Targets: political and ethnic opponents
+- Repertoire of actions: low-level violence, terrorism
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/h.png)
+:::
+::::
+
+## Hezbollah
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Lebanon, but also transnational 
+- Organisational structure: hierarchical 
+- Membership: large 
+- (main) Objective: Islamic state in Lebanon 
+- (common) Targets: Western forces, the power-sharing in Lebanon 
+- Repertoire of actions: terrorism 
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/hezbollah.png)
+:::
+::::
+
+## Hizb ut-Tahrir
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: international 
+- Organisational structure: network 
+- Membership: large 
+- (main) Objective: united Islamic caliphate 
+- (common) Targets: political and ethnic opponents 
+- Repertoire of actions: low-level violence, incitement to violence, terrorism 
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/HuT.png)
+:::
+::::
+
 ## Irish Republican Army
 
 :::: {.columns}
@@ -820,6 +791,62 @@ gtd_data %>% download_this(
 ![](slide_files/02/groups/ira.png)
 :::
 ::::
+
+## Kommunistische Partei Deutschlands (KPD)
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Germany, but with important international links
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: communist/socialist revolution
+- (common) Targets: political opponents
+- Repertoire of actions: low-level violence and agitation for revolution
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/kpd.png)
+:::
+::::
+
+## Liberation Tigers of Tamil Eelam
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Sri Lanka, but also transnational
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: independent Tamil state
+- (common) Targets: Sinhalese dominated Sri Lankan state
+- Repertoire of actions: assassination, guerrilla activity
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/ltte.png)
+:::
+::::
+
+## Sozialistische Reichspartei (SRP)
+
+
+:::: {.columns}
+:::{.column width="50%"}
+- Territory of action: Germany
+- Organisational structure: hierarchical
+- Membership: large
+- (main) Objective: revive national socialist movement
+- (common) Targets: political opponents
+- Repertoire of actions: low-level violence, support for state violence
+
+:::
+
+:::{.column width="50%"}
+![](slide_files/02/groups/srp.png)
+:::
+::::
+
 
 # Assigning groups for in-depth study {background-color="#2c844c"}
 
@@ -941,12 +968,15 @@ Remember: regression is a tool for understanding a phenomenon as a linear functi
 
 ## @Piazza2017 - findings (interpetting reg. table)
 
+::: {style="margin-top: -40px;"} 
 - right-wing terrorism [not rooted in economic grievances]{style="color:darkorange;"}, economic stress, or structural economic change
-- 'gendered' dimension to right-wing extremist activity: [where women are becoming more empowered, right-wing terrorism is more frequent]{style="color:darkorange;"}
+- 'gendered' dimension: [where women are becoming more empowered, right-wing terrorism is more frequent]{style="color:darkorange;"}
     + predictors associated with women’s rights significantly boost the incidence of right-wing terrorism
     + "*On average, increases in state-level abortion rates or women’s participation in the workforce produce fewer than 0.05 more right-wing terrorist attacks per state per year*."
 - of 'big gov.' motivations, only the dummy variable for a Democrat U.S. President is significant
     + suggests [only peak-level and highly visible political predictors]{style="color:darkorange;"} are associated with increased incidence of right-wing terrorism
+
+:::
 
 <!-- FIGURE 2 SHOWS ... predictors associated with women’s rights significantly boost the incidence of right-wing terrorism in the USA, but are minimal contributors to terrorism compared with other factors. On average, increases in state-level abortion rates or women’s participation in the workforce produce fewer than 0.05 more right-wing terrorist attacks per state per year. -->
 
