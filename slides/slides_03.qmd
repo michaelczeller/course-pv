@@ -29,6 +29,8 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+- please try to do the readings assigned for the week *prior to that week's class*
+
 ## Presentation groups
 
 Remember: topic to me at least by Week 4
