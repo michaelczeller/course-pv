@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Political Violence in Germany"
+  title: "Political Violence"
   navbar:
     left:
       - href: index.qmd

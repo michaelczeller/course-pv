@@ -1,5 +1,5 @@
 ---
-title: "Class 1: Political Violence in Germany"
+title: "Class 1: Political Violence"
 subtitle: "Introduction and types of political violence"
 author: "[Dr. Michael C. Zeller](https://michaelzeller.de)"
 format: 
