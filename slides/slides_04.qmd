@@ -29,32 +29,32 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
+- clarification: assigned PV groups are **not** for a presentation or a groupwork assignment; they are for you to study independently and discuss in class (to help apply and clarify concepts)
+
 ## Presentation groups
 
-<!-- ::: panel-tabset -->
-<!-- ## December -->
+::: panel-tabset
+## December
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography | 
-| 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    | 
-| 18 Dec: | Shoam, Aidan, Tara, Sebastian    | TBD    | 
+| 7 Dec:  |                                  | TBD    | 
+| 14 Dec: |                                  | TBD    | 
+| 21 Dec: | C.G. and E.J.                    | TBD    | 
 
 : Presentations line-up
 
-<!-- ## January -->
+## January
 
-<!-- | Date    | Presenters                       | Method | -->
-<!-- | -------:|:---------------------------------|:------:| -->
-<!-- | 8 Jan:  |                                  | TBD    |  -->
-<!-- | 15 Jan: |                                  | TBD    |  -->
-<!-- | 22 Jan: |                                  | TBD    |  -->
-<!-- | 29 Jan: |                                  | TBD    |  -->
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 11 Jan: |                                  | TBD    | 
+| 18 Jan: |                                  | TBD    | 
+| 25 Jan: |                                  | TBD    | 
 
-<!-- : Presentations line-up -->
+: Presentations line-up
 
-<!-- ::: -->
-
+:::
 <!-- []{style="font-size:10px;"} -->
 
 # Klausur preview {background-color="#2c844c"}
@@ -754,7 +754,9 @@ plot_advantage = Plot.plot({
 ```
  
 
-# Open data - Campaign Outcomes {background-color="#ffe0b2"}
+# Open data - Campaign Outcomes {visibility="hidden"}
+
+<!-- {background-color="#ffe0b2"} -->
 
 ::: panel-tabset
 ### Visualisation 

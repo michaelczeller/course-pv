@@ -40,9 +40,9 @@ Remember: topic to me at least by Week 4
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 4 Dec:  |                                  | TBD    | 
-| 11 Dec: |                                  | TBD    | 
-| 18 Dec: |                                  | TBD    | 
+| 7 Dec:  |                                  | TBD    | 
+| 14 Dec: |                                  | TBD    | 
+| 21 Dec: |                                  | TBD    | 
 
 : Presentations line-up
 
@@ -50,10 +50,9 @@ Remember: topic to me at least by Week 4
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-| 8 Jan:  |                                  | TBD    | 
-| 15 Jan: |                                  | TBD    | 
-| 22 Jan: |                                  | TBD    | 
-| 29 Jan: |                                  | TBD    | 
+| 11 Jan: |                                  | TBD    | 
+| 18 Jan: |                                  | TBD    | 
+| 25 Jan: |                                  | TBD    | 
 
 : Presentations line-up
 
