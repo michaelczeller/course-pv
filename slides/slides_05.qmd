@@ -29,7 +29,7 @@ bibliography: ../../../library.bib
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 ```
 
-## Follow-up from last week 
+## Follow-up from last week {visibility="hidden"}
 
 - factors shaping politically violent groups' [strategy]{style="color:darkred;"}
     + multiple simultaneously 
@@ -43,34 +43,28 @@ bibliography: ../../../library.bib
 
 ## Presentation groups
 
-<!-- ::: panel-tabset -->
-<!-- ## December -->
-
+::: panel-tabset
+## December
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-|         |                                  |        | 
+| 7 Dec:  |                                  | TBD    | 
+| 14 Dec: | O.P., J.M., and H.W.             | TBD    | 
+| 21 Dec: | C.G. and E.J.                    | TBD    | 
 
 : Presentations line-up
 
-<!-- | Date    | Presenters                       | Method | -->
-<!-- | -------:|:---------------------------------|:------:| -->
-<!-- | 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography |  -->
-<!-- | 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    |  -->
-<!-- | 18 Dec: | Shoam, Aidan, Tara, Sebastian    | QCA    |  -->
+## January
 
-<!-- ## January -->
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 11 Jan: |                                  | TBD    | 
+| 18 Jan: |                                  | TBD    | 
+| 25 Jan: |                                  | TBD    | 
 
-<!-- | Date    | Presenters                       | Method | -->
-<!-- | -------:|:---------------------------------|:------:| -->
-<!-- | 8 Jan:  |                                  | TBD    |  -->
-<!-- | 15 Jan: |                                  | TBD    |  -->
-<!-- | 22 Jan: |                                  | TBD    |  -->
-<!-- | 29 Jan: |                                  | TBD    |  -->
+: Presentations line-up
 
-<!-- : Presentations line-up -->
-
-<!-- ::: -->
+:::
 
 <!-- []{style="font-size:10px;"} -->
 
@@ -1631,37 +1625,32 @@ associate <- subset(PIRUS_geo_sf, Role_Group == "Associate")
 nogroup   <- subset(PIRUS_geo_sf, Role_Group == "NoGroup")
 unknown   <- subset(PIRUS_geo_sf, Role_Group == "Unknown")
 
-mapview(leaders, zcol="Decade", legend=T, layer.name="Leaders",
+mapview(leaders, map.types = "OpenStreetMap", zcol="Decade", legend=T, layer.name="Leaders",
         label="Role_Group", cex=6,
-        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
         popup=popupTable(leaders,
                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
                                     "Recruiter1","Loc_Habitation_State1",
                                     "Loc_Habitation_City1")))+
-  mapview(followers, zcol="Decade", legend=T, layer.name="Followers",
+  mapview(followers, map.types = "OpenStreetMap", zcol="Decade", legend=T, layer.name="Followers",
         label="Role_Group", cex=4,
-        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
         popup=popupTable(followers,
                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
                                     "Recruiter1","Loc_Habitation_State1",
                                     "Loc_Habitation_City1")))+
-  mapview(associate, zcol="Decade", legend=T, layer.name="Associates",
+  mapview(associate, map.types = "OpenStreetMap", zcol="Decade", legend=T, layer.name="Associates",
         label="Role_Group", cex=3,
-        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
         popup=popupTable(associate,
                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
                                     "Recruiter1","Loc_Habitation_State1",
                                     "Loc_Habitation_City1")))+
-  mapview(nogroup, zcol="Decade", legend=T, layer.name="No Group",
+  mapview(nogroup, map.types = "OpenStreetMap", zcol="Decade", legend=T, layer.name="No Group",
         label="Role_Group", cex=2,
-        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
         popup=popupTable(nogroup,
                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
                                     "Recruiter1","Loc_Habitation_State1",
                                     "Loc_Habitation_City1")))+
-  mapview(unknown, zcol="Decade", legend=T, layer.name="Unknown",
+  mapview(unknown, map.types = "OpenStreetMap", zcol="Decade", legend=T, layer.name="Unknown",
         label="Role_Group", cex=1,
-        map.types=c("CartoDB.Positron","CartoDB.DarkMatter"),
         popup=popupTable(unknown,
                            zcol=c("Year_Exposure","Role_Group","Actively_Recruited",
                                     "Recruiter1","Loc_Habitation_State1",
