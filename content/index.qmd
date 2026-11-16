@@ -158,12 +158,27 @@ xaringanExtra::embed_xaringan(
 # }
 ```
 
+<!-- <figure> -->
+<!-- <figcaption>Click to listen</figcaption> -->
+<!-- <audio controls src="2026pv_class6_recording.mp3"> -->
+<!--         Your browser does not support the -->
+<!--         <code>audio</code> element. -->
+<!-- </audio> -->
+<!-- </figure> -->
+
+**Class 6 audio recording**
+
+<audio controls>
+  <source src="2026pv_class6_recording.m4a" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 
 # Class 7 
 
 ```{r echo=FALSE, results="asis"}
 #| warning: false
-if (Sys.Date() >= as.Date("2026-11-26")) { 
+# if (Sys.Date() >= as.Date("2026-11-26")) { 
   
 slide_buttons <- function(slide_id) {
   glue::glue('<p class="text-center buttons"><a class="btn btn-danger" target="_blank" href="{slide_id}.html"><i class="fa-solid fa-arrow-up-right-from-square"></i> View all slides in new window</a> <a class="btn btn-danger" target="_blank" href="{slide_id}.pdf" role="button"><i class="fa-solid fa-file-pdf"></i> Download PDF of all slides</a></p>')
@@ -179,7 +194,7 @@ xaringanExtra::embed_xaringan(
   border = "none",
   margin = "0 auto"
 )
-}
+# }
 ```
 
 
