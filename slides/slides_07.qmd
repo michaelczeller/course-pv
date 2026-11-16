@@ -31,33 +31,28 @@ bibliography: ../../../library.bib
 
 ## Presentation groups
 
-<!-- ::: panel-tabset -->
-<!-- ## December -->
+::: panel-tabset
+## December
 
 | Date    | Presenters                       | Method |
 | -------:|:---------------------------------|:------:|
-|         |                                  |        | 
+| 7 Dec:  |                                  | TBD    | 
+| 14 Dec: | O.P., J.M., and H.W.             | TBD    | 
+| 21 Dec: | C.G. and E.J.                    | TBD    | 
 
 : Presentations line-up
 
-<!-- | Date    | Presenters                       | Method | -->
-<!-- | -------:|:---------------------------------|:------:| -->
-<!-- | 4 Dec:  | Shahadaan, Kristine, Daichi      | ethnography |  -->
-<!-- | 11 Dec: | Bérénice, Zorka, Victoria, Katharina | TBD    |  -->
-<!-- | 18 Dec: | Shoam, Aidan, Tara, Sebastian    | QCA    |  -->
+## January
 
-<!-- ## January -->
+| Date    | Presenters                       | Method |
+| -------:|:---------------------------------|:------:|
+| 11 Jan: | J.B.                             | TBD    | 
+| 18 Jan: |                                  | TBD    | 
+| 25 Jan: |                                  | TBD    | 
 
-<!-- | Date    | Presenters                       | Method | -->
-<!-- | -------:|:---------------------------------|:------:| -->
-<!-- | 8 Jan:  |                                  | TBD    |  -->
-<!-- | 15 Jan: |                                  | TBD    |  -->
-<!-- | 22 Jan: |                                  | TBD    |  -->
-<!-- | 29 Jan: |                                  | TBD    |  -->
+: Presentations line-up
 
-<!-- : Presentations line-up -->
-
-<!-- ::: -->
+:::
 
 <!-- []{style="font-size:10px;"} -->
 
